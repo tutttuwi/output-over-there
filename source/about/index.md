@@ -17,11 +17,11 @@ comment: false
 
 ## 環境について
 
-- 本サイトは `Amazon S3` 上に静的に配備しています。
-- 構成概要は以下の通り。
+- 本サイトは `Amazon S3` 上に静的に配備していましたが、Github Pagesに引っ越しました。
+- Amazon S3上の構成は以下でした。
 
 <div style="text-align:center; margin-bottom: 40px">
-<img src="/img/SystemConfigurationDiagram.png" alt="SystemConfigurationDiagram" title="SystemConfigurationDiagram" style="width:980px">
+<img src="https://tutttuwi.github.io/output-over-there/img/SystemConfigurationDiagram.png" alt="SystemConfigurationDiagram" title="SystemConfigurationDiagram" style="width:980px">
 </div>
 
 ## ご留意事項
