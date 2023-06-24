@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築 | OUTPUT*OVER-THERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#264A2E">
+    
+    
+    <meta name="keywords" content="教科書">
+    <meta name="description" content="Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築 形式：書籍 発売日：2015年12月15日 ISBN：9784798140926 価格：本体3,800円＋税 仕様：B5変・584ページ 分類：プログラミング・開発 シリーズ：徹底入門  書籍ページ https:&#x2F;&#x2F;www.shoeisha.co.jp&#x2F;book&#x2F;detail&#x2F;9784798140926  サ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築">
+<meta property="og:url" content="http://yoursite.com/JAVA/2020-04_JavaEE7%E5%BE%B9%E5%BA%95%E5%85%A5%E9%96%80/index.html">
+<meta property="og:site_name" content="OUTPUT*OVER-THERE">
+<meta property="og:description" content="Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築 形式：書籍 発売日：2015年12月15日 ISBN：9784798140926 価格：本体3,800円＋税 仕様：B5変・584ページ 分類：プログラミング・開発 シリーズ：徹底入門  書籍ページ https:&#x2F;&#x2F;www.shoeisha.co.jp&#x2F;book&#x2F;detail&#x2F;9784798140926  サ">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2020-04-11T15:00:00.000Z">
+<meta property="article:modified_time" content="2020-09-18T17:00:40.616Z">
+<meta property="article:author" content="t-tsutsui">
+<meta property="article:tag" content="教科書">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="OUTPUT*OVER-THERE" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">t-tsutsui</h5>
+          <a href="mailto:t.tsutsui9117@gmail.com" title="t.tsutsui9117@gmail.com" class="mail">t.tsutsui9117@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-04-11T15:00:00.000Z" itemprop="datePublished" class="page-time">
+  2020-04-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Java-EE-7徹底入門-標準Javaフレームワークによる高信頼性Webシステムの構築"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-1-Java-EEの基礎知識"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Chapter 1 Java EEの基礎知識</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-Java-EEのこれまで"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.1 Java EEのこれまで</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-3-Java-EE-7-へ-—-3つのテーマ"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">1.1.3 Java EE 7 へ — 3つのテーマ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-Java-EEの全体像"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.2 Java EEの全体像</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-2-Java-EEに含まれる機能"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">1.2.2 Java EEに含まれる機能</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-3-Java-EE-の仕様策定"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">1.2.3 Java EE の仕様策定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-4-Java-EEの実行環境とプロファイル"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">1.2.4 Java EEの実行環境とプロファイル</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-3-Java-EEアプリケーション開発の基本"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">1.3 Java EEアプリケーション開発の基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-1-Java-EEアプリケーションモデル"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">1.3.1 Java EEアプリケーションモデル</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-4-開発環境の準備"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">1.4 開発環境の準備</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-1-Oracle-JDKのインストール"><span class="post-toc-number">1.1.4.1.</span> <span class="post-toc-text">1.4.1 Oracle JDKのインストール</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-2-NetBeansのインストール"><span class="post-toc-number">1.1.4.2.</span> <span class="post-toc-text">1.4.2 NetBeansのインストール</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-3-NetBeansの起動"><span class="post-toc-number">1.1.4.3.</span> <span class="post-toc-text">1.4.3 NetBeansの起動</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-5-サンプルアプリケーションの概要"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">1.5 サンプルアプリケーションの概要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-1-ナレッジバンク"><span class="post-toc-number">1.1.5.1.</span> <span class="post-toc-text">1.5.1 ナレッジバンク</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-2-ナレッジバンクのセットアップ"><span class="post-toc-number">1.1.5.2.</span> <span class="post-toc-text">1.5.2 ナレッジバンクのセットアップ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-6-まとめ"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">1.6 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-2-プレゼンテーション層の開発――JSFの基本"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Chapter 2 プレゼンテーション層の開発――JSFの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-JSF概要"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2.1 JSF概要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-1-JavaSErver-Faces-JSF-とは"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">2.1.1 JavaSErver Faces(JSF)とは</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-JSFの構成要素"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.2 JSFの構成要素</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-1-画面と処理（フェースレットとマネージドビーン）"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">2.2.1 画面と処理（フェースレットとマネージドビーン）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-2-マネージドビーンとスコープ"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">2.2.2 マネージドビーンとスコープ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-JSFの画面遷移"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2.3 JSFの画面遷移</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-1-画面遷移の方法"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">2.3.1 画面遷移の方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-2-画面のリダイレクト"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">2.3.2 画面のリダイレクト</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-4-JSFの内部処理"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">2.4 JSFの内部処理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-1-コンポーネント指向"><span class="post-toc-number">1.2.4.1.</span> <span class="post-toc-text">2.4.1 コンポーネント指向</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4-2-ライフサイクル"><span class="post-toc-number">1.2.4.2.</span> <span class="post-toc-text">2.4.2 ライフサイクル</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-5-JSFの基本設定"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">2.5 JSFの基本設定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-1-フォルダ構成"><span class="post-toc-number">1.2.5.1.</span> <span class="post-toc-text">2.5.1 フォルダ構成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-2-設定ファイル"><span class="post-toc-number">1.2.5.2.</span> <span class="post-toc-text">2.5.2 設定ファイル</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-5-3-リソースフォルダ"><span class="post-toc-number">1.2.5.3.</span> <span class="post-toc-text">2.5.3 リソースフォルダ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-6-フェースレットタグライブラリ"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">2.6 フェースレットタグライブラリ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-1-タグライブラリの種類"><span class="post-toc-number">1.2.6.1.</span> <span class="post-toc-text">2.6.1 タグライブラリの種類</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-2-HTMLタグライブラリ"><span class="post-toc-number">1.2.6.2.</span> <span class="post-toc-text">2.6.2 HTMLタグライブラリ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-3-ヘッダーとボディ"><span class="post-toc-number">1.2.6.3.</span> <span class="post-toc-text">2.6.3 ヘッダーとボディ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-4-リソース"><span class="post-toc-number">1.2.6.4.</span> <span class="post-toc-text">2.6.4 リソース</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-5-文字の出力"><span class="post-toc-number">1.2.6.5.</span> <span class="post-toc-text">2.6.5 文字の出力</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-6-6-リンクとボタン"><span class="post-toc-number">1.2.6.6.</span> <span class="post-toc-text">2.6.6 リンクとボタン</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-7-EL（Expression-Language）"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">2.7 EL（Expression Language）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-1-ELとは"><span class="post-toc-number">1.2.7.1.</span> <span class="post-toc-text">2.7.1 ELとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-2-オブジェクトの参照"><span class="post-toc-number">1.2.7.2.</span> <span class="post-toc-text">2.7.2 オブジェクトの参照</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-3-暗黙オブジェクト"><span class="post-toc-number">1.2.7.3.</span> <span class="post-toc-text">2.7.3 暗黙オブジェクト</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-4-演算子"><span class="post-toc-number">1.2.7.4.</span> <span class="post-toc-text">2.7.4 演算子</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-7-5-メソッドの呼び出し"><span class="post-toc-number">1.2.7.5.</span> <span class="post-toc-text">2.7.5 メソッドの呼び出し</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-3-プレゼンテーション層の開発――JSFの応用-その1"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Chapter 3 プレゼンテーション層の開発――JSFの応用 その1</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-入力チェック"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">3.1 入力チェック</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-1-入力チェック（バリデーション）とは"><span class="post-toc-number">1.3.1.1.</span> <span class="post-toc-text">3.1.1 入力チェック（バリデーション）とは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-2-JSFのバリデーション"><span class="post-toc-number">1.3.1.2.</span> <span class="post-toc-text">3.1.2 JSFのバリデーション</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-3-JSFのカスタムバリデータ"><span class="post-toc-number">1.3.1.3.</span> <span class="post-toc-text">3.1.3 JSFのカスタムバリデータ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-4-ビーンバリデーションとは"><span class="post-toc-number">1.3.1.4.</span> <span class="post-toc-text">3.1.4 ビーンバリデーションとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-5-ビーンバリデーションのバリデータ"><span class="post-toc-number">1.3.1.5.</span> <span class="post-toc-text">3.1.5 ビーンバリデーションのバリデータ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-6-ビーンバリデーションのエラーメッセージ変更"><span class="post-toc-number">1.3.1.6.</span> <span class="post-toc-text">3.1.6 ビーンバリデーションのエラーメッセージ変更</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-7-ビーンバリデーションのバリデータ統合"><span class="post-toc-number">1.3.1.7.</span> <span class="post-toc-text">3.1.7 ビーンバリデーションのバリデータ統合</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-8-ビーンバリデーションのカスタマイズバリデータ"><span class="post-toc-number">1.3.1.8.</span> <span class="post-toc-text">3.1.8 ビーンバリデーションのカスタマイズバリデータ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-コンバータ"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">3.2 コンバータ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-1-コンバータの役割"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">3.2.1 コンバータの役割</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-2-標準のコンバータ"><span class="post-toc-number">1.3.2.2.</span> <span class="post-toc-text">3.2.2 標準のコンバータ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-3-カスタムコンバータ"><span class="post-toc-number">1.3.2.3.</span> <span class="post-toc-text">3.2.3 カスタムコンバータ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-コンポーネントのカスタマイズ"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">3.3 コンポーネントのカスタマイズ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-3-1-コンポジットコンポーネント"><span class="post-toc-number">1.3.3.1.</span> <span class="post-toc-text">3.3.1 コンポジットコンポーネント</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-3-2-より高度なコンポジットコンポーネント"><span class="post-toc-number">1.3.3.2.</span> <span class="post-toc-text">3.3.2 より高度なコンポジットコンポーネント</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-フェースレットテンプレート"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">3.4 フェースレットテンプレート</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-4-1-フェースレットテンプレートの利用"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">3.4.1 フェースレットテンプレートの利用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-HTML5フレンドリマークアップ"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">3.5 HTML5フレンドリマークアップ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-5-1-パススルーアトリビュート"><span class="post-toc-number">1.3.5.1.</span> <span class="post-toc-text">3.5.1 パススルーアトリビュート</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-5-2-パススルーエレメント"><span class="post-toc-number">1.3.5.2.</span> <span class="post-toc-text">3.5.2 パススルーエレメント</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-Ajax"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">3.6 Ajax</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-6-1-JSFのAjax対応"><span class="post-toc-number">1.3.6.1.</span> <span class="post-toc-text">3.6.1 JSFのAjax対応</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-6-2-Ajaxを使用した入力チェック"><span class="post-toc-number">1.3.6.2.</span> <span class="post-toc-text">3.6.2 Ajaxを使用した入力チェック</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-6-3-Ajaxのイベントハンドリング"><span class="post-toc-number">1.3.6.3.</span> <span class="post-toc-text">3.6.3 Ajaxのイベントハンドリング</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-4-プレゼンテーション層の開発――JSFの応用-その2"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Chapter 4 プレゼンテーション層の開発――JSFの応用 その2</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-認証／認可"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">4.1 認証／認可</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-1-認証-認可の仕組み"><span class="post-toc-number">1.4.1.1.</span> <span class="post-toc-text">4.1.1 認証&#x2F;認可の仕組み</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-2-アプリケーションサーバーの認証設定"><span class="post-toc-number">1.4.1.2.</span> <span class="post-toc-text">4.1.2 アプリケーションサーバーの認証設定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-3-アプリケーションの認証設定"><span class="post-toc-number">1.4.1.3.</span> <span class="post-toc-text">4.1.3 アプリケーションの認証設定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-4-ログイン-ログアウト機能の作成"><span class="post-toc-number">1.4.1.4.</span> <span class="post-toc-text">4.1.4 ログイン&#x2F;ログアウト機能の作成</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-国際化"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">4.2 国際化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-2-1-JSFの国際化"><span class="post-toc-number">1.4.2.1.</span> <span class="post-toc-text">4.2.1 JSFの国際化</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-ブックマーカビリティ"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">4.3 ブックマーカビリティ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-3-1-ブックマーカビリティとは"><span class="post-toc-number">1.4.3.1.</span> <span class="post-toc-text">4.3.1 ブックマーカビリティとは</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-4-フェーズリスナ"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">4.4 フェーズリスナ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-5-Java-EE-7で導入されたJSFの機能"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">4.5 Java EE 7で導入されたJSFの機能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-5-1-JSF-2-2-の追加機能"><span class="post-toc-number">1.4.5.1.</span> <span class="post-toc-text">4.5.1 JSF 2.2 の追加機能</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-5-2-リソース・ライブラリコントラクト"><span class="post-toc-number">1.4.5.2.</span> <span class="post-toc-text">4.5.2 リソース・ライブラリコントラクト</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-5-3-Faces-Flows"><span class="post-toc-number">1.4.5.3.</span> <span class="post-toc-text">4.5.3 Faces Flows</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-5-4-ステートレスビュー"><span class="post-toc-number">1.4.5.4.</span> <span class="post-toc-text">4.5.4 ステートレスビュー</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-6-まとめ"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">4.6 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-5-ビジネスロジック層の開発――CDIの利用"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Chapter 5 ビジネスロジック層の開発――CDIの利用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-1-CDIとEJB"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">5.1 CDIとEJB</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-1-1-ビジネスロジック層の部品"><span class="post-toc-number">1.5.1.1.</span> <span class="post-toc-text">5.1.1 ビジネスロジック層の部品</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-1-2-CDIとEJBの違い"><span class="post-toc-number">1.5.1.2.</span> <span class="post-toc-text">5.1.2 CDIとEJBの違い</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-2-DI（Dependency-Injection）"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">5.2 DI（Dependency Injection）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-2-1-DIとは"><span class="post-toc-number">1.5.2.1.</span> <span class="post-toc-text">5.2.1 DIとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-2-2-DIによる依存関係の解消"><span class="post-toc-number">1.5.2.2.</span> <span class="post-toc-text">5.2.2 DIによる依存関係の解消</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-2-3-JavaEEへのDI取り込み"><span class="post-toc-number">1.5.2.3.</span> <span class="post-toc-text">5.2.3 JavaEEへのDI取り込み</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-3-CDI"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">5.3 CDI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-4-CDI基本編"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">5.4 CDI基本編</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-4-1-CDIコンテナによるインジェクション"><span class="post-toc-number">1.5.4.1.</span> <span class="post-toc-text">5.4.1 CDIコンテナによるインジェクション</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-4-2-CDIの型解決方法"><span class="post-toc-number">1.5.4.2.</span> <span class="post-toc-text">5.4.2 CDIの型解決方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-5-CDI応用編"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">5.5 CDI応用編</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-5-1-イベント処理"><span class="post-toc-number">1.5.5.1.</span> <span class="post-toc-text">5.5.1 イベント処理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-5-2-ステレオタイプの利用"><span class="post-toc-number">1.5.5.2.</span> <span class="post-toc-text">5.5.2 ステレオタイプの利用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-5-3-プロデューサ-ディスポーザの利用"><span class="post-toc-number">1.5.5.3.</span> <span class="post-toc-text">5.5.3 プロデューサ&#x2F;ディスポーザの利用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-5-4-インターセプタとデコレータ"><span class="post-toc-number">1.5.5.4.</span> <span class="post-toc-text">5.5.4 インターセプタとデコレータ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-6-まとめ"><span class="post-toc-number">1.5.6.</span> <span class="post-toc-text">5.6 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-6-ビジネスロジック層の開発――EJBの利用"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Chapter 6 ビジネスロジック層の開発――EJBの利用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-Enterprise-Java-Beans（EJB）"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">6.1 Enterprise Java Beans（EJB）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-1-1-EJBとは"><span class="post-toc-number">1.6.1.1.</span> <span class="post-toc-text">6.1.1 EJBとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-1-2-EJBの利点"><span class="post-toc-number">1.6.1.2.</span> <span class="post-toc-text">6.1.2 EJBの利点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-1-3-EJBの種類"><span class="post-toc-number">1.6.1.3.</span> <span class="post-toc-text">6.1.3 EJBの種類</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-セッションビーン"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">6.2 セッションビーン</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-1-セッションビーンとは"><span class="post-toc-number">1.6.2.1.</span> <span class="post-toc-text">6.2.1 セッションビーンとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-2-セッションビーンの種類"><span class="post-toc-number">1.6.2.2.</span> <span class="post-toc-text">6.2.2 セッションビーンの種類</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-3-ステートレスセッションビーン"><span class="post-toc-number">1.6.2.3.</span> <span class="post-toc-text">6.2.3 ステートレスセッションビーン</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-5-シングルトンセッションビーン"><span class="post-toc-number">1.6.2.4.</span> <span class="post-toc-text">6.2.5 シングルトンセッションビーン</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-6-非同期処理"><span class="post-toc-number">1.6.2.5.</span> <span class="post-toc-text">6.2.6 非同期処理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-7-トランザクション"><span class="post-toc-number">1.6.2.6.</span> <span class="post-toc-text">6.2.7 トランザクション</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-メッセージドリブンビーン"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">6.3 メッセージドリブンビーン</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-3-1-メッセージドリブン便とは"><span class="post-toc-number">1.6.3.1.</span> <span class="post-toc-text">6.3.1 メッセージドリブン便とは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-3-2-実装例"><span class="post-toc-number">1.6.3.2.</span> <span class="post-toc-text">6.3.2 実装例</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-4-タイマー"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">6.4 タイマー</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-4-1-タイマーとは"><span class="post-toc-number">1.6.4.1.</span> <span class="post-toc-text">6.4.1 タイマーとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-4-2-タイマーサービスのサンプル"><span class="post-toc-number">1.6.4.2.</span> <span class="post-toc-text">6.4.2 タイマーサービスのサンプル</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-4-3-Scheduleの実装サンプル"><span class="post-toc-number">1.6.4.3.</span> <span class="post-toc-text">6.4.3 @Scheduleの実装サンプル</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-5-EJBの設計"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">6.5 EJBの設計</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-5-1-EJBメソッドの呼び出しに関する設計"><span class="post-toc-number">1.6.5.1.</span> <span class="post-toc-text">6.5.1 EJBメソッドの呼び出しに関する設計</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-5-2-ローカル呼び出しとリモート呼び出し"><span class="post-toc-number">1.6.5.2.</span> <span class="post-toc-text">6.5.2 ローカル呼び出しとリモート呼び出し</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-5-3-同期-非同期"><span class="post-toc-number">1.6.5.3.</span> <span class="post-toc-text">6.5.3 同期&#x2F;非同期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-5-4-負荷量"><span class="post-toc-number">1.6.5.4.</span> <span class="post-toc-text">6.5.4 負荷量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-5-5-データベースアクセス"><span class="post-toc-number">1.6.5.5.</span> <span class="post-toc-text">6.5.5 データベースアクセス</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-6-EJBのテスト"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">6.6 EJBのテスト</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-6-1-EJBのテストの必要性と難しさ"><span class="post-toc-number">1.6.6.1.</span> <span class="post-toc-text">6.6.1 EJBのテストの必要性と難しさ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-6-2-EJBテストの準備"><span class="post-toc-number">1.6.6.2.</span> <span class="post-toc-text">6.6.2 EJBテストの準備</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-7-まとめ"><span class="post-toc-number">1.6.7.</span> <span class="post-toc-text">6.7 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter-7-データアクセス層の開発――JPAの基本"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Chapter 7 データアクセス層の開発――JPAの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-1-JPAの基礎知識"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">7.1 JPAの基礎知識</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-1-JPAの構成要素"><span class="post-toc-number">1.7.1.1.</span> <span class="post-toc-text">7.1.1 JPAの構成要素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-2-エンティティクラスとエンティティオブジェクト"><span class="post-toc-number">1.7.1.2.</span> <span class="post-toc-text">7.1.2 エンティティクラスとエンティティオブジェクト</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-3-エンティティマネージャ"><span class="post-toc-number">1.7.1.3.</span> <span class="post-toc-text">7.1.3 エンティティマネージャ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-4-クエリ"><span class="post-toc-number">1.7.1.4.</span> <span class="post-toc-text">7.1.4 クエリ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-5-永続化ユニット"><span class="post-toc-number">1.7.1.5.</span> <span class="post-toc-text">7.1.5 永続化ユニット</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-6-JPAのメリット"><span class="post-toc-number">1.7.1.6.</span> <span class="post-toc-text">7.1.6 JPAのメリット</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-エンティティの基本"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">7.2 エンティティの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-2-1-エンティティクラスの実装"><span class="post-toc-number">1.7.2.1.</span> <span class="post-toc-text">7.2.1 エンティティクラスの実装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-2-2-ID"><span class="post-toc-number">1.7.2.2.</span> <span class="post-toc-text">7.2.2 ID</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-2-3-リレーション"><span class="post-toc-number">1.7.2.3.</span> <span class="post-toc-text">7.2.3 リレーション</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-3-エンティティマネージャの基本"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">7.3 エンティティマネージャの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-3-1-エンティティのライフサイクル"><span class="post-toc-number">1.7.3.1.</span> <span class="post-toc-text">7.3.1 エンティティのライフサイクル</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-3-2-エンティティオブジェクトの作成と永続化"><span class="post-toc-number">1.7.3.2.</span> <span class="post-toc-text">7.3.2 エンティティオブジェクトの作成と永続化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-3-3-エンティティオブジェクトの取得と更新"><span class="post-toc-number">1.7.3.3.</span> <span class="post-toc-text">7.3.3 エンティティオブジェクトの取得と更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-3-4-エンティティの削除"><span class="post-toc-number">1.7.3.4.</span> <span class="post-toc-text">7.3.4 エンティティの削除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-3-5-デタッチ"><span class="post-toc-number">1.7.3.5.</span> <span class="post-toc-text">7.3.5 デタッチ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-クエリAPI"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">7.4 クエリAPI</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-4-1-パラメータ"><span class="post-toc-number">1.7.4.1.</span> <span class="post-toc-text">7.4.1 パラメータ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-4-2-サンプルデータ"><span class="post-toc-number">1.7.4.2.</span> <span class="post-toc-text">7.4.2 サンプルデータ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-5-JPQL"><span class="post-toc-number">1.7.5.</span> <span class="post-toc-text">7.5 JPQL</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-5-1-JPQLの基本構文"><span class="post-toc-number">1.7.5.1.</span> <span class="post-toc-text">7.5.1 JPQLの基本構文</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-5-5-フェッチ"><span class="post-toc-number">1.7.5.2.</span> <span class="post-toc-text">7.5.5 フェッチ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-5-6-エンティティオブジェクトの集計"><span class="post-toc-number">1.7.5.3.</span> <span class="post-toc-text">7.5.6 エンティティオブジェクトの集計</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-5-7-名前付きクエリ"><span class="post-toc-number">1.7.5.4.</span> <span class="post-toc-text">7.5.7 名前付きクエリ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-6-CriteriaAPI"><span class="post-toc-number">1.7.6.</span> <span class="post-toc-text">7.6 CriteriaAPI</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-6-1-Criteria-APIの基本構文"><span class="post-toc-number">1.7.6.1.</span> <span class="post-toc-text">7.6.1 Criteria APIの基本構文</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter8-データアクセス層の開発-JPAの応用"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">Chapter8 データアクセス層の開発 JPAの応用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-1-高度なエンティティの利用方法"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">8.1 高度なエンティティの利用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-1-1-フィールドに関する応用"><span class="post-toc-number">1.8.1.1.</span> <span class="post-toc-text">8.1.1 フィールドに関する応用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-2-ライフサイクルコールバック"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">8.2 ライフサイクルコールバック</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-3-エンティティクラスとテーブル構造"><span class="post-toc-number">1.8.3.</span> <span class="post-toc-text">8.3 エンティティクラスとテーブル構造</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-3-1-テーブル名とカラム名"><span class="post-toc-number">1.8.3.1.</span> <span class="post-toc-text">8.3.1 テーブル名とカラム名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-3-2-索引"><span class="post-toc-number">1.8.3.2.</span> <span class="post-toc-text">8.3.2 索引</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-3-3-制約"><span class="post-toc-number">1.8.3.3.</span> <span class="post-toc-text">8.3.3 制約</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-4-トランザクション"><span class="post-toc-number">1.8.4.</span> <span class="post-toc-text">8.4 トランザクション</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-5-キャッシュ"><span class="post-toc-number">1.8.5.</span> <span class="post-toc-text">8.5 キャッシュ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-5-1-これまでのデータアクセス"><span class="post-toc-number">1.8.5.1.</span> <span class="post-toc-text">8.5.1 これまでのデータアクセス</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-5-2-キャッシュを使用したデータアクセス"><span class="post-toc-number">1.8.5.2.</span> <span class="post-toc-text">8.5.2 キャッシュを使用したデータアクセス</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-5-5-プリロード"><span class="post-toc-number">1.8.5.3.</span> <span class="post-toc-text">8.5.5 プリロード</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-5-6-EclipseLink"><span class="post-toc-number">1.8.5.4.</span> <span class="post-toc-text">8.5.6 EclipseLink</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-6-永続化ユニット"><span class="post-toc-number">1.8.6.</span> <span class="post-toc-text">8.6 永続化ユニット</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-7-環境構築手順"><span class="post-toc-number">1.8.7.</span> <span class="post-toc-text">8.7 環境構築手順</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-8-アプリケーション開発手順"><span class="post-toc-number">1.8.8.</span> <span class="post-toc-text">8.8 アプリケーション開発手順</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-8-2-JPQLの開発"><span class="post-toc-number">1.8.8.1.</span> <span class="post-toc-text">8.8.2 JPQLの開発</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter9-RESTful-Webサービスの開発"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Chapter9 RESTful Webサービスの開発</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-1-Webサービスの基礎"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">9.1 Webサービスの基礎</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-1-1-Webサービスとは"><span class="post-toc-number">1.9.1.1.</span> <span class="post-toc-text">9.1.1 Webサービスとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-1-2-RESTful-Webサービスとは"><span class="post-toc-number">1.9.1.2.</span> <span class="post-toc-text">9.1.2 RESTful Webサービスとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-1-3-RESTとHTTP"><span class="post-toc-number">1.9.1.3.</span> <span class="post-toc-text">9.1.3 RESTとHTTP</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-2-JAX-RSの基本"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">9.2 JAX-RSの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-2-1-JAX-RSとは"><span class="post-toc-number">1.9.2.1.</span> <span class="post-toc-text">9.2.1 JAX-RSとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-2-2-サンプルアプリケーションにおけるJAX-RSの機能"><span class="post-toc-number">1.9.2.2.</span> <span class="post-toc-text">9.2.2 サンプルアプリケーションにおけるJAX-RSの機能</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-3-RESTful-Webサービス作成のための事前準備"><span class="post-toc-number">1.9.3.</span> <span class="post-toc-text">9.3 RESTful Webサービス作成のための事前準備</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-3-1-RESTful-Webサービスの認証方式"><span class="post-toc-number">1.9.3.1.</span> <span class="post-toc-text">9.3.1 RESTful Webサービスの認証方式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-3-2-データクラス（DTO）"><span class="post-toc-number">1.9.3.2.</span> <span class="post-toc-text">9.3.2 データクラス（DTO）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-3-3-Application-サブクラス"><span class="post-toc-number">1.9.3.3.</span> <span class="post-toc-text">9.3.3 Application サブクラス</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-4-RESTサービスクラス（サーバー側）の作成"><span class="post-toc-number">1.9.4.</span> <span class="post-toc-text">9.4 RESTサービスクラス（サーバー側）の作成</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-1-リソースクラスの構成要素"><span class="post-toc-number">1.9.4.1.</span> <span class="post-toc-text">9.4.1 リソースクラスの構成要素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-2-エンドポイントURIの設定"><span class="post-toc-number">1.9.4.2.</span> <span class="post-toc-text">9.4.2 エンドポイントURIの設定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-3-HTTPメソッドとリソースメソッドのバインド"><span class="post-toc-number">1.9.4.3.</span> <span class="post-toc-text">9.4.3 HTTPメソッドとリソースメソッドのバインド</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-4-メッセージボディのデータ形式指定"><span class="post-toc-number">1.9.4.4.</span> <span class="post-toc-text">9.4.4 メッセージボディのデータ形式指定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-5-リクエスト情報のインジェクション"><span class="post-toc-number">1.9.4.5.</span> <span class="post-toc-text">9.4.5 リクエスト情報のインジェクション</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-6-リクエストのメッセージボディの受取"><span class="post-toc-number">1.9.4.6.</span> <span class="post-toc-text">9.4.6 リクエストのメッセージボディの受取</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-7-入力チェック"><span class="post-toc-number">1.9.4.7.</span> <span class="post-toc-text">9.4.7 入力チェック</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-4-8-レスポンスの定義"><span class="post-toc-number">1.9.4.8.</span> <span class="post-toc-text">9.4.8 レスポンスの定義</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-5-HTTPメソッドに応じた処理"><span class="post-toc-number">1.9.5.</span> <span class="post-toc-text">9.5 HTTPメソッドに応じた処理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-5-1-ナレッジの検索（GETメソッドによる操作）"><span class="post-toc-number">1.9.5.1.</span> <span class="post-toc-text">9.5.1 ナレッジの検索（GETメソッドによる操作）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-5-2-ナレッジの登録（POSTメソッドによる操作）"><span class="post-toc-number">1.9.5.2.</span> <span class="post-toc-text">9.5.2 ナレッジの登録（POSTメソッドによる操作）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-5-3-ナレッジの更新（PUTメソッドによる操作）"><span class="post-toc-number">1.9.5.3.</span> <span class="post-toc-text">9.5.3 ナレッジの更新（PUTメソッドによる操作）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-5-4-ナレッジの削除（DELETEメソッドによる操作）"><span class="post-toc-number">1.9.5.4.</span> <span class="post-toc-text">9.5.4 ナレッジの削除（DELETEメソッドによる操作）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-5-5-例外クラス"><span class="post-toc-number">1.9.5.5.</span> <span class="post-toc-text">9.5.5 例外クラス</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-6-RESTクライアントクラス（クライアント側）の作成"><span class="post-toc-number">1.9.6.</span> <span class="post-toc-text">9.6 RESTクライアントクラス（クライアント側）の作成</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-6-1-データクラス（DTO）"><span class="post-toc-number">1.9.6.1.</span> <span class="post-toc-text">9.6.1 データクラス（DTO）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-6-2-RESTクライアントクラス"><span class="post-toc-number">1.9.6.2.</span> <span class="post-toc-text">9.6.2 RESTクライアントクラス</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-7-メッセージフィルタクラス"><span class="post-toc-number">1.9.7.</span> <span class="post-toc-text">9.7 メッセージフィルタクラス</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-7-1-メッセージフィルタとエンティティインターセプタ"><span class="post-toc-number">1.9.7.1.</span> <span class="post-toc-text">9.7.1 メッセージフィルタとエンティティインターセプタ</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-8-まとめ"><span class="post-toc-number">1.9.8.</span> <span class="post-toc-text">9.8 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Chapter10-バッチアプリケーションの開発"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">Chapter10 バッチアプリケーションの開発</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-1-jBatchの基本"><span class="post-toc-number">1.10.1.</span> <span class="post-toc-text">10.1 jBatchの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-1-1-バッチ処理とその特徴"><span class="post-toc-number">1.10.1.1.</span> <span class="post-toc-text">10.1.1 バッチ処理とその特徴</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-1-2-jBatchとは"><span class="post-toc-number">1.10.1.2.</span> <span class="post-toc-text">10.1.2 jBatchとは</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-1-3-ジョブ"><span class="post-toc-number">1.10.1.3.</span> <span class="post-toc-text">10.1.3 ジョブ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-1-4-ステップ"><span class="post-toc-number">1.10.1.4.</span> <span class="post-toc-text">10.1.4 ステップ</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-1-5-補助機能"><span class="post-toc-number">1.10.1.5.</span> <span class="post-toc-text">10.1.5 補助機能</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-2-jBatchの利用――基本編"><span class="post-toc-number">1.10.2.</span> <span class="post-toc-text">10.2 jBatchの利用――基本編</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-2-1-JobXMLの実装"><span class="post-toc-number">1.10.2.1.</span> <span class="post-toc-text">10.2.1 JobXMLの実装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-2-2-チャンク型ステップの実装"><span class="post-toc-number">1.10.2.2.</span> <span class="post-toc-text">10.2.2 チャンク型ステップの実装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-2-5-バッチレット型ステップの実装"><span class="post-toc-number">1.10.2.3.</span> <span class="post-toc-text">10.2.5 バッチレット型ステップの実装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-2-6-ジョブ実行部分の実装"><span class="post-toc-number">1.10.2.4.</span> <span class="post-toc-text">10.2.6 ジョブ実行部分の実装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-2-7-実行結果の確認"><span class="post-toc-number">1.10.2.5.</span> <span class="post-toc-text">10.2.7 実行結果の確認</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-3-jBatchの利用――応用編"><span class="post-toc-number">1.10.3.</span> <span class="post-toc-text">10.3 jBatchの利用――応用編</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-3-1-サンプル概要"><span class="post-toc-number">1.10.3.1.</span> <span class="post-toc-text">10.3.1 サンプル概要</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-4-ジョブの作成"><span class="post-toc-number">1.10.4.</span> <span class="post-toc-text">10.4 ジョブの作成</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-4-1-Job-XMLの実装"><span class="post-toc-number">1.10.4.1.</span> <span class="post-toc-text">10.4.1 Job XMLの実装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-4-2-チャンクの実装"><span class="post-toc-number">1.10.4.2.</span> <span class="post-toc-text">10.4.2 チャンクの実装</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-5-ジョブのフロー制御"><span class="post-toc-number">1.10.5.</span> <span class="post-toc-text">10.5 ジョブのフロー制御</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-6-まとめ"><span class="post-toc-number">1.10.6.</span> <span class="post-toc-text">10.6 まとめ</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2020-04_JavaEE7徹底入門"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-12 00:00:00" datetime="2020-04-11T15:00:00.000Z"  itemprop="datePublished">2020-04-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/JAVA/">JAVA</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Java-EE-7徹底入門-標準Javaフレームワークによる高信頼性Webシステムの構築"><a href="#Java-EE-7徹底入門-標準Javaフレームワークによる高信頼性Webシステムの構築" class="headerlink" title="Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築"></a>Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築</h1><ul>
+<li>形式：書籍</li>
+<li>発売日：2015年12月15日</li>
+<li>ISBN：9784798140926</li>
+<li>価格：本体3,800円＋税</li>
+<li>仕様：B5変・584ページ</li>
+<li>分類：プログラミング・開発</li>
+<li><p>シリーズ：徹底入門</p>
+</li>
+<li><p>書籍ページ <a href="https://www.shoeisha.co.jp/book/detail/9784798140926" target="_blank" rel="noopener">https://www.shoeisha.co.jp/book/detail/9784798140926</a></p>
+</li>
+<li><p>サンプルプログラム <a href="https://www.shoeisha.co.jp/book/download/9784798140926/detail" target="_blank" rel="noopener">https://www.shoeisha.co.jp/book/download/9784798140926/detail</a></p>
+</li>
+</ul>
+<h2 id="Chapter-1-Java-EEの基礎知識"><a href="#Chapter-1-Java-EEの基礎知識" class="headerlink" title="Chapter 1 Java EEの基礎知識"></a>Chapter 1 Java EEの基礎知識</h2><h3 id="1-1-Java-EEのこれまで"><a href="#1-1-Java-EEのこれまで" class="headerlink" title="1.1 Java EEのこれまで"></a>1.1 Java EEのこれまで</h3><ul>
+<li>1995年 Sun Microsytems,Inc<ul>
+<li>JDK1.0 α版</li>
+</ul>
+</li>
+<li>1998年 Sun JPEと呼ぶプロジェクトを立ち上げ<ul>
+<li>サーバー側の企業アプリケーション開発にJavaを利用できるようにするために立ち上げ</li>
+</ul>
+</li>
+<li>1999年12月 フレームワーク提供(J2EE 1.2)<ul>
+<li>10個の機能から構成<ul>
+<li>JSP+Servlet → 急速に普及</li>
+<li>EJB</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2001年 J2EE 1.3</li>
+<li>2003年 J2EE 1.4<ul>
+<li>XML対応</li>
+</ul>
+</li>
+<li><p>このころ、オープンソースのフレームワークも台頭</p>
+</li>
+<li><p>2006年5月 簡単開発(Ease of Development)をテーマに、名前を改名</p>
+<ul>
+<li>Java Platform Enterprise Edition(JavaEE)と改め新バージョンをリリース</li>
+<li>Java EE 5<ul>
+<li>普及には至らず</li>
+<li>改善をすすめる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2009年12月 JavaEE5をさらに大幅改善したJavaEE6をリリース<ul>
+<li>CDI</li>
+<li>プロファイル：全仕様に対するサブセットを提供</li>
+<li>プルーニング：使われなくなって古くなった使用を整理するための仕組み</li>
+<li>→ ミッションクリティカルな企業システムでも採用されるようになった</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-1-3-Java-EE-7-へ-—-3つのテーマ"><a href="#1-1-3-Java-EE-7-へ-—-3つのテーマ" class="headerlink" title="1.1.3 Java EE 7 へ — 3つのテーマ"></a>1.1.3 Java EE 7 へ — 3つのテーマ</h4><ul>
+<li><p>JavaEE6のリリース後、すぐに次期バージョンの検討</p>
+<ul>
+<li>目をつけたのは「クラウド」</li>
+<li>より簡単にJavaEEアプリケーションをスケールするような機能を考え、GlassFishというアプリケーション・サーバー上で実際に動作するサンプルも作成<ul>
+<li>外部からのフィードバックやスペックリードが集まって再検討した結果次期が早いと判断し見送り</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Column JavaEE7 におけるクラウド対応の見送り</p>
+<ul>
+<li>2012年8月12日 開発の遅れと、仕様化に対する十分な経験、検討が足りなかったため見送りを決定</li>
+<li>期待があった分失望の声もあったが</li>
+<li>有識者やベンダーの多くはこの決断を支持</li>
+</ul>
+</li>
+<li><p>新しいテーマを考えた</p>
+<ul>
+<li>HTML5対応</li>
+<li>開発用意/生産性の向上</li>
+<li>エンタープライズニーズへの対応</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-Java-EEの全体像"><a href="#1-2-Java-EEの全体像" class="headerlink" title="1.2 Java EEの全体像"></a>1.2 Java EEの全体像</h3><ul>
+<li><p>Java EEに含まれる機能の全体像を把握してください</p>
+</li>
+<li><p>JavaEEは企業システムのアプリケーション開発に必要なさまざまな機能を１つにまとめた包括仕様（umbrella specification）の総称</p>
+</li>
+<li><p>大小さまざまな39個の仕様から構成されています。</p>
+</li>
+<li><p>主に</p>
+<ul>
+<li>インテグレーションテクノロジー</li>
+<li>ビジネスロジックテクノロジー</li>
+<li>プレゼンテーションテクノロジー<ul>
+<li>を組み合わせながらシステムを構築する</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>インテグレーションテクノロジー</p>
+<ul>
+<li>外部システムと連携するための機能を提供</li>
+<li>外部システム<ul>
+<li>データベース</li>
+<li>メールサーバー</li>
+<li>メッセージングプロバイダ（OpenMQ,WebShereMQ）</li>
+<li>エンタープライズ情報システム（ERP,メインフレーム）等がある</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ビジネスロジックテクノロジー</p>
+<ul>
+<li>外部システムと連携するプログラムの実装とユーザーインターフェースのプログラムの実装の間に入り、企業システムの業務で必要とされる処理を実装<ul>
+<li>トランザクションの処理や業務のフローの実装など</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>プレゼンテーションテクノロジー</p>
+<ul>
+<li>様々なデバイスからアクセスされることを考慮する必要がある</li>
+<li>人だけでなく、物も含め、企業システムに対してアクセスするためのインターフェースを提供</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-2-Java-EEに含まれる機能"><a href="#1-2-2-Java-EEに含まれる機能" class="headerlink" title="1.2.2 Java EEに含まれる機能"></a>1.2.2 Java EEに含まれる機能</h4><ul>
+<li>Java Persistence API(JPA)<ul>
+<li>ORM機能</li>
+<li>JavaSEでも利用可能</li>
+</ul>
+</li>
+<li>Java Messagge Service(JMS)<ul>
+<li>外部のメッセージングプロバイダを経由して非同期でテキストメッセージやバイナリメッセージを送受信</li>
+<li>JavaSEでも利用可能</li>
+</ul>
+</li>
+<li>Batch Applications for the Java Platform<ul>
+<li>データをまとめて一括処理する場合に利用</li>
+<li>JavaSEでも利用可能</li>
+</ul>
+</li>
+<li>Java Mail API<ul>
+<li>電子メールクライアントを作成するために必要な機能を提供</li>
+</ul>
+</li>
+<li>Java EE Connector Architecture(JCA)<ul>
+<li>EAIを行うために必要な機能を提供</li>
+</ul>
+</li>
+<li>DI/CDI<ul>
+<li>JavaEEに含まれる技術を疎結合で結び合わせるための技術</li>
+</ul>
+</li>
+<li>Enterprise JavaBeans(EJB)<ul>
+<li>もともと、分散コンポーネントを作成するための技術として作られました</li>
+<li>JavaEE5以降、EJBはビジネスロジックを簡単に実装するための技術として大きく生まれ変わりました</li>
+<li>XMLの設定は不要で、クラスに対して宣言的に定義できるようになっています。</li>
+</ul>
+</li>
+<li>Java Transaction API(JTA)<ul>
+<li>トランザクション管理を行うための技術</li>
+</ul>
+</li>
+<li>JavaServer Pages(JSP), JSP Standard Tag Library(JSTL)<ul>
+<li>JSPは動的ページ作成</li>
+<li>JSTLは、ページ内のループ処理やSQLを使用したデータベースアクセスなど、JSPで共通する機能を隠蔽して利用できるようにした専用タグ<ul>
+<li>JSFの導入以降は徐々に置き換えが進む</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>JSON-P<ul>
+<li>JavaEE7から新たに導入されたJavaEEでJSONを扱うための機能</li>
+<li>次期バージョンでは、JSONデータとJavaオブジェクトをマッピングするJSON Bindingの提供も予定されている<ul>
+<li>→ もう対応されている？</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Expression Language(EL)<ul>
+<li>簡単な式や変数などを用いて、記述内容の評価が行える言語として作られました</li>
+</ul>
+</li>
+<li>Servlet<ul>
+<li>ServletのプログラムはServletコンテナ（Webコンテナとも呼ばれる）と呼ばれる実行環境上でどうsあ</li>
+<li>HTTP/1.0及び1.1のリクエストに応答する</li>
+<li>ServletはHTTP処理に対する低レベルAPIしか提供しないため、現在はServletのAPIだけでプログラミングを行う場面は少ない</li>
+<li>JSFのようなServletコンテナ上で動作する上位フレームワークへ処理を以上するための仲介役として利用されることが多い</li>
+</ul>
+</li>
+<li>WebSocket<ul>
+<li>HTTPプロトコルをアップグレードした、双方向/全二重通信が可能なプロトコル</li>
+<li>HTTPと比べてメッセージ送受信の際のオーバーヘッドが少ないため、効果的にリアルタイムメッセージの送受信ができる</li>
+</ul>
+</li>
+<li>Java API for RESTful Web Services(JAX-RS)<ul>
+<li>RESTアーキテクチャに基づいてWebサービスを実装するための機能を提供</li>
+<li>従来、Webサービスの実装にはSOAP Webサービス(JAX-WS)とXMLを用いるのが主流だった</li>
+<li>現在は、分散システム間連携を行うために、RESTful WebサービスとJSONを組み合わせて実装する場面が多くなっている</li>
+<li>JAX-RSの仕様は、HTTPの仕様と密接に関連しており、HTTPメソッドに対応するアノテーションを用いて処理を実装する<ul>
+<li>JAX-WSからJAX-RSへと主流が変わってきたことを理解した</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JavaServer Faces(JSF)</p>
+<ul>
+<li>コンポーネントベースで開発が可能なWebアプリケーション開発フレームワーク</li>
+<li>画面は、フェースレット（Facelets）と呼ばれるXHTML形式のテキストファイルに、HTMLタグやJSF専用タグを記入してデザイン</li>
+<li>バックエンドの処理はマネージドビーン（Managed Bean）と呼ばれるPOJOクラス、もしくはCDIクラスで処理を実装</li>
+<li>JSFは標準でHTML5やAjaxへも対応しており、Javascriptの知識がなくても簡単にAjaxプログラミングが行えます</li>
+</ul>
+</li>
+<li><p>ビーンバリデーション</p>
+<ul>
+<li>データの整合性を検証するための機能</li>
+</ul>
+</li>
+<li><p>Common Annotation</p>
+<ul>
+<li>JavaEE5でMetadata facility for Javaという機能が追加された</li>
+<li>これに関連して、JavaSE環境、JavaEE環境の両方で共通して利用可能なアノテーションが定期された</li>
+<li>例えば<ul>
+<li>インスタンスの生成時、破棄時になんらかの処理を行うことを規定したもの</li>
+<li>処理に対する実行権限を規定したもの</li>
+<li>データベース設定を規定したもの</li>
+</ul>
+</li>
+<li>これらのアノテーションを利用して宣言的にプログラミングを行う</li>
+</ul>
+</li>
+<li><p>Managed Bean</p>
+<ul>
+<li>Common Annotationの中に、Managed Beanというアノテーションがある</li>
+<li>JavaEE環境で管理されているBeanであることが明示される</li>
+<li>Managed Beanは、アプリケーション・サーバーで管理されているリソースの参照や、インスタンスのライフサイクル管理ができる</li>
+<li><strong>通常、Managed Beanのアノテーションを付加したクラスを実装することはほとんど無い</strong><ul>
+<li>しかし、Managed Beanの機能を持つ上位機能（CDI、EJB）でManaged Beanの機能を利用する</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Interceptors</p>
+<ul>
+<li>複数の機能間で横断的な関心事の実装を行うための機能です。</li>
+<li>例えば<ul>
+<li>ログの出力や各処理時間の計測、セキュリティの検査などは、特定部分の実装に限らず、システムの全体で必要な実装</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Concurrency Utilities for Java EE</p>
+<ul>
+<li>JavaEE環境で新たにスレッドを生成するための機能</li>
+<li>JavaEE6まではサーバー環境上で新たなスレッドを生成することは非推奨でした。なぜならば、作成されたスレッドがアプリケーション・サーバーから管理できないスレッドとして動作するためでした</li>
+<li>たとえば<ul>
+<li>セキュリティ情報や、トランザクション情報、コンテキスト情報などを一切含まないため、アプリケーション・サーバーから制御することは不可能</li>
+</ul>
+</li>
+<li>そこで、サーバーが管理できるスレッドを作るために、JavaEE7からConcurrency Utilities for Java EEが新たに導入された</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-3-Java-EE-の仕様策定"><a href="#1-2-3-Java-EE-の仕様策定" class="headerlink" title="1.2.3 Java EE の仕様策定"></a>1.2.3 Java EE の仕様策定</h4><ul>
+<li><p>Javaの仕様はJCP(Java Community Process)という団体で管理</p>
+<ul>
+<li>Java Specification Requests(JSR)と呼ぶ仕様のリクエストに対して、一意の番号を割り当てて管理している</li>
+</ul>
+</li>
+<li><p>JSRをJCPに提出するために必要な成果物について記載（割愛）</p>
+</li>
+</ul>
+<h4 id="1-2-4-Java-EEの実行環境とプロファイル"><a href="#1-2-4-Java-EEの実行環境とプロファイル" class="headerlink" title="1.2.4 Java EEの実行環境とプロファイル"></a>1.2.4 Java EEの実行環境とプロファイル</h4><ul>
+<li>割愛</li>
+</ul>
+<h3 id="1-3-Java-EEアプリケーション開発の基本"><a href="#1-3-Java-EEアプリケーション開発の基本" class="headerlink" title="1.3 Java EEアプリケーション開発の基本"></a>1.3 Java EEアプリケーション開発の基本</h3><h4 id="1-3-1-Java-EEアプリケーションモデル"><a href="#1-3-1-Java-EEアプリケーションモデル" class="headerlink" title="1.3.1 Java EEアプリケーションモデル"></a>1.3.1 Java EEアプリケーションモデル</h4><ul>
+<li>3階層アプリケーションの開発モデルを採用している<ul>
+<li>ビジネスロジックとユーザーインターフェースを切り分けて実装することが大事</li>
+<li>柔軟性の高いシステムを構築していくことが大事</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-開発環境の準備"><a href="#1-4-開発環境の準備" class="headerlink" title="1.4 開発環境の準備"></a>1.4 開発環境の準備</h3><ul>
+<li>サンプルアプリケーション<ul>
+<li>JavaSE8</li>
+<li>JavaEE7</li>
+<li>GlassFishv4.1.1 (JavaEE参照実装)</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-4-1-Oracle-JDKのインストール"><a href="#1-4-1-Oracle-JDKのインストール" class="headerlink" title="1.4.1 Oracle JDKのインストール"></a>1.4.1 Oracle JDKのインストール</h4><h4 id="1-4-2-NetBeansのインストール"><a href="#1-4-2-NetBeansのインストール" class="headerlink" title="1.4.2 NetBeansのインストール"></a>1.4.2 NetBeansのインストール</h4><h4 id="1-4-3-NetBeansの起動"><a href="#1-4-3-NetBeansの起動" class="headerlink" title="1.4.3 NetBeansの起動"></a>1.4.3 NetBeansの起動</h4><h3 id="1-5-サンプルアプリケーションの概要"><a href="#1-5-サンプルアプリケーションの概要" class="headerlink" title="1.5 サンプルアプリケーションの概要"></a>1.5 サンプルアプリケーションの概要</h3><h4 id="1-5-1-ナレッジバンク"><a href="#1-5-1-ナレッジバンク" class="headerlink" title="1.5.1 ナレッジバンク"></a>1.5.1 ナレッジバンク</h4><ul>
+<li>個人が保有する知識情報（ナレッジ）を共有するためのWebアプリケーション</li>
+<li><p>JavaEE7で一般的なWebアプリケーションを実装するために必要な機能を使用して構築されている</p>
+</li>
+<li><p>画面遷移などの説明</p>
+</li>
+</ul>
+<h4 id="1-5-2-ナレッジバンクのセットアップ"><a href="#1-5-2-ナレッジバンクのセットアップ" class="headerlink" title="1.5.2 ナレッジバンクのセットアップ"></a>1.5.2 ナレッジバンクのセットアップ</h4><ul>
+<li>プロジェクトを読み込み</li>
+</ul>
+<h3 id="1-6-まとめ"><a href="#1-6-まとめ" class="headerlink" title="1.6 まとめ"></a>1.6 まとめ</h3><ul>
+<li>この章のまとめを記載（割愛）</li>
+</ul>
+<h2 id="Chapter-2-プレゼンテーション層の開発――JSFの基本"><a href="#Chapter-2-プレゼンテーション層の開発――JSFの基本" class="headerlink" title="Chapter 2 プレゼンテーション層の開発――JSFの基本"></a>Chapter 2 プレゼンテーション層の開発――JSFの基本</h2><ul>
+<li>以下の３層に分けて開発を行う<ul>
+<li>プレゼンテーション層</li>
+<li>ビジネスロジック層</li>
+<li>インテグレーション層</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-JSF概要"><a href="#2-1-JSF概要" class="headerlink" title="2.1 JSF概要"></a>2.1 JSF概要</h3><h4 id="2-1-1-JavaSErver-Faces-JSF-とは"><a href="#2-1-1-JavaSErver-Faces-JSF-とは" class="headerlink" title="2.1.1 JavaSErver Faces(JSF)とは"></a>2.1.1 JavaSErver Faces(JSF)とは</h4><ul>
+<li><p>JSFとはJavaEE5から追加されたプレゼンテーション層を作成するための仕様</p>
+<ul>
+<li>今まではServletを使用していた<ul>
+<li>サーブレットとは：ブラウザとHTTP通信を行う基礎的な仕様で、最小限の機能を提供<ul>
+<li>入力値とJavaオブジェクトのマッピング</li>
+<li>入力値のチェック</li>
+<li>エラーメッセージのハンドリング<ul>
+<li>など多くの機能が不足していた</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Column MVC1.0</p>
+<ul>
+<li>次のバージョンのJavaEE8には、「MVC1.0」というプレゼンテーション層を開発する新しい仕様が加わる予定</li>
+<li>Webアプリケーションを開発するフレームワークには、HTTPの通信に紐付けて処理を記述するアクションベースのフレームワーク</li>
+<li>入力フィールドやボタンに紐付けて処理を記述するコンポーネントベースのフレームワークがある</li>
+<li>本書で記述するJSFはコンポーネントベースのフレームワーク</li>
+<li>そのため開発者から、アクションベースの選択肢も必要という意見があがり、JavaEE8でアクションベースのフレームワークである「MVC1.0」を追加することになった</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-JSFの構成要素"><a href="#2-2-JSFの構成要素" class="headerlink" title="2.2 JSFの構成要素"></a>2.2 JSFの構成要素</h3><h4 id="2-2-1-画面と処理（フェースレットとマネージドビーン）"><a href="#2-2-1-画面と処理（フェースレットとマネージドビーン）" class="headerlink" title="2.2.1 画面と処理（フェースレットとマネージドビーン）"></a>2.2.1 画面と処理（フェースレットとマネージドビーン）</h4><ul>
+<li><p>フェースレットとは</p>
+<ul>
+<li>画面レイアウトを記述するXHTMLベースのテンプレートエンジン</li>
+<li>XHTMLとは、HTMLをXMLの文法に適合するように定義し直したもの</li>
+</ul>
+</li>
+<li><p>フェースレットとBeanがどのように紐付いているかを確認</p>
+</li>
+<li><p>Column マネージドビーンとバッキングビーン</p>
+<ul>
+<li>フェースレット似バインドするJavaクラスはマネージドビーンといいますが、</li>
+<li>フェースレットの裏側で処理を行うという意味で、バッキングビーンと呼ばれることもあります。</li>
+<li>マネージドビーンがCDIでも代用できるようになった頃からJSFで使用するマネージドビーンをバッキングビーンと呼ぶことが多くなった</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-2-2-マネージドビーンとスコープ"><a href="#2-2-2-マネージドビーンとスコープ" class="headerlink" title="2.2.2 マネージドビーンとスコープ"></a>2.2.2 マネージドビーンとスコープ</h4><ul>
+<li><p>スコープ：マネージドビーンのデータをいつまで保有するかを指定する</p>
+</li>
+<li><p>スコープの一覧の紹介</p>
+</li>
+</ul>
+<h3 id="2-3-JSFの画面遷移"><a href="#2-3-JSFの画面遷移" class="headerlink" title="2.3 JSFの画面遷移"></a>2.3 JSFの画面遷移</h3><h4 id="2-3-1-画面遷移の方法"><a href="#2-3-1-画面遷移の方法" class="headerlink" title="2.3.1 画面遷移の方法"></a>2.3.1 画面遷移の方法</h4><ul>
+<li><p>JSFで次の画面に遷移する場合、遷移先の名前を文字列で指定</p>
+<ul>
+<li>この画面遷移に使用する文字列を「outcome値」といいます</li>
+<li>遷移するフェースレットのパスを指定</li>
+</ul>
+</li>
+<li><p>静的な遷移</p>
+<ul>
+<li>マネージドビーンの処理を行わずに直接次の画面に遷移する方法</li>
+</ul>
+</li>
+<li><p>動的な遷移</p>
+<ul>
+<li>マネージドビーンで処理を行い、その結果を基に任意の画面へ遷移する方法</li>
+<li>EL式でメソッドをバインドしている</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-3-2-画面のリダイレクト"><a href="#2-3-2-画面のリダイレクト" class="headerlink" title="2.3.2 画面のリダイレクト"></a>2.3.2 画面のリダイレクト</h4><ul>
+<li><p>画面遷移</p>
+<ul>
+<li>フォワード：処理後に直接Web画面を生成して結果を返す</li>
+<li>リダイレクト：一度ブラウザに処理を返した後にサーバーに再アクセスしてWeb画面を生成する</li>
+</ul>
+</li>
+<li><p>JSFではリダイレクトを使用して次の画面に遷移する方法を提供している</p>
+<ul>
+<li>１画面前のURLを表示することを避けるためにこの機能を提供<ul>
+<li><code>?faces-redirect=true</code>というパラメータを付与すると動くらしい</li>
+</ul>
+</li>
+<li>問題：リクエストスコープが効かなくなる<ul>
+<li>対策：フラッシュスコープという特別なスコープを提供している</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-JSFの内部処理"><a href="#2-4-JSFの内部処理" class="headerlink" title="2.4 JSFの内部処理"></a>2.4 JSFの内部処理</h3><h4 id="2-4-1-コンポーネント指向"><a href="#2-4-1-コンポーネント指向" class="headerlink" title="2.4.1 コンポーネント指向"></a>2.4.1 コンポーネント指向</h4><ul>
+<li>JSFではWebアプリケーションをより直感的に開発するためにコンポーネントという考え方を導入している</li>
+<li><p>メリット</p>
+<ul>
+<li>Web画面と処理の紐付けを直感的に行える（HTTPの理解が不要）</li>
+<li>コンポーネントが再利用しやすい</li>
+<li>Web画面のプロトタイプ作成が容易に行える</li>
+</ul>
+</li>
+<li><p>コンポーネントツリーとしてアクセスできるJavaクラスが存在するらしい</p>
+</li>
+</ul>
+<h4 id="2-4-2-ライフサイクル"><a href="#2-4-2-ライフサイクル" class="headerlink" title="2.4.2 ライフサイクル"></a>2.4.2 ライフサイクル</h4><ol>
+<li>ビューの復元(Restore View)</li>
+<li>リクエスト値の適用(Apply Request Values)</li>
+<li>入力チェック(Process Validations)</li>
+<li>モデル値の更新(Update Model Values)</li>
+<li>アプリケーションの実施(Invoke Application)</li>
+<li>画面の生成(REnder Response)</li>
+</ol>
+<ul>
+<li>最初のアクセスの場合<ul>
+<li>①の復元フェーズ終了後に、⑥の画面生成フェーズに進み、画面を表示</li>
+</ul>
+</li>
+<li>ポストバックの場合<ul>
+<li>すでにコンポーネントツリーがあり、値の入力やボタンの操作が実施されているので、</li>
+<li>①→⑥まで順番に実施</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-JSFの基本設定"><a href="#2-5-JSFの基本設定" class="headerlink" title="2.5 JSFの基本設定"></a>2.5 JSFの基本設定</h3><h4 id="2-5-1-フォルダ構成"><a href="#2-5-1-フォルダ構成" class="headerlink" title="2.5.1 フォルダ構成"></a>2.5.1 フォルダ構成</h4><ul>
+<li><p>JSFを使用したWebアプリケーションを作成するにはWAR形式のプロジェクトを作成</p>
+</li>
+<li><p>EAR形式もある</p>
+<ul>
+<li>複数のWARファイルやJARファイルを１つにまとめてZIPにしたもの</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-5-2-設定ファイル"><a href="#2-5-2-設定ファイル" class="headerlink" title="2.5.2 設定ファイル"></a>2.5.2 設定ファイル</h4><ul>
+<li><p>必要な設定ファイル</p>
+<ul>
+<li>web.xml</li>
+<li>faces-config.xml</li>
+<li>アプリケーションサーバーの設定ファイル</li>
+</ul>
+</li>
+<li><p>web.xml</p>
+<ul>
+<li>デプロイメントディスクリプタというWebアプリケーションの設定を記述するファイル<ul>
+<li>webアプリケーションの初期設定</li>
+<li>サーブレットの設定</li>
+<li>セキュリティの設定</li>
+</ul>
+</li>
+<li>WebアプリケーションでJSFを使用する場合は、web.xmlにJSFが提供するFacesServletを設定</li>
+</ul>
+</li>
+<li><p>サーブレットの定義</p>
+<ul>
+<li>JSFは内部でサーブレットを使用している</li>
+<li>そのためJSFを使用するにはJSFのサーブレット指定が必要</li>
+<li>ロードオンスタートアップの指定はサーバーの起動時にサーブレットのインスタンス化と初期化を行うという指定</li>
+</ul>
+</li>
+<li><p>サーブレットのマッピング定義</p>
+<ul>
+<li>URLパターンとサーブレットの定義で指定したサーブレット名を指定</li>
+<li>URLパターンは「/faces/*」という指定がJSFでは一般的らしい</li>
+<li>facesで始まっている場合に、JSFのアクセスであるとみなされる</li>
+</ul>
+</li>
+<li><p>faces-config.xml</p>
+<ul>
+<li>JSFの設定を記述するファイル<ul>
+<li>国際化のせてい</li>
+<li>フェーズリスなのクラス指定など</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>アプリケーション・サーバー用の設定ファイル</p>
+</li>
+</ul>
+<h4 id="2-5-3-リソースフォルダ"><a href="#2-5-3-リソースフォルダ" class="headerlink" title="2.5.3 リソースフォルダ"></a>2.5.3 リソースフォルダ</h4><ul>
+<li>JSFの仕様で<code>resources</code>フォルダに配置するフォルダ構成が決められているらしい</li>
+<li><code>resouces/[ローカルプレフィックス]/[ライブラリ名]/[ライブラリバージョン]/[リソース名]/[リソースバージョン]</code><ul>
+<li>→わかりにくいと感じた</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-6-フェースレットタグライブラリ"><a href="#2-6-フェースレットタグライブラリ" class="headerlink" title="2.6 フェースレットタグライブラリ"></a>2.6 フェースレットタグライブラリ</h3><h4 id="2-6-1-タグライブラリの種類"><a href="#2-6-1-タグライブラリの種類" class="headerlink" title="2.6.1 タグライブラリの種類"></a>2.6.1 タグライブラリの種類</h4><ul>
+<li><p>タグライブラリ</p>
+<ul>
+<li>画面レイアウトで使用するタグを定義したもの</li>
+</ul>
+</li>
+<li><p>種類</p>
+<ul>
+<li>コアタグライブラリ：他のタグライブラリのサポート的な機能を提供するタグライブラリ</li>
+<li>HTMLタグライブラリ：HTMLのタグを生成するタグライブラリ</li>
+<li>フェースレットテンプレーティングタグライブラリ：画面のテンプレート処理や繰り返し処理などを提供するタグライブラリ</li>
+<li>コンポジットコンポーネントタグライブラリ：コンポジットコンポーネントの作成に使用するタグライブラリ</li>
+<li>JSTLコア/ファンクションタグライブラリ：JSPで使用するタグライブラリ</li>
+</ul>
+</li>
+<li><p>最も使用頻度が高いのは「HTMLタグライブラリ</p>
+</li>
+<li><p>JSTLコア/ファンクションタグライブラリ：JSPというJavaEEの仕様で使用するライブラリでJSFでも使用できるが、他のフェースレットが提供するタグライブラリとの実行タイミングが違うため不具合が発生しやすく、基本的に利用しない</p>
+</li>
+<li><p>※ここで再確認</p>
+<ul>
+<li>JSF<ul>
+<li>フェースレット<ul>
+<li>フェースレットタグライブラリ</li>
+<li>EL式</li>
+</ul>
+</li>
+<li>マネージドビーン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>タグライブラリを利用するには、冒頭でネームスペースの宣言が必要</p>
+</li>
+</ul>
+<h4 id="2-6-2-HTMLタグライブラリ"><a href="#2-6-2-HTMLタグライブラリ" class="headerlink" title="2.6.2 HTMLタグライブラリ"></a>2.6.2 HTMLタグライブラリ</h4><ul>
+<li>一覧を表で記載（割愛）</li>
+</ul>
+<h4 id="2-6-3-ヘッダーとボディ"><a href="#2-6-3-ヘッダーとボディ" class="headerlink" title="2.6.3 ヘッダーとボディ"></a>2.6.3 ヘッダーとボディ</h4><p><code>&lt;h:head&gt;</code><br><code>&lt;h:body&gt;</code></p>
+<h4 id="2-6-4-リソース"><a href="#2-6-4-リソース" class="headerlink" title="2.6.4 リソース"></a>2.6.4 リソース</h4><h4 id="2-6-5-文字の出力"><a href="#2-6-5-文字の出力" class="headerlink" title="2.6.5 文字の出力"></a>2.6.5 文字の出力</h4><h4 id="2-6-6-リンクとボタン"><a href="#2-6-6-リンクとボタン" class="headerlink" title="2.6.6 リンクとボタン"></a>2.6.6 リンクとボタン</h4><p>(割愛)</p>
+<h3 id="2-7-EL（Expression-Language）"><a href="#2-7-EL（Expression-Language）" class="headerlink" title="2.7 EL（Expression Language）"></a>2.7 EL（Expression Language）</h3><h4 id="2-7-1-ELとは"><a href="#2-7-1-ELとは" class="headerlink" title="2.7.1 ELとは"></a>2.7.1 ELとは</h4><ul>
+<li>ELとは、演算の結果や値の参照結果を返却するための簡易記法</li>
+<li><code>#</code>または、<code>$</code>で始まり、波括弧で囲んだ中に式を記述<ul>
+<li><code>$</code>を使用した場合：ページがレンダリングされた時点で即時評価</li>
+<li><code>#</code>を使用した場合：コンポーネントに式として渡され、ライフサイクルのタイミングで遅延評価される<ul>
+<li>JSFでは基本的に<code>$</code>を使用せずに、<code>#</code>を使用する</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-7-2-オブジェクトの参照"><a href="#2-7-2-オブジェクトの参照" class="headerlink" title="2.7.2 オブジェクトの参照"></a>2.7.2 オブジェクトの参照</h4><ul>
+<li><code>@Named</code>を付与したマネージドビーンの名前はEL式から参照できる</li>
+</ul>
+<h4 id="2-7-3-暗黙オブジェクト"><a href="#2-7-3-暗黙オブジェクト" class="headerlink" title="2.7.3 暗黙オブジェクト"></a>2.7.3 暗黙オブジェクト</h4><ul>
+<li>暗黙的に参照可能なオブジェクト一覧を記載（割愛）</li>
+</ul>
+<h4 id="2-7-4-演算子"><a href="#2-7-4-演算子" class="headerlink" title="2.7.4 演算子"></a>2.7.4 演算子</h4><ul>
+<li>算術演算子</li>
+<li>関係演算子</li>
+<li>論理演算子</li>
+<li>三項演算子</li>
+<li>空演算子<ul>
+<li><code>empty a</code> : aがNullまたは空文字の場合trueを返す</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-7-5-メソッドの呼び出し"><a href="#2-7-5-メソッドの呼び出し" class="headerlink" title="2.7.5 メソッドの呼び出し"></a>2.7.5 メソッドの呼び出し</h4><ul>
+<li>メソッドも呼び出せるよって言う説明（割愛）</li>
+</ul>
+<h2 id="Chapter-3-プレゼンテーション層の開発――JSFの応用-その1"><a href="#Chapter-3-プレゼンテーション層の開発――JSFの応用-その1" class="headerlink" title="Chapter 3 プレゼンテーション層の開発――JSFの応用 その1"></a>Chapter 3 プレゼンテーション層の開発――JSFの応用 その1</h2><h3 id="3-1-入力チェック"><a href="#3-1-入力チェック" class="headerlink" title="3.1 入力チェック"></a>3.1 入力チェック</h3><h4 id="3-1-1-入力チェック（バリデーション）とは"><a href="#3-1-1-入力チェック（バリデーション）とは" class="headerlink" title="3.1.1 入力チェック（バリデーション）とは"></a>3.1.1 入力チェック（バリデーション）とは</h4><ul>
+<li>JSFのライフサイクルの中にある</li>
+<li>JSFでは入力した値をチェックする機能を提供している</li>
+<li>バリデーションの方法として以下の２つを提供<ul>
+<li>JSFの初期から提供されているJSFのバリデーション</li>
+<li>JavaEE6で導入されたビーンバリデーション★</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-1-2-JSFのバリデーション"><a href="#3-1-2-JSFのバリデーション" class="headerlink" title="3.1.2 JSFのバリデーション"></a>3.1.2 JSFのバリデーション</h4><ul>
+<li>バリデーションタグを利用する（割愛）</li>
+</ul>
+<h4 id="3-1-3-JSFのカスタムバリデータ"><a href="#3-1-3-JSFのカスタムバリデータ" class="headerlink" title="3.1.3 JSFのカスタムバリデータ"></a>3.1.3 JSFのカスタムバリデータ</h4><ul>
+<li>細かなチェックをするために独自でバリデータを作成する方法<ul>
+<li>メソッドを作成する方法</li>
+<li>クラスを作成する方法</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-1-4-ビーンバリデーションとは"><a href="#3-1-4-ビーンバリデーションとは" class="headerlink" title="3.1.4 ビーンバリデーションとは"></a>3.1.4 ビーンバリデーションとは</h4><ul>
+<li>ビーンのフィールドにアノテーションを付与するだけでチェックができる</li>
+</ul>
+<h4 id="3-1-5-ビーンバリデーションのバリデータ"><a href="#3-1-5-ビーンバリデーションのバリデータ" class="headerlink" title="3.1.5 ビーンバリデーションのバリデータ"></a>3.1.5 ビーンバリデーションのバリデータ</h4><ul>
+<li><p>ビーンバリデーションのアノテーション一覧</p>
+<ul>
+<li><code>@NotNull</code></li>
+<li><code>@Null</code></li>
+<li><code>@Max</code></li>
+<li><code>@Min</code></li>
+<li><code>.....</code></li>
+</ul>
+</li>
+<li><p>point: 入力値が空文字の場合NULL値として扱う場合、web.xmlにパラメータを追加する必要がある</p>
+<ul>
+<li><code>javax.faces.INTERPRET_EMPTY_STRING_SUBMITED_VALUES_AS_NULL</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="3-1-6-ビーンバリデーションのエラーメッセージ変更"><a href="#3-1-6-ビーンバリデーションのエラーメッセージ変更" class="headerlink" title="3.1.6 ビーンバリデーションのエラーメッセージ変更"></a>3.1.6 ビーンバリデーションのエラーメッセージ変更</h4><ul>
+<li>メッセージを変更する方法は２つある<ul>
+<li>アノテーションに、<code>message</code>属性を指定する</li>
+<li>propertiesファイルで管理する<ul>
+<li>多言語対応などする場合、こちらが得策</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-1-7-ビーンバリデーションのバリデータ統合"><a href="#3-1-7-ビーンバリデーションのバリデータ統合" class="headerlink" title="3.1.7 ビーンバリデーションのバリデータ統合"></a>3.1.7 ビーンバリデーションのバリデータ統合</h4><ul>
+<li>MEMO: ★このテクニックは覚えておきたい</li>
+<li>入力チェックに複数の条件がある場合には、フィールドに標準のアノテーションを複数設定するが、同じような条件を何度も設定するのは面倒なので、アノテーションを作成してまとめる</li>
+</ul>
+<h4 id="3-1-8-ビーンバリデーションのカスタマイズバリデータ"><a href="#3-1-8-ビーンバリデーションのカスタマイズバリデータ" class="headerlink" title="3.1.8 ビーンバリデーションのカスタマイズバリデータ"></a>3.1.8 ビーンバリデーションのカスタマイズバリデータ</h4><ul>
+<li>ビーンバリデーションのカスタマイズも可能<ul>
+<li>MEMO:（実装方法省略）</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-コンバータ"><a href="#3-2-コンバータ" class="headerlink" title="3.2 コンバータ"></a>3.2 コンバータ</h3><h4 id="3-2-1-コンバータの役割"><a href="#3-2-1-コンバータの役割" class="headerlink" title="3.2.1 コンバータの役割"></a>3.2.1 コンバータの役割</h4><ul>
+<li>Web画面に表示する文字列とマネージドビーンのプロパティで保持するJavaのオブジェクトを変換するための仕組み</li>
+<li><p>JSFにより自動的に変換されるオブジェクトも存在する</p>
+<ul>
+<li>short</li>
+<li>int</li>
+<li>long</li>
+<li>float</li>
+<li>double</li>
+<li>boolean</li>
+<li>byte</li>
+<li>char</li>
+<li>BigInteger</li>
+<li>BigDecimal</li>
+</ul>
+</li>
+<li><p>JSFでは任意のフォーマットで画面表示を行うため、標準のコンバータを提供している</p>
+</li>
+</ul>
+<h4 id="3-2-2-標準のコンバータ"><a href="#3-2-2-標準のコンバータ" class="headerlink" title="3.2.2 標準のコンバータ"></a>3.2.2 標準のコンバータ</h4><ul>
+<li>JSFが標準で提供するコンバータは、日付や数値とおじ列を相互に変換するコンバータ<ul>
+<li>f:convertDateTime</li>
+<li>f:convertNumber</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-2-3-カスタムコンバータ"><a href="#3-2-3-カスタムコンバータ" class="headerlink" title="3.2.3 カスタムコンバータ"></a>3.2.3 カスタムコンバータ</h4><ul>
+<li><p>独自で作成したクラスなどの標準のコンバータでは対応できないクラスでは、独自にコンバータを作成する</p>
+<ul>
+<li>JSFが提供する<code>javax.faces.convert.Converter</code>インターフェースを実装したクラスを作成する</li>
+</ul>
+</li>
+<li><p>MEMO: 確かに変換が必要な場面は絶対あるはずなので、thymeleafとかがどのように変換を持っているか確認する</p>
+<ul>
+<li>他のフレームワークでも、convertを実装する方法を書いていた<ul>
+<li><a href="https://qiita.com/alpha_pz/items/21c6eda2fe227abfa403" target="_blank" rel="noopener">https://qiita.com/alpha_pz/items/21c6eda2fe227abfa403</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MEMO: DBSlectした結果をList(category)にかかえているような書き方をしている</p>
+</li>
+</ul>
+<h3 id="3-3-コンポーネントのカスタマイズ"><a href="#3-3-コンポーネントのカスタマイズ" class="headerlink" title="3.3 コンポーネントのカスタマイズ"></a>3.3 コンポーネントのカスタマイズ</h3><ul>
+<li>JSFではフェースレットが提供するコンポーネントを使用してWeb画面を作成</li>
+<li>独自のコンポーネントを作成することもできる</li>
+<li>方法として２つある<ul>
+<li>コンポーネントクラスを作成するカスタムコンポーネント</li>
+<li>フェースレットでコンポーネントを組み合わせて作成するコンポジットコンポーネント★</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-1-コンポジットコンポーネント"><a href="#3-3-1-コンポジットコンポーネント" class="headerlink" title="3.3.1 コンポジットコンポーネント"></a>3.3.1 コンポジットコンポーネント</h4><ul>
+<li>１つのフェースレットファイルを作成するだけで、複数の画面で使い回せるコンポーネントを作成することができる<ul>
+<li>MEMO: thymeleafでincludeしている感じと同じ</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-2-より高度なコンポジットコンポーネント"><a href="#3-3-2-より高度なコンポジットコンポーネント" class="headerlink" title="3.3.2 より高度なコンポジットコンポーネント"></a>3.3.2 より高度なコンポジットコンポーネント</h4><figure class="highlight xhtml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- テンプレート側 --&gt;</span></span><br><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:h</span>=<span class="string">"http://xmlns.jcp.org/jsf/html"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:knowledge</span>=<span class="string">"http://xmlns.jcp.org/jsf/composite/knowledgecomp"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h:head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h:outputStylesheet</span> <span class="attr">library</span>=<span class="string">"css"</span> <span class="attr">name</span>=<span class="string">"style.css"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h:outputScript</span> <span class="attr">name</span>=<span class="string">"jsf.js"</span> <span class="attr">library</span>=<span class="string">"javax.faces"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h:outputScript</span> <span class="attr">library</span>=<span class="string">"js"</span> <span class="attr">name</span>=<span class="string">"application.js"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Knowledge Bank<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h:head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h:body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top_content"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h:form</span> <span class="attr">id</span>=<span class="string">"form"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">h:graphicImage</span> <span class="attr">library</span>=<span class="string">"img"</span> <span class="attr">name</span>=<span class="string">"logo.png"</span> /&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"notice"</span>&gt;</span></span><br><span class="line">                    #&#123;flash.notice&#125;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">knowledge:login</span> <span class="attr">userId</span>=<span class="string">"#&#123;loginBean.userId&#125;"</span> <span class="attr">password</span>=<span class="string">"#&#123;loginBean.password&#125;"</span> <span class="attr">loginButtonAction</span>=<span class="string">"#&#123;loginBean.login()&#125;"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">h:link</span> <span class="attr">outcome</span>=<span class="string">"account/register"</span> <span class="attr">value</span>=<span class="string">"アカウント登録"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">h:form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h:body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xhtml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 利用する側 --&gt;</span></span><br><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:h</span>=<span class="string">"http://xmlns.jcp.org/jsf/html"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:knowledge</span>=<span class="string">"http://xmlns.jcp.org/jsf/composite/knowledgecomp"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h:head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h:outputStylesheet</span> <span class="attr">library</span>=<span class="string">"css"</span> <span class="attr">name</span>=<span class="string">"style.css"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h:outputScript</span> <span class="attr">name</span>=<span class="string">"jsf.js"</span> <span class="attr">library</span>=<span class="string">"javax.faces"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h:outputScript</span> <span class="attr">library</span>=<span class="string">"js"</span> <span class="attr">name</span>=<span class="string">"application.js"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Knowledge Bank<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h:head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h:body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"top_content"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h:form</span> <span class="attr">id</span>=<span class="string">"form"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">h:graphicImage</span> <span class="attr">library</span>=<span class="string">"img"</span> <span class="attr">name</span>=<span class="string">"logo.png"</span> /&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"notice"</span>&gt;</span></span><br><span class="line">                    #&#123;flash.notice&#125;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">knowledge:login</span> <span class="attr">userId</span>=<span class="string">"#&#123;loginBean.userId&#125;"</span> <span class="attr">password</span>=<span class="string">"#&#123;loginBean.password&#125;"</span> <span class="attr">loginButtonAction</span>=<span class="string">"#&#123;loginBean.login()&#125;"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">h:link</span> <span class="attr">outcome</span>=<span class="string">"account/register"</span> <span class="attr">value</span>=<span class="string">"アカウント登録"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">h:form</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h:body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>Column: コンポーネントで利用可能な暗黙オブジェクト<ul>
+<li>カスタムコンポーネント内でよく利用する暗黙オブジェクト<ul>
+<li>cc: コンポジットコンポーネントの情報が取得できる</li>
+<li>component: 現在のコンポーネントの情報や、親や子のコンポーネントの情報にアクセスすることができる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-フェースレットテンプレート"><a href="#3-4-フェースレットテンプレート" class="headerlink" title="3.4 フェースレットテンプレート"></a>3.4 フェースレットテンプレート</h3><h4 id="3-4-1-フェースレットテンプレートの利用"><a href="#3-4-1-フェースレットテンプレートの利用" class="headerlink" title="3.4.1 フェースレットテンプレートの利用"></a>3.4.1 フェースレットテンプレートの利用</h4><ul>
+<li>ヘッダーやサイドバーなどはテンプレート化して管理する説明<ul>
+<li>こっちがthymeleafのincludeに近い</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-5-HTML5フレンドリマークアップ"><a href="#3-5-HTML5フレンドリマークアップ" class="headerlink" title="3.5 HTML5フレンドリマークアップ"></a>3.5 HTML5フレンドリマークアップ</h3><ul>
+<li>JavaEE7(JSF2.2)からHTML5の進化へ対応するためにフレンドリマークアップという機能が導入された<ul>
+<li>以前のJSFでは任意の属性をHTMLとして出力する場合にコンポーネントをカスタマイズして提供していた</li>
+</ul>
+</li>
+<li>画面デザインをWebデザイナーが行い、リッチなWeb画面を作ることが一般化</li>
+</ul>
+<h4 id="3-5-1-パススルーアトリビュート"><a href="#3-5-1-パススルーアトリビュート" class="headerlink" title="3.5.1 パススルーアトリビュート"></a>3.5.1 パススルーアトリビュート</h4><h4 id="3-5-2-パススルーエレメント"><a href="#3-5-2-パススルーエレメント" class="headerlink" title="3.5.2 パススルーエレメント"></a>3.5.2 パススルーエレメント</h4><h3 id="3-6-Ajax"><a href="#3-6-Ajax" class="headerlink" title="3.6 Ajax"></a>3.6 Ajax</h3><h4 id="3-6-1-JSFのAjax対応"><a href="#3-6-1-JSFのAjax対応" class="headerlink" title="3.6.1 JSFのAjax対応"></a>3.6.1 JSFのAjax対応</h4><ul>
+<li>一般的なAjaxの作りでは、データの取得処理や画面の再描画処理をJavascriptで記述する必要がある</li>
+<li><p>JSFのAjax機能を利用するとJavascriptをほとんど記述せずにWeb画面の部分更新が可能</p>
+</li>
+<li><p>Ajax専用のタグを使用して、結果をRenderingしている</p>
+</li>
+<li>MEMO: 専用のタグでAjax処理ができるのは、コンポーネントベースのフレームワークであるJSFの特徴だと感じた</li>
+</ul>
+<h4 id="3-6-2-Ajaxを使用した入力チェック"><a href="#3-6-2-Ajaxを使用した入力チェック" class="headerlink" title="3.6.2 Ajaxを使用した入力チェック"></a>3.6.2 Ajaxを使用した入力チェック</h4><h4 id="3-6-3-Ajaxのイベントハンドリング"><a href="#3-6-3-Ajaxのイベントハンドリング" class="headerlink" title="3.6.3 Ajaxのイベントハンドリング"></a>3.6.3 Ajaxのイベントハンドリング</h4><ul>
+<li>イベント実行中や完了、エラー発生時の処理を記述するための方法</li>
+<li>共通化するための方法を紹介</li>
+</ul>
+<h2 id="Chapter-4-プレゼンテーション層の開発――JSFの応用-その2"><a href="#Chapter-4-プレゼンテーション層の開発――JSFの応用-その2" class="headerlink" title="Chapter 4 プレゼンテーション層の開発――JSFの応用 その2"></a>Chapter 4 プレゼンテーション層の開発――JSFの応用 その2</h2><h3 id="4-1-認証／認可"><a href="#4-1-認証／認可" class="headerlink" title="4.1 認証／認可"></a>4.1 認証／認可</h3><h4 id="4-1-1-認証-認可の仕組み"><a href="#4-1-1-認証-認可の仕組み" class="headerlink" title="4.1.1 認証/認可の仕組み"></a>4.1.1 認証/認可の仕組み</h4><ul>
+<li><p>JavaEEのログイン機能を実現するための認証認可の仕組みについて</p>
+</li>
+<li><p>ログイン機能を利用する手順</p>
+<ol>
+<li>アプリケーションサーバーの認証/認可設定をする。</li>
+<li>アプリケーションの認証/認可設定をする。</li>
+<li>プログラムでログイン/ログアウト機能を作成する。</li>
+</ol>
+</li>
+</ul>
+<h4 id="4-1-2-アプリケーションサーバーの認証設定"><a href="#4-1-2-アプリケーションサーバーの認証設定" class="headerlink" title="4.1.2 アプリケーションサーバーの認証設定"></a>4.1.2 アプリケーションサーバーの認証設定</h4><ul>
+<li>アプリケーション・サーバーに認証の設定を行う必要がある<ul>
+<li>認証データの指定先に<ul>
+<li>ファイル</li>
+<li>データベース</li>
+<li>LDAPサーバー　などを指定する</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ナレッジバンクではデータベースを指定している</li>
+<li>Glasfishを使用した認証の設定方法を説明</li>
+<li><p>Glasfishの管理コンソール</p>
+<ul>
+<li><code>http://localhost:4848/</code></li>
+</ul>
+</li>
+<li><p>認証設定を行うには</p>
+<ul>
+<li>Configurations＞server-config＞Security＞Realms＞New</li>
+</ul>
+</li>
+<li>ナレッジバンクではJDBCレルムを使用するので<ul>
+<li>ClassNameにJDBCRealmを選択する</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-1-3-アプリケーションの認証設定"><a href="#4-1-3-アプリケーションの認証設定" class="headerlink" title="4.1.3 アプリケーションの認証設定"></a>4.1.3 アプリケーションの認証設定</h4><ul>
+<li>アプリケーションサーバーの認証設定が終了したら、</li>
+<li>今度はアプリケーションの認証設定を行う</li>
+</ul>
+<h4 id="4-1-4-ログイン-ログアウト機能の作成"><a href="#4-1-4-ログイン-ログアウト機能の作成" class="headerlink" title="4.1.4 ログイン/ログアウト機能の作成"></a>4.1.4 ログイン/ログアウト機能の作成</h4><ul>
+<li>Oracle18cで接続を試していたがどうしてもうまく行かなかった</li>
+<li><p>Oracle11gだとすぐにうまく行った</p>
+</li>
+<li><p>ログインの仕組みを作って、</p>
+</li>
+<li>実際にloginのfaceletでコンテキストのログインメソッドを呼び出して、認証を済ませる<ul>
+<li>MEMO: springsecurityみたいなやつ　認証設定は必ず実装しておく</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-国際化"><a href="#4-2-国際化" class="headerlink" title="4.2 国際化"></a>4.2 国際化</h3><h4 id="4-2-1-JSFの国際化"><a href="#4-2-1-JSFの国際化" class="headerlink" title="4.2.1 JSFの国際化"></a>4.2.1 JSFの国際化</h4><ul>
+<li>プロパティファイルでロケール管理して、<code>faces-config.xml</code>で切り替え</li>
+<li>UIViewRootクラスのgetLocaleメソッドやsetLocaleメソッドでも切り替えることができるみたい<ul>
+<li>MEMO: ロケール切り替えは実装しておくべき</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-ブックマーカビリティ"><a href="#4-3-ブックマーカビリティ" class="headerlink" title="4.3 ブックマーカビリティ"></a>4.3 ブックマーカビリティ</h3><h4 id="4-3-1-ブックマーカビリティとは"><a href="#4-3-1-ブックマーカビリティとは" class="headerlink" title="4.3.1 ブックマーカビリティとは"></a>4.3.1 ブックマーカビリティとは</h4><ul>
+<li>JSFでは最初にブラウザからアクセスが来た際に、処理をせずに画面を表示する</li>
+<li><p>しかし、Webアプリケーションでデータの一覧や詳細を表示する画面では、なにかしらの事前処理やデータの取得処理が必要</p>
+<ul>
+<li>そこで、JSFでは初回アクセス時に処理を実施する機能を提供している</li>
+</ul>
+</li>
+<li><p>使い方について説明（割愛）</p>
+</li>
+</ul>
+<h3 id="4-4-フェーズリスナ"><a href="#4-4-フェーズリスナ" class="headerlink" title="4.4 フェーズリスナ"></a>4.4 フェーズリスナ</h3><ul>
+<li><p>JSFのライフサイクル</p>
+<ol>
+<li>ビューの復元(Restore View)</li>
+<li>リクエスト値の適用(Apply Request Values)</li>
+<li>入力チェック(Process Validations)</li>
+<li>モデル値の更新(Update Model Values)</li>
+<li>アプリケーションの実施(Invoke Application)</li>
+<li>画面の生成(REnder Response)</li>
+</ol>
+</li>
+<li><p>フェーズ前後で横断的に行う処理はフェーズリスナを使用する</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> knowledgebank.web.listener;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.logging.Logger;</span><br><span class="line"><span class="keyword">import</span> javax.faces.event.PhaseEvent;</span><br><span class="line"><span class="keyword">import</span> javax.faces.event.PhaseId;</span><br><span class="line"><span class="keyword">import</span> javax.faces.event.PhaseListener;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KnowledgePhaseListener</span> <span class="keyword">implements</span> <span class="title">PhaseListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Logger logger = Logger.getLogger(KnowledgePhaseListener.class.getName());</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">beforePhase</span><span class="params">(PhaseEvent event)</span> </span>&#123;</span><br><span class="line">        logger.info(event.getPhaseId() + <span class="string">" beforePhase"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPhase</span><span class="params">(PhaseEvent event)</span> </span>&#123;</span><br><span class="line">        logger.info(event.getPhaseId() + <span class="string">" afterPhase"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> PhaseId <span class="title">getPhaseId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> PhaseId.ANY_PHASE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-5-Java-EE-7で導入されたJSFの機能"><a href="#4-5-Java-EE-7で導入されたJSFの機能" class="headerlink" title="4.5 Java EE 7で導入されたJSFの機能"></a>4.5 Java EE 7で導入されたJSFの機能</h3><h4 id="4-5-1-JSF-2-2-の追加機能"><a href="#4-5-1-JSF-2-2-の追加機能" class="headerlink" title="4.5.1 JSF 2.2 の追加機能"></a>4.5.1 JSF 2.2 の追加機能</h4><ul>
+<li>JSF2.2の仕様には大きな特徴として以下の４つが紹介されている<ul>
+<li>HTML5フレンドリマークアップ（パススルーアトリビュートと、パススルーエレメント）</li>
+<li>リソース・ライブラリコントラクト</li>
+<li>Faces Flows</li>
+<li>ステートレスビュー</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-5-2-リソース・ライブラリコントラクト"><a href="#4-5-2-リソース・ライブラリコントラクト" class="headerlink" title="4.5.2 リソース・ライブラリコントラクト"></a>4.5.2 リソース・ライブラリコントラクト</h4><p>リソースの塊を簡単に切り替えることができる仕組み</p>
+<ul>
+<li>あまり便利に思わなかった</li>
+</ul>
+<h4 id="4-5-3-Faces-Flows"><a href="#4-5-3-Faces-Flows" class="headerlink" title="4.5.3 Faces Flows"></a>4.5.3 Faces Flows</h4><ul>
+<li>フロー処理について記載されている</li>
+<li>スコープを設定ファイルやJavaアノテーションで保持できるみたい<ul>
+<li>MEMO: 他のフレームワークではどのようにスコープ持っているのか確認</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-5-4-ステートレスビュー"><a href="#4-5-4-ステートレスビュー" class="headerlink" title="4.5.4 ステートレスビュー"></a>4.5.4 ステートレスビュー</h4><ul>
+<li><p>状態を保持しないビューを作成する機能</p>
+</li>
+<li><p>JSFでは画面を表示する際にサーバー側似コンポーネントツリーを作成し、同一画面を表示している間はそのコンポーネントツリーを保持していると説明しました。</p>
+</li>
+<li><p>ステートレスビューを使用すると、そのコンポーネントツリーを毎回破棄市、アクセスが来るたびに再作成する動きに変わる</p>
+</li>
+<li><p>ステートレスなアプリを作る上で欠かせない</p>
+<ul>
+<li>MEMO: 他のフレームワークの場合は、redisなどでセッション管理している</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-6-まとめ"><a href="#4-6-まとめ" class="headerlink" title="4.6 まとめ"></a>4.6 まとめ</h3><ul>
+<li>ここまでの内容を理解していれば、十分JSFを使用してWebアプリケーションを作成することができる</li>
+<li><p>紹介していないライブラリ</p>
+<ul>
+<li>PrimeFaces</li>
+<li>RichFaces</li>
+<li>OmniFaces</li>
+</ul>
+</li>
+<li><p>MEMO: 時間があれば見てみる程度で良いかも</p>
+</li>
+</ul>
+<h2 id="Chapter-5-ビジネスロジック層の開発――CDIの利用"><a href="#Chapter-5-ビジネスロジック層の開発――CDIの利用" class="headerlink" title="Chapter 5 ビジネスロジック層の開発――CDIの利用"></a>Chapter 5 ビジネスロジック層の開発――CDIの利用</h2><ul>
+<li><p>本章と次章ではCDIとEJBについて解説</p>
+</li>
+<li><p>本章ではCDI</p>
+<ul>
+<li>CDIとEJBの違いについて解説</li>
+<li>CDIがJavaEEに採用された経緯</li>
+<li>CDIの機能　について解説</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-1-CDIとEJB"><a href="#5-1-CDIとEJB" class="headerlink" title="5.1 CDIとEJB"></a>5.1 CDIとEJB</h3><h4 id="5-1-1-ビジネスロジック層の部品"><a href="#5-1-1-ビジネスロジック層の部品" class="headerlink" title="5.1.1 ビジネスロジック層の部品"></a>5.1.1 ビジネスロジック層の部品</h4><ul>
+<li><p>CDI,EJB</p>
+<ul>
+<li>いずれも「ビジネスロジック」を記述するための部品である</li>
+</ul>
+</li>
+<li><p>CDI</p>
+<ul>
+<li>JavaEE6から採用された新しい技術</li>
+</ul>
+</li>
+<li>EJB<ul>
+<li>Java2Enterprise Edition（J2EE）の頃から存在する歴史ある技術</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-1-2-CDIとEJBの違い"><a href="#5-1-2-CDIとEJBの違い" class="headerlink" title="5.1.2 CDIとEJBの違い"></a>5.1.2 CDIとEJBの違い</h4><ul>
+<li>CDIとEJBの違いは「設計の柔軟性」</li>
+<li>CDIの方が自由度が高い</li>
+</ul>
+<h3 id="5-2-DI（Dependency-Injection）"><a href="#5-2-DI（Dependency-Injection）" class="headerlink" title="5.2 DI（Dependency Injection）"></a>5.2 DI（Dependency Injection）</h3><ul>
+<li>CDIについて知る前にDIについて理解しておく必要がある</li>
+<li>DIが考案された歴史的な背景をたどって、CDIの意義について知ることにする</li>
+</ul>
+<h4 id="5-2-1-DIとは"><a href="#5-2-1-DIとは" class="headerlink" title="5.2.1 DIとは"></a>5.2.1 DIとは</h4><ul>
+<li><p>DI</p>
+<ul>
+<li>部品間の依存関係を少なくすることで、部品の分離と結合をコントロールするための考え方、及びその仕組みのこと</li>
+</ul>
+</li>
+<li><p>「依存」とは、クラス同士が強いつながりを持つことを意味している</p>
+</li>
+<li>直接クラスを宣言し、インスタンス化している強い依存関係は、それ自体で処理が完結しているプログラムモジュール、例えば、</li>
+<li>ビジネスロジック層でしか動かないクラス間の依存については問題ありません。</li>
+<li>一方で各層をまたがる依存関係はできる限り弱い方がよいという考えがある</li>
+<li>依存関係を弱く保つことができれば、変更点は少なくてすむ</li>
+</ul>
+<h4 id="5-2-2-DIによる依存関係の解消"><a href="#5-2-2-DIによる依存関係の解消" class="headerlink" title="5.2.2 DIによる依存関係の解消"></a>5.2.2 DIによる依存関係の解消</h4><ul>
+<li>DIコンテナがあれば、実行時に動的にクラスを選択できる</li>
+<li><p>用途としては以下</p>
+<ul>
+<li>ある条件において別の実装クラスを必要とするケース<ul>
+<li>処理の流れ自体は変わらないが、ユーザーやリクエストの状況に応じて手続きが異なる、あるいは出力先が異なる</li>
+</ul>
+</li>
+<li>テストや開発中のモック入れ替え<ul>
+<li>層をまたぐ処理や開発中のクラスを利用しなければならないときに、仮となるモックを利用し、将来的に完成したクラスを入れ替える場合。</li>
+<li>あるいはテストデータを返却するテスト用のモックと完成したクラスを入れ替える場合</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>COLUMN ファクトリメソッドパターン</p>
+<ul>
+<li>DIが実現している実装の入れ替えは、ファクトリメソッドパターンと呼ばれるデザインパターンを採用することでも実現可能</li>
+<li>ファクトリメソッドパターンはオブジェクトの生成を管理するクラスを設けることで、任意の振る舞いを持つオブジェクトを取得する方式</li>
+<li>ただし、ファクトリメソッドパターンを利用していても、結局返却するインスタンスを選択する処理をソースコードに記述しておく必要があり、</li>
+<li>インスタンスをソースコード外で管理するには、プロパティファイルなどを用いる必要があるので、そうするよりはDIコンテナを利用するほうが楽</li>
+<li>MEMO: 再読</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-3-JavaEEへのDI取り込み"><a href="#5-2-3-JavaEEへのDI取り込み" class="headerlink" title="5.2.3 JavaEEへのDI取り込み"></a>5.2.3 JavaEEへのDI取り込み</h4><p>(<br>  割愛<br>)</p>
+<h3 id="5-3-CDI"><a href="#5-3-CDI" class="headerlink" title="5.3 CDI"></a>5.3 CDI</h3><ul>
+<li><p>CDIとはJavaEE6から導入されたJavaEEアプリケーションサーバー上でDI機能を提供するための仕様</p>
+</li>
+<li><p>CDIを使用するために必要な定義</p>
+<ul>
+<li>インジェクションポイント：<code>@Inject</code>が指定された変数</li>
+<li>CDIビーン：スコープに関するアノテーションが付与されたクラス</li>
+</ul>
+</li>
+<li><p>Column 設定ファイル beans.xml</p>
+<ul>
+<li>JavaEE7 からCDIを使うための設定ファイルであるbeans.xmlは特定の用途を除き不要になりました</li>
+<li>beanx.xmlはインジェクションポイントとCDIビーンの関係性を記述するためのものでしたが、現在では自動的に解決する用になっている</li>
+</ul>
+</li>
+<li><p>CDIの利点</p>
+<ul>
+<li>インジェクションを行うのが簡単（アノテーションのみで設定ファイル不要）</li>
+<li>DIを基礎とした様々な機能があらかじめ準備されている</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-4-CDI基本編"><a href="#5-4-CDI基本編" class="headerlink" title="5.4 CDI基本編"></a>5.4 CDI基本編</h3><ul>
+<li>CDI限定子：複数のインジェクション候補クラスが存在する場合に、クラスを特定するためのアノテーション <code>javax.inject.Qualifier</code></li>
+</ul>
+<h4 id="5-4-1-CDIコンテナによるインジェクション"><a href="#5-4-1-CDIコンテナによるインジェクション" class="headerlink" title="5.4.1 CDIコンテナによるインジェクション"></a>5.4.1 CDIコンテナによるインジェクション</h4><ul>
+<li>CDIコンテナに存在するスコープを過ぎたオブジェクトは破棄される</li>
+</ul>
+<h4 id="5-4-2-CDIの型解決方法"><a href="#5-4-2-CDIの型解決方法" class="headerlink" title="5.4.2 CDIの型解決方法"></a>5.4.2 CDIの型解決方法</h4><ul>
+<li><p>CDIがインジェクションポイントに対して注入する対象となるインスタンスを解決する方法は２通りある</p>
+<ul>
+<li>インジェクションポイントと対象インスタンスが１対１の場合（自動解決）</li>
+<li>CDI限定子もしくは、beans.xml(@Alternative)で解決する方法</li>
+</ul>
+</li>
+<li><p>結論：CDI限定子（Qualifier）を使用して書いていくのがよい</p>
+<ul>
+<li>設定ファイルも必要ないし、ソースコードを柔軟に変更しながら開発ができるため</li>
+</ul>
+</li>
+<li><p>Column インターフェースを利用するべきか</p>
+<ul>
+<li>結論：インターフェースは準備しておくべき</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-5-CDI応用編"><a href="#5-5-CDI応用編" class="headerlink" title="5.5 CDI応用編"></a>5.5 CDI応用編</h3><ul>
+<li>CDIに関わる応用的な利用方法について記述</li>
+<li>CDIの付加機能<ul>
+<li>イベント処理：CDIビーン上である条件を満たした場合に、別のクラスに対して通知を行う機能</li>
+<li>ステレオタイプ：複数アノテーションをまとめて定義する機能</li>
+<li>プロデューサ/ディスポーザ：クラスではなく、フィールドそのものやメソッドの戻り値をインジェクションポイントに注入する機能</li>
+<li>インターセプター/デコレータ：処理の前後に別の処理を入れ込んだり、追加したりする機能</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-5-1-イベント処理"><a href="#5-5-1-イベント処理" class="headerlink" title="5.5.1 イベント処理"></a>5.5.1 イベント処理</h4><ul>
+<li><p>イベント処理とは</p>
+<ul>
+<li>設定した閾値を超えるなど、特定の条件を満たす情報が発生したとき、その通知と情報をやりとりすることを指す</li>
+<li>CDIではイベント発火はCDIビーン上で行い、それを処理するクラスを特別な呼び方として「オブザーバ」と呼ぶ</li>
+</ul>
+</li>
+<li><p>イベント処理の実装</p>
+<ul>
+<li>イベント情報を格納するクラスを準備する</li>
+<li>イベントを発火するCDIビーンを作成する</li>
+<li>オブザーバクラスを作成する</li>
+</ul>
+</li>
+<li><p>イベント処理の留意事項</p>
+<ul>
+<li>イベント発火からオブザーバの処理までがすべて同期で実行される</li>
+<li>非同期だと勘違いしないように</li>
+<li>参照関係を持たず、プログラムモジュール間似おける情報のやり取りを非同期で実行したい場合には、次章で説明するJMSを利用するなど別の方法を検討する必要がある</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-5-2-ステレオタイプの利用"><a href="#5-5-2-ステレオタイプの利用" class="headerlink" title="5.5.2 ステレオタイプの利用"></a>5.5.2 ステレオタイプの利用</h4><ul>
+<li>複数のアノテーション定義をまとめて管理できる</li>
+<li><code>@StereoType</code>を付与してまとめていく</li>
+<li><p>上書きもできるが、あまり上書きしすぎると良くない</p>
+</li>
+<li><p>MEMO: 管理方法について</p>
+<ul>
+<li>パッケージ名を<code>stereotype</code>で切って管理する</li>
+<li>クラス名称の接尾字に<code>Type</code>をつけておくとアノテーションがステレオタイプで有ることを明示できる</li>
+</ul>
+</li>
+<li><p>MEMO: Springでもまとめていくアノテーションあるか</p>
+</li>
+</ul>
+<h4 id="5-5-3-プロデューサ-ディスポーザの利用"><a href="#5-5-3-プロデューサ-ディスポーザの利用" class="headerlink" title="5.5.3 プロデューサ/ディスポーザの利用"></a>5.5.3 プロデューサ/ディスポーザの利用</h4><ul>
+<li>プロデューサを利用すると、インジェクションポイントに注入するオブジェクトをプログラム上で動的に変更することができる</li>
+<li><p>プロデューサにより作成されたオブジェクトが終了処理の必要なオブジェクトである場合、ディスポーザを利用することで終了処理を記述することができる</p>
+</li>
+<li><p>プロデューサアノテーションをメソッドに付与して戻り値に<code>@Inject</code>指定した変数と同じ型を指定してあげる</p>
+</li>
+<li>メソッドで処理されたあとのオブジェクトがDIコンテナに格納され、インジェクションされる</li>
+<li><p>Disposesアノテーションは、Producerメソッドで提供されたクラスの終了処理を行うためのディスポーザ</p>
+</li>
+<li><p>MEMO: Springにもこの概念があるかどうか確認</p>
+</li>
+</ul>
+<h4 id="5-5-4-インターセプタとデコレータ"><a href="#5-5-4-インターセプタとデコレータ" class="headerlink" title="5.5.4 インターセプタとデコレータ"></a>5.5.4 インターセプタとデコレータ</h4><ul>
+<li><p>インターセプターとデコレータについて解説</p>
+<ul>
+<li>すでに作成済みのメソッドの処理に対して、外部のクラスを用いてその処理の前後や、処理内容に変更を加えることができる技術</li>
+</ul>
+</li>
+<li><p>インターセプター：対象となる処理の前後やライフサイクルに応じて処理を行うための仕組み</p>
+</li>
+<li><p>定義方法</p>
+<ul>
+<li><code>@Interceptor</code>を付与したクラスを作成、メソッドに特定のアノテーション付与して機能に関与しない処理を実装</li>
+<li>利用側のメソッドで<code>@Interceptors()</code>の引数に作成したインターセプタークラスを追加する</li>
+<li>または、beans.xmlに使用するインターセプターを定義する</li>
+</ul>
+</li>
+<li><p>Column どこでインターセプターを定義する？</p>
+<ul>
+<li>機能処理内にインターセプター（非機能処理）を記載するのはナンセンス</li>
+<li>beans.xmlで管理する方が良いのではという意見が記載されている</li>
+</ul>
+</li>
+<li><p>デコレータ：機能追加をするための仕組み</p>
+<ul>
+<li>共通のインターフェースを実装したクラスに処理を委譲する</li>
+</ul>
+</li>
+<li><p>MEMO: デコレータの使い所について確認</p>
+<ul>
+<li>Springで同様の機能あるかどうか</li>
+<li>インターセプター＝AOP？こちらも使い所についてまとめておく</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-6-まとめ"><a href="#5-6-まとめ" class="headerlink" title="5.6 まとめ"></a>5.6 まとめ</h3><p>機能が非常に豊富であることと、ルール似基づいた設計と実装が必要であることをご理解いただけたと思います。</p>
+<h2 id="Chapter-6-ビジネスロジック層の開発――EJBの利用"><a href="#Chapter-6-ビジネスロジック層の開発――EJBの利用" class="headerlink" title="Chapter 6 ビジネスロジック層の開発――EJBの利用"></a>Chapter 6 ビジネスロジック層の開発――EJBの利用</h2><h3 id="6-1-Enterprise-Java-Beans（EJB）"><a href="#6-1-Enterprise-Java-Beans（EJB）" class="headerlink" title="6.1 Enterprise Java Beans（EJB）"></a>6.1 Enterprise Java Beans（EJB）</h3><h4 id="6-1-1-EJBとは"><a href="#6-1-1-EJBとは" class="headerlink" title="6.1.1 EJBとは"></a>6.1.1 EJBとは</h4><ul>
+<li>アプリケーションサーバー上で動作するJavaのプログラムのうち、特に「ビジネスロジック」を担当する部品を指す</li>
+<li><p>EJBは</p>
+<ul>
+<li>サーブレットやJSF、Webサーバーなどアプリケーションサーバー外からのリクエストを受け付ける層と</li>
+<li>データベースなどへ情報の永続化を行う層の中間の層の部品として機能する</li>
+</ul>
+</li>
+<li><p>機能 EJB3.2</p>
+<ul>
+<li>トランザクション制御</li>
+<li>Java Persistence APIを介した永続化処理</li>
+<li>Java Messageing Serviceを介したメッセージ駆動処理</li>
+<li>非同期実行制御</li>
+<li>同期実行制御</li>
+<li>スケジュールに基づいた実行</li>
+<li>JNDIを介したインスタンス取得（現在はアノテーションを利用）</li>
+<li>リモートクライアントからの実行</li>
+<li>セキュリティ</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-1-2-EJBの利点"><a href="#6-1-2-EJBの利点" class="headerlink" title="6.1.2 EJBの利点"></a>6.1.2 EJBの利点</h4><ul>
+<li>JavaEETutorialを参考</li>
+<li>EJBの利点<ul>
+<li>EJBコンテナがシステムレベルのサービスを提供してくれるため、開発者はビジネスロジックの構築に集中できる</li>
+<li>クライアントとの分離。クライアントにはビジネスロジックを実装する必要がない</li>
+<li>JavaEE準拠のアプリケーションサーバー上であればどこでも動く</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-1-3-EJBの種類"><a href="#6-1-3-EJBの種類" class="headerlink" title="6.1.3 EJBの種類"></a>6.1.3 EJBの種類</h4><ul>
+<li>３種類ある<ul>
+<li>セッションビーン</li>
+<li>メッセージドリブンビーン</li>
+<li>タイマー</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-2-セッションビーン"><a href="#6-2-セッションビーン" class="headerlink" title="6.2 セッションビーン"></a>6.2 セッションビーン</h3><h4 id="6-2-1-セッションビーンとは"><a href="#6-2-1-セッションビーンとは" class="headerlink" title="6.2.1 セッションビーンとは"></a>6.2.1 セッションビーンとは</h4><ul>
+<li>EJBの中核を成すコンポーネント</li>
+</ul>
+<h4 id="6-2-2-セッションビーンの種類"><a href="#6-2-2-セッションビーンの種類" class="headerlink" title="6.2.2 セッションビーンの種類"></a>6.2.2 セッションビーンの種類</h4><ul>
+<li>セッションビーンの種類<ul>
+<li>ステートレスセッションビーン</li>
+<li>ステートフルセッションビーン</li>
+<li>シングルトン</li>
+<li>タイマー</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-2-3-ステートレスセッションビーン"><a href="#6-2-3-ステートレスセッションビーン" class="headerlink" title="6.2.3 ステートレスセッションビーン"></a>6.2.3 ステートレスセッションビーン</h4><ul>
+<li>一番良く利用されるEJBであり、ごくシンプルで基本的なEJB</li>
+<li>ステートレスセッションビーンのクラスに<code>@Stateless</code>を付与</li>
+<li><p>利用側は<code>@EJB</code>を付与して使用する</p>
+</li>
+<li><p><code>@Stateful</code>アノテーションを利用する</p>
+</li>
+<li><p>留意点</p>
+<ul>
+<li>クライアントごとにステートフルセッションビーンのインスタンスが作成される</li>
+</ul>
+</li>
+<li><p>サーブレットからステートフルセッションビーンを呼び出す場合、</p>
+</li>
+<li>通常サーブレットは１リクエストスレッドにより１つのインスタンスが利用されるモデルであるため、</li>
+<li><p>状態を保持できない</p>
+</li>
+<li><p>ライフサイクルの制御</p>
+<ul>
+<li>生成</li>
+<li>活性化</li>
+<li>非活性化</li>
+<li>破棄</li>
+</ul>
+</li>
+<li><p>非活性化されると、メモリ外にシリアライズ処理され出力される。</p>
+</li>
+<li>必要になるとデシリアライズされ、メモリ上に復帰する</li>
+</ul>
+<h4 id="6-2-5-シングルトンセッションビーン"><a href="#6-2-5-シングルトンセッションビーン" class="headerlink" title="6.2.5 シングルトンセッションビーン"></a>6.2.5 シングルトンセッションビーン</h4><ul>
+<li><code>@Singleton</code>アノテーションを付与</li>
+<li><p>設定ファイルの読み出しの管理などで使う</p>
+</li>
+<li><p>COLUMN <code>@Startup</code>アノテーション</p>
+<ul>
+<li>デプロイされたアプリケーションが有効化されたタイミングですぐにオブジェクトを生成するよう、アプリケーションサーバーに支持するもの</li>
+<li><code>@DependsOn</code>というアノテーションもある<ul>
+<li>初期化の依存関係を解消するためのもの</li>
+</ul>
+</li>
+<li>MEMO: Springの場合初期化のアノテーションは何を使っているか</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-2-6-非同期処理"><a href="#6-2-6-非同期処理" class="headerlink" title="6.2.6 非同期処理"></a>6.2.6 非同期処理</h4><ul>
+<li>実装には「<code>@Asynchronous</code>アノテーション」を使用</li>
+<li><p>クラスかメソッドに定義する</p>
+<ul>
+<li>クラスの場合はすべてのメソッドが非同期になる</li>
+<li>メソッドの場合は対象メソッドのみ非同期になる</li>
+</ul>
+</li>
+<li><p>MEMO: Futureインターフェースを介した操作について理解する</p>
+</li>
+<li><p>Column 非同期処理の再実行</p>
+<ul>
+<li>EJBの非同期実行には処理の再投入（再実行）のためのAPIは定義されていないので</li>
+<li>自前で実装するか、他のアーキテクチャを利用する方法も検討する</li>
+<li>キューを利用して後述のメッセージドリブンビーンを使うなどが考えられる</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-2-7-トランザクション"><a href="#6-2-7-トランザクション" class="headerlink" title="6.2.7 トランザクション"></a>6.2.7 トランザクション</h4><ul>
+<li><code>@TransactionManagement</code>アノテーション</li>
+<li><code>@TransactionAttribute</code>アノテーションを使用するらしい</li>
+</ul>
+<p>詳しい使い方については割愛</p>
+<h3 id="6-3-メッセージドリブンビーン"><a href="#6-3-メッセージドリブンビーン" class="headerlink" title="6.3 メッセージドリブンビーン"></a>6.3 メッセージドリブンビーン</h3><ul>
+<li>メッセージドリブンビーン（Message Driven Bean: MDB）について解説していく<ul>
+<li>メッセージと呼ばれるものを受け取ることで起動するという用途が限定的なコンポーネント</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-3-1-メッセージドリブン便とは"><a href="#6-3-1-メッセージドリブン便とは" class="headerlink" title="6.3.1 メッセージドリブン便とは"></a>6.3.1 メッセージドリブン便とは</h4><ul>
+<li><p>MEMO: JMSも理解を深める必要あり</p>
+</li>
+<li><p>JMS</p>
+<ul>
+<li>キューまたはトピックと呼ばれる方式を利用して、主にシステム間やアプリケーション間の情報を受け渡しを行うための仕組み</li>
+</ul>
+</li>
+<li><p>Column キューとトピック</p>
+<ul>
+<li>キューとトピックの違いは、送信元と受取側の数の違いにある<ul>
+<li>キュー：１対１</li>
+<li>トピック：N対M（多対多）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>メッセージの受取を担当するのがメッセージドリブンビーン</p>
+</li>
+<li>MDBは常にキューまたはトピックにメッセージが配信されるのを待機し、監視している</li>
+</ul>
+<h4 id="6-3-2-実装例"><a href="#6-3-2-実装例" class="headerlink" title="6.3.2 実装例"></a>6.3.2 実装例</h4><p>割愛</p>
+<ul>
+<li>MEMO: JMSの使用方法とSpringJMSを使う</li>
+</ul>
+<h3 id="6-4-タイマー"><a href="#6-4-タイマー" class="headerlink" title="6.4 タイマー"></a>6.4 タイマー</h3><h4 id="6-4-1-タイマーとは"><a href="#6-4-1-タイマーとは" class="headerlink" title="6.4.1 タイマーとは"></a>6.4.1 タイマーとは</h4><ul>
+<li>EJBには時間を指定して起動するための「タイマーサービス」というものが定義されている</li>
+</ul>
+<p>タイマーはバッチ処理とは異なるので、むやみに使用するべきではない</p>
+<ul>
+<li>使用方法は以下の２種類存在する<ul>
+<li>TimerServiceAPIから登録する</li>
+<li><code>@Schedule</code>を使って登録する</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-4-2-タイマーサービスのサンプル"><a href="#6-4-2-タイマーサービスのサンプル" class="headerlink" title="6.4.2 タイマーサービスのサンプル"></a>6.4.2 タイマーサービスのサンプル</h4><p>割愛</p>
+<h4 id="6-4-3-Scheduleの実装サンプル"><a href="#6-4-3-Scheduleの実装サンプル" class="headerlink" title="6.4.3 @Scheduleの実装サンプル"></a>6.4.3 @Scheduleの実装サンプル</h4><p>割愛</p>
+<h3 id="6-5-EJBの設計"><a href="#6-5-EJBの設計" class="headerlink" title="6.5 EJBの設計"></a>6.5 EJBの設計</h3><ul>
+<li>EJBというのはあくまでビジネスロジックの実装を任されているコンポーネント</li>
+<li>アプリケーションはビジネスロジックだけでは成り立たない</li>
+<li>ブラウザの画面などのプレゼンテーション層</li>
+<li>Webサービスなどのロジック呼び出し部分、データベース接続などの永続化層、外部サービスの呼び出しなどもある</li>
+<li><p>EJBはこれらの処理の中間に位置することになる</p>
+</li>
+<li><p>EJBを設計する上でまず考える必要があるのは、この「外部の層との接点」</p>
+</li>
+</ul>
+<h4 id="6-5-1-EJBメソッドの呼び出しに関する設計"><a href="#6-5-1-EJBメソッドの呼び出しに関する設計" class="headerlink" title="6.5.1 EJBメソッドの呼び出しに関する設計"></a>6.5.1 EJBメソッドの呼び出しに関する設計</h4><ul>
+<li>（１）やり取りする情報を保持するクラスを作成し、サーブレットとEJB双方から共通のクラスとして参照する<ul>
+<li>あまりにも多くの情報を保持し、データベースへの永続化が終わるリクエストの最後まで保持し続けるような長寿クラスにならないように注意する必要</li>
+</ul>
+</li>
+<li><p>（２）引数が増えた分についてはメソッドをオーバーロードして対応する</p>
+<ul>
+<li>注意：公開するメソッドが増えて、Webサービスのエンドポイントになるような場合はWSDLの変更が発生するため注意</li>
+</ul>
+</li>
+<li><p>Column JSPからのEJB呼び出し</p>
+<ul>
+<li>画面生成とビジネスロジックの分離ができないためやめた方がいい</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-5-2-ローカル呼び出しとリモート呼び出し"><a href="#6-5-2-ローカル呼び出しとリモート呼び出し" class="headerlink" title="6.5.2 ローカル呼び出しとリモート呼び出し"></a>6.5.2 ローカル呼び出しとリモート呼び出し</h4><ul>
+<li><p>リモート呼び出しは可能な限り使わないことをおすすめする</p>
+</li>
+<li><p>リモート呼び出しが必要なパターン</p>
+<ul>
+<li>バッチの実装</li>
+<li>GUIを持つクライアントからのビジネスロジック呼び出し</li>
+<li>多段アプリケーションサーバー構成（処理量による業務分離、接続形態によるレイヤー分割）</li>
+</ul>
+</li>
+<li><p>代替手段としてはEJBはローカル使用のみにしておき</p>
+<ul>
+<li>JAX-RSなどを使用した層を準備することが考えられる</li>
+</ul>
+</li>
+<li><p>MEMO: JAX-RS層について深堀り</p>
+</li>
+</ul>
+<h4 id="6-5-3-同期-非同期"><a href="#6-5-3-同期-非同期" class="headerlink" title="6.5.3 同期/非同期"></a>6.5.3 同期/非同期</h4><ul>
+<li>基本的に非同期にするメソッドはいかに絞るとよい<ul>
+<li>すぐに結果を必要としないもの</li>
+<li>結果を得るのに相応の時間がかかる処理</li>
+</ul>
+</li>
+</ul>
+<h4 id="6-5-4-負荷量"><a href="#6-5-4-負荷量" class="headerlink" title="6.5.4 負荷量"></a>6.5.4 負荷量</h4><ul>
+<li>MEMO: 設計する際の負荷について考えるべき</li>
+</ul>
+<h4 id="6-5-5-データベースアクセス"><a href="#6-5-5-データベースアクセス" class="headerlink" title="6.5.5 データベースアクセス"></a>6.5.5 データベースアクセス</h4><ul>
+<li>JPA</li>
+<li>JPA以外のO/RマッピングもしくはDAOフレームワーク</li>
+<li><p>JDBCの直接呼び出し</p>
+</li>
+<li><p>通常はEJBと親和性が高いJPAをEJBトランザクション管理下に置くのが容易</p>
+</li>
+</ul>
+<h3 id="6-6-EJBのテスト"><a href="#6-6-EJBのテスト" class="headerlink" title="6.6 EJBのテスト"></a>6.6 EJBのテスト</h3><h4 id="6-6-1-EJBのテストの必要性と難しさ"><a href="#6-6-1-EJBのテストの必要性と難しさ" class="headerlink" title="6.6.1 EJBのテストの必要性と難しさ"></a>6.6.1 EJBのテストの必要性と難しさ</h4><ul>
+<li><p>EJBの最大の弱点はテストがしづらいものであった</p>
+</li>
+<li><p>JavaSEでも必要な資材を準備すれば動くようになったが、一部対応していないらしい</p>
+</li>
+</ul>
+<h4 id="6-6-2-EJBテストの準備"><a href="#6-6-2-EJBテストの準備" class="headerlink" title="6.6.2 EJBテストの準備"></a>6.6.2 EJBテストの準備</h4><ul>
+<li>EJBContainerからEJBモジュールを取得し、Junitなどでテストを実施する説明</li>
+</ul>
+<h3 id="6-7-まとめ"><a href="#6-7-まとめ" class="headerlink" title="6.7 まとめ"></a>6.7 まとめ</h3><p>CDIとEJBをうまく組み合わせて設計していこうという説明</p>
+<h2 id="Chapter-7-データアクセス層の開発――JPAの基本"><a href="#Chapter-7-データアクセス層の開発――JPAの基本" class="headerlink" title="Chapter 7 データアクセス層の開発――JPAの基本"></a>Chapter 7 データアクセス層の開発――JPAの基本</h2><p>本章と次章では、JavaEEのにおけるデータベースへのアクセス方法であるJPAについて解説</p>
+<p>エンティティやクエリといったJPAの構成要素と、JPQLとCriteriaAPIの２種類のクエリについて説明</p>
+<h3 id="7-1-JPAの基礎知識"><a href="#7-1-JPAの基礎知識" class="headerlink" title="7.1 JPAの基礎知識"></a>7.1 JPAの基礎知識</h3><ul>
+<li>永続化：Javaのプロセスが終了しても、データが消えずに残るような状態にすること</li>
+</ul>
+<h4 id="7-1-1-JPAの構成要素"><a href="#7-1-1-JPAの構成要素" class="headerlink" title="7.1.1 JPAの構成要素"></a>7.1.1 JPAの構成要素</h4><ul>
+<li>エンティティクラス（データのレイアウトを規定）とエンティティオブジェクト（データを保持）</li>
+<li>エンティティマネージャ<ul>
+<li>エンティティオブジェクトとレコードの紐付けを管理</li>
+</ul>
+</li>
+<li>クエリ<ul>
+<li>データを操作</li>
+</ul>
+</li>
+<li>永続化ユニット<ul>
+<li>データベースへの接続情報などJPAの設定を記述する</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-1-2-エンティティクラスとエンティティオブジェクト"><a href="#7-1-2-エンティティクラスとエンティティオブジェクト" class="headerlink" title="7.1.2 エンティティクラスとエンティティオブジェクト"></a>7.1.2 エンティティクラスとエンティティオブジェクト</h4><ul>
+<li>そのまま、クラスとオブジェクトという理解</li>
+<li>テーブルとレコード　になぞらえて考えられる</li>
+</ul>
+<h4 id="7-1-3-エンティティマネージャ"><a href="#7-1-3-エンティティマネージャ" class="headerlink" title="7.1.3 エンティティマネージャ"></a>7.1.3 エンティティマネージャ</h4><ul>
+<li>エンティティオブジェクトを取得したり、データベースへ反映、削除したりする</li>
+<li>永続化コンテキストの配下にないものは、データベースへは反映されない</li>
+<li><code>persist()</code>メソッドで管理下におくみたい</li>
+</ul>
+<h4 id="7-1-4-クエリ"><a href="#7-1-4-クエリ" class="headerlink" title="7.1.4 クエリ"></a>7.1.4 クエリ</h4><ul>
+<li><p>エンティティマネージャが持つ基本的なメソッドを利用する他に、より自由度の高いクエリを用いる方法がある</p>
+</li>
+<li><p>JPAが用意しているクエリの定義方法</p>
+<ul>
+<li>JPQL: SQLに似た記法で記載でき、DBMSを意識しなくて良い</li>
+<li>Criteria API: APIを使ってクエリを組み立てて行く手法。DBMSを意識しなくて良い</li>
+<li>ネイティブクエリ: SQL文をかいていく必要があるので、DBMSが変わればここも変更しないと行けない</li>
+</ul>
+</li>
+<li><p>理由がなければJPQLを用いるのが良いだろう</p>
+</li>
+</ul>
+<h4 id="7-1-5-永続化ユニット"><a href="#7-1-5-永続化ユニット" class="headerlink" title="7.1.5 永続化ユニット"></a>7.1.5 永続化ユニット</h4><ul>
+<li><p>永続化似関する設定をまとめたもので、実態は<code>persistence.xml</code>という名前のXMLファイル</p>
+</li>
+<li><p>設定項目としては以下のようなものがある</p>
+<ul>
+<li>永続化ユニットの名前</li>
+<li>トランザクションマネージャの設定</li>
+<li>永続化プロバイダ（JPAの実行エンジン）のクラス名</li>
+<li>永続化プロバイダに与えるプロパティ</li>
+<li>接続先データソースの名前★</li>
+<li>エンティティクラスの名前★</li>
+</ul>
+</li>
+<li><p>データベースの接続先を設定する方法</p>
+<ul>
+<li>アプリケーションサーバーで定義されているデータソースの名前を指定する方法</li>
+<li>永続化プロバイダのプロパティとして、接続先アドレスやユーザー名、パスワードなどを設定する方法　が挙げられる</li>
+</ul>
+</li>
+<li><p>JPAの実行エンジンにどれがエンティティクラスなのか検知してもらう設定も入れる</p>
+</li>
+</ul>
+<h4 id="7-1-6-JPAのメリット"><a href="#7-1-6-JPAのメリット" class="headerlink" title="7.1.6 JPAのメリット"></a>7.1.6 JPAのメリット</h4><ul>
+<li>ResultSetからDTOにうつして..という処理を記述しなくてよい</li>
+<li>メソッドかクエリでアクセスできる</li>
+<li>コード量が従来よりも少ない</li>
+<li>メモリ上にキャッシュされたエンティティオブジェクトを利用できる<ul>
+<li>アプリ開発者はキャッシュの有無を意識する必要はない</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-2-エンティティの基本"><a href="#7-2-エンティティの基本" class="headerlink" title="7.2 エンティティの基本"></a>7.2 エンティティの基本</h3><p>（割愛）</p>
+<h4 id="7-2-1-エンティティクラスの実装"><a href="#7-2-1-エンティティクラスの実装" class="headerlink" title="7.2.1 エンティティクラスの実装"></a>7.2.1 エンティティクラスの実装</h4><ul>
+<li>エンティティクラスには<code>@Entity</code>を付与する</li>
+<li><p>publicでなければならず、finalであってはならない</p>
+</li>
+<li><p>引数のないコンストラクタを作成しとくべき</p>
+</li>
+<li><p>Column Serializableについて</p>
+<ul>
+<li>EJBのリモート呼び出し</li>
+<li>複数のアプリケーションサーバーでJPAの２次キャッシュを構成する場合</li>
+<li>MEMO: 他のORMはSerializableに定義しているか確認</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-2-2-ID"><a href="#7-2-2-ID" class="headerlink" title="7.2.2 ID"></a>7.2.2 ID</h4><ul>
+<li>エンティティクラスはIDとして定義したフィールドを使用して<code>hashCode</code>メソッド、</li>
+<li><code>equals(Object)</code>メソッドを実装しなければ行けない→通常IDEで自動生成できる</li>
+<li><code>toString()</code>をオーバーライドしておくとデバッグに役立つ！</li>
+<li>MEMO: 他のORMでも<code>toString()</code>オーバーライドしたりしてるか確認</li>
+</ul>
+<h4 id="7-2-3-リレーション"><a href="#7-2-3-リレーション" class="headerlink" title="7.2.3 リレーション"></a>7.2.3 リレーション</h4><ul>
+<li><code>@OneToMany</code>等によるエンティティの紐付け型を説明</li>
+<li><p>MEMO: 他のORMでも存在するか確認</p>
+</li>
+<li><p>１対１のリレーションについて</p>
+<ul>
+<li>通常１対１のリレーションだと、同一エンティティに保持してしまうことが望ましい</li>
+<li>ただし、ライフサイクルが異なるデータだと、別のエンティティに分けた方が良いケースがある</li>
+<li>例）アカウント情報とアカウントに紐づく会社情報<ul>
+<li>アカウント情報：作成されてから削除されるまで</li>
+<li>会社情報：入社して初めてできる、会社に所属しなければレコードがない<ul>
+<li>などのような状況</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-3-エンティティマネージャの基本"><a href="#7-3-エンティティマネージャの基本" class="headerlink" title="7.3 エンティティマネージャの基本"></a>7.3 エンティティマネージャの基本</h3><ul>
+<li>エンティティマネージャの実態は <code>javax.persistence.EntityManager</code>インターフェース</li>
+<li>このインターフェースに用意されているメソッドを通してエンティティを操作する</li>
+<li><p>EntityManagerのインスタンスはCDIを用いてアプリケーションサーバーからインジェクションで取得する</p>
+</li>
+<li><p><code>@PersistenceContext</code>アノテーションを付与し、属性似unitNameを指定</p>
+</li>
+<li><code>persistence.xml</code>の<code>&lt;persistence-unit&gt;</code>タグのname属性と一致した名前を指定</li>
+</ul>
+<h4 id="7-3-1-エンティティのライフサイクル"><a href="#7-3-1-エンティティのライフサイクル" class="headerlink" title="7.3.1 エンティティのライフサイクル"></a>7.3.1 エンティティのライフサイクル</h4><ul>
+<li>ライフサイクル<ul>
+<li>NEW</li>
+<li>MANAGED</li>
+<li>REMOVED</li>
+<li>DETACHED</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-3-2-エンティティオブジェクトの作成と永続化"><a href="#7-3-2-エンティティオブジェクトの作成と永続化" class="headerlink" title="7.3.2 エンティティオブジェクトの作成と永続化"></a>7.3.2 エンティティオブジェクトの作成と永続化</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// NEW状態でまだ永続化コンテキストと紐付いてない</span></span><br><span class="line">Account account = <span class="keyword">new</span> Account();</span><br><span class="line"></span><br><span class="line"><span class="comment">// MANAGED状態になる 次のコミットのタイミングでデータベースに反映される</span></span><br><span class="line">EntiryManager em = xxx;</span><br><span class="line">em.persist(account);</span><br></pre></td></tr></table></figure>
+<h4 id="7-3-3-エンティティオブジェクトの取得と更新"><a href="#7-3-3-エンティティオブジェクトの取得と更新" class="headerlink" title="7.3.3 エンティティオブジェクトの取得と更新"></a>7.3.3 エンティティオブジェクトの取得と更新</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 取得したいEntityクラスとIDを指定</span></span><br><span class="line"><span class="comment">// MANAGED状態で取得される</span></span><br><span class="line">Account account = em.find(Account.class, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// setter経由で値を設定するとデータベースに反映される（コミットしたタイミングで）</span></span><br><span class="line">account.setName(<span class="string">'てらだよしお'</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="7-3-4-エンティティの削除"><a href="#7-3-4-エンティティの削除" class="headerlink" title="7.3.4 エンティティの削除"></a>7.3.4 エンティティの削除</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em.remove(account);</span><br></pre></td></tr></table></figure>
+<h4 id="7-3-5-デタッチ"><a href="#7-3-5-デタッチ" class="headerlink" title="7.3.5 デタッチ"></a>7.3.5 デタッチ</h4><p>EJBのメソッドの外へ出るとDETACHED状態になる</p>
+<ul>
+<li>MEMO: 通常アプリでEntityクラスをそのまま画面で使用することは良くないと考える</li>
+</ul>
+<h3 id="7-4-クエリAPI"><a href="#7-4-クエリAPI" class="headerlink" title="7.4 クエリAPI"></a>7.4 クエリAPI</h3><p>JPQLとCriteriaAPIを使ったQuery作成方法を記載</p>
+<h4 id="7-4-1-パラメータ"><a href="#7-4-1-パラメータ" class="headerlink" title="7.4.1 パラメータ"></a>7.4.1 パラメータ</h4><p>JPQLとCriteriaAPIはパラメータを取ることができる<br>パラメータは位置で指定する方法と名前で指定する方法があるが通常は名前で指定した方がよい</p>
+<ul>
+<li>MEMO: 名前で指定するルールを作った方が良さそう</li>
+</ul>
+<h4 id="7-4-2-サンプルデータ"><a href="#7-4-2-サンプルデータ" class="headerlink" title="7.4.2 サンプルデータ"></a>7.4.2 サンプルデータ</h4><p>ダウンロードデータの中にあるサンプルデータについての説明</p>
+<h3 id="7-5-JPQL"><a href="#7-5-JPQL" class="headerlink" title="7.5 JPQL"></a>7.5 JPQL</h3><ul>
+<li>JPQL(Java Persistence Query Language)</li>
+</ul>
+<h4 id="7-5-1-JPQLの基本構文"><a href="#7-5-1-JPQLの基本構文" class="headerlink" title="7.5.1 JPQLの基本構文"></a>7.5.1 JPQLの基本構文</h4><h4 id="7-5-5-フェッチ"><a href="#7-5-5-フェッチ" class="headerlink" title="7.5.5 フェッチ"></a>7.5.5 フェッチ</h4><ul>
+<li>取得するエンティティにリレーションが定義されている場合、リレーション先のエンティティを</li>
+<li><p>どのタイミングでデータベースから取得するかを決めることができる</p>
+</li>
+<li><p>これを「フェッチ戦略」という</p>
+<ul>
+<li>Eagerフェッチ</li>
+<li>Lazyフェッチ</li>
+</ul>
+</li>
+<li><p>Eagerフェッチ</p>
+<ul>
+<li>findメソッド実行時に、リレーション定義されている参照先のオブジェクトも取得する</li>
+<li>リレーション先のエンティティオブジェクトを同時に使用することの多い場合は、</li>
+<li>Eagerフェッチを使用する</li>
+</ul>
+</li>
+<li><p>Lazyフェッチ</p>
+<ul>
+<li>取得処理時には、リレーション先のエンティティオブジェクトを取得せず、</li>
+<li>リレーション先にはじめてアクセスする際に取得する</li>
+<li>リレーション先のエンティティオブジェクトを頻繁に使用しない場合はLazyにすべき</li>
+<li>デメリット<ul>
+<li>どこでエンティティの取得が行われたか分かりづらい</li>
+<li>性能の劣化の場所を特定しづらい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>N+1問題とJOINフェッチ</p>
+<ul>
+<li>１回のクエリを発行したあとにN回のクエリの発行を必要とすることをN+1問題という</li>
+<li>リレーションが増えるほど、発行するクエリの数が増える</li>
+<li>これに対応するためにJOIN FETCH節を利用する</li>
+<li>JOIN句の後ろにFETCHがつくだけ</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-5-6-エンティティオブジェクトの集計"><a href="#7-5-6-エンティティオブジェクトの集計" class="headerlink" title="7.5.6 エンティティオブジェクトの集計"></a>7.5.6 エンティティオブジェクトの集計</h4><ul>
+<li>シンプルにCountなどを使う方法</li>
+<li>型を意識する必要がある場合、コンストラクタ式を利用する必要があるらしい<ul>
+<li>割愛））</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-5-7-名前付きクエリ"><a href="#7-5-7-名前付きクエリ" class="headerlink" title="7.5.7 名前付きクエリ"></a>7.5.7 名前付きクエリ</h4><ul>
+<li>開発者はJPQLのクエリに名前をつけることができる</li>
+<li><p>名前をつけられたJPQLのクエリを「名前付きクエリ」と呼ぶ</p>
+</li>
+<li><p><code>@NamedQueries</code>と<code>@NamedQuery</code>を使って名前定義しておく方法</p>
+<ul>
+<li>MEMO: 他のORMはSQLファイルで管理するのではと思う</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-6-CriteriaAPI"><a href="#7-6-CriteriaAPI" class="headerlink" title="7.6 CriteriaAPI"></a>7.6 CriteriaAPI</h3><ul>
+<li>Criteriaクエリを利用してクエリを構築していく</li>
+<li>JPQLと役割は同じであるため、JPQL同様に以下の要素から構成<ul>
+<li>SELECT</li>
+<li>FROM</li>
+<li>JOIN</li>
+<li>WHERE</li>
+<li>ORDERBY</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-6-1-Criteria-APIの基本構文"><a href="#7-6-1-Criteria-APIの基本構文" class="headerlink" title="7.6.1 Criteria APIの基本構文"></a>7.6.1 Criteria APIの基本構文</h4><p>（割愛）</p>
+<ul>
+<li>利用のメリットがあまりわかない<ul>
+<li>発行されているSQLが分かりづらい</li>
+<li>SQLNativeでかけない</li>
+<li>メソッドなど覚えなくては行けない</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter8-データアクセス層の開発-JPAの応用"><a href="#Chapter8-データアクセス層の開発-JPAの応用" class="headerlink" title="Chapter8 データアクセス層の開発 JPAの応用"></a>Chapter8 データアクセス層の開発 JPAの応用</h2><ul>
+<li>エンティティとデータベースの関連付け</li>
+<li>キャッシュなどJPAの応用的な使い方について紹介</li>
+</ul>
+<h3 id="8-1-高度なエンティティの利用方法"><a href="#8-1-高度なエンティティの利用方法" class="headerlink" title="8.1 高度なエンティティの利用方法"></a>8.1 高度なエンティティの利用方法</h3><ul>
+<li>日時を指定する日時型、</li>
+<li>連続した一意の数字を設定するシーケンス、</li>
+<li>リレーション先のエンティティへ処理を伝播するカスケードを紹介</li>
+</ul>
+<h4 id="8-1-1-フィールドに関する応用"><a href="#8-1-1-フィールドに関する応用" class="headerlink" title="8.1.1 フィールドに関する応用"></a>8.1.1 フィールドに関する応用</h4><ul>
+<li><p>日時</p>
+<ul>
+<li>JPAで日時を使用するには、エンティティクラスのフィールドに<code>java.util.Date型</code>を指定</li>
+<li><code>@Temporal</code>アノテーションを付与して、引数にTemporalTypeを指定</li>
+</ul>
+</li>
+<li><p>シーケンス</p>
+<ul>
+<li>エンティティのIDにはサロゲートキーを使用するのが　一般的</li>
+<li>サロゲートキーは人工的に作成されたキーであり、業務上の意味がないもの</li>
+<li>MEMO: 一般的にサロゲートキーが使われているのか確認</li>
+<li><code>@SequenceGenerator</code>アノテーションを付与し、作成したシーケンスからエンティティフィールドに自動で値を設定するには</li>
+<li><code>@GeneratedValue</code>アノテーションを使用する</li>
+<li>MEMO: DBとどのように絡んでくるのか、DB定義側も自動的にシーケンス定義が作成されるのか<ul>
+<li>どのDBもだいたいシーケンス定義を作成できるのか</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>カスケード</p>
+<ul>
+<li>エンティティオブジェクトに任意の操作をしたあと、リレーション先までその操作を反映させるための機能</li>
+<li>MEMO: 他のORMはどのようにこの機能を持っているか確認</li>
+</ul>
+</li>
+<li><p>複合ID</p>
+<ul>
+<li><code>@IdClass</code>か<code>@EmbeddedId</code>を使用して実装する<ul>
+<li>どちらも主キークラスとして定義する必要あり</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-2-ライフサイクルコールバック"><a href="#8-2-ライフサイクルコールバック" class="headerlink" title="8.2 ライフサイクルコールバック"></a>8.2 ライフサイクルコールバック</h3><ul>
+<li>JPAではコールバックメソッドを使用することで、エンティティオブジェクトの操作に対応した処理を実行することができる</li>
+<li>実装方法は２種類<ul>
+<li>エンティティクラスに実装<ul>
+<li>エンティティの値を変更する場合にとどめてく</li>
+</ul>
+</li>
+<li>エンティティリスナに実装<ul>
+<li>エンティティの値を変更する処理は実装せず、共通で使用するような処理にとどめておく</li>
+</ul>
+</li>
+<li>→あまり複雑にならないように注意</li>
+</ul>
+</li>
+<li>MEMO: 他のORMにはコールバックメソッドの仕組みある？どんな処理を実装するのがベター？</li>
+</ul>
+<h3 id="8-3-エンティティクラスとテーブル構造"><a href="#8-3-エンティティクラスとテーブル構造" class="headerlink" title="8.3 エンティティクラスとテーブル構造"></a>8.3 エンティティクラスとテーブル構造</h3><p>Javaアプリケーション開発者がエンティティクラスを作成すると、JPAはエンティティクラスの定義を読み込み、<br>データベースへテーブルを作成する</p>
+<ul>
+<li>MEMO: 他のORMはテーブル自動作成とかされるのか確認</li>
+</ul>
+<h4 id="8-3-1-テーブル名とカラム名"><a href="#8-3-1-テーブル名とカラム名" class="headerlink" title="8.3.1 テーブル名とカラム名"></a>8.3.1 テーブル名とカラム名</h4><p>エンティティの変数とカラム名を変更する方法について記載</p>
+<ul>
+<li>多対多の中間表の名前の付け方</li>
+<li>LOB定義 <code>@Lob</code></li>
+</ul>
+<h4 id="8-3-2-索引"><a href="#8-3-2-索引" class="headerlink" title="8.3.2 索引"></a>8.3.2 索引</h4><ul>
+<li>索引を作成する方法について記載<ul>
+<li><code>@Index(columnList =  &quot;xxxxx,xxxxx,xxxxxx&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="8-3-3-制約"><a href="#8-3-3-制約" class="headerlink" title="8.3.3 制約"></a>8.3.3 制約</h4><ul>
+<li><p>精度とスケール、長さ</p>
+<ul>
+<li><code>@Column(precision=15, scale=0)</code></li>
+<li><code>@Column(length=500)</code></li>
+</ul>
+</li>
+<li><p>一意制約</p>
+</li>
+<li><p>MEMO: 他のORMでもDBMSの方言を吸収しながらテーブル定義ができるか確認、できなければJPAってすごい</p>
+<ul>
+<li>他のシステムも同じDBを参照していた場合、衝突する可能性あるので、AP:DBが対になるようなシステムであればよいかも</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-4-トランザクション"><a href="#8-4-トランザクション" class="headerlink" title="8.4 トランザクション"></a>8.4 トランザクション</h3><ul>
+<li>JavaEEには<ul>
+<li>EJBコンテナにより自動的に開始されるトランザクション</li>
+<li>Java開発者が任意で開始するトランザクション<ul>
+<li>がある</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-5-キャッシュ"><a href="#8-5-キャッシュ" class="headerlink" title="8.5 キャッシュ"></a>8.5 キャッシュ</h3><h4 id="8-5-1-これまでのデータアクセス"><a href="#8-5-1-これまでのデータアクセス" class="headerlink" title="8.5.1 これまでのデータアクセス"></a>8.5.1 これまでのデータアクセス</h4><h4 id="8-5-2-キャッシュを使用したデータアクセス"><a href="#8-5-2-キャッシュを使用したデータアクセス" class="headerlink" title="8.5.2 キャッシュを使用したデータアクセス"></a>8.5.2 キャッシュを使用したデータアクセス</h4><ul>
+<li>Column 複数アプリケーションによるデータ更新<ul>
+<li>複数のアプリケーションが同一のデータベースを更新する場合や他のノードやデータベースでデータが更新されると、</li>
+<li>キャッシュされているエンティティに伝播されないので、整合性が取れなくなる</li>
+<li>MEMO: かなり致命的な問題だと思う… マスタテーブルに使うとか？</li>
+<li>MEMO: 今キャッシュされているエンティティ情報をログに出力する方法などがあれば可視化されてわかりやすいが、ある？</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-5-5-プリロード"><a href="#8-5-5-プリロード" class="headerlink" title="8.5.5 プリロード"></a>8.5.5 プリロード</h4><ul>
+<li>EJBの<code>@Startup</code>などを利用してアプリケーション起動時に１回だけSQLを実行したり、</li>
+<li>JSFやWebサービスを利用して外から初期化処理を起動できるようにすること<ul>
+<li>１回読み込んでおくことでキャッシュに乗せて処理を早くする</li>
+</ul>
+</li>
+</ul>
+<h4 id="8-5-6-EclipseLink"><a href="#8-5-6-EclipseLink" class="headerlink" title="8.5.6 EclipseLink"></a>8.5.6 EclipseLink</h4><ul>
+<li>GlassFishではJPAの実行エンジンとして、EclipseLinkを使用している</li>
+<li><p>EclipseLinkには</p>
+<ul>
+<li>エンティティキャッシュ<ul>
+<li>エンティティオブジェクトをキャッシュする機能</li>
+</ul>
+</li>
+<li>問い合わせキャッシュ　の２種類が存在する<ul>
+<li>クエリの結果をキャッシュする機能</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MEMO: EcllipseLink以外の実行エンジンなどが存在する？</p>
+</li>
+</ul>
+<h3 id="8-6-永続化ユニット"><a href="#8-6-永続化ユニット" class="headerlink" title="8.6 永続化ユニット"></a>8.6 永続化ユニット</h3><ul>
+<li><a href="http://itdoc.hitachi.co.jp/manuals/link/cosmi_v0870/APKC/EU070266.HTM" target="_blank" rel="noopener">http://itdoc.hitachi.co.jp/manuals/link/cosmi_v0870/APKC/EU070266.HTM</a></li>
+</ul>
+<p>アプリケーションからJPAを使用する場合，次のような情報を定義する必要があります。</p>
+<p>アプリケーション内のエンティティクラスの情報<br>エンティティクラスとデータベーステーブルとのマッピング情報<br>JPAプロバイダがデータベースコネクションを取得するためのデータソースの情報<br>これらの情報を定義したものを永続化ユニットといいます。</p>
+<ul>
+<li>APサーバーにJNDIを定義し、APサーバー経由で接続→こちらを推奨しますとのこと</li>
+<li><p>設定ファイルをアプリケーションに保持して直接接続</p>
+</li>
+<li><p>Column JavaSEでJPAを使う</p>
+<ul>
+<li>jarファイルをクラスパスに追加して、persistence.xmlを用意すれば使えますとのこと</li>
+<li>EJBコンテナがないので、EntityManagerFactory経由でEntityManagerオブジェクトを取得する</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-7-環境構築手順"><a href="#8-7-環境構築手順" class="headerlink" title="8.7 環境構築手順"></a>8.7 環境構築手順</h3><p>割愛</p>
+<h3 id="8-8-アプリケーション開発手順"><a href="#8-8-アプリケーション開発手順" class="headerlink" title="8.8 アプリケーション開発手順"></a>8.8 アプリケーション開発手順</h3><h4 id="8-8-2-JPQLの開発"><a href="#8-8-2-JPQLの開発" class="headerlink" title="8.8.2 JPQLの開発"></a>8.8.2 JPQLの開発</h4><p>IDE上で試しにSQL流せる機能</p>
+<ul>
+<li>MEMO: 他のORMにも同様の機能あるか確認する</li>
+</ul>
+<h2 id="Chapter9-RESTful-Webサービスの開発"><a href="#Chapter9-RESTful-Webサービスの開発" class="headerlink" title="Chapter9 RESTful Webサービスの開発"></a>Chapter9 RESTful Webサービスの開発</h2><h3 id="9-1-Webサービスの基礎"><a href="#9-1-Webサービスの基礎" class="headerlink" title="9.1 Webサービスの基礎"></a>9.1 Webサービスの基礎</h3><h4 id="9-1-1-Webサービスとは"><a href="#9-1-1-Webサービスとは" class="headerlink" title="9.1.1 Webサービスとは"></a>9.1.1 Webサービスとは</h4><ul>
+<li><p>サーバーで行われたなんらかの処理の結果をHTMLではなく、処理結果だけで返すものをWebサービスと呼びます</p>
+</li>
+<li><p>Webサービスを実現するために使われる技術</p>
+<ul>
+<li>SOAP: 信頼性を必要とする企業間でのWebサービスで多用されている</li>
+<li>REST: 一般に公開されているWebサービスでよく使用されている<ul>
+<li>RESTベースのWebサービスをRESTfulWebサービスと呼ぶ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JavaEEでもSOAPとRESTを利用したWebサービスを作成するためのAPIを提供している</p>
+<ul>
+<li>SOAPを使用したWebサービスを作成するAPIがJAX-WS</li>
+<li>RESTful Webサービスを作成するAPIが、JAX-RS</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-1-2-RESTful-Webサービスとは"><a href="#9-1-2-RESTful-Webサービスとは" class="headerlink" title="9.1.2 RESTful Webサービスとは"></a>9.1.2 RESTful Webサービスとは</h4><ul>
+<li>RESTful Webサービスとは、RESTに則ったWebサービス</li>
+<li><p>REST原則</p>
+<ul>
+<li>a.すべてのリソースに一意なアドレス（URI）を与える</li>
+<li>b.情報の操作には予め定義された命令体型（統一インターフェイスという）を使用する</li>
+<li>c.プラットフォームに応じて複数の表現（データ形式）を使用する</li>
+<li>d.セッションなどの状態管理を行わず、ステートレスに通信する</li>
+<li>e.アプリケーションはリンクによって、次の状態に遷移する</li>
+</ul>
+</li>
+<li><p>上記のすべてを守る必要はないが、少なくとも、aとbは守っておくべき</p>
+</li>
+<li>制約がゆるいので、かんたんに実装できる</li>
+<li>一方、SOAPは定義が厳密なので実装ハードルが高い</li>
+</ul>
+<h4 id="9-1-3-RESTとHTTP"><a href="#9-1-3-RESTとHTTP" class="headerlink" title="9.1.3 RESTとHTTP"></a>9.1.3 RESTとHTTP</h4><ul>
+<li>HTTPヘッダー</li>
+<li>HTTPメソッド<ul>
+<li>GET</li>
+<li>POST</li>
+<li>PUT</li>
+<li>DELETE</li>
+</ul>
+</li>
+<li>URI<ul>
+<li>MEMO: マトリックスパラメータは初めて聞いた</li>
+</ul>
+</li>
+<li>ステータスコード</li>
+</ul>
+<h3 id="9-2-JAX-RSの基本"><a href="#9-2-JAX-RSの基本" class="headerlink" title="9.2 JAX-RSの基本"></a>9.2 JAX-RSの基本</h3><h4 id="9-2-1-JAX-RSとは"><a href="#9-2-1-JAX-RSとは" class="headerlink" title="9.2.1 JAX-RSとは"></a>9.2.1 JAX-RSとは</h4><ul>
+<li><p>リクエストパラメータ</p>
+<ul>
+<li>マーシャル：XML形式やJSON形式→Javaオブジェクト</li>
+<li>アンマーシャル：Javaオブジェクト→XML形式やJSON形式</li>
+<li>JAX-RS2.0仕様の参照実装はJersey</li>
+<li>JerseyはGlassFishサーバーでも使用されている</li>
+</ul>
+</li>
+<li><p>主に５つの機能を提供</p>
+<ul>
+<li>１．HTTPメソッド/URIパターンとリソースメソッドとのバインド機能</li>
+<li>２．メッセージボディのデータ形式指定機能</li>
+<li>３．リクエスト情報のインジェクション機能</li>
+<li>４．リクエスト/レスポンスのメッセージボディの変換機能</li>
+<li>５．例外のレスポンスマッピング機能</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-2-2-サンプルアプリケーションにおけるJAX-RSの機能"><a href="#9-2-2-サンプルアプリケーションにおけるJAX-RSの機能" class="headerlink" title="9.2.2 サンプルアプリケーションにおけるJAX-RSの機能"></a>9.2.2 サンプルアプリケーションにおけるJAX-RSの機能</h4><h3 id="9-3-RESTful-Webサービス作成のための事前準備"><a href="#9-3-RESTful-Webサービス作成のための事前準備" class="headerlink" title="9.3 RESTful Webサービス作成のための事前準備"></a>9.3 RESTful Webサービス作成のための事前準備</h3><h4 id="9-3-1-RESTful-Webサービスの認証方式"><a href="#9-3-1-RESTful-Webサービスの認証方式" class="headerlink" title="9.3.1 RESTful Webサービスの認証方式"></a>9.3.1 RESTful Webサービスの認証方式</h4><ul>
+<li>ナレッジバンクのRESTサービス機能ではWEBアプリケーション機能で採用しているFORM認証ではなく</li>
+<li><p>BASIC認証で認証を行う</p>
+</li>
+<li><p>BASIC認証を行うための設定を記載</p>
+<ul>
+<li>web.xmlに追記するみたい</li>
+</ul>
+</li>
+<li>MEMO: 他のフレームワークでBASIC認証を行う方法について整理</li>
+</ul>
+<h4 id="9-3-2-データクラス（DTO）"><a href="#9-3-2-データクラス（DTO）" class="headerlink" title="9.3.2 データクラス（DTO）"></a>9.3.2 データクラス（DTO）</h4><ul>
+<li>クライアントからのリクエストをJavaオブジェクトに変換する際に受け皿クラスを作成<ul>
+<li><code>@XMLRootElementアノテーション</code>などを不要しないと行けないらしく、不便そう</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-3-3-Application-サブクラス"><a href="#9-3-3-Application-サブクラス" class="headerlink" title="9.3.3 Application サブクラス"></a>9.3.3 Application サブクラス</h4><ul>
+<li>作成するリソースクラスなど、JAX-RSで使用する一連のファイルをJAX-RSランタイムに通知するためにApplicationサブクラスをクラスパス上に配置</li>
+<li>このファイルの存在により、作成するリソースクラスをRESTful Webサービスとして公開できる</li>
+<li><code>ApplicationConfig.java</code>に<code>@ApplicationPath(&quot;xxxxxx&quot;)</code>を指定することでOK</li>
+</ul>
+<h3 id="9-4-RESTサービスクラス（サーバー側）の作成"><a href="#9-4-RESTサービスクラス（サーバー側）の作成" class="headerlink" title="9.4 RESTサービスクラス（サーバー側）の作成"></a>9.4 RESTサービスクラス（サーバー側）の作成</h3><h4 id="9-4-1-リソースクラスの構成要素"><a href="#9-4-1-リソースクラスの構成要素" class="headerlink" title="9.4.1 リソースクラスの構成要素"></a>9.4.1 リソースクラスの構成要素</h4><ul>
+<li>RESTful Webサービスで提供する処理を定義するRESTサービスクラスを作成します。</li>
+<li>RESTではすべてをリソースとして扱うため、リソースクラスとも呼ばれる<ul>
+<li>MEMO: Springの場合、Controller</li>
+</ul>
+</li>
+</ul>
+<h4 id="9-4-2-エンドポイントURIの設定"><a href="#9-4-2-エンドポイントURIの設定" class="headerlink" title="9.4.2 エンドポイントURIの設定"></a>9.4.2 エンドポイントURIの設定</h4><ul>
+<li><code>@Path(&quot;{id}&quot;)</code></li>
+<li>などと指定</li>
+</ul>
+<h4 id="9-4-3-HTTPメソッドとリソースメソッドのバインド"><a href="#9-4-3-HTTPメソッドとリソースメソッドのバインド" class="headerlink" title="9.4.3 HTTPメソッドとリソースメソッドのバインド"></a>9.4.3 HTTPメソッドとリソースメソッドのバインド</h4><ul>
+<li><code>@GET</code>,<code>@POST</code>などを指定</li>
+</ul>
+<h4 id="9-4-4-メッセージボディのデータ形式指定"><a href="#9-4-4-メッセージボディのデータ形式指定" class="headerlink" title="9.4.4 メッセージボディのデータ形式指定"></a>9.4.4 メッセージボディのデータ形式指定</h4><ul>
+<li><code>@Consumes({})</code>: クライアントから受け取るデータ形式</li>
+<li><p><code>@Produces({})</code>: クライアントに返却するデータ形式</p>
+</li>
+<li><p>MINEタイプの抽象化：<code>javax.ws.rs.core.MediaType</code></p>
+<ul>
+<li><code>APPLICATION_XML = &quot;application/xml&quot;;</code></li>
+<li>などの定義がある</li>
+</ul>
+</li>
+<li><p>Column コンテンツネゴシエーション</p>
+<ul>
+<li>クライアントがサーバーにリクエストする際に、返してもらいたいメッセージボディのデータ形式やエンコード方式などをリクエストヘッダーで要求できる</li>
+<li>これを「HTTPコンテンツネゴシエーション」といいます。</li>
+<li>コンテンツネゴシエーションはAcceptヘッダーに要求するデータ形式を指定して行う</li>
+<li>要求されたデータ形式をサーバーが提供できない場合、「406 Not Acceptable」のステータスコードをクライアントに返す<ul>
+<li><code>Accept-Charset</code>ヘッダー、<code>Accept-Language</code>ヘッダー、<code>Accept-Encoding</code>ヘッダーなど</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MEMO: 見たことはあったが用語として抑えれてなかったので覚えておく</p>
+</li>
+<li><p>メッセージボディとJavaオブジェクトとのマッピング</p>
+<ul>
+<li>アンマーシャル：<code>javax.ws.rs.ext.MessageBodyReader</code></li>
+<li>マーシャル：<code>javax.ws.rs.ext.MessageBodyWriter</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="9-4-5-リクエスト情報のインジェクション"><a href="#9-4-5-リクエスト情報のインジェクション" class="headerlink" title="9.4.5 リクエスト情報のインジェクション"></a>9.4.5 リクエスト情報のインジェクション</h4><ul>
+<li><a href="mailto:`@javax.ws.rs.PathParam" target="_blank" rel="noopener">`@javax.ws.rs.PathParam</a>`アノテーション：{id}などのパスパラメータを取得</li>
+<li><a href="mailto:`@javax.ws.rs.QueryParam" target="_blank" rel="noopener">`@javax.ws.rs.QueryParam</a>`アノテーション：クエリパラメータを取得</li>
+<li><a href="mailto:`@javax.ws.rs.MatrixParam" target="_blank" rel="noopener">`@javax.ws.rs.MatrixParam</a>`アノテーション：URIのマトリクスパラメータを取得する</li>
+<li><a href="mailto:`@javax.ws.rs.FormParam" target="_blank" rel="noopener">`@javax.ws.rs.FormParam</a>`アノテーション：HTMLのフォームから送信された情報を取得する</li>
+<li><a href="mailto:`@javax.ws.rs.HeaderParam" target="_blank" rel="noopener">`@javax.ws.rs.HeaderParam</a>`アノテーション：リクエストヘッダーから値を取得する</li>
+<li><a href="mailto:`@javax.ws.rs.CookieParam" target="_blank" rel="noopener">`@javax.ws.rs.CookieParam</a>`アノテーション：リクエストのCookieヘッダーから値を取得する</li>
+<li><a href="mailto:`@javax.ws.rs.core.Context" target="_blank" rel="noopener">`@javax.ws.rs.core.Context</a>`アノテーション：リクエストURIやリクエストヘッダー、セキュリティ情報などのコンテキスト情報を取得する汎用的なアノテーション</li>
+<li><a href="mailto:`@javax.ws.rs.BeanParam" target="_blank" rel="noopener">`@javax.ws.rs.BeanParam</a>`アノテーション：リクエストのパラメータ一式をビーンとして取得する</li>
+<li><a href="mailto:`@javax.ws.rs.DefaultValue" target="_blank" rel="noopener">`@javax.ws.rs.DefaultValue</a>`アノテーション：対象に値が入らなかった場合、デフォルト値を指定するアノテーション</li>
+</ul>
+<h4 id="9-4-6-リクエストのメッセージボディの受取"><a href="#9-4-6-リクエストのメッセージボディの受取" class="headerlink" title="9.4.6 リクエストのメッセージボディの受取"></a>9.4.6 リクエストのメッセージボディの受取</h4><ul>
+<li>リクエストの引数にアノテーションを付与しなければ、メッセージボディを受け取れる</li>
+</ul>
+<h4 id="9-4-7-入力チェック"><a href="#9-4-7-入力チェック" class="headerlink" title="9.4.7 入力チェック"></a>9.4.7 入力チェック</h4><ul>
+<li>リクエストのメッセージボディにマッピングしているJavaオブジェクトをバリデーションするには<code>@Valid</code>アノテーションを使用する</li>
+</ul>
+<h4 id="9-4-8-レスポンスの定義"><a href="#9-4-8-レスポンスの定義" class="headerlink" title="9.4.8 レスポンスの定義"></a>9.4.8 レスポンスの定義</h4><ul>
+<li>return する時に <code>javax.ws.rs.core.Response</code>クラスを用意している</li>
+<li><p><code>Response.created(URI.create(&quot;/knowledge&quot; + knowledge.getId())).build()</code></p>
+<ul>
+<li>みたいな感じで生成して返却する</li>
+</ul>
+</li>
+<li><p>レスポンスメッセージボディのみを指定するときは、Response型以外のオブジェクトを戻り値にするとよい</p>
+</li>
+<li>エンティティプロバイダ（<code>MessageBodyWriter</code>インターフェース実装クラス）がリクエストのAcceptヘッダーに指定されているデータ形式に変換し、レスポンスのメッセージボディに書き出します</li>
+<li>成功時のレスポンスにメッセージボディが含まれている場合、「200 OK」</li>
+<li>メッセージボディが含まれていない場合、「204 No Content」<ul>
+<li>MEMO: レスポンスの 204 No Contentは覚えておく</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-5-HTTPメソッドに応じた処理"><a href="#9-5-HTTPメソッドに応じた処理" class="headerlink" title="9.5 HTTPメソッドに応じた処理"></a>9.5 HTTPメソッドに応じた処理</h3><h4 id="9-5-1-ナレッジの検索（GETメソッドによる操作）"><a href="#9-5-1-ナレッジの検索（GETメソッドによる操作）" class="headerlink" title="9.5.1 ナレッジの検索（GETメソッドによる操作）"></a>9.5.1 ナレッジの検索（GETメソッドによる操作）</h4><h4 id="9-5-2-ナレッジの登録（POSTメソッドによる操作）"><a href="#9-5-2-ナレッジの登録（POSTメソッドによる操作）" class="headerlink" title="9.5.2 ナレッジの登録（POSTメソッドによる操作）"></a>9.5.2 ナレッジの登録（POSTメソッドによる操作）</h4><h4 id="9-5-3-ナレッジの更新（PUTメソッドによる操作）"><a href="#9-5-3-ナレッジの更新（PUTメソッドによる操作）" class="headerlink" title="9.5.3 ナレッジの更新（PUTメソッドによる操作）"></a>9.5.3 ナレッジの更新（PUTメソッドによる操作）</h4><h4 id="9-5-4-ナレッジの削除（DELETEメソッドによる操作）"><a href="#9-5-4-ナレッジの削除（DELETEメソッドによる操作）" class="headerlink" title="9.5.4 ナレッジの削除（DELETEメソッドによる操作）"></a>9.5.4 ナレッジの削除（DELETEメソッドによる操作）</h4><h4 id="9-5-5-例外クラス"><a href="#9-5-5-例外クラス" class="headerlink" title="9.5.5 例外クラス"></a>9.5.5 例外クラス</h4><ul>
+<li>JAX-RSの例外クラスを使用する</li>
+<li><p>JAX-RS2.0の例外体系</p>
+<ul>
+<li>非チェック例外である、<code>WebApplicationException</code>を用意している<ul>
+<li>コンストラクタにステータスコードを指定すると、アプリケーションからスローされた際にステータスコードを含んだResponseインスタンスをクライントに返す</li>
+<li>何も指定しなかったら 500 Internal Server Error</li>
+</ul>
+</li>
+<li>JAX-RS2.0ではこのクラスを継承した例外クラスが追加された</li>
+</ul>
+</li>
+<li><p>ClientErrorExceptionを継承した例外クラス</p>
+<ul>
+<li>BadRequestException(400)</li>
+<li>NotAuthorizedException(401)</li>
+</ul>
+</li>
+<li><p>ServerErrorExceptionを継承した例外クラス</p>
+<ul>
+<li>InternalServerErrorException(500)</li>
+<li>ServiceUnavailableException(503)</li>
+</ul>
+</li>
+<li><p>MEMO: 他のフレームワークでもこの標準エラーを使用しているような気がする。あとで確認しておく</p>
+</li>
+<li><p>独自例外の作成方法</p>
+<ul>
+<li>RuntimeExceptionを継承して例外クラスを作成</li>
+<li>マッパークラスを作成し、JAX-RSに認識させる</li>
+</ul>
+</li>
+<li><p>MEMO: 独自例外を作成することは必ず必要になってくるので、ここ後で見返しておく</p>
+<ul>
+<li>Responseが持っているステータスについても覚えておく</li>
+</ul>
+</li>
+<li><p>MEMO: 標準提供の例外をマッピングすることも可能！</p>
+<ul>
+<li>標準のExceptionはステータスコードしかクライアントに返却しないため、ここでマッピングして再定義しておくと、メッセージも合わせて返却できるということ</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-6-RESTクライアントクラス（クライアント側）の作成"><a href="#9-6-RESTクライアントクラス（クライアント側）の作成" class="headerlink" title="9.6 RESTクライアントクラス（クライアント側）の作成"></a>9.6 RESTクライアントクラス（クライアント側）の作成</h3><h4 id="9-6-1-データクラス（DTO）"><a href="#9-6-1-データクラス（DTO）" class="headerlink" title="9.6.1 データクラス（DTO）"></a>9.6.1 データクラス（DTO）</h4><h4 id="9-6-2-RESTクライアントクラス"><a href="#9-6-2-RESTクライアントクラス" class="headerlink" title="9.6.2 RESTクライアントクラス"></a>9.6.2 RESTクライアントクラス</h4><ul>
+<li>MEMO: Javaクライアント側でJAX-RSのWebサービスを利用したい場合の実装方法<ul>
+<li>BASIC認証にサードパーティのクラスを使う</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-7-メッセージフィルタクラス"><a href="#9-7-メッセージフィルタクラス" class="headerlink" title="9.7 メッセージフィルタクラス"></a>9.7 メッセージフィルタクラス</h3><h4 id="9-7-1-メッセージフィルタとエンティティインターセプタ"><a href="#9-7-1-メッセージフィルタとエンティティインターセプタ" class="headerlink" title="9.7.1 メッセージフィルタとエンティティインターセプタ"></a>9.7.1 メッセージフィルタとエンティティインターセプタ</h4><ul>
+<li>JAX-RS2.0では新たに、<ul>
+<li>メッセージフィルタ：リクエスト/レスポンスヘッダーの編集などに使用</li>
+<li>エンティティボディインターセプター：エンティティボディの編集などに使用</li>
+</ul>
+</li>
+</ul>
+<p>割愛</p>
+<ul>
+<li>MEMO: Logging用のフィルタの実装について考える ベストプラクティスは？<ul>
+<li>FileterとInterceptorの違い<a href="https://meetup-jp.toast.com/698" target="_blank" rel="noopener">https://meetup-jp.toast.com/698</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="9-8-まとめ"><a href="#9-8-まとめ" class="headerlink" title="9.8 まとめ"></a>9.8 まとめ</h3><ul>
+<li>JAX-RS<ul>
+<li>アノテーションでRESTful-Webサービスを作成できる</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter10-バッチアプリケーションの開発"><a href="#Chapter10-バッチアプリケーションの開発" class="headerlink" title="Chapter10 バッチアプリケーションの開発"></a>Chapter10 バッチアプリケーションの開発</h2><p>JavaEE7では、Javaにおけるバッチ処理の標準化仕様が盛り込まれました。</p>
+<p>この仕様はJSR352(Batch Applications for the Java Platform)で規定されている</p>
+<p>通称「jBatch」と呼ばれている</p>
+<h3 id="10-1-jBatchの基本"><a href="#10-1-jBatchの基本" class="headerlink" title="10.1 jBatchの基本"></a>10.1 jBatchの基本</h3><h4 id="10-1-1-バッチ処理とその特徴"><a href="#10-1-1-バッチ処理とその特徴" class="headerlink" title="10.1.1 バッチ処理とその特徴"></a>10.1.1 バッチ処理とその特徴</h4><ul>
+<li><p>バッチ処理とは</p>
+<ul>
+<li>複数のデータや複数の処理を一括して実行する方式のこと</li>
+<li>一方、Webブラウザなどの画面を介して入力と応答が繰り返される処理をリアルタイム処理、オンライン処理と呼ぶ</li>
+</ul>
+</li>
+<li><p>特徴</p>
+<ul>
+<li>一度に多くのデータが処理される</li>
+<li>実行時間が長い</li>
+<li>非対話型（人間による画面での入出力操作を伴わない）</li>
+<li>リクエストに従って起動されることよりも、実行する時刻を指定して起動されることが多い</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-1-2-jBatchとは"><a href="#10-1-2-jBatchとは" class="headerlink" title="10.1.2 jBatchとは"></a>10.1.2 jBatchとは</h4><ul>
+<li><p>jBatchとは</p>
+<ul>
+<li>前項で述べたような特徴を持つバッチ処理をJava言語で実装するためのフレームワーク</li>
+<li>業務システムにおけるバッチ処理は、全体的な処理の流れや設計時に注意すべきポイントなど、</li>
+<li>時代や言語を伴わない共通点が多く見られる</li>
+<li>jBatchはこうした業務システムのバッチ処理似求められる要素を盛り込んだ「以前から培われている雛形」を標準として提供</li>
+<li>jBatchを使わなくてもバッチ処理を実現できるが、活用することで、理解が容易で考慮漏れの少ないバッチ処理を効率よく提供刷ることができる</li>
+</ul>
+</li>
+<li><p>jBatchの機能と構成要素</p>
+<ul>
+<li>大まかに言うと<ul>
+<li>ジョブ</li>
+<li>ステップ<ul>
+<li>で構成される</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ジョブ：全体の流れを記述</li>
+<li>ステップ：ここの処理を実装する</li>
+<li>ジョブとステップの分離により、業務の変更に対して柔軟に対応できる仕組みになっている</li>
+</ul>
+</li>
+<li><p>jBatchのアーキテクチャはオープンソースのSpringBatchから多くを受け継いでいるが</p>
+</li>
+<li>ジョブとステップの分離は、メインフレーム時代から受け継がれているもの</li>
+<li>メインフレームでは、全体の流れはジョブとしてJCLによって記述され、</li>
+<li><p>業務ロジックはステップとして、COBOLやPL/Iなどの言語で記述されたプログラムを用いて実装される</p>
+</li>
+<li><p>jBatchの機能と構成要素</p>
+</li>
+<li><p>jBatchにはジョブとステップ以外にいくつか保s所的な機能がある</p>
+<ul>
+<li>リスナ：ジョブやステップの開始直前または終了直後に処理を差し込む</li>
+<li>ジョブリポジトリ：ジョブやステップの状態を永続的に保持する</li>
+<li>コンテキスト：一時的に保持する</li>
+<li>メトリック：統計的な情報を確認刷る</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-1-3-ジョブ"><a href="#10-1-3-ジョブ" class="headerlink" title="10.1.3 ジョブ"></a>10.1.3 ジョブ</h4><ul>
+<li><p>ジョブはステップの入れ物</p>
+<ul>
+<li>１つのジョブの中には１つ以上のステップが必要</li>
+<li>XMLで記述する<ul>
+<li>各ステップの呼び出し先クラス</li>
+<li>実行順序</li>
+<li>ジョブ全体や各ステップに対する設定、エラー発生時の挙動なども記述</li>
+<li>記述のルールを示した仕様は、JSL(Job Specification Language)と呼ばれる</li>
+<li>ジョブを記述したXMLファイルはJob XMLファイルと呼ばれる</li>
+</ul>
+</li>
+<li>JSLには処理の実行順序を制御するために、以下のXML要素が用意されている<ul>
+<li>フロー（flow）</li>
+<li>スプリット（split）</li>
+<li>デシジョン（decision）</li>
+<li>遷移要素（Transition Elements）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>全体図が記載されている（書籍を見たほうが良い）</p>
+</li>
+<li><p>フロー：複数のステップをまとめる要素</p>
+</li>
+<li>スプリット：複数のフローを同時実行させることができる</li>
+<li>デシジョン：ジョブ内部で次の遷移先を細かくカスタマイズするための機能</li>
+<li><p>遷移要素</p>
+<ul>
+<li>next: 遷移先には、ステップ、フロー、スプリット、デシジョンが指定できる</li>
+<li>end: 正常終了</li>
+<li>stop: 中断</li>
+<li>fail: 異常終了</li>
+</ul>
+</li>
+<li><p>リトライとスキップ</p>
+<ul>
+<li>リトライ：チャンク型ステップの処理中に特定の例外が発生した場合に、再度そのデータの処理を試みる</li>
+<li>スキップ：チャンク型ステップの処理中に特定の例外が発生した場合に、データを飛ばして次に進む</li>
+<li>リトライもしくはスキップ対象の例外クラスをJob XMLの中に定義</li>
+</ul>
+</li>
+<li><p>ジョブオペレータ</p>
+<ul>
+<li>ジョブ自体の開始や停止の全体的な制御を行う</li>
+</ul>
+</li>
+<li><p>ジョブオペレータの呼び出し方法</p>
+<ul>
+<li>バッチ処理の特徴として、「実行する時刻を指定して起動されることが多い」という点をあげたが、</li>
+<li>jBatchの仕様にはバッチを決まった時間に起動する方式に関する規定や、それを実現するAPIも含まれていない</li>
+<li>この部分に関しては、ジョブスケジューラを連携させる方式が一般的に<ul>
+<li>Linuxなどであればcron</li>
+<li>Windowsであればタスクスケジューラ</li>
+<li>その他市販のジョブスケジューラを使用する…など</li>
+</ul>
+</li>
+<li>ジョブを臨時で実行したい場合や、何らかの異常が発生し、人間が介入して原因を取り除いたあとに再実行する場合は、リクエストに従って起動することになります。（これを「アドホックな実行」と呼びます）<ul>
+<li>そういった場合、画面などのユーザーインターフェースがあると便利だが、この点に関してもjBatchは規定ない</li>
+</ul>
+</li>
+<li>実装する際には、オペレータの運用も考える必要がある</li>
+</ul>
+</li>
+<li><p>MEMO: 手動実行されたジョブか、スケジュールで実行されたジョブかを識別する方法を仕込んでおいた方が良いと思った</p>
+</li>
+</ul>
+<h4 id="10-1-4-ステップ"><a href="#10-1-4-ステップ" class="headerlink" title="10.1.4 ステップ"></a>10.1.4 ステップ</h4><ul>
+<li>バッチ内部の個々の処理を実装する部分<ul>
+<li>ステップの実態は、jBatchのAPIの中で定義されているJavaインターフェースであり、実装テンプレートを提供している</li>
+</ul>
+</li>
+<li>ステップには２種類ある<ul>
+<li>チャンク型：複数のデータを逐次的に処理するために使われる<ul>
+<li><code>ItemReader</code>,<code>ItemProcessor</code>,<code>ItemWriter</code>の３つで構成される</li>
+<li>ItemReaderとItemProcessorを繰り返したあと、ItemWriterが呼ばれる（デフォルトで１０回）</li>
+<li>この塊（１０回などの処理の塊）をチャンクと呼ぶ</li>
+</ul>
+</li>
+<li>バッチレット型：単体で完結する処理で使われます<ul>
+<li>データの加工や計算を１件ずつ繰り返すような処理ではなく、データに依存しない処理やコマンド実行などの処理を担います。</li>
+<li>例えば、ディレクトリ作成やファイル圧縮、送受信処理などの処理</li>
+<li>「タスク志向のステップ」と呼ばれる場合もある</li>
+<li>MEMO: このような単純な処理であれば、スクリプトで完結しそうな気もする..</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-1-5-補助機能"><a href="#10-1-5-補助機能" class="headerlink" title="10.1.5 補助機能"></a>10.1.5 補助機能</h4><ul>
+<li>リスナ<ul>
+<li>リスナを用いることで、バッチ処理の進行に応じた特定のタイミングで任意の処理を実行することができる</li>
+<li>「特定のタイミング」には、ジョブやステップの開始及び終了、リトライやスキップの発生などがある</li>
+</ul>
+</li>
+<li>各処理のタイミングごとにリスナが用意されている</li>
+<li><p>リスナの設置は任意で、設置したい場合、リスナのクラス名をJob XMLの中で記述</p>
+</li>
+<li><p>ジョブリポジトリ：開発者が意識して操作したりしない部分みたい</p>
+<ul>
+<li>実行中のジョブの情報や、実行が終わったジョブに関する情報が保存される</li>
+<li>情報の更新はコンテナによって自動的に行われ、情報の取得は、前述のジョブオペレータや、後述するコンテキスト、メトリックAPIを利用する</li>
+</ul>
+</li>
+<li><p>コンテキスト</p>
+<ul>
+<li>種類<ul>
+<li>ジョブコンテキスト</li>
+<li>ステップコンテキスト</li>
+</ul>
+</li>
+<li>それぞれ、実行中のジョブやステップに関する情報を提供する役割を担う<ul>
+<li>名前やID、ステータスなどがある</li>
+<li>コンテキストへのアクセスは、jBatchAPIのJobContext、StepContextインターフェースを経由して行います</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>メトリック</p>
+<ul>
+<li>チャンク型のステップに対して、実行時の統計情報を提供するのがメトリック</li>
+<li>情報<ul>
+<li>読み取りレコード数</li>
+<li>書き込みレコード数</li>
+<li>スキップが発生した数</li>
+<li>など、処理量に関するもの</li>
+</ul>
+</li>
+<li>メトリックへのアクセスには、jBatchAPI似あるMetricインターフェースを経由して行う</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-2-jBatchの利用――基本編"><a href="#10-2-jBatchの利用――基本編" class="headerlink" title="10.2 jBatchの利用――基本編"></a>10.2 jBatchの利用――基本編</h3><ul>
+<li>実際に実装してみる<ul>
+<li>JobXMLの実装</li>
+<li>チャンク型ステップの実装</li>
+<li>バッチレット型ステップの実装</li>
+<li>ジョブ実行部分の実装</li>
+<li>実行結果の確認</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-2-1-JobXMLの実装"><a href="#10-2-1-JobXMLの実装" class="headerlink" title="10.2.1 JobXMLの実装"></a>10.2.1 JobXMLの実装</h4><ul>
+<li>バッチの全体を表すJobXMLを作成刷る</li>
+<li>ファイル名から拡張子を取り除いた部分がそのままジョブの名前となります。</li>
+<li><p>ジョブの名前は実行時にJobOperatorクラスのメソッドにわたす形で利用される</p>
+</li>
+<li><p>それぞれの要素説明</p>
+<ul>
+<li>job</li>
+<li>step</li>
+<li>chunk</li>
+<li>batchlet</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-2-2-チャンク型ステップの実装"><a href="#10-2-2-チャンク型ステップの実装" class="headerlink" title="10.2.2 チャンク型ステップの実装"></a>10.2.2 チャンク型ステップの実装</h4><h4 id="10-2-5-バッチレット型ステップの実装"><a href="#10-2-5-バッチレット型ステップの実装" class="headerlink" title="10.2.5 バッチレット型ステップの実装"></a>10.2.5 バッチレット型ステップの実装</h4><ul>
+<li>Batchletを実装<ul>
+<li>prosess,stopを実装して処理を書くだけ</li>
+<li>保守性を高い状態に保つためにも、１機能の実装にとどめておくべき</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-2-6-ジョブ実行部分の実装"><a href="#10-2-6-ジョブ実行部分の実装" class="headerlink" title="10.2.6 ジョブ実行部分の実装"></a>10.2.6 ジョブ実行部分の実装</h4><ul>
+<li><p>JobInstanceとJobExecution</p>
+<ul>
+<li>最初にジョブを実行すると、コンテナ内部ではこの２つのインスタンスが生成される<ul>
+<li>JobInstanceはジョブの１回分を表現</li>
+<li>JobExecutionはジョブの実行そのものを表現している</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>パッケージング</p>
+<ul>
+<li>jBatchでもWebアプリケーションと同様に、構成するファイル群をwarファイル形式にまとめてコンテナにデプロイ刷る</li>
+<li>ここで注意が必要なのは、JobXMLファイルの配置場所<ul>
+<li>JobXMLは、warファイル内部の<code>WEB-INF/classes/META-INF/batch-jobs</code>ディレクトリの配下に「ジョブ名.xml」という名前で配置しなければ行けない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MEMO: パッケージングする際には一般的にどのようにしているか確認、Gradleとかの前処理で調整している？</p>
+</li>
+</ul>
+<h4 id="10-2-7-実行結果の確認"><a href="#10-2-7-実行結果の確認" class="headerlink" title="10.2.7 実行結果の確認"></a>10.2.7 実行結果の確認</h4><p>バッチログを掲載</p>
+<h3 id="10-3-jBatchの利用――応用編"><a href="#10-3-jBatchの利用――応用編" class="headerlink" title="10.3 jBatchの利用――応用編"></a>10.3 jBatchの利用――応用編</h3><h4 id="10-3-1-サンプル概要"><a href="#10-3-1-サンプル概要" class="headerlink" title="10.3.1 サンプル概要"></a>10.3.1 サンプル概要</h4><ul>
+<li>ナレッジ件数ランキング集計バッチ</li>
+<li><p>コメント件数ランキング集計バッチ</p>
+</li>
+<li><p>Column キーブレイク処理について</p>
+<ul>
+<li>マスタ表から１件読み込み、トランザクション表を操作して処理するという一連の流れ</li>
+<li>業務におけるバッチ処理では大変多く見られるパターンの１つ</li>
+<li>jBatchのチャンク形式のステップは、このようなキーブレイク処理を念頭においたものと言えるので、本書でも取り上げた</li>
+<li>MEMO: チャンク形式が業務で応用されている例を確認しておくべき<ul>
+<li>SQL一本で済ませる場合が多いのでは？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-4-ジョブの作成"><a href="#10-4-ジョブの作成" class="headerlink" title="10.4 ジョブの作成"></a>10.4 ジョブの作成</h3><h4 id="10-4-1-Job-XMLの実装"><a href="#10-4-1-Job-XMLの実装" class="headerlink" title="10.4.1 Job XMLの実装"></a>10.4.1 Job XMLの実装</h4><ul>
+<li>property要素を利用する方法を記載<ul>
+<li>感覚的にはmavenみたいな感じ</li>
+</ul>
+</li>
+</ul>
+<h4 id="10-4-2-チャンクの実装"><a href="#10-4-2-チャンクの実装" class="headerlink" title="10.4.2 チャンクの実装"></a>10.4.2 チャンクの実装</h4><p>※実際に実装刷る際に必要なった時に見返す</p>
+<h3 id="10-5-ジョブのフロー制御"><a href="#10-5-ジョブのフロー制御" class="headerlink" title="10.5 ジョブのフロー制御"></a>10.5 ジョブのフロー制御</h3><p>※実際に実装刷る際に必要なった時に見返す</p>
+<h3 id="10-6-まとめ"><a href="#10-6-まとめ" class="headerlink" title="10.6 まとめ"></a>10.6 まとめ</h3><ul>
+<li>終了！</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2020-09-18T17:00:40.616Z" itemprop="dateUpdated">2020-09-19 02:00:40</time>
+</span><br>
+
+
+        
+        thank you for your reading my article!!
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="t-tsutsui">
+            t-tsutsui
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A7%91%E6%9B%B8/" rel="tag">教科書</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/JAVA/2020-05_Spring%E5%BE%B9%E5%BA%95%E5%85%A5%E9%96%80/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Spring徹底入門</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/CSS/2020-04_Web%E8%A3%BD%E4%BD%9C%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AESass%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Web製作者のためのSassの教科書</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+<!--        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p> -->
+    </div>
+    <div class="bottom">
+        <p><span>t-tsutsui &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

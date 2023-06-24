@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>安全なWebアプリケーションの作り方_脆弱性が生まれる原理と対策の実践_第2版 | OUTPUT*OVER-THERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#264A2E">
+    
+    
+    <meta name="keywords" content="教科書">
+    <meta name="description" content="安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版理解したこと書籍情報 著者  徳丸浩:ＥＧセキュアソリューションズ株式会社代表、ＯＷＡＳＰ Ｊａｐａｎアドバイザリーボード、独占行政法人情報処理推進機構（ＩＰＡ）非常勤研究員   定価  3,520円   発売日 2018&#x2F;06&#x2F;22   ISBN 978-4-7973-9316-3    Ｗｅｂアプリ開発者が知っておくべき">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安全なWebアプリケーションの作り方_脆弱性が生まれる原理と対策の実践_第2版">
+<meta property="og:url" content="http://yoursite.com/Security/2020-08_%E5%AE%89%E5%85%A8%E3%81%AAWeb%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9_%E8%84%86%E5%BC%B1%E6%80%A7%E3%81%8C%E7%94%9F%E3%81%BE%E3%82%8C%E3%82%8B%E5%8E%9F%E7%90%86%E3%81%A8%E5%AF%BE%E7%AD%96%E3%81%AE%E5%AE%9F%E8%B7%B5_%E7%AC%AC2%E7%89%88/index.html">
+<meta property="og:site_name" content="OUTPUT*OVER-THERE">
+<meta property="og:description" content="安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版理解したこと書籍情報 著者  徳丸浩:ＥＧセキュアソリューションズ株式会社代表、ＯＷＡＳＰ Ｊａｐａｎアドバイザリーボード、独占行政法人情報処理推進機構（ＩＰＡ）非常勤研究員   定価  3,520円   発売日 2018&#x2F;06&#x2F;22   ISBN 978-4-7973-9316-3    Ｗｅｂアプリ開発者が知っておくべき">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2020-08-19T15:00:00.000Z">
+<meta property="article:modified_time" content="2020-08-29T08:50:56.320Z">
+<meta property="article:author" content="t-tsutsui">
+<meta property="article:tag" content="教科書">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="OUTPUT*OVER-THERE" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">t-tsutsui</h5>
+          <a href="mailto:t.tsutsui9117@gmail.com" title="t.tsutsui9117@gmail.com" class="mail">t.tsutsui9117@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">安全なWebアプリケーションの作り方_脆弱性が生まれる原理と対策の実践_第2版</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">安全なWebアプリケーションの作り方_脆弱性が生まれる原理と対策の実践_第2版</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-08-19T15:00:00.000Z" itemprop="datePublished" class="page-time">
+  2020-08-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Security/">Security</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版"><span class="post-toc-number">1.</span> <span class="post-toc-text">安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#理解したこと"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">理解したこと</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#書籍情報"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">書籍情報</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1章-Webアプリケーションの脆弱性とは"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1章 Webアプリケーションの脆弱性とは</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-脆弱性とは、「悪用できるバグ」"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">1.1 脆弱性とは、「悪用できるバグ」</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-脆弱性があるとなぜ駄目なのか"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">1.2 脆弱性があるとなぜ駄目なのか</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-3-脆弱性が生まれる理由"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">1.3 脆弱性が生まれる理由</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-4-セキュリティバグとセキュリティ機能"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">1.4 セキュリティバグとセキュリティ機能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-5-本書の構成"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">1.5 本書の構成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-6-セキュリティガイドラインとの対応"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">1.6 セキュリティガイドラインとの対応</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2章-実習環境のセットアップ"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">2章 実習環境のセットアップ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-実習環境の概要"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">2.1 実習環境の概要</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-Firefoxのインストール"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">2.2 Firefoxのインストール</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-VirtualBoxのインストール"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">2.3 VirtualBoxのインストール</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-4-仮想マシンのインストールと動作確認"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">2.4 仮想マシンのインストールと動作確認</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-5-OWASP-ZAPのインストール"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">2.5 OWASP ZAPのインストール</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-6-Firefoxの拡張FoxyProxy-Standardのインストール"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">2.6 Firefoxの拡張FoxyProxy-Standardのインストール</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-7-OWASP-ZAPを使ってみる"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">2.7 OWASP ZAPを使ってみる</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-8-Webメールの確認"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">2.8 Webメールの確認</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3章-Webセキュリティの基礎-～-HTTP、セッション管理、同一オリジンポリシー"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">3章 Webセキュリティの基礎 ～ HTTP、セッション管理、同一オリジンポリシー</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-HTTPとセッション管理"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">3.1 HTTPとセッション管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-受動的攻撃と同一オリジンポリシー"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">3.2 受動的攻撃と同一オリジンポリシー</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-CORS（Cross-Origin-Resource-Sharing）"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">3.3 CORS（Cross-Origin Resource Sharing）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4章-Webアプリケーションの機能別に見るセキュリティバグ"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">4章 Webアプリケーションの機能別に見るセキュリティバグ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-Webアプリケーションの機能と脆弱性の対応"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">4.1 Webアプリケーションの機能と脆弱性の対応</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-入力処理とセキュリティ"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">4.2 入力処理とセキュリティ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-表示処理に伴う問題"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">4.3 表示処理に伴う問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-4-SQL呼び出しに伴う脆弱性"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">4.4 SQL呼び出しに伴う脆弱性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-5-「-重要な処理」の際に混入する脆弱性"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">4.5 「 重要な処理」の際に混入する脆弱性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-6-セッション管理の不備"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">4.6 セッション管理の不備</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-7-リダイレクト処理にまつわる脆弱性"><span class="post-toc-number">1.6.7.</span> <span class="post-toc-text">4.7 リダイレクト処理にまつわる脆弱性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-8-クッキー出力にまつわる脆弱性"><span class="post-toc-number">1.6.8.</span> <span class="post-toc-text">4.8 クッキー出力にまつわる脆弱性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-9-メール送信の問題"><span class="post-toc-number">1.6.9.</span> <span class="post-toc-text">4.9 メール送信の問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-10-ファイルアクセスにまつわる問題"><span class="post-toc-number">1.6.10.</span> <span class="post-toc-text">4.10 ファイルアクセスにまつわる問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-11-OSコマンド呼び出しの際に発生する脆弱性"><span class="post-toc-number">1.6.11.</span> <span class="post-toc-text">4.11 OSコマンド呼び出しの際に発生する脆弱性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-12-ファイルアップロードにまつわる問題"><span class="post-toc-number">1.6.12.</span> <span class="post-toc-text">4.12 ファイルアップロードにまつわる問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-13-インクルードにまつわる問題"><span class="post-toc-number">1.6.13.</span> <span class="post-toc-text">4.13 インクルードにまつわる問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-14-構造化データの読み込みにまつわる問題"><span class="post-toc-number">1.6.14.</span> <span class="post-toc-text">4.14 構造化データの読み込みにまつわる問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-15-共有資源やキャッシュに関する問題"><span class="post-toc-number">1.6.15.</span> <span class="post-toc-text">4.15 共有資源やキャッシュに関する問題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-16-Web-API実装における脆弱性"><span class="post-toc-number">1.6.16.</span> <span class="post-toc-text">4.16 Web API実装における脆弱性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-17-JavaScriptの問題"><span class="post-toc-number">1.6.17.</span> <span class="post-toc-text">4.17 JavaScriptの問題</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5章-代表的なセキュリティ機能"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">5章 代表的なセキュリティ機能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-1-認証"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">5.1 認証</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-2-アカウント管理"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">5.2 アカウント管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-3-認可"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">5.3 認可</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-4-ログ出力"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">5.4 ログ出力</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6章-文字コードとセキュリティ"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">6章 文字コードとセキュリティ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-文字コードとセキュリティの概要"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">6.1 文字コードとセキュリティの概要</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-文字集合"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">6.2 文字集合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-文字エンコーディング"><span class="post-toc-number">1.8.3.</span> <span class="post-toc-text">6.3 文字エンコーディング</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-4-文字コードによる脆弱性の発生要因まとめ"><span class="post-toc-number">1.8.4.</span> <span class="post-toc-text">6.4 文字コードによる脆弱性の発生要因まとめ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-5-文字コードを正しく扱うために"><span class="post-toc-number">1.8.5.</span> <span class="post-toc-text">6.5 文字コードを正しく扱うために</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-6-まとめ"><span class="post-toc-number">1.8.6.</span> <span class="post-toc-text">6.6 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7章-脆弱性診断入門"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">7章 脆弱性診断入門</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-1-脆弱性診断の概要"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">7.1 脆弱性診断の概要</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-脆弱なサンプルアプリケーションBad-Todo"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">7.2 脆弱なサンプルアプリケーションBad Todo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-3-診断ツールのダウンロードとインストール"><span class="post-toc-number">1.9.3.</span> <span class="post-toc-text">7.3 診断ツールのダウンロードとインストール</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-Nmapによるポートスキャン"><span class="post-toc-number">1.9.4.</span> <span class="post-toc-text">7.4 Nmapによるポートスキャン</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-5-OpenVASによるプラットフォーム脆弱性診断"><span class="post-toc-number">1.9.5.</span> <span class="post-toc-text">7.5 OpenVASによるプラットフォーム脆弱性診断</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-6-OWASP-ZAPによる自動脆弱性スキャン"><span class="post-toc-number">1.9.6.</span> <span class="post-toc-text">7.6 OWASP ZAPによる自動脆弱性スキャン</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-7-OWASP-ZAPによる手動脆弱性診断"><span class="post-toc-number">1.9.7.</span> <span class="post-toc-text">7.7 OWASP ZAPによる手動脆弱性診断</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-8-RIPSによるソースコード診断"><span class="post-toc-number">1.9.8.</span> <span class="post-toc-text">7.8 RIPSによるソースコード診断</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-9-脆弱性診断実施上の注意"><span class="post-toc-number">1.9.9.</span> <span class="post-toc-text">7.9 脆弱性診断実施上の注意</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-10-まとめ"><span class="post-toc-number">1.9.10.</span> <span class="post-toc-text">7.10 まとめ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-11-脆弱性診断報告書のサンプル"><span class="post-toc-number">1.9.11.</span> <span class="post-toc-text">7.11 脆弱性診断報告書のサンプル</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8章-Webサイトの安全性を高めるために"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">8章 Webサイトの安全性を高めるために</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-1-Webサーバーへの攻撃経路と対策"><span class="post-toc-number">1.10.1.</span> <span class="post-toc-text">8.1 Webサーバーへの攻撃経路と対策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-2-成りすまし対策"><span class="post-toc-number">1.10.2.</span> <span class="post-toc-text">8.2 成りすまし対策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-3-盗聴・改ざん対策"><span class="post-toc-number">1.10.3.</span> <span class="post-toc-text">8.3 盗聴・改ざん対策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-4-マルウェア対策"><span class="post-toc-number">1.10.4.</span> <span class="post-toc-text">8.4 マルウェア対策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-5-まとめ"><span class="post-toc-number">1.10.5.</span> <span class="post-toc-text">8.5 まとめ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9章-安全なWebアプリケーションのための開発マネジメント"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">9章 安全なWebアプリケーションのための開発マネジメント</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-1-開発マネジメントにおけるセキュリティ施策の全体像"><span class="post-toc-number">1.11.1.</span> <span class="post-toc-text">9.1 開発マネジメントにおけるセキュリティ施策の全体像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-2-開発体制"><span class="post-toc-number">1.11.2.</span> <span class="post-toc-text">9.2 開発体制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-3-開発プロセス"><span class="post-toc-number">1.11.3.</span> <span class="post-toc-text">9.3 開発プロセス</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-4-まとめ"><span class="post-toc-number">1.11.4.</span> <span class="post-toc-text">9.4 まとめ</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2020-08_安全なWebアプリケーションの作り方_脆弱性が生まれる原理と対策の実践_第2版"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">安全なWebアプリケーションの作り方_脆弱性が生まれる原理と対策の実践_第2版</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-08-20 00:00:00" datetime="2020-08-19T15:00:00.000Z"  itemprop="datePublished">2020-08-20</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Security/">Security</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版"><a href="#安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版" class="headerlink" title="安全なWebアプリケーションの作り方脆弱性が生まれる原理と対策の実践第2版"></a>安全なWebアプリケーションの作り方<em>脆弱性が生まれる原理と対策の実践</em>第2版</h1><h2 id="理解したこと"><a href="#理解したこと" class="headerlink" title="理解したこと"></a>理解したこと</h2><h2 id="書籍情報"><a href="#書籍情報" class="headerlink" title="書籍情報"></a>書籍情報</h2><ul>
+<li><p>著者</p>
+<ul>
+<li>徳丸浩:ＥＧセキュアソリューションズ株式会社代表、ＯＷＡＳＰ Ｊａｐａｎアドバイザリーボード、独占行政法人情報処理推進機構（ＩＰＡ）非常勤研究員</li>
+</ul>
+</li>
+<li><p>定価</p>
+<ul>
+<li>3,520円</li>
+</ul>
+</li>
+<li>発売日<ul>
+<li>2018/06/22</li>
+</ul>
+</li>
+<li>ISBN<ul>
+<li>978-4-7973-9316-3</li>
+</ul>
+</li>
+</ul>
+<p>Ｗｅｂアプリ開発者が知っておくべき攻撃と防御の知識を徹底解説。脆弱性が生まれる原理と具体的な対処法が学べる。実習用仮想マシンのダウンロードサービス付き。ＯＷＡＳＰ Ｔｏｐ１０−２０１７対応。【「TRC MARC」の商品解説】</p>
+<p>日本中の現場で支持されたベストセラーが、最新環境にあわせて全面刷新＋大増ページ！</p>
+<p>Webアプリケーションにはなぜ脆弱性が生まれるのか？<br>脆弱性を解消するにはどうプログラミングすればよいか？<br>PHPサンプルへの攻撃を通して脆弱性が生まれる原理と具体的な対処方法が学べる！</p>
+<p>Webアプリ開発者の必読書、待望の改訂版！<br>OWASP Top 10 - 2017対応</p>
+<p>&lt;主な改訂内容&gt;<br>・HTML5の普及に対応してWeb APIやJavaScriptに関する解説を新設<br>・OWASP Top 10 - 2017に対応して、XXEや安全でないデシリアライゼーションなどを解説<br>・脆弱性診断に対する関心が高まっていることから、脆弱性診断の入門の章を親設<br>・IE7のサポート終了など現在のソフトウェアの状況に対応<br>・実習環境をWindowsに加えてMacにも対応【商品解説】</p>
+<h2 id="1章-Webアプリケーションの脆弱性とは"><a href="#1章-Webアプリケーションの脆弱性とは" class="headerlink" title="1章 Webアプリケーションの脆弱性とは"></a>1章 Webアプリケーションの脆弱性とは</h2><h3 id="1-1-脆弱性とは、「悪用できるバグ」"><a href="#1-1-脆弱性とは、「悪用できるバグ」" class="headerlink" title="1.1 脆弱性とは、「悪用できるバグ」"></a>1.1 脆弱性とは、「悪用できるバグ」</h3><p>脆弱性(vulnerability)とは：バグの中でも悪用できてしまうもの</p>
+<h3 id="1-2-脆弱性があるとなぜ駄目なのか"><a href="#1-2-脆弱性があるとなぜ駄目なのか" class="headerlink" title="1.2 脆弱性があるとなぜ駄目なのか"></a>1.2 脆弱性があるとなぜ駄目なのか</h3><ul>
+<li>経済的損失</li>
+<li>法的な要求</li>
+<li>利用者が回復不可能なダメージを受ける場合が多い</li>
+<li>Webサイト利用者に嘘をつくことになる</li>
+<li>攻撃インフラ（ボットネットワークなど）構築に荷担してしまう</li>
+</ul>
+<h3 id="1-3-脆弱性が生まれる理由"><a href="#1-3-脆弱性が生まれる理由" class="headerlink" title="1.3 脆弱性が生まれる理由"></a>1.3 脆弱性が生まれる理由</h3><ul>
+<li>理由<ul>
+<li>(A)バグによるもの：XSS</li>
+<li>(B)チェック機能の不足によるもの：ディレクトリトラバーサルなど</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-セキュリティバグとセキュリティ機能"><a href="#1-4-セキュリティバグとセキュリティ機能" class="headerlink" title="1.4 セキュリティバグとセキュリティ機能"></a>1.4 セキュリティバグとセキュリティ機能</h3><h3 id="1-5-本書の構成"><a href="#1-5-本書の構成" class="headerlink" title="1.5 本書の構成"></a>1.5 本書の構成</h3><h3 id="1-6-セキュリティガイドラインとの対応"><a href="#1-6-セキュリティガイドラインとの対応" class="headerlink" title="1.6 セキュリティガイドラインとの対応"></a>1.6 セキュリティガイドラインとの対応</h3><ul>
+<li>ガイドライン２種類<ul>
+<li>安全なウェブサイトの作り方</li>
+<li>OWASP Top 10</li>
+</ul>
+</li>
+</ul>
+<p>本書の項目との対応表の説明</p>
+<h2 id="2章-実習環境のセットアップ"><a href="#2章-実習環境のセットアップ" class="headerlink" title="2章 実習環境のセットアップ"></a>2章 実習環境のセットアップ</h2><h3 id="2-1-実習環境の概要"><a href="#2-1-実習環境の概要" class="headerlink" title="2.1 実習環境の概要"></a>2.1 実習環境の概要</h3><ul>
+<li><p>サンプルを動かす環境</p>
+<ul>
+<li>Linux</li>
+<li>nginx 1.10</li>
+<li>Apache 2.4</li>
+<li>PHP 5.3 / PHP 7.0</li>
+<li>Tomcat 8.5</li>
+<li>MariaDB 10.1</li>
+<li>Postfix 3.1</li>
+</ul>
+</li>
+<li><p>インストールするプログラム</p>
+<ul>
+<li>Firefox</li>
+<li>VirtualBox</li>
+<li>仮想マシン</li>
+<li>OWASP ZAP(脆弱性診断に用いるツール)</li>
+<li>FoxyProxy-Standard(プロキシを切り替えるFirefoxアドオン)</li>
+</ul>
+</li>
+<li><p>実習用仮想マシンのダウンロード</p>
+<ul>
+<li><a href="https://wasbook.org/download/" target="_blank" rel="noopener">https://wasbook.org/download/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-Firefoxのインストール"><a href="#2-2-Firefoxのインストール" class="headerlink" title="2.2 Firefoxのインストール"></a>2.2 Firefoxのインストール</h3><ul>
+<li>XSSフィルタが標準では実装されていないのでクロスサイトスクリプティングという脆弱性の体験がやりやすい</li>
+<li>ダウンロードURL<ul>
+<li><a href="https://www.mozilla.org/ja/firefox/new/" target="_blank" rel="noopener">https://www.mozilla.org/ja/firefox/new/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-VirtualBoxのインストール"><a href="#2-3-VirtualBoxのインストール" class="headerlink" title="2.3 VirtualBoxのインストール"></a>2.3 VirtualBoxのインストール</h3><ul>
+<li>ダウンロードURL<ul>
+<li><a href="https://www.virtualbox.org/" target="_blank" rel="noopener">https://www.virtualbox.org/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-仮想マシンのインストールと動作確認"><a href="#2-4-仮想マシンのインストールと動作確認" class="headerlink" title="2.4 仮想マシンのインストールと動作確認"></a>2.4 仮想マシンのインストールと動作確認</h3><p>wasbookのOSイメージをインポート<br>ホストネットワークマネージャを設定<br>ゲストOSの設定＞ネットワークより以下を確認<br>アダプター１にNATが設定されている<br>アダプター２にホストオンリーアダプター、名前に先程ホストネットワークマネージャより設定した名前が選択されていること</p>
+<p>ゲストOSを起動してログイン<br><code>ip a</code>でアドレス確認<br>ホストOSからping疎通</p>
+<h3 id="2-5-OWASP-ZAPのインストール"><a href="#2-5-OWASP-ZAPのインストール" class="headerlink" title="2.5 OWASP ZAPのインストール"></a>2.5 OWASP ZAPのインストール</h3><ul>
+<li><p>OWASP ZAPとは</p>
+<ul>
+<li>OWASP ZAP(OWASP Zed Attack Proxy)は、OWASP(The Open Web Application Security Project)が開発・公開しているWebアプリケーション脆弱性診断用ツールで、無償で公開されている</li>
+<li>OWASP ZAPはWindowsPC/Mac上でプロキシとして動作し、HTTP通信を観察したり、変更したりすることができる</li>
+<li>同種のツールに、Burp SuiteやFiddlerなどがあるが、本書では以下の理由でこちらを使う<ul>
+<li>完全に無償で利用できる</li>
+<li>自動の診断ツールが手軽に利用できる</li>
+<li>WindowsとmacOSの両方で利用できる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JREのインストール</p>
+<ul>
+<li>OWASP ZAPはJavaで記述されているので実行環境が必要</li>
+<li>ただしmacOS版のOWASP ZAPはJRE版が同梱されているのでJREをインストールする必要はありません</li>
+<li>Windowsは必要があればJREをインストール<ul>
+<li><code>java -version</code>で確認</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>OWASP ZAPのインストール</p>
+<ul>
+<li><a href="https://owasp.org/www-project-zap/" target="_blank" rel="noopener">https://owasp.org/www-project-zap/</a></li>
+<li>JRE実行環境とbit数をあわせること</li>
+</ul>
+</li>
+</ul>
+<p>オプションの設定を行っておく</p>
+<h3 id="2-6-Firefoxの拡張FoxyProxy-Standardのインストール"><a href="#2-6-Firefoxの拡張FoxyProxy-Standardのインストール" class="headerlink" title="2.6 Firefoxの拡張FoxyProxy-Standardのインストール"></a>2.6 Firefoxの拡張FoxyProxy-Standardのインストール</h3><ul>
+<li>ForxProxy Satandard<ul>
+<li><a href="https://addons.mozilla.org/ja/firefox/addon/foxyproxy-standard/" target="_blank" rel="noopener">https://addons.mozilla.org/ja/firefox/addon/foxyproxy-standard/</a></li>
+</ul>
+</li>
+</ul>
+<p>アドオン内のプロキシ設定を修正</p>
+<h3 id="2-7-OWASP-ZAPを使ってみる"><a href="#2-7-OWASP-ZAPを使ってみる" class="headerlink" title="2.7 OWASP ZAPを使ってみる"></a>2.7 OWASP ZAPを使ってみる</h3><p>実際にFireFoxからアクセスして記録されるかどうかを確認する</p>
+<h3 id="2-8-Webメールの確認"><a href="#2-8-Webメールの確認" class="headerlink" title="2.8 Webメールの確認"></a>2.8 Webメールの確認</h3><p>本書では、メール処理に伴う脆弱性でメールを送信したり、<br>脆弱性に対する攻撃でメールを送信したりする場合があるので、ブラウザからメールを確認できるように、RoundcubeというWebメールソフトが導入されている</p>
+<p>実際にログインして確かめましょう</p>
+<h2 id="3章-Webセキュリティの基礎-～-HTTP、セッション管理、同一オリジンポリシー"><a href="#3章-Webセキュリティの基礎-～-HTTP、セッション管理、同一オリジンポリシー" class="headerlink" title="3章 Webセキュリティの基礎 ～ HTTP、セッション管理、同一オリジンポリシー"></a>3章 Webセキュリティの基礎 ～ HTTP、セッション管理、同一オリジンポリシー</h2><h3 id="3-1-HTTPとセッション管理"><a href="#3-1-HTTPとセッション管理" class="headerlink" title="3.1 HTTPとセッション管理"></a>3.1 HTTPとセッション管理</h3><ul>
+<li><p>なぜHTTPを学ぶのか</p>
+<ul>
+<li>Web固有の特性に由来して、脆弱性が発生するため</li>
+</ul>
+</li>
+<li><p>一番かんたんなHTTP</p>
+</li>
+<li><p>Referer</p>
+<ul>
+<li>セキュリティ上の問題になるのは、URLが秘密情報を含んでいる場合</li>
+<li>典型的にはURLにセッションIDを含んでいる場合、Referer経由で外部に漏洩し、なりすましに悪用される可能性がある</li>
+</ul>
+</li>
+<li><p>hiddenパラメータの書き換えを体験</p>
+<ul>
+<li>hiddenパラメータ部分に脆弱性がある場合に、OWASP ZAPのようなプロキシツールを用いてhiddenパラメータを改変し、攻撃することが可能であることを実感してもらうため</li>
+</ul>
+</li>
+<li><p>hiddenパラメータのメリット</p>
+<ul>
+<li>hiddenは利用者自身からは書き換えできるものの、情報漏洩や第三者からの書き換えに対しては堅牢だということ</li>
+<li>hiddenパラメ―tあと比較する対象には、後述するクッキーやセッション変数がある</li>
+<li>特にログイン前の状態でかつ、地域型JPドメイン名や都道府県型JPドメイン名を使っている場合、後述するクッキーモンスターバグの影響により、セッション変数の漏洩に対する効果的な対策がない</li>
+<li>このため利用者自身によっても書換えられては困る認証や認可に関する情報はセッション変数に保存するべきだが、それ以外の情報はまずはhiddenパラメータに保存することを検討するとよい</li>
+<li>特にログイン前の状態では認証認可に関する情報はないはずなので、原則としてセッション変数の使用は避け、hiddenパラメータを使うことが情報漏えいなどに対して安全</li>
+</ul>
+</li>
+<li><p>ステートレスなHTTP認証</p>
+<ul>
+<li>HTTPには認証機能がサポートされている</li>
+<li>HTTP認証と総称されるが<ul>
+<li>Basic認証</li>
+<li>NTLM認証</li>
+<li>Digest認証<ul>
+<li>などが存在する</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>HTTPがステートレスなプロトコルであることから、HTTP認証もステートレス</li>
+</ul>
+</li>
+<li><p>Basic認証を体験する</p>
+<ul>
+<li>Basic認証は認証が必要なページにリクエストがあると、いったん「401 Unauthorized(認証が必要なのにされていない)」というステータスを返します。これを受けてブラウザはIDとパスワードの入力画面を表示し、入力されたIDとパスワードを追加したリクエストをあらためてサーバーに返信します。</li>
+</ul>
+</li>
+<li><p>認証と認可</p>
+<ul>
+<li>認証とは：利用者がたしかに本人であることをなんらかの手段で確認すること<ul>
+<li>Basic認証のほか、HTMLフォームでIDとパスワードを入力させるフォーム認証、TLSクライアント証明書を用いるクライアント認証など</li>
+</ul>
+</li>
+<li>認可とは：認証済みの利用者に権限を与えること<ul>
+<li>具体的には、データの参照・更新・削除や、預金の振り込み、物品の購入などを「できるようにする」こと</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>クッキーとセッション管理</p>
+<ul>
+<li>クッキー：サーバー側からブラウザに対して、「名前＝変数」の組を覚えておくように指示するもの<ul>
+<li>クッキーはセッション管理という機能の実現に使われる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>アプリケーションが<code>Set-Cookie</code>というレスポンスヘッダーを返却して、ブラウザに対してクッキーを覚えるように指示する</p>
+</li>
+<li><p>クッキーには有効期限が設定できるが、有効期限が設定されていないクッキーはブラウザ終了時まで有効になる</p>
+</li>
+<li><p>クッキーによるセッション管理</p>
+<ul>
+<li>アプリケーションデータを保持する目的でクッキーそのものに値を入れることはあまり行われない</li>
+<li>その理由は以下の通り<ul>
+<li>クッキーが保持できる値の個数や文字列長には制限がある</li>
+<li>クッキーの値は利用者本人には参照・変更ができるので、秘密情報の格納に向かない<ul>
+<li>このためクッキーには「整理番号」としてセッションIDを格納しておき、実際の値はサーバー側で管理する方法が広く用いられている</li>
+<li>これをクッキーによるセッション管理と呼ぶ</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>セッションIDに求められる要件</p>
+<ul>
+<li>要件１：第三者がセッションIDを推測できないこと<ul>
+<li>暗号論的擬似乱数生成器を用いて生成<a href="https://www.cryptrec.go.jp/list.html" target="_blank" rel="noopener">https://www.cryptrec.go.jp/list.html</a></li>
+<li>しかし実際にはセッションIDを自作するのではなく、Webアプリケーション開発ツールで提供されるものを利用すべき</li>
+<li>セッション管理機構は自作しないことが重要</li>
+</ul>
+</li>
+<li>要件２：第三者がセッションIDを強制されないこと<ul>
+<li>セッションIDの固定化攻撃(Session Fixaction Attack)を受けないように、認証が完了したタイミングでセッションIDを新しく払い出そうという話</li>
+</ul>
+</li>
+<li>要件３：第三者にセッションIDが漏洩しないこと<ul>
+<li>セッションIDが漏洩する主な原因<ul>
+<li>クッキー発行の際の属性に不備がある</li>
+<li>ネットワーク的にセッションIDが盗聴される</li>
+<li>XSSなどアプリケーションの脆弱性により漏洩する</li>
+<li>PHPやブラウザなどプラットフォームの脆弱性により漏洩する</li>
+<li>セッションIDをURLに保持している場合は、Refererヘッダから漏洩する</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>クッキーの属性</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain</td>
+<td>ブラウザがクッキー値を送信するサーバーのドメイン</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>ブラウザがクッキー値を送信するURLのディレクトリ</td>
+</tr>
+<tr>
+<td>Expires</td>
+<td>クッキー値の有効期限。指定しない場合、ブラウザの終了まで</td>
+</tr>
+<tr>
+<td>Secure</td>
+<td>HTTPSの場合のみクッキーを送信</td>
+</tr>
+<tr>
+<td>HttpOnly</td>
+<td>この属性が指定されたクッキーはJavascriptからアクセスできない</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>このうちセキュリティ上重要な属性</p>
+<ul>
+<li>Domain</li>
+<li>Secure</li>
+<li>HttpOnly</li>
+</ul>
+</li>
+<li><p>Domain属性：通常設定しない</p>
+<ul>
+<li>複数のサーバに送信されるクッキーを生成したい場合に使うが、Domain属性を指定しない状態がもっともクッキーの送信範囲が狭く、安全な状態と言える</li>
+</ul>
+</li>
+<li><p>Column：クッキーモンスターバグ</p>
+<ul>
+<li>筆者が所属する会社のドメイン名は<code>eg-secure.co.jp</code>なので、クッキーを発行する際のドメイン指定の最短は<code>eg-secure.co.jp</code>となるはず</li>
+<li>ところが、古いブラウザを使っていると<code>.co.jp</code>のドメインのクッキーが作れてしまうという問題があった</li>
+<li>このバグを「クッキーモンスターバグ」という</li>
+</ul>
+</li>
+<li><p>クッキーのセキュア属性</p>
+<ul>
+<li>HTTPS通信の場合のみにサーバーに送信されるので、HTTPS通信を保証することができる</li>
+</ul>
+</li>
+<li><p>クッキーのHttpOnly属性</p>
+<ul>
+<li>Javascriptからアクセスできないクッキーを設定するもの</li>
+<li>XSS攻撃でJavascriptを悪用してクッキーを盗み出すというもので、クッキーにHttpOnly属性をつけておくとJavascriptによりクッキーを盗み出すことができなくなる</li>
+<li>HttpOnly属性をつけることで悪影響はないのでつけておくことをおすすめ</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-受動的攻撃と同一オリジンポリシー"><a href="#3-2-受動的攻撃と同一オリジンポリシー" class="headerlink" title="3.2 受動的攻撃と同一オリジンポリシー"></a>3.2 受動的攻撃と同一オリジンポリシー</h3><ul>
+<li><p>能動的攻撃と受動的攻撃</p>
+<ul>
+<li>能動的攻撃：攻撃者がWebサーバーに対して直接攻撃すること</li>
+<li>受動的攻撃：攻撃者がサーバーに直接攻撃するのではなく、Webサイトの利用者に罠を仕掛ける事により、罠を閲覧したユーザを通してアプリケーションを攻撃する手法<ul>
+<li>罠サイト経由でCSRFやXSSの攻撃を仕掛ける</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ブラウザはどのように受動的攻撃を防ぐか</p>
+<ul>
+<li>受動的攻撃に対しては、ブラウザとWebサイトそれぞれで対策を行う必要がある</li>
+<li>Webサイト側の対策を説明する前に、この節でブラウザのセキュリティ機能について説明する</li>
+</ul>
+</li>
+<li><p>サンドボックスという考え方</p>
+<ul>
+<li>利用者に配布元を確認させた上で、利用者が許可した場合のみに実行する</li>
+<li>プログラムの「できること」を制限するサンドボックスという環境を用意する<ul>
+<li>ローカルファイルへのアクセス禁止</li>
+<li>プリンタなどの資源の利用禁止（画面表示は可能）</li>
+<li>ネットワークアクセスの制限（同一オリジンポリシー）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>同一オリジンポリシー</p>
+<ul>
+<li>JavaScriptなどのクライアントスクリプトからサイトをまたがったアクセスを禁止するセキュリティ上の制限であり、ブラウザのサンドボックスに用意された制限の１つ</li>
+<li>iframeを題材にして、同一オリジンポリシーがなぜ必要かを説明していきます</li>
+</ul>
+</li>
+<li><p>同一オリジンである条件</p>
+<ul>
+<li>「同一オリジン」であるとは、以下のすべてを満たす場合<ul>
+<li>URLのホスト（FQDN:Fully Qualified Domain Name）が一致している</li>
+<li>スキーム（プロトコル）が一致している</li>
+<li>ポート番号が一致している</li>
+</ul>
+</li>
+<li>クッキーに対する条件はスキームとポート番号は関係ないのでJavaScriptの制限のほうが厳しい</li>
+<li>一方JavaScriptにはディレクトリに関する制限はない</li>
+<li>iframeだけでなく、Ajaxの実現に使用されているXMLHttpRequestについても成約がある</li>
+<li>ただし、XMLHttpRequestについては相手側の許可があれば同一オリジンでなくても通信できるCORSという規格が策定されました</li>
+</ul>
+</li>
+<li><p>アプリケーション脆弱性と受動的攻撃</p>
+<ul>
+<li>ブラウザは同一オリジンポリシーにより受動的攻撃を防止しているが、アプリケーションに脆弱性があると受動的攻撃を受ける場合がある</li>
+<li>その代表がクロスサイトスクリプティング（XSS）攻撃</li>
+<li>iframeの外側から内側の要素へアクセスすることはできないが、何らかの方法で内側の要素にスクリプトを埋め込むことができれば、同一オリジンポリシーの制約は受けないのでドキュメント情報にアクセスできる</li>
+</ul>
+</li>
+<li><p>JavaScript以外のクロスドメインアクセス</p>
+<ul>
+<li>frame要素とiframe要素</li>
+<li>img要素</li>
+<li>script要素</li>
+<li>CSS<ul>
+<li>クロスドメインで読み込み可能</li>
+<li>IEにはCSSXSSと呼ばれる脆弱性があった</li>
+<li>HTMLやJavaScriptをCSSとして呼び出した場合、これらCSSでないデータが部分的に読み出せるジェイ弱製があった</li>
+</ul>
+</li>
+<li>form要素のaction属性<ul>
+<li>form要素のaction属性もクロスドメインの指定が可能</li>
+<li>またformの送信（submit）はJavaScriptから常に（action先がクロスドメインであっても）操作できる</li>
+<li>この仕様を悪用した攻撃手法がクロスサイトリクエストフォージェリ（CSRF）攻撃</li>
+<li>CSRF攻撃では、ユーザの意図しないformを送信させられ、アプリケーションの機能が勝手に実行される</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-CORS（Cross-Origin-Resource-Sharing）"><a href="#3-3-CORS（Cross-Origin-Resource-Sharing）" class="headerlink" title="3.3 CORS（Cross-Origin Resource Sharing）"></a>3.3 CORS（Cross-Origin Resource Sharing）</h3><ul>
+<li><p>シンプルなリクエスト</p>
+<ul>
+<li>特定の王権を満たす「シンプルなリクエスト」の場合、XMLHttpRequestを用いて異なるオリジンにHTTPリクエストを送ることが相手側の許可なしに可能</li>
+</ul>
+</li>
+<li><p>Access-Control-Allow-Origin</p>
+<ul>
+<li>クロスオリジンからの読み出しを許可するための仕掛けで、情報の提供元がHTTPレスポンスヘッダとして出力</li>
+<li><code>http://example.jp</code>に対してXMLHttpRequestなどのアクセスを許可する場合は下記のHTTPレスポンスヘッダを送信<ul>
+<li><code>Access-Control-Allow-Origin: http://example.jp</code></li>
+<li>情報提供元がこの許可をすればJavaScriptから参照できるようになる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>シンプルなリクエストの要件</p>
+<ul>
+<li>メソッド<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>POST</li>
+</ul>
+</li>
+<li>XMLHttpRequestオブジェクトのsetRequestHeaderメソッドで設定するリクエストヘッダは以下に限る<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Content-Type</li>
+</ul>
+</li>
+<li>Content-Typeヘッダは以下のいずれかである<ul>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/plain</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>プリフライトリクエスト</p>
+<ul>
+<li>クロスオリジンアクセスにおいて「シンプルなリクエスト」の条件を満たさない場合、</li>
+<li>ブラウザは、プリフライトリクエスト（pre-flight request）というHTTPリクエストを送信する</li>
+<li>上記のシンプルなリクエストの要件に合致しない場合、ブラウザは以下のようなリクエストヘッダを送信<ul>
+<li><code>Access-Control-Request-Method: POST</code></li>
+<li><code>Access-Control-Request-Headers: content-type</code></li>
+<li><code>Origin: http://example.jp</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>MEMO: CORS制約に引っかかる場合でもリソース提供元のソースは走る</p>
+<ul>
+<li>返却されたリソースを読み込むときに、レスポンスヘッダが存在しないと読み込むことができない様になっている</li>
+</ul>
+</li>
+<li><p>認証情報を含むリクエスト</p>
+<ul>
+<li>デフォルトでは、クロスオリジンに対するリクエストにはHTTP認証やクッキーなどの認証に用いられるリクエストヘッダは自動的に送信されません</li>
+<li>これらを用いるには、XMLHttpRequestのプロパティ<code>withCredentials</code>をtrueにセットする必要がある</li>
+<li><code>withCredentials</code>プロパティをtrueにしたリクエストに対しては、<code>Access-Control-Allow-Credentials: true</code>というレスポンスヘッダを返す必要がある</li>
+<li>まとめると<ul>
+<li>クライアント側：XMLHttpRequestオブジェクトのwithCredentialsプロパティをtrueにする</li>
+<li>サーバー側：レスポンスヘッダとしてAccess-Control-Allow-Credentials: trueを返す</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4章-Webアプリケーションの機能別に見るセキュリティバグ"><a href="#4章-Webアプリケーションの機能別に見るセキュリティバグ" class="headerlink" title="4章 Webアプリケーションの機能別に見るセキュリティバグ"></a>4章 Webアプリケーションの機能別に見るセキュリティバグ</h2><h3 id="4-1-Webアプリケーションの機能と脆弱性の対応"><a href="#4-1-Webアプリケーションの機能と脆弱性の対応" class="headerlink" title="4.1 Webアプリケーションの機能と脆弱性の対応"></a>4.1 Webアプリケーションの機能と脆弱性の対応</h3><ul>
+<li><p>脆弱性はどこで発生するか</p>
+<ul>
+<li>Webアプリケーションの出力処理で発生<ul>
+<li>ここでいう出力は、ブラウザ表示、RDB処理、シェル実行、メール処理、ファイル処理など</li>
+</ul>
+</li>
+<li>まとめると<ul>
+<li>脆弱性には処理に起因するものと出力に起因するものがある</li>
+<li>入力に起因する脆弱性はない（ミドルウェアの範囲を広げると、入力時の検証処理に脆弱性が入り込む余地はある）</li>
+<li>出力に起因する脆弱性には「インジェクション」という単語がつくものが多い</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>インジェクション系脆弱性とは</p>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>脆弱性の説明を始めるにあたり、脆弱性の発生箇所と脆弱性の種類の関連性について説明しました</li>
+<li>また「出力」で発生する脆弱性は、インジェクションと呼ばれる共通の原理で発生することを紹介</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-入力処理とセキュリティ"><a href="#4-2-入力処理とセキュリティ" class="headerlink" title="4.2 入力処理とセキュリティ"></a>4.2 入力処理とセキュリティ</h3><ul>
+<li><p>WEBアプリケーションの「入力」では何をするのか</p>
+<ul>
+<li>処理に入る前の準備段階<ul>
+<li>文字エンコーディングの妥当性検証</li>
+<li>文字エンコーディングの交換（必要な場合のみ）</li>
+<li>入力値（パラメータ文字列）の妥当性検証</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文字エンコーディングの検証</p>
+<ul>
+<li>PHPの場合、文字エンコーディングの検証にはmb_check_encoding関数が利用できる</li>
+</ul>
+</li>
+<li><p>文字エンコーディングの変換</p>
+<ul>
+<li>言語によって文字エンコーディングの変換手段は異なる</li>
+<li>おおまかな分類として、文字エンコーディングを自動的に変換する言語と、スクリプトで変換ロジックを明示する言語がある</li>
+</ul>
+</li>
+<li><p>入力値の検証</p>
+<ul>
+<li>入力値の検証がないと…<ul>
+<li>数値のみを受け付ける項目に英数字や記号を入力して、データベースのエラーになる</li>
+<li>更新処理が途中でエラーになり、データベースの不整合が発生する</li>
+<li>利用者が多数の項目を入力して事項ボタンをクリックしたら内部エラーとなり入力を最初からやり直す羽目になる</li>
+<li>メールアドレスの入力を忘れているのにアプリケーションがメール送信処理を実行する<ul>
+<li>入力検証はこのような悪いことが起きる可能性をへらす！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目的<ul>
+<li>入力値の間違いを早期に発見して再入力を促すことにより、ユーザビリティ（使いやすさ）を向上する</li>
+<li>間違った処理を継続することによるデータの不整合などを防ぎ、システムの信頼性を向上させる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>バイナリセーフという考え方とヌルバイト攻撃</p>
+<ul>
+<li>バイナリセーフとは：入力値がどんなバイト列であっても正しく扱えること</li>
+<li>ヌルバイトは、バイナリセーフでない関数の場合終端文字として扱われるため、後ろの文字列を評価対象としない</li>
+</ul>
+</li>
+<li><p>入力値検証だけでは対策にならない</p>
+<ul>
+<li>入力段階で不正な入力をチェックしておけば、セキュリティ対策は終わりにできないか？<ul>
+<li>アプリの仕様のためすべての文字を許容するという仕様の場合は入力時点でも何も防げない</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-表示処理に伴う問題"><a href="#4-3-表示処理に伴う問題" class="headerlink" title="4.3 表示処理に伴う問題"></a>4.3 表示処理に伴う問題</h3><ul>
+<li><p>クロスサイトスクリプティング（基本編）</p>
+<ul>
+<li>外部からの入力値を画面に表示するしてHTMLを生成する処理に問題があると生じる脆弱性</li>
+<li>影響<ul>
+<li>サイト利用者のブラウザ上で、攻撃者の用意したスクリプトの実行によりクッキー値を盗まれ、利用者がなりすましの被害にあう</li>
+<li>同じくブラウザ上でスクリプトを実行させられ、サイト利用者の権限でWebアプリケーションの機能を悪用される</li>
+<li>Webサイト上に偽の入力フォームが表示され、フィッシングにより利用者が個人情報を盗まれる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>攻撃手法と影響</p>
+<ul>
+<li>クッキー値の盗み出し<ul>
+<li>罠サイトを用意してiframeで標的サイトを表示し、script実行！</li>
+</ul>
+</li>
+<li>その他のJavaScriptによる攻撃<ul>
+<li>ワーム攻撃</li>
+</ul>
+</li>
+<li>画面の書換え<ul>
+<li>JavaScriptを使わない攻撃</li>
+<li>formを表示する画面で入力画面と編集画面を兼ねているようなもので、各入力項目の初期値が設定できるようになっているページに脆弱性があると実現する</li>
+<li>MEMO: 最初わからなかったが腑に落ちた！ただこんなページを実装しているサイトは無いと思う。。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>P129まで 2020-08-27 02:33:29</p>
+<ul>
+<li><p>反射型XSSと持続型XSS</p>
+<ul>
+<li>反射型：攻撃用JavaScriptが攻撃対象サイトとは別のサイトに有る場合</li>
+<li>持続型：攻撃用のJavaScriptが、攻撃対象のデータベースなどに保存される場合</li>
+</ul>
+</li>
+<li><p>COLUMN: TRACEメソッドの無効化とXST</p>
+<ul>
+<li>古いブラウザに対して飲み有効なクロスサイト・トレーシングという攻撃がある</li>
+<li>JavaScriptによりHTTPのTRACEメソッドを送信する事によりクッキーやBasic認証のID・パスワードを盗み出す手法</li>
+<li>XST攻撃はブラウザで対策が2006年に完了しており、リスクはほぼないと考えられる</li>
+</ul>
+</li>
+<li><p>対策まとめ</p>
+<ul>
+<li>必須対策（個別の対策）<ul>
+<li>HTMLの要素内容<ul>
+<li>htmlspecialchars関数によりエスケープ</li>
+</ul>
+</li>
+<li>属性値<ul>
+<li>htmlspecialcharsカンスによりエスケープしてダブルクォートで囲む</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>必須対策（共通対策）<ul>
+<li>HTTPレスポンスに文字エンコーディングを明示する</li>
+</ul>
+</li>
+<li>保険的対策<ul>
+<li>X-XSS-Protectionレスポンスヘッダの使用</li>
+<li>入力値の検証</li>
+<li>クッキーにHttpOnly属性を付与</li>
+<li>TRACEメソッドの無効化（コラム参照）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>4.3.2 クロスサイトスクリプティング（発展編）</p>
+</li>
+<li><p>href属性やsrc属性のXSS</p>
+<ul>
+<li>対策<ul>
+<li><code>http:</code>または<code>https:</code>で始まる絶対URLチェック</li>
+<li>スラッシュで始まる相対URLチェック</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>JavaScriptの動的生成</p>
+<ul>
+<li>イベントハンドラのXSS<ul>
+<li>Javascriptのメソッド引数にサーバ側で動的に生成したスクリプトが注入されている場合<ul>
+<li>対策<ul>
+<li>JavaScript文字列リテラルとしてエスケープする</li>
+<li>結果をHTMLエスケープする</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>script要素のXSS</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-4-SQL呼び出しに伴う脆弱性"><a href="#4-4-SQL呼び出しに伴う脆弱性" class="headerlink" title="4.4 SQL呼び出しに伴う脆弱性"></a>4.4 SQL呼び出しに伴う脆弱性</h3><h3 id="4-5-「-重要な処理」の際に混入する脆弱性"><a href="#4-5-「-重要な処理」の際に混入する脆弱性" class="headerlink" title="4.5 「 重要な処理」の際に混入する脆弱性"></a>4.5 「 重要な処理」の際に混入する脆弱性</h3><h3 id="4-6-セッション管理の不備"><a href="#4-6-セッション管理の不備" class="headerlink" title="4.6 セッション管理の不備"></a>4.6 セッション管理の不備</h3><h3 id="4-7-リダイレクト処理にまつわる脆弱性"><a href="#4-7-リダイレクト処理にまつわる脆弱性" class="headerlink" title="4.7 リダイレクト処理にまつわる脆弱性"></a>4.7 リダイレクト処理にまつわる脆弱性</h3><h3 id="4-8-クッキー出力にまつわる脆弱性"><a href="#4-8-クッキー出力にまつわる脆弱性" class="headerlink" title="4.8 クッキー出力にまつわる脆弱性"></a>4.8 クッキー出力にまつわる脆弱性</h3><h3 id="4-9-メール送信の問題"><a href="#4-9-メール送信の問題" class="headerlink" title="4.9 メール送信の問題"></a>4.9 メール送信の問題</h3><h3 id="4-10-ファイルアクセスにまつわる問題"><a href="#4-10-ファイルアクセスにまつわる問題" class="headerlink" title="4.10 ファイルアクセスにまつわる問題"></a>4.10 ファイルアクセスにまつわる問題</h3><h3 id="4-11-OSコマンド呼び出しの際に発生する脆弱性"><a href="#4-11-OSコマンド呼び出しの際に発生する脆弱性" class="headerlink" title="4.11 OSコマンド呼び出しの際に発生する脆弱性"></a>4.11 OSコマンド呼び出しの際に発生する脆弱性</h3><h3 id="4-12-ファイルアップロードにまつわる問題"><a href="#4-12-ファイルアップロードにまつわる問題" class="headerlink" title="4.12 ファイルアップロードにまつわる問題"></a>4.12 ファイルアップロードにまつわる問題</h3><h3 id="4-13-インクルードにまつわる問題"><a href="#4-13-インクルードにまつわる問題" class="headerlink" title="4.13 インクルードにまつわる問題"></a>4.13 インクルードにまつわる問題</h3><h3 id="4-14-構造化データの読み込みにまつわる問題"><a href="#4-14-構造化データの読み込みにまつわる問題" class="headerlink" title="4.14 構造化データの読み込みにまつわる問題"></a>4.14 構造化データの読み込みにまつわる問題</h3><h3 id="4-15-共有資源やキャッシュに関する問題"><a href="#4-15-共有資源やキャッシュに関する問題" class="headerlink" title="4.15 共有資源やキャッシュに関する問題"></a>4.15 共有資源やキャッシュに関する問題</h3><h3 id="4-16-Web-API実装における脆弱性"><a href="#4-16-Web-API実装における脆弱性" class="headerlink" title="4.16 Web API実装における脆弱性"></a>4.16 Web API実装における脆弱性</h3><h3 id="4-17-JavaScriptの問題"><a href="#4-17-JavaScriptの問題" class="headerlink" title="4.17 JavaScriptの問題"></a>4.17 JavaScriptの問題</h3><h2 id="5章-代表的なセキュリティ機能"><a href="#5章-代表的なセキュリティ機能" class="headerlink" title="5章 代表的なセキュリティ機能"></a>5章 代表的なセキュリティ機能</h2><h3 id="5-1-認証"><a href="#5-1-認証" class="headerlink" title="5.1 認証"></a>5.1 認証</h3><h3 id="5-2-アカウント管理"><a href="#5-2-アカウント管理" class="headerlink" title="5.2 アカウント管理"></a>5.2 アカウント管理</h3><h3 id="5-3-認可"><a href="#5-3-認可" class="headerlink" title="5.3 認可"></a>5.3 認可</h3><h3 id="5-4-ログ出力"><a href="#5-4-ログ出力" class="headerlink" title="5.4 ログ出力"></a>5.4 ログ出力</h3><h2 id="6章-文字コードとセキュリティ"><a href="#6章-文字コードとセキュリティ" class="headerlink" title="6章 文字コードとセキュリティ"></a>6章 文字コードとセキュリティ</h2><h3 id="6-1-文字コードとセキュリティの概要"><a href="#6-1-文字コードとセキュリティの概要" class="headerlink" title="6.1 文字コードとセキュリティの概要"></a>6.1 文字コードとセキュリティの概要</h3><h3 id="6-2-文字集合"><a href="#6-2-文字集合" class="headerlink" title="6.2 文字集合"></a>6.2 文字集合</h3><h3 id="6-3-文字エンコーディング"><a href="#6-3-文字エンコーディング" class="headerlink" title="6.3 文字エンコーディング"></a>6.3 文字エンコーディング</h3><h3 id="6-4-文字コードによる脆弱性の発生要因まとめ"><a href="#6-4-文字コードによる脆弱性の発生要因まとめ" class="headerlink" title="6.4 文字コードによる脆弱性の発生要因まとめ"></a>6.4 文字コードによる脆弱性の発生要因まとめ</h3><h3 id="6-5-文字コードを正しく扱うために"><a href="#6-5-文字コードを正しく扱うために" class="headerlink" title="6.5 文字コードを正しく扱うために"></a>6.5 文字コードを正しく扱うために</h3><h3 id="6-6-まとめ"><a href="#6-6-まとめ" class="headerlink" title="6.6 まとめ"></a>6.6 まとめ</h3><h2 id="7章-脆弱性診断入門"><a href="#7章-脆弱性診断入門" class="headerlink" title="7章 脆弱性診断入門"></a>7章 脆弱性診断入門</h2><h3 id="7-1-脆弱性診断の概要"><a href="#7-1-脆弱性診断の概要" class="headerlink" title="7.1 脆弱性診断の概要"></a>7.1 脆弱性診断の概要</h3><h3 id="7-2-脆弱なサンプルアプリケーションBad-Todo"><a href="#7-2-脆弱なサンプルアプリケーションBad-Todo" class="headerlink" title="7.2 脆弱なサンプルアプリケーションBad Todo"></a>7.2 脆弱なサンプルアプリケーションBad Todo</h3><h3 id="7-3-診断ツールのダウンロードとインストール"><a href="#7-3-診断ツールのダウンロードとインストール" class="headerlink" title="7.3 診断ツールのダウンロードとインストール"></a>7.3 診断ツールのダウンロードとインストール</h3><h3 id="7-4-Nmapによるポートスキャン"><a href="#7-4-Nmapによるポートスキャン" class="headerlink" title="7.4 Nmapによるポートスキャン"></a>7.4 Nmapによるポートスキャン</h3><h3 id="7-5-OpenVASによるプラットフォーム脆弱性診断"><a href="#7-5-OpenVASによるプラットフォーム脆弱性診断" class="headerlink" title="7.5 OpenVASによるプラットフォーム脆弱性診断"></a>7.5 OpenVASによるプラットフォーム脆弱性診断</h3><h3 id="7-6-OWASP-ZAPによる自動脆弱性スキャン"><a href="#7-6-OWASP-ZAPによる自動脆弱性スキャン" class="headerlink" title="7.6 OWASP ZAPによる自動脆弱性スキャン"></a>7.6 OWASP ZAPによる自動脆弱性スキャン</h3><h3 id="7-7-OWASP-ZAPによる手動脆弱性診断"><a href="#7-7-OWASP-ZAPによる手動脆弱性診断" class="headerlink" title="7.7 OWASP ZAPによる手動脆弱性診断"></a>7.7 OWASP ZAPによる手動脆弱性診断</h3><h3 id="7-8-RIPSによるソースコード診断"><a href="#7-8-RIPSによるソースコード診断" class="headerlink" title="7.8 RIPSによるソースコード診断"></a>7.8 RIPSによるソースコード診断</h3><h3 id="7-9-脆弱性診断実施上の注意"><a href="#7-9-脆弱性診断実施上の注意" class="headerlink" title="7.9 脆弱性診断実施上の注意"></a>7.9 脆弱性診断実施上の注意</h3><h3 id="7-10-まとめ"><a href="#7-10-まとめ" class="headerlink" title="7.10 まとめ"></a>7.10 まとめ</h3><h3 id="7-11-脆弱性診断報告書のサンプル"><a href="#7-11-脆弱性診断報告書のサンプル" class="headerlink" title="7.11 脆弱性診断報告書のサンプル"></a>7.11 脆弱性診断報告書のサンプル</h3><h2 id="8章-Webサイトの安全性を高めるために"><a href="#8章-Webサイトの安全性を高めるために" class="headerlink" title="8章 Webサイトの安全性を高めるために"></a>8章 Webサイトの安全性を高めるために</h2><h3 id="8-1-Webサーバーへの攻撃経路と対策"><a href="#8-1-Webサーバーへの攻撃経路と対策" class="headerlink" title="8.1 Webサーバーへの攻撃経路と対策"></a>8.1 Webサーバーへの攻撃経路と対策</h3><h3 id="8-2-成りすまし対策"><a href="#8-2-成りすまし対策" class="headerlink" title="8.2 成りすまし対策"></a>8.2 成りすまし対策</h3><h3 id="8-3-盗聴・改ざん対策"><a href="#8-3-盗聴・改ざん対策" class="headerlink" title="8.3 盗聴・改ざん対策"></a>8.3 盗聴・改ざん対策</h3><h3 id="8-4-マルウェア対策"><a href="#8-4-マルウェア対策" class="headerlink" title="8.4 マルウェア対策"></a>8.4 マルウェア対策</h3><h3 id="8-5-まとめ"><a href="#8-5-まとめ" class="headerlink" title="8.5 まとめ"></a>8.5 まとめ</h3><h2 id="9章-安全なWebアプリケーションのための開発マネジメント"><a href="#9章-安全なWebアプリケーションのための開発マネジメント" class="headerlink" title="9章 安全なWebアプリケーションのための開発マネジメント"></a>9章 安全なWebアプリケーションのための開発マネジメント</h2><h3 id="9-1-開発マネジメントにおけるセキュリティ施策の全体像"><a href="#9-1-開発マネジメントにおけるセキュリティ施策の全体像" class="headerlink" title="9.1 開発マネジメントにおけるセキュリティ施策の全体像"></a>9.1 開発マネジメントにおけるセキュリティ施策の全体像</h3><h3 id="9-2-開発体制"><a href="#9-2-開発体制" class="headerlink" title="9.2 開発体制"></a>9.2 開発体制</h3><h3 id="9-3-開発プロセス"><a href="#9-3-開発プロセス" class="headerlink" title="9.3 開発プロセス"></a>9.3 開発プロセス</h3><h3 id="9-4-まとめ"><a href="#9-4-まとめ" class="headerlink" title="9.4 まとめ"></a>9.4 まとめ</h3>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2020-08-29T08:50:56.320Z" itemprop="dateUpdated">2020-08-29 17:50:56</time>
+</span><br>
+
+
+        
+        thank you for your reading my article!!
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="t-tsutsui">
+            t-tsutsui
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A7%91%E6%9B%B8/" rel="tag">教科書</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/Linux/2021-11_Linux%E6%95%99%E7%A7%91%E6%9B%B8_LinuC%E3%83%AC%E3%83%99%E3%83%AB2Version10.0%E5%AF%BE%E5%BF%9C%20copy/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Linux教科書_LinuCレベル2Version10.0対応</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/Ruby/2021-03_%E7%8F%BE%E5%A0%B4%E3%81%A7%E4%BD%BF%E3%81%88%E3%82%8B%20Ruby%20on%20Rails%205%E9%80%9F%E7%BF%92%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">現場で使える Ruby on Rails 5速習実践ガイド</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+<!--        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p> -->
+    </div>
+    <div class="bottom">
+        <p><span>t-tsutsui &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -16,7 +16,8 @@ timezone: Asia/Tokyo
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://tutttuwi.github.io/output-over-there/
+#url: https://tutttuwi.github.io/output-over-there
+url: http://yoursite.com
 root: /
 permalink: :category/:title/ #:year/:month/:day/:title/ , /:id
 permalink_defaults:

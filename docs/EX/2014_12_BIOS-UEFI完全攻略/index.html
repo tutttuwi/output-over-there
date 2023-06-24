@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>BIOS/UEFI 完全攻略 | OUTPUT*OVER-THERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#264A2E">
+    
+    
+    <meta name="keywords" content="教科書,再読">
+    <meta name="description" content="BIOS&#x2F;UEFI 完全攻略  学んだこと BIOSの仕組み UEFIはBIOSの後継。GUI操作ができる。 すべて読み切れていないので時間あるときに戻ってくる  手に取った理由 業務でBIOS設定の変更などを行っていて興味がわいたから LAN起動させるためにマジックパケットを許容する設定とかしていた">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BIOS&#x2F;UEFI 完全攻略">
+<meta property="og:url" content="http://yoursite.com/EX/2014_12_BIOS-UEFI%E5%AE%8C%E5%85%A8%E6%94%BB%E7%95%A5/index.html">
+<meta property="og:site_name" content="OUTPUT*OVER-THERE">
+<meta property="og:description" content="BIOS&#x2F;UEFI 完全攻略  学んだこと BIOSの仕組み UEFIはBIOSの後継。GUI操作ができる。 すべて読み切れていないので時間あるときに戻ってくる  手に取った理由 業務でBIOS設定の変更などを行っていて興味がわいたから LAN起動させるためにマジックパケットを許容する設定とかしていた">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="http://yoursite.com/img/cover/2014_12_bios.jpg">
+<meta property="article:published_time" content="2014-11-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2019-07-21T16:46:30.955Z">
+<meta property="article:author" content="t-tsutsui">
+<meta property="article:tag" content="教科書">
+<meta property="article:tag" content="再読">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/img/cover/2014_12_bios.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="OUTPUT*OVER-THERE" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">t-tsutsui</h5>
+          <a href="mailto:t.tsutsui9117@gmail.com" title="t.tsutsui9117@gmail.com" class="mail">t.tsutsui9117@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">BIOS/UEFI 完全攻略</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">BIOS/UEFI 完全攻略</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2014-11-30T15:00:00.000Z" itemprop="datePublished" class="page-time">
+  2014-12-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/EX/">EX</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#BIOS-UEFI-完全攻略"><span class="post-toc-number">1.</span> <span class="post-toc-text">BIOS&#x2F;UEFI 完全攻略</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学んだこと"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">学んだこと</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#手に取った理由"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">手に取った理由</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2014_12_BIOS-UEFI完全攻略"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">BIOS/UEFI 完全攻略</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2014-12-01 00:00:00" datetime="2014-11-30T15:00:00.000Z"  itemprop="datePublished">2014-12-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/EX/">EX</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="BIOS-UEFI-完全攻略"><a href="#BIOS-UEFI-完全攻略" class="headerlink" title="BIOS/UEFI 完全攻略"></a>BIOS/UEFI 完全攻略</h1><div style="text-align:center; margin-bottom: 40px"><br><img src="/img/cover/2014_12_bios.jpg" alt="2014_12_bios" title="2014_12_bios" style="width:980px"><br></div>
+
+<h2 id="学んだこと"><a href="#学んだこと" class="headerlink" title="学んだこと"></a>学んだこと</h2><ul>
+<li>BIOSの仕組み</li>
+<li>UEFIはBIOSの後継。GUI操作ができる。</li>
+<li>すべて読み切れていないので時間あるときに戻ってくる</li>
+</ul>
+<h2 id="手に取った理由"><a href="#手に取った理由" class="headerlink" title="手に取った理由"></a>手に取った理由</h2><ul>
+<li>業務でBIOS設定の変更などを行っていて興味がわいたから</li>
+<li>LAN起動させるためにマジックパケットを許容する設定とかしていた</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2019-07-21T16:46:30.955Z" itemprop="dateUpdated">2019-07-22 01:46:30</time>
+</span><br>
+
+
+        
+        thank you for your reading my article!!
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="t-tsutsui">
+            t-tsutsui
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%8D%E8%AA%AD/" rel="tag">再読</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A7%91%E6%9B%B8/" rel="tag">教科書</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/EX/2015_02_Windows%E3%81%AF%E3%81%AA%E3%81%9C%E5%8B%95%E3%81%8F%E3%81%AE%E3%81%8B/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Windowsはなぜ動くのか</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/EX/2014_12_Windows7%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E5%BE%B9%E5%BA%95%E6%B4%BB%E7%94%A8%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Windows 7 レジストリ徹底活用マニュアル</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+<!--        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p> -->
+    </div>
+    <div class="bottom">
+        <p><span>t-tsutsui &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
