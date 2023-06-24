@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Effective Java | OUTPUT*OVER-THERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#264A2E">
+    
+    
+    <meta name="keywords" content="読書中,技術書籍">
+    <meta name="description" content="Effective Java　第二版 著者：Joshua Bloch　ジョンシュア・ブロック　（sun → google[Chief Java Architect]）  訳　：柴田芳樹     Effective Java によせて 言語を使用するために習得しなければならない３つの事項 1. 文法 2. 語彙 3. 日々の事柄を話すための慣習的で効果的な方法   教室では文法、語彙のみ教わることが">
+<meta name="keywords" content="読書中,技術書籍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Effective Java">
+<meta property="og:url" content="http://yoursite.com/Java/2016_03_Effective-Java/index.html">
+<meta property="og:site_name" content="OUTPUT*OVER-THERE">
+<meta property="og:description" content="Effective Java　第二版 著者：Joshua Bloch　ジョンシュア・ブロック　（sun → google[Chief Java Architect]）  訳　：柴田芳樹     Effective Java によせて 言語を使用するために習得しなければならない３つの事項 1. 文法 2. 語彙 3. 日々の事柄を話すための慣習的で効果的な方法   教室では文法、語彙のみ教わることが">
+<meta property="og:locale" content="ja">
+<meta property="og:image" content="http://yoursite.com/img/cover/2016_03_effective_java.JPG">
+<meta property="og:updated_time" content="2019-07-21T16:45:15.406Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Effective Java">
+<meta name="twitter:description" content="Effective Java　第二版 著者：Joshua Bloch　ジョンシュア・ブロック　（sun → google[Chief Java Architect]）  訳　：柴田芳樹     Effective Java によせて 言語を使用するために習得しなければならない３つの事項 1. 文法 2. 語彙 3. 日々の事柄を話すための慣習的で効果的な方法   教室では文法、語彙のみ教わることが">
+<meta name="twitter:image" content="http://yoursite.com/img/cover/2016_03_effective_java.JPG">
+    
+        <link rel="alternate" type="application/atom+xml" title="OUTPUT*OVER-THERE" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">t-tsutsui</h5>
+          <a href="mailto:t.tsutsui9117@gmail.com" title="t.tsutsui9117@gmail.com" class="mail">t.tsutsui9117@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about">
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Effective Java</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Effective Java</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2016-02-29T15:00:00.000Z" itemprop="datePublished" class="page-time">
+  2016-03-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Effective-Java-第二版"><span class="post-toc-number">1.</span> <span class="post-toc-text">Effective Java　第二版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Effective-Java-によせて"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Effective Java によせて</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第１章-はじめに"><span class="post-toc-number">2.</span> <span class="post-toc-text">第１章　はじめに</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第２章-オブジェクトの生成と消滅"><span class="post-toc-number">3.</span> <span class="post-toc-text">第２章　オブジェクトの生成と消滅</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目１-コントラクタの変わりにstaticファクトリーメソッドを検討する"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">項目１　コントラクタの変わりにstaticファクトリーメソッドを検討する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目２-数多くのコンストラクタパラメータに直面した時にはビルダーを検討する"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">項目２　数多くのコンストラクタパラメータに直面した時にはビルダーを検討する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目３-privateのコンストラクタかenum型でシングルトン特性を強制する"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">項目３　privateのコンストラクタかenum型でシングルトン特性を強制する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目４-privateのコンストラクタでインスタンス化不可能を強制する"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">項目４　privateのコンストラクタでインスタンス化不可能を強制する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目５-不必要なオブジェクトの生成を避ける"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">項目５　不必要なオブジェクトの生成を避ける</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目６-廃れたオブジェクト参照を取り除く"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">項目６　廃れたオブジェクト参照を取り除く</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目７-ファイナライザを避ける"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">項目７　ファイナライザを避ける</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第３章-すべてのオブジェクトに共通のメソッド"><span class="post-toc-number">4.</span> <span class="post-toc-text">第３章　すべてのオブジェクトに共通のメソッド</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目８-equalsをオーバーライドする時は一般契約に従う"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">項目８　equalsをオーバーライドする時は一般契約に従う</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目９-equalsをオーバーライドする時は、常にhashCodeをオーバーライドする"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">項目９　equalsをオーバーライドする時は、常にhashCodeをオーバーライドする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目10-toStringを常にオーバーライドする"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">項目10 toStringを常にオーバーライドする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目11-cloneを注意してオーバーライドする"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">項目11　cloneを注意してオーバーライドする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目12-Comparableの実装を検討する"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">項目12　Comparableの実装を検討する</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第４章-クラスとインタフェース"><span class="post-toc-number">5.</span> <span class="post-toc-text">第４章　クラスとインタフェース</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目13-クラスとメンバーへのアクセス可能性を最小限にする"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">項目13　クラスとメンバーへのアクセス可能性を最小限にする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目14-publicのクラスでは、publicのフィールドではなく、アクセッサーメソッドを使う"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">項目14　publicのクラスでは、publicのフィールドではなく、アクセッサーメソッドを使う</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#項目15-可変性を最小限にする"><span class="post-toc-number">6.</span> <span class="post-toc-text">項目15　可変性を最小限にする</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#項目16-継承よりコンポジションを選ぶ"><span class="post-toc-number">7.</span> <span class="post-toc-text">項目16　継承よりコンポジションを選ぶ</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#項目17-継承のために設計および文書化する、でなければ継承を禁止する"><span class="post-toc-number">8.</span> <span class="post-toc-text">項目17　継承のために設計および文書化する、でなければ継承を禁止する</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目18-抽象クラスよりインタフェースを選ぶ"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">項目18　抽象クラスよりインタフェースを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目19-型を定義するためだけにインタフェースを使用する"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">項目19　型を定義するためだけにインタフェースを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目20-タグ付クラスよりクラス階層を選ぶ"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">項目20　タグ付クラスよりクラス階層を選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目21-戦略を表現するために関数オブジェクトを使用する"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">項目21　戦略を表現するために関数オブジェクトを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目22-非staticのメンバークラスよりstaticのメンバークラスを選ぶ"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">項目22　非staticのメンバークラスよりstaticのメンバークラスを選ぶ</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第５章-ジェネリックス"><span class="post-toc-number">9.</span> <span class="post-toc-text">第５章　ジェネリックス</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目23-新たなコードで原型を使用しない"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">項目23　新たなコードで原型を使用しない</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目24-無検査警告を取り除く"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">項目24　無検査警告を取り除く</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#■まとめ"><span class="post-toc-number">9.2.0.1.</span> <span class="post-toc-text">■まとめ</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目25-配列よりリストを選ぶ"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">項目25　配列よりリストを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目26-ジェネリック型を使用する"><span class="post-toc-number">9.4.</span> <span class="post-toc-text">項目26　ジェネリック型を使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目27-ジェネリックメソッドを使用する"><span class="post-toc-number">9.5.</span> <span class="post-toc-text">項目27　ジェネリックメソッドを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目28-APIの柔軟性向上のために境界ワイルドカードを使用する"><span class="post-toc-number">9.6.</span> <span class="post-toc-text">項目28　APIの柔軟性向上のために境界ワイルドカードを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目29-型安全な異種コンテナーを検討する"><span class="post-toc-number">9.7.</span> <span class="post-toc-text">項目29　型安全な異種コンテナーを検討する</span></a></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第６章-enumとアノテーション"><span class="post-toc-number">10.</span> <span class="post-toc-text">第６章　enumとアノテーション</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目30-int定数の代わりにenumを使用する"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">項目30　int定数の代わりにenumを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目31-序数の代わりにインスタンスフィールドを使用する"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">項目31　序数の代わりにインスタンスフィールドを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目32-ビットフィールドの代わりにEnumSetを使用する"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">項目32　ビットフィールドの代わりにEnumSetを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目33-序数インデックスの代わりにEnumMapを使用する"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">項目33　序数インデックスの代わりにEnumMapを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目34-拡張可能なenumをインタフェースで模倣する"><span class="post-toc-number">10.5.</span> <span class="post-toc-text">項目34　拡張可能なenumをインタフェースで模倣する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目35-命名パターンよりアノテーションを選ぶ"><span class="post-toc-number">10.6.</span> <span class="post-toc-text">項目35　命名パターンよりアノテーションを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目36-常にOverrideアノテーションを使用する"><span class="post-toc-number">10.7.</span> <span class="post-toc-text">項目36　常にOverrideアノテーションを使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目37-型を定義するためにマーカーインタフェースを使用する"><span class="post-toc-number">10.8.</span> <span class="post-toc-text">項目37　型を定義するためにマーカーインタフェースを使用する</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第７章-メソッド"><span class="post-toc-number">11.</span> <span class="post-toc-text">第７章 メソッド</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目38-パラメータの正当性を検査する"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">項目38　パラメータの正当性を検査する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目39-必要な場合には、防御的にコピーする"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">項目39　必要な場合には、防御的にコピーする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目40-メソッドのシグニチャを注意深く設計する"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">項目40　メソッドのシグニチャを注意深く設計する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目41-オーバーロードを注意して使用する"><span class="post-toc-number">11.4.</span> <span class="post-toc-text">項目41　オーバーロードを注意して使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目42-可変長引数を注意して使用する"><span class="post-toc-number">11.5.</span> <span class="post-toc-text">項目42　可変長引数を注意して使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目43-nullではなく、空配列か空コレクションを返す"><span class="post-toc-number">11.6.</span> <span class="post-toc-text">項目43　nullではなく、空配列か空コレクションを返す</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目44-すべての公開API要素に対してドキュメントコメントを書く"><span class="post-toc-number">11.7.</span> <span class="post-toc-text">項目44　すべての公開API要素に対してドキュメントコメントを書く</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第８章-プログラミング一般"><span class="post-toc-number">12.</span> <span class="post-toc-text">第８章　プログラミング一般</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目45-ローカル変数のスコープを最小限にする"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">項目45　ローカル変数のスコープを最小限にする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目46-従来のforループよりfor-eachループを選ぶ"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">項目46　従来のforループよりfor-eachループを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目47-ライブラリーを知り、ライブラリーを使う"><span class="post-toc-number">12.3.</span> <span class="post-toc-text">項目47　ライブラリーを知り、ライブラリーを使う</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目48-正確な答えが必要ならば、floatとdoubleを避ける"><span class="post-toc-number">12.4.</span> <span class="post-toc-text">項目48　正確な答えが必要ならば、floatとdoubleを避ける</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目49-ボクシングされた基本データより基本データ型を選ぶ"><span class="post-toc-number">12.5.</span> <span class="post-toc-text">項目49　ボクシングされた基本データより基本データ型を選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目50-他の型が適切な場所では、文字列を避ける"><span class="post-toc-number">12.6.</span> <span class="post-toc-text">項目50　他の型が適切な場所では、文字列を避ける</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目51-文字列結合のパフォーマンスに用心する"><span class="post-toc-number">12.7.</span> <span class="post-toc-text">項目51　文字列結合のパフォーマンスに用心する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目52-インターフェースでオブジェクトを参照する"><span class="post-toc-number">12.8.</span> <span class="post-toc-text">項目52　インターフェースでオブジェクトを参照する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目53-リフレクションよりインタフェースを選ぶ"><span class="post-toc-number">12.9.</span> <span class="post-toc-text">項目53　リフレクションよりインタフェースを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目54-ネイティブメソッドを注意して使用する"><span class="post-toc-number">12.10.</span> <span class="post-toc-text">項目54　ネイティブメソッドを注意して使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目55-注意して最適化する"><span class="post-toc-number">12.11.</span> <span class="post-toc-text">項目55　注意して最適化する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目56-一般的に受け入れられている命名規約を守る"><span class="post-toc-number">12.12.</span> <span class="post-toc-text">項目56　一般的に受け入れられている命名規約を守る</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第９章-例外"><span class="post-toc-number">13.</span> <span class="post-toc-text">第９章　例外</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目57-例外的状態にだけ例外を使用する"><span class="post-toc-number">13.1.</span> <span class="post-toc-text">項目57　例外的状態にだけ例外を使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目58-回復可能な状態にはチェックされる例外を、プログラミングエラーには実行時例外を使用する"><span class="post-toc-number">13.2.</span> <span class="post-toc-text">項目58　回復可能な状態にはチェックされる例外を、プログラミングエラーには実行時例外を使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目59-チェックされる例外を不必要に使用するのを避ける"><span class="post-toc-number">13.3.</span> <span class="post-toc-text">項目59　チェックされる例外を不必要に使用するのを避ける</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目60-標準例外を使用する"><span class="post-toc-number">13.4.</span> <span class="post-toc-text">項目60　標準例外を使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目61-抽象概念に適した例外をスローする"><span class="post-toc-number">13.5.</span> <span class="post-toc-text">項目61　抽象概念に適した例外をスローする</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目62-各メソッドがスローするすべての例外を文書化する"><span class="post-toc-number">13.6.</span> <span class="post-toc-text">項目62　各メソッドがスローするすべての例外を文書化する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目63-詳細メッセージにエラー記録情報を含める"><span class="post-toc-number">13.7.</span> <span class="post-toc-text">項目63　詳細メッセージにエラー記録情報を含める</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目64-エラーアトミック性に努める"><span class="post-toc-number">13.8.</span> <span class="post-toc-text">項目64　エラーアトミック性に努める</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目65-例外を無視しない"><span class="post-toc-number">13.9.</span> <span class="post-toc-text">項目65　例外を無視しない</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第10章-並行性"><span class="post-toc-number">14.</span> <span class="post-toc-text">第10章　並行性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目66-共有された可変データへのアクセスを同期する"><span class="post-toc-number">14.1.</span> <span class="post-toc-text">項目66　共有された可変データへのアクセスを同期する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目67-過剰な同期は避ける"><span class="post-toc-number">14.2.</span> <span class="post-toc-text">項目67　過剰な同期は避ける</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目68-スレッドよりエグゼキューターとタクスを選ぶ"><span class="post-toc-number">14.3.</span> <span class="post-toc-text">項目68　スレッドよりエグゼキューターとタクスを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目69-waitとnotifyよりコンカレンシーユーティリティを選ぶ"><span class="post-toc-number">14.4.</span> <span class="post-toc-text">項目69　waitとnotifyよりコンカレンシーユーティリティを選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目70-スレッド安全性を文書化する"><span class="post-toc-number">14.5.</span> <span class="post-toc-text">項目70　スレッド安全性を文書化する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目71-遅延初期化を注意して使用する"><span class="post-toc-number">14.6.</span> <span class="post-toc-text">項目71　遅延初期化を注意して使用する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目72-スレッドスケジューラに依存しない"><span class="post-toc-number">14.7.</span> <span class="post-toc-text">項目72　スレッドスケジューラに依存しない</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目73-スレッドグループを避ける"><span class="post-toc-number">14.8.</span> <span class="post-toc-text">項目73　スレッドグループを避ける</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#第11章-シリアライズ"><span class="post-toc-number">15.</span> <span class="post-toc-text">第11章　シリアライズ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目74-Serializableを注意して実装する"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">項目74　Serializableを注意して実装する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目75-カスタムシリアライズ形式の使用を検討する"><span class="post-toc-number">15.2.</span> <span class="post-toc-text">項目75　カスタムシリアライズ形式の使用を検討する</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目76-防御的にreadObjectを書く"><span class="post-toc-number">15.3.</span> <span class="post-toc-text">項目76　防御的にreadObjectを書く</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目77-インスタンス制御に対しては、readResolveよりenum型を選ぶ"><span class="post-toc-number">15.4.</span> <span class="post-toc-text">項目77　インスタンス制御に対しては、readResolveよりenum型を選ぶ</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#項目78-シリアライズされたインスタンスの代わりに、シリアライズ・プロキシを検討する"><span class="post-toc-number">15.5.</span> <span class="post-toc-text">項目78　シリアライズされたインスタンスの代わりに、シリアライズ・プロキシを検討する</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#付録-初版に対応する項目"><span class="post-toc-number">16.</span> <span class="post-toc-text">付録　初版に対応する項目</span></a></li>
+        </nav>
+    </aside>
+
+
+<article id="post-2016_03_Effective-Java" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Effective Java</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2016-03-01 00:00:00" datetime="2016-02-29T15:00:00.000Z" itemprop="datePublished">2016-03-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Java/">Java</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Effective-Java-第二版"><a href="#Effective-Java-第二版" class="headerlink" title="Effective Java　第二版"></a>Effective Java　第二版</h1><ul>
+<li><p>著者：Joshua Bloch　ジョンシュア・ブロック　（sun → google[Chief Java Architect]）</p>
+</li>
+<li><p>訳　：柴田芳樹</p>
+</li>
+</ul>
+<div style="text-align:center; margin-bottom: 40px"><br><img src="/img/cover/2016_03_effective_java.JPG" alt="2016_03_effective_java" title="2016_03_effective_java" style="width:980px"><br></div>
+
+<h2 id="Effective-Java-によせて"><a href="#Effective-Java-によせて" class="headerlink" title="Effective Java によせて"></a>Effective Java によせて</h2><ul>
+<li><p>言語を使用するために習得しなければならない３つの事項</p>
+<pre><code>1. 文法
+2. 語彙
+3. 日々の事柄を話すための慣習的で効果的な方法
+</code></pre></li>
+</ul>
+<p>教室では文法、語彙のみ教わることが多い</p>
+<p>慣習的な方法を習わずに必死に話を伝えようとするして、ネイティブに笑われる</p>
+<p>プログラミング言語も全く同じ</p>
+<p>本書は３番目の要求に取り組んでいる</p>
+<ul>
+<li>全体読んでわかったこと</li>
+</ul>
+<p>基本的に言いたいことは、エラーについてコンパイル時に気づくことが正しく、実行時に気づくことは良くない</p>
+<p>パフォーマンスに言及している</p>
+<p>他、英語翻訳の片言的な書き方が目立つ</p>
+<h1 id="第１章-はじめに"><a href="#第１章-はじめに" class="headerlink" title="第１章　はじめに"></a>第１章　はじめに</h1><ul>
+<li><p>ライブラリ</p>
+<pre><code>- java.lang
+- java.util
+- java.util.concurrent
+- java.io
+</code></pre></li>
+<li><p>対象者</p>
+<pre><code>- Java使いこなしている人
+</code></pre></li>
+</ul>
+<p>そうでない人は入門書をお読みください</p>
+<h1 id="第２章-オブジェクトの生成と消滅"><a href="#第２章-オブジェクトの生成と消滅" class="headerlink" title="第２章　オブジェクトの生成と消滅"></a>第２章　オブジェクトの生成と消滅</h1><pre><code>- どのようにオブジェクトを生成スべきか
+- いつどのように生成を回避スべきか
+- オブジェクトが適切なタイミングで消滅することをどのように保証するか
+- オブジェクト消滅前に実行しなければならない後処理をどのように行うか
+</code></pre><h2 id="項目１-コントラクタの変わりにstaticファクトリーメソッドを検討する"><a href="#項目１-コントラクタの変わりにstaticファクトリーメソッドを検討する" class="headerlink" title="項目１　コントラクタの変わりにstaticファクトリーメソッドを検討する"></a>項目１　コントラクタの変わりにstaticファクトリーメソッドを検討する</h2><p>Staticファクトリーメソッド</p>
+<p>長所と短所が存在する</p>
+<ul>
+<li><p>長所</p>
+<ol>
+<li><p>メソッド名がつけられるので分かりやすい</p>
+<pre><code>コンストラクタのように同じシグニチャを持つものが２つ以上存在できないという制約はないし、ドキュメントがなくても分かりやすい
+コンストラクタはドキュメントがないと、中身を見ないと何をしているかわからない
+</code></pre></li>
+<li><p>メソッドが呼び出されるごとに新たなオブジェクトを生成する必要がない</p>
+<pre><code>不必要に重複したオブジェクトの生成を回避できる
+Flyweightパターンに似てる
+何度呼び出されても同じオブジェクトを返すことができる　インスタンス制御されている（incetance-controlled）
+equalsメソッドの代わりに==演算子が使用可能
+→パフォーマンスが大幅に上がる　Enum型はこの保証を提供している
+</code></pre></li>
+<li><p>戻り値の型の任意のサブタイプのオブジェクトでも返すことができる</p>
+<pre><code>インターフェースに基づくフレームワーク（interface-based-framework）項目１８
+Collections Framework　コレクションのインターフェースの便利な実装が３２個ある
+概念的重みが軽くなっている　クライアントはインターフェースで返されたオブジェクトを受け取る
+EnumSetはenum型の要素数に応じて返却するインスタンスが異なる
+これらはクライアントには見えない
+
+Java Database Connectivity API (JDBC) などのサービス・プロバイダフレームワークの基本となるもの
+サービスインターフェース：プロバイダが実装する
+プロバイダ登録API：クライアント
+サービスアクセスAPI：サービスのインスタンスをクライアントが取得するためのもの
+</code></pre></li>
+<li><p>パラメータ化された型のインスタンス生成の面倒さを低減する</p>
+<pre><code>new でもダイヤモンド構文でJava1.7から簡単に記述可能
+あまりすごいメリットでもない
+</code></pre></li>
+</ol>
+<ul>
+<li><p>短所</p>
+<ol>
+<li><p>publicあるいはprotectedのコンストラクタを持たないクラスのサブクラスを作れないこと</p>
+<pre><code>継承ではなくコンポジションを使おう
+</code></pre></li>
+<li><p>それらが容易に他のstaticメソッドと区別がつかないこと</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目２-数多くのコンストラクタパラメータに直面した時にはビルダーを検討する"><a href="#項目２-数多くのコンストラクタパラメータに直面した時にはビルダーを検討する" class="headerlink" title="項目２　数多くのコンストラクタパラメータに直面した時にはビルダーを検討する"></a>項目２　数多くのコンストラクタパラメータに直面した時にはビルダーを検討する</h2><p>staticファクトリメソッドもコンストラクタが持っている共通の制約</p>
+<p>数多くのパラメータに対してうまく対応できない</p>
+<p>これらの対処として、テレスコーピングコンストラクタパターンを利用していた</p>
+<ul>
+<li><p>テレスコーピングパターン</p>
+<pre><code>パラメータの数が増えるとすぐに手に負えなくなる
+クライアントがパラメータの値の２つを逆にしてしまっても、コンパイラは何も警告しませんが誤った振る舞いをしてしまう
+</code></pre></li>
+<li><p>JavaBeansパターン</p>
+<pre><code>パラメータなしのオブジェクトを生成して、setメソッドでセットしていく
+
+生成過程で不整合な状態にあるかもしれない
+バグを含んでいるコードから離れた場所で失敗するかも
+</code></pre></li>
+</ul>
+<ul>
+<li><p>Builderパターン</p>
+<pre><code>テレスコーピングコンストラクタの安全性とJavaBeansパターンの可読性を併せ持つ
+AdaやPythonにみたいな名前付きオプションパラメータをビルダーパターンは模倣しています
+
+パフォーマンスに影響がある可能性があるが、パラメータが４つ以上ある場面では大抵の場合メリットのほうが大きい
+途中でBuilderに替えると使われなくなったコンストラクタやStaticメソッドはゴミになってしまうので、最初からビルダーで始めたほうがよい
+</code></pre></li>
+</ul>
+<h2 id="項目３-privateのコンストラクタかenum型でシングルトン特性を強制する"><a href="#項目３-privateのコンストラクタかenum型でシングルトン特性を強制する" class="headerlink" title="項目３　privateのコンストラクタかenum型でシングルトン特性を強制する"></a>項目３　privateのコンストラクタかenum型でシングルトン特性を強制する</h2><p>シングルトンとは</p>
+<p>一度しかインスタンスが作成されないクラス</p>
+<p>＊割愛＊再確認</p>
+<p>現状、シングルトンを実装する最善の方法は、単一要素のenum型を用いること</p>
+<h2 id="項目４-privateのコンストラクタでインスタンス化不可能を強制する"><a href="#項目４-privateのコンストラクタでインスタンス化不可能を強制する" class="headerlink" title="項目４　privateのコンストラクタでインスタンス化不可能を強制する"></a>項目４　privateのコンストラクタでインスタンス化不可能を強制する</h2><p>ユーティリティクラスを作成する際は、public static メソッドを定義のうえ、</p>
+<p>コンストラクタをprivateにして、明示的にインスタンス化できないかつ継承できないことをコメントに記すべし</p>
+<p>コンストラクタの中に、throw new AssertionError(); を定義すると、誤ってクラス内からコンストラクタが呼び出されたときの保険になる</p>
+<h2 id="項目５-不必要なオブジェクトの生成を避ける"><a href="#項目５-不必要なオブジェクトの生成を避ける" class="headerlink" title="項目５　不必要なオブジェクトの生成を避ける"></a>項目５　不必要なオブジェクトの生成を避ける</h2><p>String s = new String(“stringette”); //　これは絶対にやってはいけない</p>
+<p>呼び出しごとに新しいインスタンスが生成されてしまう。</p>
+<p>不変な値であれば、クラス定数としてprivate static finalで定義しておき、</p>
+<p>初期化を　static{}でするべき</p>
+<p>一度も呼び出されない場合は無駄な初期化になりえるが、遅延初期化を実装するのはもっと大変なので避けてもよい</p>
+<p>自動ボクシング時にインスタンスが生成されるので気をつけて</p>
+<p>項目３９「防御的コピー」との対比</p>
+<p>必要な場所で防御的コピーをしなければ、悪質なバグやセキュリティホールを生み出しかねない</p>
+<p>不必要なオブジェクトを生成するのは、単にスタイルとパフォーマンスに影響するだけ</p>
+<h2 id="項目６-廃れたオブジェクト参照を取り除く"><a href="#項目６-廃れたオブジェクト参照を取り除く" class="headerlink" title="項目６　廃れたオブジェクト参照を取り除く"></a>項目６　廃れたオブジェクト参照を取り除く</h2><p>配列の廃れた参照に対する配慮</p>
+<p>スタックが大きくなったあとに小さくなるト、大きくなった部分のオブジェクトがガベージコレクトの対象にならない</p>
+<p>Queオブジェクトでよいよねー</p>
+<h2 id="項目７-ファイナライザを避ける"><a href="#項目７-ファイナライザを避ける" class="headerlink" title="項目７　ファイナライザを避ける"></a>項目７　ファイナライザを避ける</h2><p>ファイナラーザは予測不可能で大抵の場合は必要ない</p>
+<p>不安定な振る舞い<br>低いパフォーマンス<br>移植性の問題原因</p>
+<p>実行される保証がない<br>ファイナライザを持つオブジェクトの生成と開放は430倍遅い<br>明示的に閉じる、inputStream,outputStreamオブジェクトもfinalizeメソッドを実装しており、GC対象になったときに呼び出されるが、あくまで保険的な意味合いなので、明示的にcloseするのが好ましい</p>
+<p>ファイナライザを使用する場面<br>安全ネット（closeシワスレの保険）<br>ネイティブ資源の開放</p>
+<p>結論<br>ファイナライザは使用しない</p>
+<h1 id="第３章-すべてのオブジェクトに共通のメソッド"><a href="#第３章-すべてのオブジェクトに共通のメソッド" class="headerlink" title="第３章　すべてのオブジェクトに共通のメソッド"></a>第３章　すべてのオブジェクトに共通のメソッド</h1><h2 id="項目８-equalsをオーバーライドする時は一般契約に従う"><a href="#項目８-equalsをオーバーライドする時は一般契約に従う" class="headerlink" title="項目８　equalsをオーバーライドする時は一般契約に従う"></a>項目８　equalsをオーバーライドする時は一般契約に従う</h2><p>equalsメソッドを誤ってオーバーライドしては行けない</p>
+<p>次の条件に当てはまるときはオーバーライドしないのが妥当</p>
+<p>クラスの個々のインスタンスは、本質的に一意である</p>
+<p>論理的等価性検査をクラスが提供するかどうか関心がない</p>
+<p>スーパークラスがすでにequalsをオーバーライドしており、スーパークラスの振る舞いがこのクラスに対して適切である</p>
+<p>　AbstractSetやAbstractListが実装しており、SetやListは継承している</p>
+<p>クラスがprivateあるいはパッケージプライベートであり、そのequalsメソッドが決して呼び出されないことが確かである</p>
+<p>　このような場合は、偶然呼び出された時を考慮して、 throw new AssertionError(); を実装するべき</p>
+<ul>
+<li>equalsメソッドは同値関係を実装する<ul>
+<li>反射的</li>
+<li>対照的</li>
+<li>推移的</li>
+<li>整合的</li>
+</ul>
+</li>
+</ul>
+<p>咀嚼できていない</p>
+<p>そもそもequalsメソッドを実装（オーバーライド）することが稀</p>
+<p>いままでそのような処理を見たことがない</p>
+<h2 id="項目９-equalsをオーバーライドする時は、常にhashCodeをオーバーライドする"><a href="#項目９-equalsをオーバーライドする時は、常にhashCodeをオーバーライドする" class="headerlink" title="項目９　equalsをオーバーライドする時は、常にhashCodeをオーバーライドする"></a>項目９　equalsをオーバーライドする時は、常にhashCodeをオーバーライドする</h2><p>hashMapのキーにequalsメソッドを実装したクラスを設定する場合、new 対象オブジェクト名();で</p>
+<p>設定すると、equalsメソッドではtrueを返却する場面で、hashCodeメソッドはことなる値を返却するためMapの値が取れない現象が発生するらしい</p>
+<p>こちらも項目８同様あまり使用しないのではないか</p>
+<p>equalsメソッドをオーバーライドするときに気をつけよう！</p>
+<p>そもそもオブジェクトをキーにHashマップを作成する場面があまり想像できない</p>
+<p>hash値を算出するにあたって「31」を使用するべきらしい</p>
+<p>偶数だと乗算がオーバーフローしたときに情報が失われる？みたい</p>
+<p><a href="https://www.thekingsmuseum.info/entry/2015/08/28/000748" target="_blank" rel="noopener">https://www.thekingsmuseum.info/entry/2015/08/28/000748</a></p>
+<p><a href="https://computinglife.wordpress.com/2008/11/20/why-do-hash-functions-use-prime-numbers/" target="_blank" rel="noopener">https://computinglife.wordpress.com/2008/11/20/why-do-hash-functions-use-prime-numbers/</a></p>
+<h2 id="項目10-toStringを常にオーバーライドする"><a href="#項目10-toStringを常にオーバーライドする" class="headerlink" title="項目10 toStringを常にオーバーライドする"></a>項目10 toStringを常にオーバーライドする</h2><p>デフォルトだと「クラス名@ハッシュコード」</p>
+<p>一般的にユーザが見てもなんのメリットもない情報</p>
+<p>返される文字列は「簡潔だが、人が読みやすくなっている有益な表現」であるべき！</p>
+<p>実用的な場合には、toStringメソッドはオブジェクトに含まれる興味のある情報をすべて！！返すべき！</p>
+<p>なお、返却する値の説明はJavadocコメントに記載すべき！</p>
+<p>フィールド値をすべて出力したい際は、</p>
+<p>commmons.langのToStringBuilder#reflectionToString(Object object)を使ってもよいのでは？</p>
+<p>パフォーマンスが懸念…</p>
+<p>どのくらい遅くてどんなデメリットがあるのか別途検証したい！</p>
+<h2 id="項目11-cloneを注意してオーバーライドする"><a href="#項目11-cloneを注意してオーバーライドする" class="headerlink" title="項目11　cloneを注意してオーバーライドする"></a>項目11　cloneを注意してオーバーライドする</h2><p>cloneメソッドはObjectクラスで実装されている</p>
+<p>Cloneableインターフェース自体は空である。</p>
+<p>Cloneableインターフェースを実装しないと、cloneメソッド呼び出し時に</p>
+<p>CloneNotSupportedExceptionがスローされる</p>
+<p>Cloneableインターフェースを実装しているクラスは、適切に機能する、publicかprotectedのCloneメソッドを提供すべき</p>
+<p>返却されるオブジェクトは自クラスにキャストすべき</p>
+<p>x.clone () != x が true であり、</p>
+<p>x.clone().getClass() == x.getClass() も true であるインスタンスを生成すること。</p>
+<p>ただし、これらの項目は絶対的なものではなく、</p>
+<p>x.clone().equals(x) は通常 true である。</p>
+<p>ObjectクラスはJavaのNativeソースでCloneableの実装をしているみたい</p>
+<p><a href="http://stackoverflow.com/questions/12032292/is-it-possible-to-find-source-for-java-native-method" target="_blank" rel="noopener">http://stackoverflow.com/questions/12032292/is-it-possible-to-find-source-for-java-native-method</a></p>
+<p>少し消化不良なので再確認</p>
+<h2 id="項目12-Comparableの実装を検討する"><a href="#項目12-Comparableの実装を検討する" class="headerlink" title="項目12　Comparableの実装を検討する"></a>項目12　Comparableの実装を検討する</h2><p>ソートしたい場合に検討</p>
+<p>Comparableインターフェース compareToメソッドを実装する</p>
+<p>自分自身が渡されたオブジェクトより小さければ負の値を返す</p>
+<p>自分自身が渡されたオブジェクトより大きければ正の値を返す</p>
+<p>自分自身が渡されたオブジェクトと等しければ 0 を返す</p>
+<p>ので、こちらを順序だてて実装</p>
+<p>ただ、実装クラスを拡張する場合は、継承ではなく移譲すること</p>
+<p>補足</p>
+<p>Comparatorインターフェースを実装することで並び替えを実現することもできる</p>
+<p>違い</p>
+<p>Comparableインターフェース：自クラスに実装</p>
+<p>Comparatorインターフェース：他クラスに実装</p>
+<p>Comparatorが比較処理を外だしできていい感じに思えるが、クラス作成するのが面倒。。</p>
+<p>JavaSE8から、「Comparator.comparingメソッド」が使えるようになったので、キー項目を単純にソートするだけならラムダ式でスマートに実装可能</p>
+<p><a href="http://totech.hateblo.jp/entry/2017/01/10/123602" target="_blank" rel="noopener">http://totech.hateblo.jp/entry/2017/01/10/123602</a></p>
+<h1 id="第４章-クラスとインタフェース"><a href="#第４章-クラスとインタフェース" class="headerlink" title="第４章　クラスとインタフェース"></a>第４章　クラスとインタフェース</h1><h2 id="項目13-クラスとメンバーへのアクセス可能性を最小限にする"><a href="#項目13-クラスとメンバーへのアクセス可能性を最小限にする" class="headerlink" title="項目13　クラスとメンバーへのアクセス可能性を最小限にする"></a>項目13　クラスとメンバーへのアクセス可能性を最小限にする</h2><p>うまい設計と下手な設計の違い</p>
+<p>どの程度内部データと実装の詳細を隠蔽しているか</p>
+<p>情報隠蔽またはカプセル化と呼ばれる</p>
+<p>ソフトウェアの再利用を促進</p>
+<p>大規模システム構築の場合のリスク軽減</p>
+<p>システムが成功しなくても、個々のモジュールとしては成功するかもしれません</p>
+<p>各クラスやメンバーをできる限りアクセスできないようにするべき</p>
+<p>メソッドをオーバーライドする際は、スーパークラスが実装しているメソッドより、広い範囲のアクセス修飾子を指定しないといけない</p>
+<p>インターフェース内のすべてのメソッドは暗黙にpublic</p>
+<p>インターフェースを実装するクラスは、オーバーライド時、絶対にpublicを指定しないと行けない</p>
+<p>インスタンスフィールドは決して、publicにしては行けない</p>
+<p>publicの可変フィールドを持つクラスはスレッドセーフではない！</p>
+<p>スレッドセーフ関連について深く理解できていないので再確認</p>
+<p>public static finalで可変オブジェクトを格納しているソースはありえない。しては行けない。</p>
+<p>そのフィールドに入る値の不変性を保証できなくなる</p>
+<p>配列をfinalで宣言しても変更できないのは配列のインスタンスであり、配列の要素を変更することは可能</p>
+<p>リストやマップも通常finalで宣言しても変更可能</p>
+<p>unmodifiableListを使わなければならない</p>
+<p><a href="https://www.sejuku.net/blog/20977" target="_blank" rel="noopener">https://www.sejuku.net/blog/20977</a></p>
+<p>セキュリティホールになりうる例として紹介されている</p>
+<h2 id="項目14-publicのクラスでは、publicのフィールドではなく、アクセッサーメソッドを使う"><a href="#項目14-publicのクラスでは、publicのフィールドではなく、アクセッサーメソッドを使う" class="headerlink" title="項目14　publicのクラスでは、publicのフィールドではなく、アクセッサーメソッドを使う"></a>項目14　publicのクラスでは、publicのフィールドではなく、アクセッサーメソッドを使う</h2><p>セッターゲッタの話</p>
+<p>publicなクラスの場合、フィールドをpublicで公開すると、</p>
+<p>その内部的な表現を永久に変更できなくなる</p>
+<p>クラスがパッケージプライベートかprivateのネストしたクラスならpublicにすることは本質的に問題ない</p>
+<p>Javaライブラリーでいくつかのクラスはこの提言を無視している</p>
+<p>Java.awtのPointクラスやDimensionクラス</p>
+<p>フィールドが不変な場合、publicとして公開することは、害が少ないが、一般的にはゲッターとセッターを提供すべき</p>
+<h1 id="項目15-可変性を最小限にする"><a href="#項目15-可変性を最小限にする" class="headerlink" title="項目15　可変性を最小限にする"></a>項目15　可変性を最小限にする</h1><p>クラスを不変にするための５つの原則</p>
+<p>１・オブジェクトの状態を変更するためのいかなるメソッドも提供しない</p>
+<p>２．クラスが拡張できないことを保証する。</p>
+<p>finalでクラスを定義</p>
+<p>３．すべてのフィールドをfinalにする。</p>
+<p>４．すべてのフィールドをprivateにする。</p>
+<p>５．可変コンポーネントに対する独占的アクセスを保証する</p>
+<p>クラスが可変オブジェクトを参照しているフィールドを持っている場合、クライアントが参照できないことを保証すること</p>
+<p>この項目で言いたいことを掘り下げれてないのであとで見返す</p>
+<h1 id="項目16-継承よりコンポジションを選ぶ"><a href="#項目16-継承よりコンポジションを選ぶ" class="headerlink" title="項目16　継承よりコンポジションを選ぶ"></a>項目16　継承よりコンポジションを選ぶ</h1><p>継承はコードを再利用するための強力な方法</p>
+<p>不適切に使用されると継承はもろいソフトウェアを作り出します</p>
+<p>パッケージをまたがって普通の具象クラスから継承することは危険</p>
+<p>ここでいう継承は実装継承を意味します</p>
+<p>クラスがインターフェースを実装した場合や、</p>
+<p>インターフェースが他のインターフェースを拡張した場合のインターフェース継承には適用しない</p>
+<p>メソッド呼び出しと異なり、継承はカプセル化をやぶる</p>
+<p>スーパークラスに変更があった場合、サブクラスは一緒に変更しなければ行けない可能性がある</p>
+<p>HashSetを継承して、addメソッドが呼び出された回数をカウントするサブクラスを作成する</p>
+<p>add時にカウントアップ</p>
+<p>addAll時に、引数のサイズ分カウントアップしようとするが、HashSetクラスが内部的に</p>
+<p>addAllメソッドの中でaddメソッドを呼び出しているので、２重カウントとなってしまう</p>
+<p>このサブクラスはHashSetの実装に依存しており、脆いクラスになっていると言える</p>
+<p>スーパークラスのメソッド追加も、サブクラスの実装メソッドと同じシグニチャで、戻り値が異なる場合、</p>
+<p>サブクラスはコンパイルできなくなる</p>
+<p>propertiesクラスの例</p>
+<p>結論</p>
+<p>継承はなるべく使わないようにしよう</p>
+<p>経験則、Javaでバッチ処理を実装する際、ログを残すための設定、基本となる設定ファイルを読み込み値の保持をスーパークラスでやっているロジックをみたことがあるが、そういう場合は継承は効果的なの<br>かもしれない。（処理をがつがつ書いているスーパークラスじゃないから）</p>
+<h1 id="項目17-継承のために設計および文書化する、でなければ継承を禁止する"><a href="#項目17-継承のために設計および文書化する、でなければ継承を禁止する" class="headerlink" title="項目17　継承のために設計および文書化する、でなければ継承を禁止する"></a>項目17　継承のために設計および文書化する、でなければ継承を禁止する</h1><p>クラスはオーバーライド可能なメソッドの事故利用を文書化しないと行けない</p>
+<p>自己利用(self-use)の文書化</p>
+<p>継承は慎重に</p>
+<p>カプセル化を破壊する可能性がある</p>
+<p>咀嚼しきれてないので再度見直す</p>
+<h2 id="項目18-抽象クラスよりインタフェースを選ぶ"><a href="#項目18-抽象クラスよりインタフェースを選ぶ" class="headerlink" title="項目18　抽象クラスよりインタフェースを選ぶ"></a>項目18　抽象クラスよりインタフェースを選ぶ</h2><p>複数の実装を許す型を定義するために</p>
+<p>抽象クラスとインターフェースを定義している</p>
+<p>違いは、抽象クラスはいくつかの実装を含むことが許されていて、インターフェースは許されていないこと</p>
+<p>抽象クラスで定義された型を実装するためには、クラスはその抽象クラスのサブクラスでなければならない</p>
+<p>複数のインターフェースを混ぜ合わせて実装することをミックスインという</p>
+<p>このミックスインはインターフェースのみ許されていて、抽象クラスでは多重継承が許されていないため実現できない</p>
+<p>P92の組み合わせ爆弾について不明</p>
+<p>なんで抽象クラスではなく、インターフェースじゃないとだめなのか、具体的なデメリットが確立できていないので再確認が必要</p>
+<p>以下に調査を書いていたが結論でてない</p>
+<p><a href="https://www.thekingsmuseum.info/entry/2015/09/26/165815" target="_blank" rel="noopener">https://www.thekingsmuseum.info/entry/2015/09/26/165815</a></p>
+<h2 id="項目19-型を定義するためだけにインタフェースを使用する"><a href="#項目19-型を定義するためだけにインタフェースを使用する" class="headerlink" title="項目19　型を定義するためだけにインタフェースを使用する"></a>項目19　型を定義するためだけにインタフェースを使用する</h2><p>インターフェースを実装するということは、そのクラスのインスタンスは何ができるかについて述べているべき</p>
+<p>定数インターフェースはこの限りでない。定数管理にインターフェースを使うのはよろしくない</p>
+<p>Javaのライブラリーにはjava.io.ObjectStreamConstantsなどの定数インターフェースがあるが、真似すべきではない！</p>
+<p>定数を提供する場合、</p>
+<p>　クラスやインターフェースと強く結びついているならば、IntegerやFloatなどのように定数を提供</p>
+<p>　定数が列挙型のメンバーとしてみなされるべきなら、Enum型で提供すべき</p>
+<p>　そうでなければインスタンス化不可能なユーティリティクラスで定数を提供すべき</p>
+<h2 id="項目20-タグ付クラスよりクラス階層を選ぶ"><a href="#項目20-タグ付クラスよりクラス階層を選ぶ" class="headerlink" title="項目20　タグ付クラスよりクラス階層を選ぶ"></a>項目20　タグ付クラスよりクラス階層を選ぶ</h2><p>タグ付きクラスは冗長で誤りやすく、非効率</p>
+<p>タグ付きクラス：インスタンスが２以上の特性を持っていて、その特性を示すためのタグフィールドを持ったクラスのこと</p>
+<p>円と四角形を表現したいと思い、２種類のタグ属性をフィールドに保持したクラス</p>
+<p>コンストラクタでオブジェクト生成時に、生成しようとしているオブジェクトはどちらのタグに当たるのかを判断して、</p>
+<p>フィールドに保持する。</p>
+<p>タグ付きクラスを使用する事によるデメリット</p>
+<p>一方のタグでは使わない、不要なフィールドにより、メモリ領域を抱えることになる</p>
+<p>処理にswitchを用いる事になり、タグが増加した場合の修正が大変</p>
+<p>タグフィールドを持つクラスを書きたくなったら、そのタグを取り除いてクラス階層で置き換えられないかを考えてください</p>
+<p>タグフィールドを持つクラスに出くわしたら、クラス階層になるようにリファクタリングできないか検討してください</p>
+<p>腑に落ちた。タグ付きクラスは設計しないようにする。できるだけ継承関係（階層）で表現する</p>
+<h2 id="項目21-戦略を表現するために関数オブジェクトを使用する"><a href="#項目21-戦略を表現するために関数オブジェクトを使用する" class="headerlink" title="項目21　戦略を表現するために関数オブジェクトを使用する"></a>項目21　戦略を表現するために関数オブジェクトを使用する</h2><p>関数ポインタの主な使用方法は、戦略パターンを実装すること</p>
+<p>戦略を表すインターフェースと、個々の具象戦略に関してそのインターフェースを実装しているクラスを宣言</p>
+<p>具象クラスが１度しか使用されない場合はそのクラスは一般には無名クラスを使用して宣言及びインスタンス化すべき</p>
+<p>繰り返し使用される場合は、そのクラスは一般的にprivate staticのメンバークラスであり、戦略インターフェースの型を持つpublic static finalのフィールドを通して提供されます</p>
+<p>インターフェースを実装したフィールドを持たないステートレスなクラスを定義することは有用</p>
+<p>ステートレスなクラスは、シングルトンで設計すべき、メモリ節約</p>
+<h2 id="項目22-非staticのメンバークラスよりstaticのメンバークラスを選ぶ"><a href="#項目22-非staticのメンバークラスよりstaticのメンバークラスを選ぶ" class="headerlink" title="項目22　非staticのメンバークラスよりstaticのメンバークラスを選ぶ"></a>項目22　非staticのメンバークラスよりstaticのメンバークラスを選ぶ</h2><p>ネストしたクラスは、他のクラス内に定義されたクラスのこと</p>
+<p>ネストしたクラスは、そのエンクロージングクラスに対して仕えるためだけに存在すべき</p>
+<p>ネストクラスとしては以下の４種類がある</p>
+<p>staticのメンバークラス</p>
+<p>非staticのメンバークラス（内部クラス）</p>
+<p>無名クラス（内部クラス）</p>
+<p>ローカルクラス（内部クラス）</p>
+<p>非staticな内部クラスはエンクロージングクラスへの参照を持っているので、</p>
+<p>参照する必要がなければ、staticなメンバークラスを定義するべき</p>
+<h1 id="第５章-ジェネリックス"><a href="#第５章-ジェネリックス" class="headerlink" title="第５章　ジェネリックス"></a>第５章　ジェネリックス</h1><h2 id="項目23-新たなコードで原型を使用しない"><a href="#項目23-新たなコードで原型を使用しない" class="headerlink" title="項目23　新たなコードで原型を使用しない"></a>項目23　新たなコードで原型を使用しない</h2><ul>
+<li>原型の使用は実行時例外の可能性があるため、使用しないこと</li>
+<li>ジェネリクスが提供されるコードとの互換性を保つためだけに、原型の使用がサポートされている</li>
+<li>原型のまま使用することは可能であるが、できる限りやめたほうが懸命</li>
+<li><p>ジェネリクスの安全性と表現力をすべて失うことになる</p>
+<pre><code>結論
+ジェネリクスの型を使用するとコンパイル時に誤りに気づくことができ、メリットのほうが多いため、
+必ず型宣言すること。
+</code></pre></li>
+</ul>
+<h2 id="項目24-無検査警告を取り除く"><a href="#項目24-無検査警告を取り除く" class="headerlink" title="項目24　無検査警告を取り除く"></a>項目24　無検査警告を取り除く</h2><pre><code>- 無検査キャスト警告
+- 無検査メソッド呼び出し警告
+- 無検査ジェネリック配列生成警告
+- 無検査変換警告
+</code></pre><ul>
+<li>このような警告を放置しているソースを見るが、取り除くことが可能なすべての無検査警告は取り除いたほうがよい</li>
+</ul>
+<p>もし、警告を起こしているコードが型安全だｓと明確に示すことができれば、そのときに限って</p>
+<ul>
+<li>@SuppressWarnings(“unchecked”)アノテーションで警告を抑止してください</li>
+</ul>
+<p>安全だとわかっているのに警告を放置するのもだめだし、安全じゃない警告も取り除くべき</p>
+<ul>
+<li>SuppressWarningアノテーションを使用する際はできる限り最小のスコープで使用するべき</li>
+</ul>
+<p>広範囲につけることも可能だが、意図せぬ警告を抑止してしまう可能性があるため</p>
+<h4 id="■まとめ"><a href="#■まとめ" class="headerlink" title="■まとめ"></a>■まとめ</h4><ul>
+<li>無検査警告は重要、無視しないでください</li>
+<li>すべての無検査警告は実行時の ClassCastExceptionの可能性があることを表しています</li>
+<li>コードが安全だと明確に示せるのであれば、最小スコープで@SuppressWarningアノテーションで警告を抑止してください</li>
+<li>警告を抑止するときは抑止した理由をコメントで残してください</li>
+</ul>
+<h2 id="項目25-配列よりリストを選ぶ"><a href="#項目25-配列よりリストを選ぶ" class="headerlink" title="項目25　配列よりリストを選ぶ"></a>項目25　配列よりリストを選ぶ</h2><p>配列は２つの重要な点でジェネリック型と異なる</p>
+<p>[１]. 配列は共変　SubがSuperのサブタイプである場合、配列型Sub[]がSuper[]のサブタイプだということ</p>
+<pre><code>実行時にわかるよりコンパイル時にエラーになることがわかったほうがよい
+</code></pre><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 実行時に失敗する</span></span><br><span class="line">Object[] objectArray = <span class="keyword">new</span> Long[<span class="number">1</span>];</span><br><span class="line">objectArray[<span class="number">0</span>] = <span class="string">"I don't fit in"</span>; <span class="comment">// ArrayStoreExceptionがスローされる</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**しかし、次のコードは許されていない **/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// コンパイルされない！</span></span><br><span class="line">List&lt;Object&gt; ol = <span class="keyword">new</span> ArrayList&lt;Long&gt;();</span><br><span class="line">ol.add(<span class="string">"I don't fit in"</span>);</span><br></pre></td></tr></table></figure>
+<p>[２]. 配列は具象化されている　</p>
+<pre><code>ジェネリックはイレイジャ（erasure）で実装されているのでコンパイル時のみ型制約を強制し、
+実行時には要素の型情報を廃棄（すなわちイレイズ）することを意味している
+</code></pre><p>これらの基本的な相違点により、配列とジェネリックスはうまく調和しません。</p>
+<p>ジェネリック配列の生成は、型安全ではないから許されていない</p>
+<p>もし許されていると、他の正しいプログラム内にコンパイラが生成したキャストが、実行時にClassCastExceptionで失敗することになる</p>
+<p>これは、ジェネリック型システムが提供している、基本的な保証を破ることになる</p>
+<p>この２つを調和させることは難しいので、設計する際は配列ではなく、リストを使用する</p>
+<h2 id="項目26-ジェネリック型を使用する"><a href="#項目26-ジェネリック型を使用する" class="headerlink" title="項目26　ジェネリック型を使用する"></a>項目26　ジェネリック型を使用する</h2><p>ジェネリック型はクライアントのコードでキャストが必要である型より、安全で使いやすい</p>
+<p>新たな型を設計する場合、クライアントのコードでキャストが不要であることを確認してください</p>
+<p>たいていの場合、型はジェネリックにすることを意味している</p>
+<p>時間が許せば、既存の型をジェネリック化してください</p>
+<p>そうすることで、既存のクライアントヲ動作させたまま、それらの型の新たなユーザをもっと楽にしてくれます</p>
+<p>※再確認項目</p>
+<h2 id="項目27-ジェネリックメソッドを使用する"><a href="#項目27-ジェネリックメソッドを使用する" class="headerlink" title="項目27　ジェネリックメソッドを使用する"></a>項目27　ジェネリックメソッドを使用する</h2><p>※再確認項目</p>
+<h2 id="項目28-APIの柔軟性向上のために境界ワイルドカードを使用する"><a href="#項目28-APIの柔軟性向上のために境界ワイルドカードを使用する" class="headerlink" title="項目28　APIの柔軟性向上のために境界ワイルドカードを使用する"></a>項目28　APIの柔軟性向上のために境界ワイルドカードを使用する</h2><p>ジェネリック型は本来であれば、継承関係問わずすべて一致していないと行けない</p>
+<p>PECS　Producer Extends Consumer Super</p>
+<p>APIの型を柔軟にしてくれる</p>
+<p>※再確認項目</p>
+<h2 id="項目29-型安全な異種コンテナーを検討する"><a href="#項目29-型安全な異種コンテナーを検討する" class="headerlink" title="項目29　型安全な異種コンテナーを検討する"></a>項目29　型安全な異種コンテナーを検討する</h2><p>※再確認項目</p>
+<h1 id="第６章-enumとアノテーション"><a href="#第６章-enumとアノテーション" class="headerlink" title="第６章　enumとアノテーション"></a>第６章　enumとアノテーション</h1><p>Java1.5より以下が追加された</p>
+<ul>
+<li>Enum型（あらたな種類のクラス）</li>
+<li>アノテーション型（新たな種類のインターフェース）</li>
+</ul>
+<p>これらを活用する方法を紹介</p>
+<h2 id="項目30-int定数の代わりにenumを使用する"><a href="#項目30-int定数の代わりにenumを使用する" class="headerlink" title="項目30　int定数の代わりにenumを使用する"></a>項目30　int定数の代わりにenumを使用する</h2><p>理解度：★★★★☆</p>
+<p>int定数に対するenum型の利点は、否定できるものではなく、はるかに読みやすく、安全であり、強力</p>
+<p>多くのEnum：明示的なコンストラクタやメンバを必要としない</p>
+<p>他の多く：各定数にデータを関連付けたり、そのデータに依存して振る舞いが変わるメソッドを提供</p>
+<p>自分自身の値によってswitchを実装するよりは、abstractメソッドを実装するように強制したほうがよい</p>
+<p>複数のenum定数が共通の振る舞いヲ共有する場合は、abstractメソッドではなく、戦略enumパターンを検討するほうがよい</p>
+<h2 id="項目31-序数の代わりにインスタンスフィールドを使用する"><a href="#項目31-序数の代わりにインスタンスフィールドを使用する" class="headerlink" title="項目31　序数の代わりにインスタンスフィールドを使用する"></a>項目31　序数の代わりにインスタンスフィールドを使用する</h2><p>理解度：★★★★★</p>
+<p>ordinalメソッドが提供されているが、それはEnumSetやEnumMapなどの汎用のenumに基づくデータ構造によりしようされるように設計されているため、そのようなデータ構造を書いているのでなければ、ordinalメソッドは全く使用しないことが最善</p>
+<p>フィールドに序数を関連付けたいときは、コンストラクタ引数を渡してインスタンスフィールドに保持すること！！</p>
+<h2 id="項目32-ビットフィールドの代わりにEnumSetを使用する"><a href="#項目32-ビットフィールドの代わりにEnumSetを使用する" class="headerlink" title="項目32　ビットフィールドの代わりにEnumSetを使用する"></a>項目32　ビットフィールドの代わりにEnumSetを使用する</h2><p>理解度：★★★★☆</p>
+<p>ビットフィールドを用いた実装方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Text</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STYLE_BOLD   = <span class="number">1</span> &lt;&lt; <span class="number">0</span>; <span class="comment">// 1</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STYLE_ITALIC = <span class="number">1</span> &lt;&lt; <span class="number">1</span>; <span class="comment">// 2</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STYLE_UNDERLINE = <span class="number">1</span> &lt;&lt; <span class="number">2</span>; <span class="comment">// 4</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STYLE_STRIKETHROUGH = <span class="number">1</span> &lt;&lt; <span class="number">3</span>; <span class="comment">// 8</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">applyStyles</span><span class="params">(<span class="keyword">int</span> styles)</span> </span>&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 利用</span></span><br><span class="line">text.applyStyles(STYLE_BOLD | STYLE_ITALIC);</span><br></pre></td></tr></table></figure>
+<p>定数の集合を引き回す必要がある場合にビットフィールドを使用することに固執している人もいる</p>
+<ul>
+<li><p>デメリット</p>
+<ul>
+<li>int num定数のすべての短所を持っている（コンパイルされるとクラスに入り込む・名前空間がない）</li>
+<li>数値として表示された場合は解釈が困難      </li>
+<li>ビットフィールドすべてをイテレートする簡単な方法も存在しない</li>
+</ul>
+</li>
+</ul>
+<p>良い例）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// EnumSet - a modern replacement for bit fields (Page 170)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Text</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">enum</span> Style &#123;BOLD, ITALIC, UNDERLINE, STRIKETHROUGH&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Any Set could be passed in, but EnumSet is clearly best</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">applyStyles</span><span class="params">(Set&lt;Style&gt; styles)</span> </span>&#123;</span><br><span class="line">        System.out.printf(<span class="string">"Applying styles %s to text%n"</span>,</span><br><span class="line">                Objects.requireNonNull(styles));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Sample use</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Text text = <span class="keyword">new</span> Text();</span><br><span class="line">        text.applyStyles(EnumSet.of(Style.BOLD, Style.ITALIC));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>まとめ<ul>
+<li>列挙型が集合の中で使用されるというだけで、それをビットフィールドで表現する理由はない</li>
+<li>短所としては、不変なEnumSetが生成できないことですが、1.6移行のリリースで改善できるだろう</li>
+<li>EnumSetをCollections.unmodifiableSetで包むことで対応可能</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>考察<ul>
+<li>不変のEnumSetはJava8でも追加されていない</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目33-序数インデックスの代わりにEnumMapを使用する"><a href="#項目33-序数インデックスの代わりにEnumMapを使用する" class="headerlink" title="項目33　序数インデックスの代わりにEnumMapを使用する"></a>項目33　序数インデックスの代わりにEnumMapを使用する</h2><p>理解度：★★☆☆☆</p>
+<p>相転移マップを作成する際の例</p>
+<p>固体、液体、気体　の状態遷移</p>
+<ul>
+<li>まとめ<ul>
+<li>配列インデックスのために序数を使用することが適切であることはめったにない</li>
+<li>代わりにEnumMapを使用すること</li>
+<li>表現使用している関係が多次元なら、EnumMap&lt;…, EnumMap&lt;…&gt;&gt;を使用してください</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目34-拡張可能なenumをインタフェースで模倣する"><a href="#項目34-拡張可能なenumをインタフェースで模倣する" class="headerlink" title="項目34　拡張可能なenumをインタフェースで模倣する"></a>項目34　拡張可能なenumをインタフェースで模倣する</h2><p>理解度：★★★☆☆</p>
+<p>項目２９の境界型トークンと境界ワイルドカード型らへんが理解できていないので再確認</p>
+<ul>
+<li>まとめ<ul>
+<li>拡張可能なEnum型を書くことはできませんが、基本のenum型に伴うインターフェースを書いて、そのインターフェースをその基本のenum型に実装させることで模倣できる</li>
+<li>そのインターフェースを実装している独自のenum型を実装させることができる</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目35-命名パターンよりアノテーションを選ぶ"><a href="#項目35-命名パターンよりアノテーションを選ぶ" class="headerlink" title="項目35　命名パターンよりアノテーションを選ぶ"></a>項目35　命名パターンよりアノテーションを選ぶ</h2><p>理解度：★★★★☆</p>
+<ul>
+<li><p>命名パターンとは</p>
+<ul>
+<li>testで始まるメソッドをテスト対象として抽出する、、、みたいなルールをつけておくこと<ul>
+<li>これは簡単に破られる、実行時まで気づかない、下手すると実行時も気づかず、正常終了したと思いこむ</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>アノテーションを使えば、アノテーションが付与されているものを抽出することが可能</p>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>今はアノテーションが提供されているので命名パターンを使うのは避けること</li>
+</ul>
+</li>
+<li><p>標準提供のアノテーション例</p>
+<ul>
+<li>Override</li>
+<li>Deprecated</li>
+<li>SuppressWarnings</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目36-常にOverrideアノテーションを使用する"><a href="#項目36-常にOverrideアノテーションを使用する" class="headerlink" title="項目36　常にOverrideアノテーションを使用する"></a>項目36　常にOverrideアノテーションを使用する</h2><p>理解度：★★★★★</p>
+<p>常にOverrideすること</p>
+<p>問題のあるプログラム</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> effectivejava.chapter6.item40;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Can you spot the bug? (Page 188)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bigram</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">char</span> first;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">char</span> second;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Bigram</span><span class="params">(<span class="keyword">char</span> first, <span class="keyword">char</span> second)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.first  = first;</span><br><span class="line">        <span class="keyword">this</span>.second = second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Bigram b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> b.first == first &amp;&amp; b.second == second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">31</span> * first + second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Set&lt;Bigram&gt; s = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">char</span> ch = <span class="string">'a'</span>; ch &lt;= <span class="string">'z'</span>; ch++)</span><br><span class="line">                s.add(<span class="keyword">new</span> Bigram(ch, ch));</span><br><span class="line">        System.out.println(s.size());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>eqalsメソッドのシグニチャがObjectではないため、オーバーライドではなく、オーバーロードになってしまっている</p>
+<p>このことにプログラマは気づけない</p>
+<p>常に@Overrideをつけることでこれを回避できる</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> effectivejava.chapter6.item40;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Fixed Bigram class (Page 189)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bigram2</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">char</span> first;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">char</span> second;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Bigram2</span><span class="params">(<span class="keyword">char</span> first, <span class="keyword">char</span> second)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.first  = first;</span><br><span class="line">        <span class="keyword">this</span>.second = second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!(o <span class="keyword">instanceof</span> Bigram2))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        Bigram2 b = (Bigram2) o;</span><br><span class="line">        <span class="keyword">return</span> b.first == first &amp;&amp; b.second == second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">31</span> * first + second;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Set&lt;Bigram2&gt; s = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">char</span> ch = <span class="string">'a'</span>; ch &lt;= <span class="string">'z'</span>; ch++)</span><br><span class="line">                s.add(<span class="keyword">new</span> Bigram2(ch, ch));</span><br><span class="line">        System.out.println(s.size());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>HashSetに格納しており、全てすべて異なるオブジェクトと判断されて、結果に誤りが生じているが、正しくequalsメソッドをオーバーライドすることで回避</p>
+<ul>
+<li><p>例外</p>
+<ul>
+<li>抽象クラスの抽象メソッドを実装するときは、実装していないことをコンパイラが警告してくれるので@overrideを記載しなくても大丈夫。記載して問題ない</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>スーパータイプの宣言をオーバーライドしているすべてのメソッド宣言にOverrideアノテーションを使用することでコンパイラは多くの誤りを指摘してくれる</li>
+<li>具象クラスでは、抽象メソッド宣言をオーバーライドしているメソッドにアノテーションをつける必要はない</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目37-型を定義するためにマーカーインタフェースを使用する"><a href="#項目37-型を定義するためにマーカーインタフェースを使用する" class="headerlink" title="項目37　型を定義するためにマーカーインタフェースを使用する"></a>項目37　型を定義するためにマーカーインタフェースを使用する</h2><p>理解度：★★★★☆</p>
+<ul>
+<li><p>マーカーインターフェース</p>
+<ul>
+<li>メソッド宣言を１つももたいないインターフェース</li>
+<li>そのインターフェースを実装しているクラスがなにか特別な性質を持っていることを示す</li>
+<li>マークされたクラスのインスタンスが実装している型を定義することに意味を持っている</li>
+<li>指摘：Serializableインターフェースを活用しなかった、ObjectOutputStream.write(Object)への指摘</li>
+</ul>
+</li>
+<li><p>マーカーアノテーション</p>
+<ul>
+<li>型定義はしていない</li>
+<li>何らかの特性を示すためのアノテーション</li>
+<li>アノテーション自体がメタデータを示すものなので、アノテーション全部がマーカーの役割を担っている</li>
+</ul>
+</li>
+<li><p>どちらを使うか決める方法</p>
+<ul>
+<li>クラスやインターフェース以外のプログラム要素に対してマーカーが適用されるのであれば「マーカーアノテーション」</li>
+<li>このマークを持つオブジェクトだけを受け付ける１個以上のメソッドを書きたいのであれば「マーカーインターフェース」　Serializableト同じ用法</li>
+<li>このマーカーの使用を特定のインターフェースの要素に永久に制限したい「マーカーインターフェースのサブインターフェースで使用」</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>マーカーインターフェースの使用を最初に検討</li>
+<li>使用できないのであれば、マーカーアノテーションを使用する</li>
+</ul>
+</li>
+</ul>
+<h1 id="第７章-メソッド"><a href="#第７章-メソッド" class="headerlink" title="第７章 メソッド"></a>第７章 メソッド</h1><ul>
+<li>この章について<ul>
+<li>メソッド設計の側面について議論</li>
+<li>パラメータと戻り値をどの様に扱うか</li>
+<li>メソッドのシグニチャをどの様に設計するか</li>
+<li>メソッドをどの様に文書化するか</li>
+<li>多くは、メソッドだけでなく、コンストラクタにも適用される</li>
+<li>本章は利便性、頑強性、柔軟性に焦点を当てている</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目38-パラメータの正当性を検査する"><a href="#項目38-パラメータの正当性を検査する" class="headerlink" title="項目38　パラメータの正当性を検査する"></a>項目38　パラメータの正当性を検査する</h2><p>理解度：★★★★☆</p>
+<p>ほとんどのメソッド、コンストラクタはパラメータとして渡される値に関して、何らかの制約を持っている</p>
+<p>Nullであっては行けない、負の値であっては行けないとか</p>
+<p>このような制約は明確に文書化すべきであり、メソッド本体のはじめに検査することで制約を強制すべき</p>
+<p>そうしないと、予想外の場所でエラーになり原因特定が困難になる</p>
+<ul>
+<li>パラメタの検査をメソッドがしないと発生する問題<ul>
+<li>メソッドが処理の途中でわけのわからない例外で失敗する</li>
+<li>メソッドは正常に終了するが、何も言わずに誤った結果を計算する</li>
+<li>いくつかのオブジェクトを不正な状態にして、あとになって全くコードと関係のないところでエラーを引き起こす</li>
+</ul>
+</li>
+</ul>
+<p>publicのメソッドに対しては、パラメータ値に関する制約が守られていない場合にスローされる例外を、Javadocの@throwsタグを使用して文書化すべき（項目６４）</p>
+<p>アサート定義について</p>
+<p>通常の正当性検査とは異なり、アサーションは条件が成り立たなければAssertionErrorをスローします。通常の正当性検査とは異なり、javaのインタプリタに-ea（あるいは、-enableassertions）を渡してアサーションを有効にしない限り、アサーションはなんの効果もなく基本的にコストは発生しません。</p>
+<ul>
+<li>まとめ<ul>
+<li>メソッド、コンストラクタを書く場合は、その都度、そのパラメータにどのような制約が存在するのか考えるべき</li>
+<li>それらの制約を文書化すべきだし、メソッド本体のはじめで、明示的に検査することで制約を強制すべき</li>
+<li>このような習慣を身につけることが大事</li>
+<li>この地道な作業は、正当性検査に初めて引っかかったときに報われます</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目39-必要な場合には、防御的にコピーする"><a href="#項目39-必要な場合には、防御的にコピーする" class="headerlink" title="項目39　必要な場合には、防御的にコピーする"></a>項目39　必要な場合には、防御的にコピーする</h2><p>Java言語は安全な言語</p>
+<p>CやC++などの安全で内言語に感染するバッファーオーバーラン、配列オーバーラン、でたらめなポインタ、他のメモリ破壊エラーなどに対して、Java言語には免疫がある</p>
+<p>これはメモリをすべて１つの巨大な配列として扱っている言語では不可能です</p>
+<p>たとえ安全であっても、自分の方で何かしらの努力をしなければ他のクラスから防御されない</p>
+<p><strong>「クラスのクライアントは、クラスの不変式を破壊するために徹底した努力をすると想定して防御的にプログラムしなければなりません。」＝壊される想定で防御していかなければならない</strong></p>
+<p>あなたのプログラムを利用する、プログラマーの単純な間違いに対処するためにも、防御が必要</p>
+<p>攻撃の可能性例)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> effectivejava.chapter8.item50;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Broken "immutable" time period class (Pages 231-3)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Period</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Date start;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Date end;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  start the beginning of the period</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span>  end the end of the period; must not precede start</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalArgumentException if start is after end</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NullPointerException if start or end is null</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Period</span><span class="params">(Date start, Date end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (start.compareTo(end) &gt; <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(</span><br><span class="line">                    start + <span class="string">" after "</span> + end);</span><br><span class="line">        <span class="keyword">this</span>.start = start;</span><br><span class="line">        <span class="keyword">this</span>.end   = end;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Date <span class="title">start</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> start;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Date <span class="title">end</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> end;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> start + <span class="string">" - "</span> + end;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    // Repaired constructor - makes defensive copies of parameters (Page 232)</span></span><br><span class="line"><span class="comment">//    public Period(Date start, Date end) &#123;</span></span><br><span class="line"><span class="comment">//        this.start = new Date(start.getTime());</span></span><br><span class="line"><span class="comment">//        this.end   = new Date(end.getTime());</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//        if (this.start.compareTo(this.end) &gt; 0)</span></span><br><span class="line"><span class="comment">//            throw new IllegalArgumentException(</span></span><br><span class="line"><span class="comment">//                    this.start + " after " + this.end);</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    // Repaired accessors - make defensive copies of internal fields (Page 233)</span></span><br><span class="line"><span class="comment">//    public Date start() &#123;</span></span><br><span class="line"><span class="comment">//        return new Date(start.getTime());</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    public Date end() &#123;</span></span><br><span class="line"><span class="comment">//        return new Date(end.getTime());</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Remainder omitted</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>コンストラクタにオブジェクトを渡して、コンストラクタ側でメンバー変数として保持する場合、コンストラクタ内で新たにnewして（防御的にコピーして）メンバー変数に保持しなければならない</p>
+<p>これを利用した攻撃を、コンピュータセキュリティのコミッティでは<strong>time-of-check/time-of-use攻撃</strong>と呼ばれている（TOCTOU攻撃）</p>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>クラスがそのクライアントから得たり、クライアントへ返したりする可変の要素を持っているならば、そのクラスはそれらの要素を防御的にコピーしなければならない</li>
+<li>もしコピーのコストが非常に高く、要素を不適切に変更しないということをでクラスがクライアントを信頼できるならば、影響を受ける要素を変更しないことがクライアントの責任であるとドキュメンテーションに概要を示すことで、防御的コピーの代わりとしても良いです。</li>
+</ul>
+</li>
+<li><p>パフォーマンス懸念について調査</p>
+<ul>
+<li>ArrayListのデフォルトコンストラクタで生成されるインスタンスのデータ容量は１０であり、大量データをAddすることが確定している場合は最初からサイズ指定してコンストラクタを使うべき<ul>
+<li>参考）「Javaでプログラムを書く際に意識しておきたいこと」<a href="https://blog.y-yuki.net/entry/2017/06/07/130000" target="_blank" rel="noopener">https://blog.y-yuki.net/entry/2017/06/07/130000</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目40-メソッドのシグニチャを注意深く設計する"><a href="#項目40-メソッドのシグニチャを注意深く設計する" class="headerlink" title="項目40　メソッドのシグニチャを注意深く設計する"></a>項目40　メソッドのシグニチャを注意深く設計する</h2><p>理解度：★★★☆☆</p>
+<p>本項目はAPI設計のヒントを集めたもの</p>
+<ul>
+<li><p>メソッド名を注意深く選ぶ</p>
+<ul>
+<li>標準命名規約（項目５６）に従うべき</li>
+<li>目標：理解可能で、同じパッケージ内の他の名前と矛盾のない名前を選ぶこと</li>
+<li>目標：存在する広範囲のコンセンサス（合致、合意）と矛盾がない名前を選ぶこと<ul>
+<li>疑問がある場合はガイダンスとして、JavaライブラリのAPIを参考にしてください、矛盾が沢山ありますが、大きさと範囲を考えると避けられない矛盾。</li>
+<li>かなりのコンセンサスがあることに注目してほしい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>便利なメソッドを提供しすぎない</p>
+<ul>
+<li>自分の役割を果たすべき</li>
+<li>頻繁に使用される場合だけ、ある操作に対する速記（shorthand）を提供することを検討すること</li>
+<li></li>
+</ul>
+</li>
+<li><p>長いパラメタのリストは避ける（４個以下を目標にする）</p>
+<ul>
+<li>ほとんどのプログラマは長いパラメータリストを覚えられない</li>
+<li>同じ型のパラメータが何個も続くのは特に有害</li>
+<li>長いパラメータを短くする方法<ul>
+<li>1.メソッドを分割して、各メソッドはパラメータのサブセットだけを必要とする</li>
+<li>2.パラメータの集まりを保持するヘルパークラスを作成する（Staticのメンバークラス）（項目２２）</li>
+<li>3.ビルダーパターンをオブジェクト生成からメソッド呼び出しに適用すること</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>パラメータ型に関しては、クラスよりインターフェースを選ぶ（項目５２）</p>
+<ul>
+<li>HashMapパラメタに取るメソッドを作成する理由はなくて、Map型で定義しておく</li>
+<li>そうすれば、Hashtable、HashMap、TreeMapどれでも渡すことが可能となる</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>booleanパラメータより２つの要素を持つenum型を使用する。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> TemperatureScale &#123; FAHRENHEIT, CELSIUS &#125;</span><br><span class="line"></span><br><span class="line">Thermometer.newInstatnce(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// より</span></span><br><span class="line"></span><br><span class="line">Thermometer.newInstance(TemperatureScale.CELSIUS);</span><br><span class="line"></span><br><span class="line"><span class="comment">// のほうが分かりやすい</span></span><br><span class="line"><span class="comment">// TemperatureScaleに　KELVIN　を追加することも可能</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="項目41-オーバーロードを注意して使用する"><a href="#項目41-オーバーロードを注意して使用する" class="headerlink" title="項目41　オーバーロードを注意して使用する"></a>項目41　オーバーロードを注意して使用する</h2><p>理解度：★★★☆☆</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不完全！　このプログラムは何を表示するでしょうか</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">package</span> effectivejava.chapter8.item52;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Broken! - What does this program print?  (Page 238)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectionClassifier</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">classify</span><span class="params">(Set&lt;?&gt; s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Set"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">classify</span><span class="params">(List&lt;?&gt; lst)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"List"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">classify</span><span class="params">(Collection&lt;?&gt; c)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Unknown Collection"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Collection&lt;?&gt;[] collections = &#123;</span><br><span class="line">                <span class="keyword">new</span> HashSet&lt;String&gt;(),</span><br><span class="line">                <span class="keyword">new</span> ArrayList&lt;BigInteger&gt;(),</span><br><span class="line">                <span class="keyword">new</span> HashMap&lt;String, String&gt;().values()</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Collection&lt;?&gt; c : collections)</span><br><span class="line">            System.out.println(classify(c));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Unknown Collection　を３回表示することになる</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>まとめ<ul>
+<li>オーバーロードできるからと言ってオーバーロードスべきではない</li>
+<li>一般的には、同じ数のパラメータを持つ複数のシグニチャでメソッドをオーバーロードすることは控えるべき<ul>
+<li>場合によっては、コンストラクタが関与すると従えない可能性もある..</li>
+<li>そうなっても、キャストによって同じ組み合わせを異なるオーバーロードされたメソッドにわたすことができる状況は避けるべき</li>
+<li>避けられない場合は、オーバーロードされたメソッドが同じふるまいをすることを保証すべき</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目42-可変長引数を注意して使用する"><a href="#項目42-可変長引数を注意して使用する" class="headerlink" title="項目42　可変長引数を注意して使用する"></a>項目42　可変長引数を注意して使用する</h2><p>理解度：★★★☆☆</p>
+<ul>
+<li>可変長引数メソッド<ul>
+<li>リリース1.5で言語に追加された</li>
+<li>０個以上の引数を受け付ける</li>
+</ul>
+</li>
+</ul>
+<p>可変長引数のあたいは配列として初期化される</p>
+<ul>
+<li><p>Java1.4の場合</p>
+<ul>
+<li>基本型配列はArrays.toList(Object[] obj)メソッドの引数にとれない</li>
+<li>渡すと、コンパイルエラーになる</li>
+</ul>
+</li>
+<li><p>Java1.5の場合</p>
+<ul>
+<li>コンパイルエラーにならない。しかし、、</li>
+</ul>
+<ul>
+<li>配列はObject型のtoStringメソッドを継承しているので、呼び出すと、ハッシュ値が出力され、値が見れない</li>
+<li>解決方法は Arrays.toString()メソッドを使用すること</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>可変長引数メソッドは、可変長の引数を必要とするメソッドを定義する便利な方法だが乱用すべきではない</li>
+<li>不適切に使用すると可変長引数メソッドは困惑する可能性がある</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目43-nullではなく、空配列か空コレクションを返す"><a href="#項目43-nullではなく、空配列か空コレクションを返す" class="headerlink" title="項目43　nullではなく、空配列か空コレクションを返す"></a>項目43　nullではなく、空配列か空コレクションを返す</h2><p>メッソドの戻り値（オブジェクト）がnullかどうかを判定するロジックを見たことがありますか？</p>
+<p>空（長さゼロ）配列や空コレクションの代わりに、nullを返すメソッドを使用する場合には必ず書かなければ行けない</p>
+<p>クライアント側を書いているプログラマは戻り値nullを処理する特別なコードを書き忘れてしまう危険性がある</p>
+<ul>
+<li>配列を生成するコストを回避できると主張されることもあるが、次の２点を理由に間違いだと言える<ul>
+<li>1.問題となっているメソッドがパフォーマンス上、本当の原因で有ることがプロファイリングにより示されない限り、ネックと言えない</li>
+<li>2.項目を１つも返さない呼び出しすべてが、同一の長さゼロ配列を返すことが可能<ul>
+<li>長さゼロ配列は不変であり、不変オブジェクトは制限なく共有して問題ないため</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// コレクションから配列を返す正しい方法</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> List&lt;Cheese&gt; cheesesInStock = ...; <span class="comment">// ここが空であれば、常に同じから配列が返却される仕組みを作れる</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Cheese[] EMPTY_CHEESE_ARRAY = <span class="keyword">new</span> Cheese[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span> 店にあるすべてのチーズを含む配列</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> Cheese[] getCheeses() &#123;</span><br><span class="line">  <span class="keyword">return</span> cheeseInStock.toArray(EMPTY_CHEESE_ARRAY);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ドキュメント</span></span><br><span class="line"><span class="comment">// https://docs.oracle.com/javase/jp/8/docs/api/java/util/List.html#toArray-T:A-</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// コレクションのコピーを返す正しい方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;Cheese&gt; <span class="title">getCheeseList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (cheeseInStock.isEmpty())</span><br><span class="line">    <span class="keyword">return</span> Collections.emptyList(); <span class="comment">// 常に同一のリストを返す</span></span><br><span class="line">  <span class="keyword">else</span> </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;Cheese&gt;(cheeseInStock);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Collections.emptyList()のドキュメントは以下</span></span><br><span class="line"><span class="comment">// https://docs.oracle.com/javase/jp/8/docs/api/java/util/Collections.html#emptyList--</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>まとめ<ul>
+<li>配列やコレクションを返すメソッドが、空配列や空コレクションの代わりに、nullを返すべき理由は決してありません。</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目44-すべての公開API要素に対してドキュメントコメントを書く"><a href="#項目44-すべての公開API要素に対してドキュメントコメントを書く" class="headerlink" title="項目44　すべての公開API要素に対してドキュメントコメントを書く"></a>項目44　すべての公開API要素に対してドキュメントコメントを書く</h2><ul>
+<li><p>APIを適切に文書化するためには、すべての公開されているクラス、インターフェース、コンストラクタ、メソッド、フィールド宣言の前にドキュメントコメントを書かなければなりません。</p>
+</li>
+<li><p>メソッドに関するドキュメントコメントは、メソッドとそのクライアント間の契約を簡潔に記述すべき</p>
+<ul>
+<li>メソッドが何を行っているかを記載するべき</li>
+<li>メソッドのすべての事前条件、事後条件を列挙すべき<ul>
+<li>事前条件：@param　（引数の説明）　に記載する</li>
+<li>事後条件：@throws に記載する</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>↑この部分、書籍の記載不備だと思われ、咀嚼できていない</p>
+<ul>
+<li><p>メソッドはいかなる<strong>副作用</strong>も文書化すべき</p>
+<ul>
+<li>たとえば、メソッドがバックグラウンドのスレッドを開始するとしたら、明記すべき</li>
+</ul>
+</li>
+<li><p>ドキュメンテーションガイド</p>
+<ul>
+<li>公式）<a href="https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html</a></li>
+<li>Qiita）<a href="https://qiita.com/maku77/items/6410c67ce95e08d8d1bd" target="_blank" rel="noopener">https://qiita.com/maku77/items/6410c67ce95e08d8d1bd</a></li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>ドキュメンテーションコメントはAPIを標準化する最善で最も効率的な方法</li>
+<li>すべての公開APIでドキュメンテーションコメントは必須だとみなされるべき</li>
+<li>標準に沿って記載されるべきで、メタタグはエスケープされるべき</li>
+</ul>
+</li>
+</ul>
+<h1 id="第８章-プログラミング一般"><a href="#第８章-プログラミング一般" class="headerlink" title="第８章　プログラミング一般"></a>第８章　プログラミング一般</h1><h2 id="項目45-ローカル変数のスコープを最小限にする"><a href="#項目45-ローカル変数のスコープを最小限にする" class="headerlink" title="項目45　ローカル変数のスコープを最小限にする"></a>項目45　ローカル変数のスコープを最小限にする</h2><ul>
+<li>ローカル変数のスコープを最小限にする最も強力な方法は、ローカル変数が使用される前に宣言されること</li>
+<li><p>ローカル変数は、初期化子を含んでいるべき</p>
+</li>
+<li><p>ループ変数の内容が、ループが終了したあとに必要ないものであれば、whileループよりforループを選択スべき</p>
+</li>
+<li><p>forループであれば、２つのループで異なった変数名を使用する理由はありませんので、コピペによる誤りを犯すことはない（コンパイルエラーになるから）</p>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>ローカル変数のスコープを最小限にすること<ul>
+<li>変数使用前に宣言すること</li>
+<li>whileよりforループをうまく活用すること</li>
+<li>メソッドを切り分けてスコープを制御すること</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目46-従来のforループよりfor-eachループを選ぶ"><a href="#項目46-従来のforループよりfor-eachループを選ぶ" class="headerlink" title="項目46　従来のforループよりfor-eachループを選ぶ"></a>項目46　従来のforループよりfor-eachループを選ぶ</h2><ul>
+<li>for-eachループ＝拡張for文のことを言っている</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// コレクションと配列をいてレートするための好ましいイデオム</span></span><br><span class="line"><span class="keyword">for</span> (Element e : elements) &#123;</span><br><span class="line">  doSomething(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>for文がネストする際はなおさら、拡張For文の恩恵を受けられる</p>
+</li>
+<li><p>for-eachループにより、コレクションと配列に対してイテレートできるだけでなく、Iterableインターフェースを実装した、いかなるオブジェクトに対してもイテレートできる</p>
+</li>
+<li>利用できる場面であるならば利用するべき</li>
+<li>利用できない場面については以下の通り<ul>
+<li>1.フィルタリング：選択された要素を削除する必要がある場合</li>
+<li>2.変換：リストや配列をイテレートして、その要素のいくつかを変換、置換する場合</li>
+<li>3.並列イテレーション</li>
+</ul>
+</li>
+</ul>
+<p>これらのケースに該当する場合は、通常のfor文を使用して、最善の方法で実装しているという認識を持つこと</p>
+<h2 id="項目47-ライブラリーを知り、ライブラリーを使う"><a href="#項目47-ライブラリーを知り、ライブラリーを使う" class="headerlink" title="項目47　ライブラリーを知り、ライブラリーを使う"></a>項目47　ライブラリーを知り、ライブラリーを使う</h2><p>0からある上限値までの整数の乱数を生成したい時、自分で実装するとうまくいかないケースがある</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Random rnd = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line"><span class="comment">// よく見かけるが、欠陥がある！！</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">random</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Math.abs(rnd.nextInt()) % n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>※欠陥の内容については、数学的な内容になるのでここ（今回の学習）では触れない</p>
+<p>この機能を実現するためのライブラリーはもう既に提供されています。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Random.nextInt(<span class="keyword">int</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>標準ライブラリを使用することで、それを書いた専門家の知識と、それをあなたよりも前に使用した人々の経験を利用することになる</li>
+<li>自分の課題に少しばかりだけ関連している問題に対する場当たり的な解決策を書くことで、時間を無駄にする必要がない。アプリケーションに時間を費やすべき</li>
+<li>自分では何もしなくても、時間とともにパフォーマンスが改善されたりする</li>
+</ul>
+<ul>
+<li>Java標準ライブラリの中で知っておくべきもの(自分の道具箱に入れておくべきもの)<ul>
+<li>java.lang</li>
+<li>java.util(コレクションフレームワーク)</li>
+<li>java.io</li>
+<li>java.util.concurrent</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>無駄な努力はしないこと！</li>
+<li>ライブラリーに存在していないか、実装前に確認すること！</li>
+<li>一般的なライブラリーは、頭の片隅においておくこと！</li>
+</ul>
+</li>
+<li><p>個人的な心がけ</p>
+<ul>
+<li>あえてライブラリーを実装していない、車輪の再開発実装を見かけたら、ライブラリーを使うとすると…ということを意識しておく</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目48-正確な答えが必要ならば、floatとdoubleを避ける"><a href="#項目48-正確な答えが必要ならば、floatとdoubleを避ける" class="headerlink" title="項目48　正確な答えが必要ならば、floatとdoubleを避ける"></a>項目48　正確な答えが必要ならば、floatとdoubleを避ける</h2><ul>
+<li><p>float型とdouble型は、特に金銭計算には適していない</p>
+<ul>
+<li>正確に、0.1を表現することが不可能だから</li>
+</ul>
+</li>
+<li><p>この問題を解くために正しい方法は、金銭計算には、BigDecimal、int、あるいはlongを使用すること</p>
+</li>
+<li><p>留意事項</p>
+<ul>
+<li>BigDecimalのデメリット<ul>
+<li>基本データの算術型を使用するよりは不便</li>
+<li>処理が遅い</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>正確な答えを必要とする計算に、floatやdoubleを使用しないこと！</li>
+<li>BigDecimalの使用を検討する<ul>
+<li>BigDecimalは、小数点を扱っているかいなかという状態の管理と、処理速度が遅いというデメリットを持っている</li>
+</ul>
+</li>
+<li>桁数が９桁を超えないのであればintを用いる</li>
+<li>桁数が１８桁を超えないのであればlongを用いる</li>
+<li>桁数が１８桁を超えるのであればBigDecimalを用いる</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目49-ボクシングされた基本データより基本データ型を選ぶ"><a href="#項目49-ボクシングされた基本データより基本データ型を選ぶ" class="headerlink" title="項目49　ボクシングされた基本データより基本データ型を選ぶ"></a>項目49　ボクシングされた基本データより基本データ型を選ぶ</h2><p>java1.5から、自動ボクシングと自動アンボクシングの機能が追加された</p>
+<p>これは基本データ型とボクシングされた基本データ型の違いを不明瞭にしたが、決して同じものと見てはいけない！</p>
+<ul>
+<li><p>３つの違い</p>
+<pre><code>- 基本データ型は値だけを持つが、ボクシングされた基本データのインスタンスは値とは別のアイデンティティを持っている
+- 基本データ型は完全に機能する値だけを持っているが、ボクシングされた基本データ型は、機能する値＋nullを持つ
+- 基本データ型は、ボクシングされた基本データ型より時間と空間に関して効率的
+</code></pre></li>
+<li><p>ボクシングされた基本データ型に対して == 演算子を適用するのは、殆どの場合誤り</p>
+<ul>
+<li>オブジェクトの同一性を確認してしまうため</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>基本的に基本データ型を使用すること</li>
+<li>自動ボクシングの機能に依存しないこと</li>
+<li>ボクシングされた基本データ型に対して==演算子を用いることはない</li>
+<li>ボクシングされた基本データ型とアンボクシングされた基本データを含む混合型の計算を行うと、アンボクシングが行われる<ul>
+<li>アンボクシングの際にNullPointerExceptionをスローする可能性がある</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目50-他の型が適切な場所では、文字列を避ける"><a href="#項目50-他の型が適切な場所では、文字列を避ける" class="headerlink" title="項目50　他の型が適切な場所では、文字列を避ける"></a>項目50　他の型が適切な場所では、文字列を避ける</h2><ul>
+<li>文字列は、他の値型に対する代替としては貧弱<ul>
+<li>データが本質的に文字である場合にだけ文字列として扱うべき</li>
+<li>「はい/いいえ」の問に対する答えならboolean型</li>
+<li>数値なら、int float BigInteger</li>
+</ul>
+</li>
+<li>文字列は、列挙型に対する代替としては貧弱</li>
+<li>文字列は、集合型に対する代替としては貧弱<ul>
+<li>ある実態が複数の構成要素を持っているならば、その集合を示すクラスを定義することが懸命。たいていは private static のメンバークラスを書く</li>
+</ul>
+</li>
+<li><p>文字列は、ケイパビリティ（capability）に対する代替としては貧弱</p>
+<ul>
+<li>ThreadLocalに関する懸念点について咀嚼できていないので再確認する</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>何も考えずに文字列ばかりを使用しないこと</li>
+<li>基本データ型、enum、集合型が選べないか確認すること</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>たまにテーブルで数値、タイムスタンプで持っているのに、Java処理で文字列型として扱っているプログラムを見るが、そのようなプログラムは適切ではないと判断することができるのではないか</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目51-文字列結合のパフォーマンスに用心する"><a href="#項目51-文字列結合のパフォーマンスに用心する" class="headerlink" title="項目51　文字列結合のパフォーマンスに用心する"></a>項目51　文字列結合のパフォーマンスに用心する</h2><ul>
+<li><p>n個の文字列を結合するのに、文字列結合演算子を繰り返し使用すると、nに関して2次の時間を必要としていまいます</p>
+<ul>
+<li>この原因は、文字列が不変(immutable)であるという事実の不幸な結果</li>
+<li>結合時に両方の内容がコピーされます</li>
+</ul>
+</li>
+<li><p>許容できるパフォーマンスを達成するためには、Stringの代わりにStringBuilderを使用する</p>
+<ul>
+<li>パフォーマンスの違いは５０倍～８５倍ほど違い</li>
+</ul>
+</li>
+<li><p>処理速度検証参考</p>
+<ul>
+<li><a href="http://www.code-magagine.com/?p=2022" target="_blank" rel="noopener">http://www.code-magagine.com/?p=2022</a></li>
+</ul>
+</li>
+<li>StringBufferは古い、StringBuilderを使用しましょうと記載があるが、スレッド処理をする場合はStringBuffer１択</li>
+<li><p>上記の検証資料を見るとStringBufferもStringBuilderと速度の大差がない様に思う…</p>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>文字列結合はStringBuilder、またはStringBuilderを用いる</li>
+<li>繰り返さない、数の少ない結合に関しては+演算子を用いる場合もある<ul>
+<li>例えば、 <code>LOG.info(&quot;処理回数:&quot; + count + &quot;回目&quot;)</code> とか局所的に使う場合</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目52-インターフェースでオブジェクトを参照する"><a href="#項目52-インターフェースでオブジェクトを参照する" class="headerlink" title="項目52　インターフェースでオブジェクトを参照する"></a>項目52　インターフェースでオブジェクトを参照する</h2><ul>
+<li>適切なインターフェース型が存在するのであれば、パラメータ、戻り値、変数、およびフィールドはすべてインターフェース型を使用して宣言されるべき</li>
+<li>型として、インターフェースを使用する癖を身に着けたならば、あなたのプログラムはかなり柔軟になる</li>
+<li>注意点<ul>
+<li>もとの実装がインターフェースの一般契約で要求されていない何らかの特別な機能を提供していて、コードがその機能に依存しているならば、新たな実装が同じ機能を提供することが重要</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>適切なインターフェースが存在しない場合には、インターフェースではなく、クラスでオブジェクトを参照することは適切</p>
+<ul>
+<li>値クラス</li>
+<li>基本的なデータ型としてインターフェースではなくクラスであるフレームワークに属しているケース</li>
+<li>インターフェースは実装しているが、そのインターフェースにない特別なメソッドをクラスが提供しているケース</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>適切なインターフェースが存在する場合はインターフェース型で実装</li>
+<li>適切なインターフェースが存在しない場合は、クラス改装中で必要な機能を提供しているクラスで実装</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目53-リフレクションよりインタフェースを選ぶ"><a href="#項目53-リフレクションよりインタフェースを選ぶ" class="headerlink" title="項目53　リフレクションよりインタフェースを選ぶ"></a>項目53　リフレクションよりインタフェースを選ぶ</h2><ul>
+<li><p>コアリフレクション機構：java.lang.reflect はロードされたクラスに関する情報へのプログラムによるアクセスを提供している</p>
+<ul>
+<li>Classインスタンスで表されているクラスの、コンストラクタ、メソッド、フィールドを表しているConstructorインスタンス、Methodインスタンス、Fieldインスタンスを取得可能</li>
+<li>さらにこれらを反射的に操作できる</li>
+</ul>
+</li>
+<li><p>リフレクションはコンパイルされた時点で存在さえしない他のクラスを使用することを可能にする</p>
+<ul>
+<li>コンパイル時の型検査の恩恵をすべて失います</li>
+<li>リフレクションによるアクセスを行うコードは、ぎこちなく、冗長</li>
+<li>パフォーマンスが悪くなる</li>
+</ul>
+</li>
+<li><p>リフレクションは設計時のみ使用されるべき</p>
+<ul>
+<li>一般に、実行時に普通のアプリケーション内で、オブジェクトはリフレクションによりアクセスされるべきではない</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>ある種の洗練されたシステムプログラミング処理に必要とされる強力な機構ですが、多くの短所を持っている</li>
+<li>コンパイル時に知られていないクラスと一緒に動作しなければならないプログラムを書くのであれば、できる限り、オブジェクトのインスタンス化のためだけにリフレクションを使用する</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>リフレクションはログ出力時に使用したい</li>
+<li>実運用では積極的な利用は避けるべきで、ツールとかで使う分であれば問題ない</li>
+<li>引数にクラス名を渡して、インスタンス化したあとに、スーパークラスやインターフェースに型を当てて使用する分には問題ないことを理解</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目54-ネイティブメソッドを注意して使用する"><a href="#項目54-ネイティブメソッドを注意して使用する" class="headerlink" title="項目54　ネイティブメソッドを注意して使用する"></a>項目54　ネイティブメソッドを注意して使用する</h2><ul>
+<li>CやC++などのネイティブのプログラミング言語で書かれた特別なメソッドであるネイティブメソッドをJavaアプリケーションが呼び出すのを可能にするのがJava Native Interface(JNI)</li>
+<li><p>JNIは以前パフォーマンスの改善等で使用されていたが、Java1.4以降のリリースあたりで、Javaで実装しチューニングしたクラスを提供し始めたため、現在あまり使われていない</p>
+</li>
+<li><p>リリース1.4</p>
+<ul>
+<li>java.util.prefs レジストリの機能</li>
+</ul>
+</li>
+<li><p>リリース1.6</p>
+<ul>
+<li>java.awt.SyustemTray デスクトップのシステムトレイ領域へのアクセスを提供</li>
+</ul>
+</li>
+<li><p>古いコードへのアクセスにネイティブメソッドを使用することは正当ですが、パフォーマンスの改善のためにネイティブメソッドを使用することは、全く勧められません。</p>
+</li>
+<li>BigIntegerも最初はCで書かれた高速な多倍精度算術ライブラリーを使用して実装されていた歴史があるが、リリース1.3でJavaに置き換えられて注意深くチューニングされた</li>
+</ul>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>パフォマンスの改善のために使用しないこと</li>
+<li>古いコードへのアクセスで利用する場合は、最小限に留めること</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>ネイティブコードをJavaで意図的に使用するコーディングの実装経験がないが、以下で紹介されているようにC++のクラス、メソッドを呼び出しできるんだな程度で理解した<ul>
+<li><a href="http://smys0515.hatenablog.com/entry/2015/05/27/075421" target="_blank" rel="noopener">http://smys0515.hatenablog.com/entry/2015/05/27/075421</a></li>
+</ul>
+</li>
+<li>実務でネイティブメソッドを使用する場面は今後もないだろう。留意しておく</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目55-注意して最適化する"><a href="#項目55-注意して最適化する" class="headerlink" title="項目55　注意して最適化する"></a>項目55　注意して最適化する</h2><ul>
+<li><p>まとめ</p>
+<ul>
+<li>早いプログラムを書く努力をしてはいけない、良いプログラムを書く努力をすること</li>
+<li>API設計、通信プロトコル、永続データ形式を設計しているときは、パフォーマンスについて意識すること</li>
+<li>システム構築を終えたあと、パフォーマンス測定し、十分に早ければそれでよい、早くなければプロファイラの力を借りて問題の特定、最適化</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>ビジネスレベルでパフォーマンスを意識した最適化をしようと思いすぎないこと</li>
+<li>API設計や、汎用的に使用されるようなクラスを作成する際は、パフォーマンスを意識すること（繰り返し呼び出される必要がある）<ul>
+<li>Javaプロファイラについて調査（jvisualvm）</li>
+<li><a href="http://www.techscore.com/blog/2017/12/11/identifying_performance_bottlenecks_with_jvisualvm/" target="_blank" rel="noopener">http://www.techscore.com/blog/2017/12/11/identifying_performance_bottlenecks_with_jvisualvm/</a></li>
+<li>Eclipse使用時、GUIでメソッドごとに処理時間を一覧できるため便利</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目56-一般的に受け入れられている命名規約を守る"><a href="#項目56-一般的に受け入れられている命名規約を守る" class="headerlink" title="項目56　一般的に受け入れられている命名規約を守る"></a>項目56　一般的に受け入れられている命名規約を守る</h2><ul>
+<li><p>命名規約</p>
+<ul>
+<li>活字的規約</li>
+<li>文法的規約</li>
+</ul>
+</li>
+<li><p>パッケージ名</p>
+<ul>
+<li>ピリオドで区切られた要素をもち、階層的であるべき</li>
+<li>区切られた要素は小文字のアルファベット文字と稀に数字から構成されるべき</li>
+<li>組織外で使用されるパッケージの名前は、トップレベルドメインを最初にした、その組織のインターネットドメイン名で始まるべき<ul>
+<li>java,javaxで始まる名前をもつパッケージはこの規約の例外です</li>
+</ul>
+</li>
+<li>パッケージを記述する１つ以上の要素から構成されるべき、要素は短く一般的に８文字以下であるべき<ul>
+<li>意味を持った省略形は推奨されている。例えば、utilitiesesよりはutilなど</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>クラス名、インターフェース名（enum型名、アノテーション型名）</p>
+<ul>
+<li>１つかそれ以上の単語から構成されるべきであり、個々の単語の最初の文字は大文字（パスカルケース）</li>
+<li>メソッド名はキャメルケースにすべき</li>
+<li>定数フィールドは、大文字＋アンダースコア</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>標準の命名規約を取り入れて学習することを意識する</li>
+<li>長く維持されてきた観葉的な用法が別に定義されている場合、これらの規約に盲目的に従うべきではない</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>命名が適切だと他者に伝わりやすい＋自分でも見返しやすい</li>
+<li>コーディング時に意識する</li>
+<li>参考）<a href="https://qiita.com/rkonno/items/1b30daf83854fecbb814" target="_blank" rel="noopener">https://qiita.com/rkonno/items/1b30daf83854fecbb814</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="第９章-例外"><a href="#第９章-例外" class="headerlink" title="第９章　例外"></a>第９章　例外</h1><p>最適に使用された場合、例外はプログラムの読みやすさ、信頼性、保守性を改善</p>
+<p>不適切に使用された場合、逆効果となる。ここでは例外を効率的に使用するためのガイドラインを定義</p>
+<h2 id="項目57-例外的状態にだけ例外を使用する"><a href="#項目57-例外的状態にだけ例外を使用する" class="headerlink" title="項目57　例外的状態にだけ例外を使用する"></a>項目57　例外的状態にだけ例外を使用する</h2><ul>
+<li>最悪な例</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例外のひどい乱用。決して、行ってはならない！！！</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">    range[i++].climb();</span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="keyword">catch</span> (ArrayIndexOutOfBoundsException e) &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment">* これを書いた人は、ループ終了検査が冗長で、遅くなるからこうかいた！と</span></span><br><span class="line"><span class="comment">* 主張するかもしれないが、今のJVMは最適化されていて、このように書くほうが遅くなるし</span></span><br><span class="line"><span class="comment">* 何を意味しているのか、読み手が理解し辛い</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>例外は例外的状態で使用されるために設計されている</li>
+<li>通常の制御の流れに対して例外を使用しないでください</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>この項目は明白。あるべきタイミングで例外処理を実装すること。例外処理実装のパターンみたいなものに言及されていないが気になる。。。</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目58-回復可能な状態にはチェックされる例外を、プログラミングエラーには実行時例外を使用する"><a href="#項目58-回復可能な状態にはチェックされる例外を、プログラミングエラーには実行時例外を使用する" class="headerlink" title="項目58　回復可能な状態にはチェックされる例外を、プログラミングエラーには実行時例外を使用する"></a>項目58　回復可能な状態にはチェックされる例外を、プログラミングエラーには実行時例外を使用する</h2><ul>
+<li><p>３種類の例外</p>
+<ul>
+<li>チェックされる例外</li>
+<li>チェックされない例外（実行時例外）</li>
+<li>チェックされない例外（エラー）<ul>
+<li>各例外がいつ使用するのが適切かについてプログラマの間で混乱がある。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>呼び出し側が適切に回復できるような状況に対してはチェックされる例外を使用すること</p>
+</li>
+<li>プログラミングエラーを示す場合は実行時例外を使用してください。実行時例外の殆どは事前条件違反を示しています。</li>
+<li>実装するすべてのチェックされない例外は、RuntimeExceptionをサブクラス化するべき</li>
+<li><p>Exception,RuntimeException,Errorのサブクラスではない例外を定義することは可能だが、得られるものはないし、ユーザを混乱させるだけなのでやめたほうがよい</p>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>回復可能な状態にはチェックされる例外を使用</li>
+<li>プログラミングエラーには実行時例外を使用</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目59-チェックされる例外を不必要に使用するのを避ける"><a href="#項目59-チェックされる例外を不必要に使用するのを避ける" class="headerlink" title="項目59　チェックされる例外を不必要に使用するのを避ける"></a>項目59　チェックされる例外を不必要に使用するのを避ける</h2><ul>
+<li><p>まとめ</p>
+<ul>
+<li>プログラマがこれ以上どうしようもないのであればチェックしない例外が適切。常にチェックされる例外を実装すべきではない</li>
+<li>チェックされる例外呼び出しをbooleanで定義して呼び分けをする方法もある<ul>
+<li>このリファクタリングが常に適切とは限らないが、リファクタリング前より見やすくなるのはわかると思う</li>
+</ul>
+</li>
+<li>項目５７の状態検査メソッドと基本的に同じであり、同じ注意事項が課せられる<ul>
+<li>オブジェクトが外部同期なしに並行してアクセスされたり、外部要因により状態遷移したりするのであれば、このリファクタリングは適切でない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>booleanを使った処理の成功、失敗の振り分けは実装したことあるが、戻り値がほしい場合はチェック例外を書かざるを得ない印象</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目60-標準例外を使用する"><a href="#項目60-標準例外を使用する" class="headerlink" title="項目60　標準例外を使用する"></a>項目60　標準例外を使用する</h2><ul>
+<li><p>ここでは一般的に再利用されている例外について議論する</p>
+</li>
+<li><p>既存の例外を再利用することのメリット</p>
+<ul>
+<li>APIを学んで使用するのが容易になる<ul>
+<li>プログラマが既に熟知している確立された慣例と一致するから</li>
+</ul>
+</li>
+<li>プログラムが見慣れない例外でごちゃごちゃしないので読みやすい</li>
+<li>例外クラスが少ないと、より少ないメモリ量と、クラスロードに費やされる時間が少ない</li>
+</ul>
+</li>
+<li><p>一般的な例外</p>
+<ul>
+<li>IllegalArgumentException<ul>
+<li>パラメータ値が不適切</li>
+</ul>
+</li>
+<li>IllegalStateException<ul>
+<li>メソッド呼び出しに対してオブジェクト状態が不正</li>
+</ul>
+</li>
+<li>NullPointerException<ul>
+<li>パラメータ値が禁止されているnull</li>
+</ul>
+</li>
+<li>ArrayIndexOutOfBoundsException<ul>
+<li>インデックスパラメータ値が範囲外</li>
+</ul>
+</li>
+<li>ConcurrentModificationException<ul>
+<li>禁止されているオブジェクトの並行した変更を検出</li>
+</ul>
+</li>
+<li>UnsupportedOperationException<ul>
+<li>オブジェクトがメソッドをサポートしていない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>まとめ</p>
+<ul>
+<li>一般的な例外を、実装ケースに合わせて使用すること</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>できるなら、個別に例外クラスを実装するような文化を作らないようにする（個別に定義した例外クラスだらけのシステム（独自ライブラリ）を見たことがあるがよくない）</li>
+<li>一般的な例外クラスを使いこなせる様にする<ul>
+<li>この場合はこの例外を使用するのが最適だと判断できるようにする</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目61-抽象概念に適した例外をスローする"><a href="#項目61-抽象概念に適した例外をスローする" class="headerlink" title="項目61　抽象概念に適した例外をスローする"></a>項目61　抽象概念に適した例外をスローする</h2><ul>
+<li>上位レイヤは下位レベルの例外をキャッチして、上位レイヤの中で上位レベルの抽象概念の観点から説明可能な例外をスローすべき</li>
+</ul>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>下位レイヤからの例外を防いだり下位レイヤの例外から上位レイヤを隔離剃ることが実現不可能であり、下位レベルのメソッドがスローするどれかの例外が上位レイヤに対して不適切ならば、例外翻訳を使用すること。</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>例外翻訳は、メソッドで投げられた例外をキャッチして、別の例外をnewして投げ返すこと</li>
+<li>投げ返すに適切な例外があれば使用すること</li>
+<li>そもそも投げ返すパターンについて整理する必要があるなと感じた</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目62-各メソッドがスローするすべての例外を文書化する"><a href="#項目62-各メソッドがスローするすべての例外を文書化する" class="headerlink" title="項目62　各メソッドがスローするすべての例外を文書化する"></a>項目62　各メソッドがスローするすべての例外を文書化する</h2><ul>
+<li>例外がthrowされる条件をjavadocの@throwsタグに明記して、正確に文書化してください</li>
+</ul>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>作成する各メソッドがスローする可能性のあるすべての例外を文書化、チェックされない例外に対しても。また、具象メソッドだけでなく抽象メソッドに対しても</li>
+<li>個々のチェックされる例外に対してthrows説を提供すること。チェックされない例外はthorows説を提供しないこと</li>
+<li>メソッドがthrowする可能性のある例外を文書化するのを忘れると、他の人がクラスやインターフェースを効果的に利用したりするのが困難だったり、不可能になる</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>@thorwsタグに、少なくともチェックされる例外の説明を記載する努力をする<ul>
+<li>どのような原因でその例外が発生するのかなど</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目63-詳細メッセージにエラー記録情報を含める"><a href="#項目63-詳細メッセージにエラー記録情報を含める" class="headerlink" title="項目63　詳細メッセージにエラー記録情報を含める"></a>項目63　詳細メッセージにエラー記録情報を含める</h2><ul>
+<li><p>エラーを記録するためには、例外の文字列表現は、その例外の原因となったすべてのパラメータとフィールドの値を含んでいるべき</p>
+</li>
+<li><p>所感</p>
+<ul>
+<li>どの様にエラー情報を提供するのかについて言及していないように思える</li>
+<li>再確認したい項目</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目64-エラーアトミック性に努める"><a href="#項目64-エラーアトミック性に努める" class="headerlink" title="項目64　エラーアトミック性に努める"></a>項目64　エラーアトミック性に努める</h2><ul>
+<li><p>エラーアトミック：一般的にいえば、失敗したメソッド呼び出しは、オブジェクトをそのメソッド呼び出しの前の状態にしておくべき</p>
+</li>
+<li><p>達成するためのアプローチ</p>
+<ul>
+<li>不変オブジェクトを設計する</li>
+<li>可変オブジェクトに対しては<ul>
+<li>操作を行う前にパラメータの正当性を検査する。そうすることでパラメータの変更を行う前にエラーを投げることができる</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">poo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (size == <span class="number">0</span>) </span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> EmptyStackException();</span><br><span class="line">  Object result = elements[--size];</span><br><span class="line">  elements[size] = <span class="keyword">null</span>; <span class="comment">// 廃れた参照を取り除く</span></span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>このように、size０のリストに、サイズを確認せずに要素の取り出しを行うと例外がスローされ、sizeフィールドが不整合な負の状態になり、オブジェクトを扱えなくなる</p>
+<ul>
+<li><p>まとめ</p>
+<ul>
+<li>アトミック性をまもることは必須ではない。コスト、煩雑さとを伴うのであれば避ける</li>
+<li>APIドキュメントに、アトミック性を保持できないことを明記するべき<ul>
+<li>残念ながら、既存のAPIドキュメントの多くはこの規則に従っていない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>所感</p>
+<ul>
+<li>そもそもアトミック性を保持しなければならないようなクラスを実装する機会があまりなかった(変化するフィールド（加算/減算/ステータス定義の変化）を持つクラスを使い回すシチュエーションがないような気がする。あっても既存のライブラリクラス。Dateとか)</li>
+<li>バッチ処理等でサービス/ビジネスクラス内に処理回数をインクリメントする変数を定義した場合、変数を加算する前に対象の処理が正常終了しているかどうかを確かめるとか…</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目65-例外を無視しない"><a href="#項目65-例外を無視しない" class="headerlink" title="項目65　例外を無視しない"></a>項目65　例外を無視しない</h2><ul>
+<li>例外を無視するのはだめ！<ul>
+<li>火災警報器を無視して警報を切ってしまうのと同じ。誰も火災があるかどうかを知ることができない</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    obj.action(args);</span><br><span class="line">&#125; <span class="keyword">catch</span> (SomeException e) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>まとめ<ul>
+<li>例外を無視するべきではない</li>
+<li>例外を無視しても最低限コメントで説明をするべき</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h1 id="第10章-並行性"><a href="#第10章-並行性" class="headerlink" title="第10章　並行性"></a>第10章　並行性</h1><ul>
+<li>スレッドは同一プログラム内で複数の処理を並行して行うことを可能にしている</li>
+<li>今日では当たり前になった、マルチコアプロセッサの恩恵を受けるためにも並行処理は必須</li>
+<li>本章では明瞭で、正確で、きちんと文書化された並行プログラムを書くのに役立つ助言を含んでいます。</li>
+</ul>
+<h2 id="項目66-共有された可変データへのアクセスを同期する"><a href="#項目66-共有された可変データへのアクセスを同期する" class="headerlink" title="項目66　共有された可変データへのアクセスを同期する"></a>項目66　共有された可変データへのアクセスを同期する</h2><ul>
+<li>壊れた同期</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> effectivejava.chapter11.item78.brokenstopthread;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Broken! - How long would you expect this program to run?  (Page 312)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StopThread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> stopRequested;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Thread backgroundThread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (!stopRequested)</span><br><span class="line">                i++;</span><br><span class="line">        &#125;);</span><br><span class="line">        backgroundThread.start();</span><br><span class="line"></span><br><span class="line">        TimeUnit.SECONDS.sleep(<span class="number">1</span>);</span><br><span class="line">        stopRequested = <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>１秒後に、メインスレッドがサブスレッドを終了させると思うかもしれませんが、実際そうならない</p>
+<ul>
+<li>問題<ul>
+<li>メインスレッドが行ったsropRequestedの値の変更をサブスレッドが検知できないため</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>以下、修正されたクラス</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> effectivejava.chapter11.item78.fixedstopthread1;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Properly synchronized cooperative thread termination</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StopThread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> stopRequested;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">requestStop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        stopRequested = <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> <span class="keyword">boolean</span> <span class="title">stopRequested</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> stopRequested;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Thread backgroundThread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (!stopRequested())</span><br><span class="line">                i++;</span><br><span class="line">        &#125;);</span><br><span class="line">        backgroundThread.start();</span><br><span class="line"></span><br><span class="line">        TimeUnit.SECONDS.sleep(<span class="number">1</span>);</span><br><span class="line">        requestStop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>期待通りに１秒でクラスが終了します。</p>
+<p>読み込み操作と、書き込み動作の両方が同期されていなければ行けない。同期はなんの効果もない</p>
+<ul>
+<li>以下のような書き方もできる</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> effectivejava.chapter11.item78.fixedstopthread2;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Cooperative thread termination with a volatile field</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StopThread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> stopRequested;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">            <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Thread backgroundThread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (!stopRequested)</span><br><span class="line">                i++;</span><br><span class="line">        &#125;);</span><br><span class="line">        backgroundThread.start();</span><br><span class="line"></span><br><span class="line">        TimeUnit.SECONDS.sleep(<span class="number">1</span>);</span><br><span class="line">        stopRequested = <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>だが、volatile修飾子では、加算処理などの同期がうまく取れないので、</p>
+<p>場合により、AtomicLongを使用すること</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不完全、動機が必要！</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keyword">int</span> nextSerialNumber = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">generateSerialNumber</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> nextSerialNumber++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ++演算子がアトミックではないことが問題　これは安全性エラーです</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span>  AtomicLong nextSerialNumber = <span class="keyword">new</span> AtomicLong();<span class="keyword">abstract</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">generateSerialNumber</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> nextSerialNumber.getAndIncrement();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>まとめ<ul>
+<li>複数のスレッドが可変データを共有する場合には、そのデータを読み書きするスレッドは同期を行わなければなりません。</li>
+<li>スレッド間通信だけが必要で、相互排他が必要なければ、volatile修飾子は同期として受け入れられる形式<ul>
+<li>正しく使用するのは難しい</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="項目67-過剰な同期は避ける"><a href="#項目67-過剰な同期は避ける" class="headerlink" title="項目67　過剰な同期は避ける"></a>項目67　過剰な同期は避ける</h2><p>項目６６では不十分な同期の危険性を示唆したが、本項目はその逆</p>
+<ul>
+<li>活性エラーと安全性エラーを回避するためには、同期されたメソッドやブロック内で決して制御をクライアントに譲ってはいけません。</li>
+</ul>
+<h2 id="項目68-スレッドよりエグゼキューターとタクスを選ぶ"><a href="#項目68-スレッドよりエグゼキューターとタクスを選ぶ" class="headerlink" title="項目68　スレッドよりエグゼキューターとタクスを選ぶ"></a>項目68　スレッドよりエグゼキューターとタクスを選ぶ</h2><h2 id="項目69-waitとnotifyよりコンカレンシーユーティリティを選ぶ"><a href="#項目69-waitとnotifyよりコンカレンシーユーティリティを選ぶ" class="headerlink" title="項目69　waitとnotifyよりコンカレンシーユーティリティを選ぶ"></a>項目69　waitとnotifyよりコンカレンシーユーティリティを選ぶ</h2><h2 id="項目70-スレッド安全性を文書化する"><a href="#項目70-スレッド安全性を文書化する" class="headerlink" title="項目70　スレッド安全性を文書化する"></a>項目70　スレッド安全性を文書化する</h2><h2 id="項目71-遅延初期化を注意して使用する"><a href="#項目71-遅延初期化を注意して使用する" class="headerlink" title="項目71　遅延初期化を注意して使用する"></a>項目71　遅延初期化を注意して使用する</h2><h2 id="項目72-スレッドスケジューラに依存しない"><a href="#項目72-スレッドスケジューラに依存しない" class="headerlink" title="項目72　スレッドスケジューラに依存しない"></a>項目72　スレッドスケジューラに依存しない</h2><h2 id="項目73-スレッドグループを避ける"><a href="#項目73-スレッドグループを避ける" class="headerlink" title="項目73　スレッドグループを避ける"></a>項目73　スレッドグループを避ける</h2><h1 id="第11章-シリアライズ"><a href="#第11章-シリアライズ" class="headerlink" title="第11章　シリアライズ"></a>第11章　シリアライズ</h1><h2 id="項目74-Serializableを注意して実装する"><a href="#項目74-Serializableを注意して実装する" class="headerlink" title="項目74　Serializableを注意して実装する"></a>項目74　Serializableを注意して実装する</h2><h2 id="項目75-カスタムシリアライズ形式の使用を検討する"><a href="#項目75-カスタムシリアライズ形式の使用を検討する" class="headerlink" title="項目75　カスタムシリアライズ形式の使用を検討する"></a>項目75　カスタムシリアライズ形式の使用を検討する</h2><h2 id="項目76-防御的にreadObjectを書く"><a href="#項目76-防御的にreadObjectを書く" class="headerlink" title="項目76　防御的にreadObjectを書く"></a>項目76　防御的にreadObjectを書く</h2><h2 id="項目77-インスタンス制御に対しては、readResolveよりenum型を選ぶ"><a href="#項目77-インスタンス制御に対しては、readResolveよりenum型を選ぶ" class="headerlink" title="項目77　インスタンス制御に対しては、readResolveよりenum型を選ぶ"></a>項目77　インスタンス制御に対しては、readResolveよりenum型を選ぶ</h2><h2 id="項目78-シリアライズされたインスタンスの代わりに、シリアライズ・プロキシを検討する"><a href="#項目78-シリアライズされたインスタンスの代わりに、シリアライズ・プロキシを検討する" class="headerlink" title="項目78　シリアライズされたインスタンスの代わりに、シリアライズ・プロキシを検討する"></a>項目78　シリアライズされたインスタンスの代わりに、シリアライズ・プロキシを検討する</h2><h1 id="付録-初版に対応する項目"><a href="#付録-初版に対応する項目" class="headerlink" title="付録　初版に対応する項目"></a>付録　初版に対応する項目</h1>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2019-07-21T16:45:15.406Z" itemprop="dateUpdated">2019-07-22 01:45:15</time>
+</span><br>
+
+
+        
+        thank you for your reading my article!!
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="t-tsutsui">
+            t-tsutsui
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技術書籍/">技術書籍</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/読書中/">読書中</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/DB/2016_04_ORACLE-MASTER_12c_SQL_Bronze/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">ORACLE MASTER Oracle Database12c SQL Bronze</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/VBA/2016_02_AccessVBAエキスパート/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">AccessVBAエキスパート</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+<!--        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p> -->
+    </div>
+    <div class="bottom">
+        <p><span>t-tsutsui &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

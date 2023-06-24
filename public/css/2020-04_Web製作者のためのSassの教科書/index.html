@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Web製作者のためのSassの教科書 | OUTPUT*OVER-THERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#264A2E">
+    
+    
+    <meta name="keywords" content="教科書">
+    <meta name="description" content="Web製作者のためのSassの教科書1234567891011121314151617・Sassって聞いたことはあるけど、導入が面倒そう・Sassをはじめたいけど、あと一歩が踏み出せない・勉強コストとの天秤にかけて、Sassのメリットが見えない・周りでSassを使いはじめた人がいて、焦りを感じている・CSSを今よりも効率的に書きたいと思っているこうした方がSassを導入するきっかけとなり、ひと通り">
+<meta name="keywords" content="教科書">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web製作者のためのSassの教科書">
+<meta property="og:url" content="http://yoursite.com/CSS/2020-04_Web製作者のためのSassの教科書/index.html">
+<meta property="og:site_name" content="OUTPUT*OVER-THERE">
+<meta property="og:description" content="Web製作者のためのSassの教科書1234567891011121314151617・Sassって聞いたことはあるけど、導入が面倒そう・Sassをはじめたいけど、あと一歩が踏み出せない・勉強コストとの天秤にかけて、Sassのメリットが見えない・周りでSassを使いはじめた人がいて、焦りを感じている・CSSを今よりも効率的に書きたいと思っているこうした方がSassを導入するきっかけとなり、ひと通り">
+<meta property="og:locale" content="ja">
+<meta property="og:updated_time" content="2020-04-26T03:36:09.892Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web製作者のためのSassの教科書">
+<meta name="twitter:description" content="Web製作者のためのSassの教科書1234567891011121314151617・Sassって聞いたことはあるけど、導入が面倒そう・Sassをはじめたいけど、あと一歩が踏み出せない・勉強コストとの天秤にかけて、Sassのメリットが見えない・周りでSassを使いはじめた人がいて、焦りを感じている・CSSを今よりも効率的に書きたいと思っているこうした方がSassを導入するきっかけとなり、ひと通り">
+    
+        <link rel="alternate" type="application/atom+xml" title="OUTPUT*OVER-THERE" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">t-tsutsui</h5>
+          <a href="mailto:t.tsutsui9117@gmail.com" title="t.tsutsui9117@gmail.com" class="mail">t.tsutsui9117@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about">
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories">
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Web製作者のためのSassの教科書</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Web製作者のためのSassの教科書</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-04-08T15:00:00.000Z" itemprop="datePublished" class="page-time">
+  2020-04-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CSS/">CSS</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Web製作者のためのSassの教科書"><span class="post-toc-number">1.</span> <span class="post-toc-text">Web製作者のためのSassの教科書</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第1章-Sassのキホン"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">第1章 Sassのキホン</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-まずはSassって何なのかを知ろう"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1-1 まずはSassって何なのかを知ろう</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-Sassを導入する前の疑問や不安"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1-2 Sassを導入する前の疑問や不安</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-3-何はともあれSassを触ってみよう"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">1-3 何はともあれSassを触ってみよう</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第2章-Sassの利用環境を整えよう"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">第2章 Sassの利用環境を整えよう</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-本書で使用する環境について"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2-1 本書で使用する環境について</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-Node-jsをインストールする"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2-2 Node.jsをインストールする</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-黒い画面を使ってみよう"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2-3 黒い画面を使ってみよう</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-4-セットアップ済みの環境をインストールする"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">2-4 セットアップ済みの環境をインストールする</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-5-Sass-をコンパイルする"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">2-5 Sass をコンパイルする</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-6-セットアップ済みの環境を作成する方法"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">2-6 セットアップ済みの環境を作成する方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-7-GUIコンパイラ（Prepros）でSassを使う"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">2-7 GUIコンパイラ（Prepros）でSassを使う</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-8-DreamweaverでSassを使う"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">2-8 DreamweaverでSassを使う</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第3章-これだけはマスターしたいSassの基本機能"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">第3章 これだけはマスターしたいSassの基本機能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-ルールのネスト（Nested-Rules）"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">3-1 ルールのネスト（Nested Rules）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-親セレクタの参照-amp-（アンパサンド）"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">3-2 親セレクタの参照&amp;（アンパサンド）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-プロパティのネスト（Nested-Properties）"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">3-3 プロパティのネスト（Nested Properties）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-Sassで使えるコメント"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">3-4 Sassで使えるコメント</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-変数（Variables）"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">3-5 変数（Variables）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-演算"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">3-6 演算</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-7-Sassの-import"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">3-7 Sassの@import</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第4章-高度な機能を覚えてSassを使いこなそう"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">第4章 高度な機能を覚えてSassを使いこなそう</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-スタイルの継承ができるエクステンド（-extend）"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">4-1 スタイルの継承ができるエクステンド（@extend）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-柔軟なスタイルの定義が可能なミックスイン（-mixin）"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">4-2 柔軟なスタイルの定義が可能なミックスイン（@mixin）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-ネストしているセレクタをルートに戻せる-at-root"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">4-3 ネストしているセレクタをルートに戻せる @at-root</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-4-Sassのデータタイプについて"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">4-4 Sassのデータタイプについて</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-5-制御構文で条件分岐や繰り返し処理を行う"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">4-5 制御構文で条件分岐や繰り返し処理を行う</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-6-関数を使ってさまざまな処理を実行する"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">4-6 関数を使ってさまざまな処理を実行する</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-7-自作関数を定義する-function"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">4-7 自作関数を定義する@function</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-8-テストやデバックで使える-debug、-warn、-error"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">4-8 テストやデバックで使える@debug、@warn、@error</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-9-使いどころに合わせて補完（インターポレーション）してくれる"><span class="post-toc-number">1.4.9.</span> <span class="post-toc-text">4-9 使いどころに合わせて補完（インターポレーション）してくれる#{}</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-10-変数の振る舞いをコントロールする-default-と-global"><span class="post-toc-number">1.4.10.</span> <span class="post-toc-text">4-10 変数の振る舞いをコントロールする !default と !global</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第5章-現場で使える実践Sassテクニック"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">第5章 現場で使える実践Sassテクニック</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-1-管理／運用・設計で使えるテクニック"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">5-1 管理／運用・設計で使えるテクニック</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-2-レイアウト・パーツで使えるテクニック"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">5-2 レイアウト・パーツで使えるテクニック</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-3-スマホ・マルチデバイス、ブラウザで使えるテクニック"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">5-3 スマホ・マルチデバイス、ブラウザで使えるテクニック</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-4-gulpのタスクを追加してもっと便利な環境にする"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">5-4 gulpのタスクを追加してもっと便利な環境にする</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-5-PostCSSでSassをさらに便利にする"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">5-5 PostCSSでSassをさらに便利にする</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第6章-もっとSassを便利にするフレームワークやツール"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">第6章 もっとSassを便利にするフレームワークやツール</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-Sassのフレームワーク紹介"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">6-1 Sassのフレームワーク紹介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-SassのGUIコンパイラ"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">6-2 SassのGUIコンパイラ</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第7章-Sass全機能リファレンス"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">第7章 Sass全機能リファレンス</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-1-Sassの基本と高度な機能"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">7-1 Sassの基本と高度な機能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-Sassの関数一覧"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">7-2 Sassの関数一覧</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-3-Sassの拡張"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">7-3 Sassの拡張</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#付録"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">付録</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#コマンド一覧"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">コマンド一覧</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用語集"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">用語集</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2020-04_Web製作者のためのSassの教科書" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Web製作者のためのSassの教科書</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-09 00:00:00" datetime="2020-04-08T15:00:00.000Z" itemprop="datePublished">2020-04-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/CSS/">CSS</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Web製作者のためのSassの教科書"><a href="#Web製作者のためのSassの教科書" class="headerlink" title="Web製作者のためのSassの教科書"></a>Web製作者のためのSassの教科書</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">・Sassって聞いたことはあるけど、導入が面倒そう</span><br><span class="line">・Sassをはじめたいけど、あと一歩が踏み出せない</span><br><span class="line">・勉強コストとの天秤にかけて、Sassのメリットが見えない</span><br><span class="line">・周りでSassを使いはじめた人がいて、焦りを感じている</span><br><span class="line">・CSSを今よりも効率的に書きたいと思っている</span><br><span class="line"></span><br><span class="line">こうした方がSassを導入するきっかけとなり、</span><br><span class="line">ひと通りSassの機能を使いこなせるようになるのが本書の目標です。</span><br><span class="line"></span><br><span class="line">本書では、HTML+CSSの基本的な知識は必須ですが、</span><br><span class="line">Sassにまったく触れたことがない方も対象としています。</span><br><span class="line"></span><br><span class="line">CSSをHTMLの構造に合わせて入れ子で書いていく「ネスト」や</span><br><span class="line">便利な「変数」や「演算」などのSassの基本機能はもちろん、</span><br><span class="line"></span><br><span class="line">筆者が実際に仕事の現場で使っている実践的なテクニックから</span><br><span class="line">新機能もカバーした全機能リファレンスまで、この一冊で網羅しています。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>発売日：2017/9/15</li>
+<li>ページ数：296</li>
+<li>サイズ：B5変形判</li>
+<li>著者：平澤 隆（Latele）　著/森田 壮　著</li>
+<li><p>ISBN：9784295002352</p>
+</li>
+<li><p>URL: <a href="https://book.impress.co.jp/books/1117101020" target="_blank" rel="noopener">https://book.impress.co.jp/books/1117101020</a></p>
+</li>
+<li><p>目次</p>
+<ul>
+<li>第1章 Sassのキホン</li>
+<li>第2章 Sassの利用環境を整えよう</li>
+<li>第3章 これだけはマスターしたいSassの基本機能</li>
+<li>第4章 高度な機能を覚えてSassを使いこなそう</li>
+<li>第5章 現場で使える実践Sassコーディング</li>
+<li>第6章 もっとSassを便利にするフレームワークやツール</li>
+<li>第7章 Sass全機能リファレンス</li>
+</ul>
+</li>
+<li><p>公式サポートサイト：<a href="https://book2.scss.jp/" target="_blank" rel="noopener">https://book2.scss.jp/</a></p>
+</li>
+</ul>
+<h2 id="第1章-Sassのキホン"><a href="#第1章-Sassのキホン" class="headerlink" title="第1章 Sassのキホン"></a>第1章 Sassのキホン</h2><h3 id="1-1-まずはSassって何なのかを知ろう"><a href="#1-1-まずはSassって何なのかを知ろう" class="headerlink" title="1-1 まずはSassって何なのかを知ろう"></a>1-1 まずはSassって何なのかを知ろう</h3><ul>
+<li><p>Sassは学習コストもあるけれど、CSSを覚え始めた頃のワクワク感や楽しさを思い出させてくれるよっている説明</p>
+</li>
+<li><p>Sass＝CSSを拡張したメタ言語</p>
+</li>
+<li><p>Sass(Syntactically Awesome Strylesheets)</p>
+</li>
+<li><p>Sassには２つの記法がある</p>
+<ul>
+<li>SASS記法：CSSと互換性が無い。インデントの深さで分ける</li>
+<li>SCSS記法：CSSと互換性がある。ネストで記載</li>
+</ul>
+</li>
+<li><p>SCSSファイルはコンパイルが必要だよという説明</p>
+</li>
+<li><p>魅力的な機能</p>
+<ul>
+<li>記述の簡略化（<strong>ネスト</strong>）</li>
+<li>コメントに、<code>//</code>が使える！</li>
+<li><strong>変数定義</strong>で同じ値を使い回すことができる</li>
+<li>１度使ったセレクタを使い回せる（<strong>エクステンド</strong>）</li>
+<li>コードの再利用が可能<ul>
+<li>スタイルをまとめてテンプレートやモジュールのように定義し、簡単に読み込んで使うことができる</li>
+<li><strong>ミックスイン</strong>と呼ばれており、Sassの中でも最も強力な機能の１つ</li>
+</ul>
+</li>
+<li>１つのCSSファイルにまとめることができる（<strong>パーシャル</strong>）</li>
+<li>条件分岐などの<strong>プログラム的な処理</strong>ができる</li>
+<li><strong>関数で様々な処理を実行</strong>できる<ul>
+<li>Sassにはかなり多くの関数が用意されている</li>
+</ul>
+</li>
+<li>CSSファイルを圧縮できる</li>
+<li>他にも魅力が沢山</li>
+</ul>
+</li>
+<li><p>Sassの歴史について説明（割愛）</p>
+</li>
+</ul>
+<h3 id="1-2-Sassを導入する前の疑問や不安"><a href="#1-2-Sassを導入する前の疑問や不安" class="headerlink" title="1-2 Sassを導入する前の疑問や不安"></a>1-2 Sassを導入する前の疑問や不安</h3><ul>
+<li>環境構築に黒い画面を操作することに対しての不安説明</li>
+<li>運用時にSassは導入ハードルが高いのではという不安説明<ul>
+<li>expandedというフォーマットがあり、これを指定してコンパイルすると、普通にCSS書いたみたいになる</li>
+<li><code>//</code>コメントは削除されてしまう</li>
+<li>なので納品後はCSS編集という運用でも問題ない</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-何はともあれSassを触ってみよう"><a href="#1-3-何はともあれSassを触ってみよう" class="headerlink" title="1-3 何はともあれSassを触ってみよう"></a>1-3 何はともあれSassを触ってみよう</h3><ul>
+<li><p>使ってみる</p>
+<ul>
+<li>「SassMeister」で検索</li>
+<li><a href="https://www.sassmeister.com" target="_blank" rel="noopener">https://www.sassmeister.com</a></li>
+</ul>
+</li>
+<li><p>meister = 師匠</p>
+</li>
+</ul>
+<p>Sassを入力するとCSSが出力されるプレイグラウンド</p>
+<ul>
+<li>Sassに対応しているソースコード共有サービス<ul>
+<li>CodePen</li>
+<li>Create a new Fiddle - jsFiddle</li>
+<li>jsdo.it Share Javascript, HTML5 and CSS</li>
+<li>HTML5, CSS3, JS Demos, Creations and Experiments | CSSDeck</li>
+</ul>
+</li>
+</ul>
+<h2 id="第2章-Sassの利用環境を整えよう"><a href="#第2章-Sassの利用環境を整えよう" class="headerlink" title="第2章 Sassの利用環境を整えよう"></a>第2章 Sassの利用環境を整えよう</h2><h3 id="2-1-本書で使用する環境について"><a href="#2-1-本書で使用する環境について" class="headerlink" title="2-1 本書で使用する環境について"></a>2-1 本書で使用する環境について</h3><ul>
+<li><p>本書では、node-sasssを使用する</p>
+</li>
+<li><p>Sassは大きく分けて２つのSassが存在する</p>
+<ul>
+<li>Ruby Sass：Rubyで開発されたもの</li>
+<li>LibSass：C/C++で開発されたもの</li>
+</ul>
+</li>
+<li><p>node-sass</p>
+<ul>
+<li>LibSassをNode.jsで動作できるようにしたライブラリ</li>
+</ul>
+</li>
+<li><p>Node.jsについて：Javascriptで作られたサーバーサイド環境</p>
+</li>
+<li>Gulp: タスクランナー</li>
+</ul>
+<h3 id="2-2-Node-jsをインストールする"><a href="#2-2-Node-jsをインストールする" class="headerlink" title="2-2 Node.jsをインストールする"></a>2-2 Node.jsをインストールする</h3><ul>
+<li>Webからインストールする手順を記載</li>
+<li>バージョン管理ツールの説明<ul>
+<li>Windowsならnodist</li>
+<li>Macならndenv</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-黒い画面を使ってみよう"><a href="#2-3-黒い画面を使ってみよう" class="headerlink" title="2-3 黒い画面を使ってみよう"></a>2-3 黒い画面を使ってみよう</h3><ul>
+<li>コマンドプロンプトを開く手順を記載しているだけ（割愛）</li>
+</ul>
+<h3 id="2-4-セットアップ済みの環境をインストールする"><a href="#2-4-セットアップ済みの環境をインストールする" class="headerlink" title="2-4 セットアップ済みの環境をインストールする"></a>2-4 セットアップ済みの環境をインストールする</h3><ul>
+<li><p>サンプルファイルコピー</p>
+<ul>
+<li><a href="https://book2.scss.jp/dl/c2/" target="_blank" rel="noopener">https://book2.scss.jp/dl/c2/</a></li>
+</ul>
+</li>
+<li><p>gulp-cliをインストール</p>
+<ul>
+<li><code>npm install --global gulp-cli</code></li>
+</ul>
+</li>
+<li><p>モジュールをインストールする</p>
+<ul>
+<li><code>npm install</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-Sass-をコンパイルする"><a href="#2-5-Sass-をコンパイルする" class="headerlink" title="2-5 Sass をコンパイルする"></a>2-5 Sass をコンパイルする</h3><ul>
+<li><p><code>gulpfile.js</code>に記載された処理を実行</p>
+<ul>
+<li><code>gulp sass</code></li>
+</ul>
+</li>
+<li><p>アウトプットスタイルを指定</p>
+<ul>
+<li>Nested</li>
+<li>Expanded</li>
+<li>Compact</li>
+<li>Compressed</li>
+</ul>
+</li>
+<li><p>ファイルの更新を監視する</p>
+<ul>
+<li><code>gulp.watch(&#39;./sass/**/*.scss&#39;,[&#39;sass&#39;]);</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-6-セットアップ済みの環境を作成する方法"><a href="#2-6-セットアップ済みの環境を作成する方法" class="headerlink" title="2-6 セットアップ済みの環境を作成する方法"></a>2-6 セットアップ済みの環境を作成する方法</h3><ul>
+<li><p>npm と gulp の説明(割愛)</p>
+</li>
+<li><p>gulpfile.jsのジェネレータについて</p>
+<ul>
+<li><a href="https://steelydylan.github.io/gulp-generator/" target="_blank" rel="noopener">https://steelydylan.github.io/gulp-generator/</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-7-GUIコンパイラ（Prepros）でSassを使う"><a href="#2-7-GUIコンパイラ（Prepros）でSassを使う" class="headerlink" title="2-7 GUIコンパイラ（Prepros）でSassを使う"></a>2-7 GUIコンパイラ（Prepros）でSassを使う</h3><ul>
+<li><a href="https://prepros.io/" target="_blank" rel="noopener">https://prepros.io/</a></li>
+<li>割愛する</li>
+</ul>
+<h3 id="2-8-DreamweaverでSassを使う"><a href="#2-8-DreamweaverでSassを使う" class="headerlink" title="2-8 DreamweaverでSassを使う"></a>2-8 DreamweaverでSassを使う</h3><ul>
+<li>割愛する</li>
+</ul>
+<h2 id="第3章-これだけはマスターしたいSassの基本機能"><a href="#第3章-これだけはマスターしたいSassの基本機能" class="headerlink" title="第3章 これだけはマスターしたいSassの基本機能"></a>第3章 これだけはマスターしたいSassの基本機能</h2><h3 id="3-1-ルールのネスト（Nested-Rules）"><a href="#3-1-ルールのネスト（Nested-Rules）" class="headerlink" title="3-1 ルールのネスト（Nested Rules）"></a>3-1 ルールのネスト（Nested Rules）</h3><ul>
+<li>ネストでCSS定義ができる</li>
+<li>セレクタも使える</li>
+<li>使いすぎるとインデントが深くなり可読性が悪くなる</li>
+<li><code>@media</code>のネストもできる</li>
+</ul>
+<h3 id="3-2-親セレクタの参照-amp-（アンパサンド）"><a href="#3-2-親セレクタの参照-amp-（アンパサンド）" class="headerlink" title="3-2 親セレクタの参照&amp;（アンパサンド）"></a>3-2 親セレクタの参照&amp;（アンパサンド）</h3><ul>
+<li><code>&amp;</code>を使えば親セレクタを参照できる</li>
+<li>BEMやMindBEMingなどBEMの設計思想に近いCSS設計を行っている場合、記述量が大幅に削減される</li>
+</ul>
+<h3 id="3-3-プロパティのネスト（Nested-Properties）"><a href="#3-3-プロパティのネスト（Nested-Properties）" class="headerlink" title="3-3 プロパティのネスト（Nested Properties）"></a>3-3 プロパティのネスト（Nested Properties）</h3><ul>
+<li>プロパティもネストさせてかけるよっていう説明</li>
+<li>ショートハンドでかけるところをネストさせる</li>
+<li>慣れないうちは可読性が下がる原因にもなるので、普通に書いたほうが無難</li>
+<li>Column: -(ハイフン)があるプロパティはすべてネストできる</li>
+</ul>
+<h3 id="3-4-Sassで使えるコメント"><a href="#3-4-Sassで使えるコメント" class="headerlink" title="3-4 Sassで使えるコメント"></a>3-4 Sassで使えるコメント</h3><ul>
+<li>javascriptのコメント<code>//</code>が使える</li>
+<li>通常のCSSコメント <code>/* */</code> だとコンパイルされても残る</li>
+<li>スタイルが「compressed」だとコメントは残らない<ul>
+<li>「compressed」でも残るコメント<ul>
+<li><code>/*! */</code> <code>!</code>を追加すれば残るらしい</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-5-変数（Variables）"><a href="#3-5-変数（Variables）" class="headerlink" title="3-5 変数（Variables）"></a>3-5 変数（Variables）</h3><ul>
+<li>変数宣言ができる</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 赤色の変数を宣言</span></span><br><span class="line"><span class="variable">$red</span>: <span class="number">#cf2d3a</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>変数名で使える文字と使えない文字</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width10</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="variable">$w-10</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="variable">$w_10</span>: <span class="number">10px</span>;</span><br><span class="line">$Ｗｉｄｔｈ１０: <span class="number">10px</span>;</span><br><span class="line">$横幅10px: <span class="number">10px</span>;</span><br><span class="line">$１０px: <span class="number">10px</span>;</span><br><span class="line">$___w10___: <span class="number">10px</span>;</span><br><span class="line"><span class="variable">$-_-______----w</span>:<span class="number">10px</span>;</span><br><span class="line">$変数はSassの便利な機能の１つです:black;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使えない文字</span></span><br><span class="line">$10width: <span class="number">10px</span>; <span class="comment">// 数字から始まっている</span></span><br><span class="line">$@width10: 10px; <span class="comment">// @など使えない記号</span></span><br><span class="line"><span class="variable">$--width</span>: <span class="number">10px</span>; <span class="comment">// 連続したハイフンから始まっている</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>ルールセット内で変数を宣言することもできる</p>
+</li>
+<li><p>変数を参照できる場所</p>
+<ul>
+<li>セレクタから参照したり、他の文字列と結合してパスを作成したい場合などに気をつける必要あり</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$セレクタ名: <span class="string">'.pickupContentsArea, section.main'</span>;</span><br><span class="line"><span class="variable">$IMG_PATH</span>: <span class="string">'../img/bg/'</span>;</span><br><span class="line"></span><br><span class="line">#&#123;$セレクタ名&#125; &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: url(#&#123;<span class="variable">$IMG_PATH</span>&#125;pickup.png);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-6-演算"><a href="#3-6-演算" class="headerlink" title="3-6 演算"></a>3-6 演算</h3><ul>
+<li><code>+ - * %</code>などの演算子が使える</li>
+<li>コンパイル後は、演算結果が出力される</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// paddingの値が変わった時に変数として持っておくとwidthに反映できる</span></span><br><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line">  <span class="variable">$padding</span>: <span class="number">7px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="variable">$main_width</span> - <span class="variable">$padding</span> * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>色の演算も算術演算子でできるが将来的には廃止予定らしい<ul>
+<li><code>rgba()</code>を使おうとのこと</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-7-Sassの-import"><a href="#3-7-Sassの-import" class="headerlink" title="3-7 Sassの@import"></a>3-7 Sassの@import</h3><ul>
+<li><p>SassではCSSで使える<code>@import</code>の他に、Sass独自の<code>@import</code>機能がある</p>
+</li>
+<li><p>CSSファイルを生成しないパーシャル</p>
+<ul>
+<li>importしたSassファイルなど、特定のSassファイルをCSSファイルとして生成したくない場合、</li>
+<li>Sassファイルのファイル名の最初に<code>_</code>アンダースコアをつけることで、コンパイルしてもCSSファイルが生成されなくなる</li>
+<li>この機能のことをパーシャル(partial)という</li>
+</ul>
+</li>
+</ul>
+<h2 id="第4章-高度な機能を覚えてSassを使いこなそう"><a href="#第4章-高度な機能を覚えてSassを使いこなそう" class="headerlink" title="第4章 高度な機能を覚えてSassを使いこなそう"></a>第4章 高度な機能を覚えてSassを使いこなそう</h2><h3 id="4-1-スタイルの継承ができるエクステンド（-extend）"><a href="#4-1-スタイルの継承ができるエクステンド（-extend）" class="headerlink" title="4-1 スタイルの継承ができるエクステンド（@extend）"></a>4-1 スタイルの継承ができるエクステンド（@extend）</h3><ul>
+<li><p>エクステンド＝指定したセレクタのスタイルを継承することができる機能</p>
+</li>
+<li><p>あまり継承しすぎると、プロパティがバッティングしてしまう可能性が高くなる</p>
+</li>
+<li><p>エクステンドの連鎖</p>
+<ul>
+<li>継承を連鎖して記載可能</li>
+</ul>
+</li>
+<li><p>エクステンドが使えないセレクタの紹介</p>
+<ul>
+<li><code>.item p</code> 子孫セレクタ</li>
+<li><code>#main &gt; article</code> 子セレクタ</li>
+<li><code>h2 + h3</code> 隣接セレクタ</li>
+<li><code>h3 ~ h3</code> 間接セレクタ</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 子孫セレクタ</span></span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-tag">p</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子セレクタ</span></span><br><span class="line"><span class="selector-id">#main</span> &gt; <span class="selector-tag">article</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 隣接セレクタ</span></span><br><span class="line"><span class="selector-tag">h2</span> + <span class="selector-tag">h3</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 間接セレクタ</span></span><br><span class="line"><span class="selector-tag">h3</span> ~ <span class="selector-tag">h3</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>エクステンド専用のプレースホルダーセレクタ</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// エクステンド専用のプレースホルダーセレクタ</span></span><br><span class="line">%boxBase &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// プレースホルダーセレクタを継承</span></span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %boxBase;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">section</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %boxBase;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>@media</code>内ではエクステンドは使用できない</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// これはコンパイルエラーになってしまう</span></span><br><span class="line">%btnBase &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> all and (orientation:landscape) &#123;</span><br><span class="line">    <span class="selector-tag">a</span> &#123;</span><br><span class="line">        @<span class="keyword">extend</span> %btnBase;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// こちらに書き直すとうまくいく</span></span><br><span class="line">@<span class="keyword">media</span> all and (orientation:landscape) &#123;</span><br><span class="line">    %btnBase &#123;</span><br><span class="line">        <span class="attribute">display</span>: inline-block;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">a</span> &#123;</span><br><span class="line">        @<span class="keyword">extend</span> %btnBase;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>警告を抑止する <code>!optional</code>フラグ</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %btnBase !optional;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-柔軟なスタイルの定義が可能なミックスイン（-mixin）"><a href="#4-2-柔軟なスタイルの定義が可能なミックスイン（-mixin）" class="headerlink" title="4-2 柔軟なスタイルの定義が可能なミックスイン（@mixin）"></a>4-2 柔軟なスタイルの定義が可能なミックスイン（@mixin）</h3><ul>
+<li>スタイルの集まりを定義しておき、それを他の場所で呼び出して使うことができる</li>
+<li>また、引数を指定することで、定義したミックスインの値を一部変更して使うといった、非常に柔軟で強力な処理が可能</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ミックスインを定義</span></span><br><span class="line">@<span class="keyword">mixin</span> boxSet &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#999</span>;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 定義したミックスインを呼び出し</span></span><br><span class="line"><span class="selector-class">.relatedArea</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> boxSet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>エクステンドと違ってコンパイル後に、展開されて出力されることを確認</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定義したミックスインを呼び出し</span></span><br><span class="line"><span class="selector-class">.relatedArea</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> boxSet;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 別のルールセットでも呼び出し</span></span><br><span class="line"><span class="selector-class">.pickupArea</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> boxSet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.relatedArea</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#999</span>;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.pickupArea</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#999</span>;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>引数を使ったミックスイン</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引数を使ったミックスインを定義</span></span><br><span class="line">@<span class="keyword">mixin</span> kadomaru(<span class="variable">$value</span>) &#123;</span><br><span class="line">    -moz-<span class="attribute">border-radius</span>: <span class="variable">$value</span>;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="variable">$value</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$value</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> kadomaru(<span class="number">3px</span>);</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</span><br><span class="line">    @<span class="keyword">include</span> kadomaru(<span class="number">5px</span> 10px);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 可変でプロパティを定義できる</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>引数に初期値を設定することもできる</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> kadomaru(<span class="variable">$value</span>: 3px) &#123;</span><br><span class="line">    -moz-<span class="attribute">border-radius</span>: <span class="variable">$value</span>;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="variable">$value</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$value</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.boxA</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> kadomaru;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.boxB</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> kadomaru();</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#f1f1f1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.boxA</span> &#123;</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.boxB</span> &#123;</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f1f1f1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>引数を複数指定することもできる</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> boxBase(<span class="variable">$margin</span>: 30px 0, <span class="variable">$padding</span>: 10px) &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="variable">$margin</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="variable">$padding</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boxA</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> boxBase;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.boxB</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> boxBase(<span class="number">0</span> 0 50px, 20px);</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#f1f1f1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>,(カンマ)を使うプロパティには可変長引数を利用する</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> shadow(<span class="variable">$value</span>...) &#123;</span><br><span class="line">    <span class="attribute">text-shadow</span>: <span class="variable">$value</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> shadow(<span class="number">8px</span> 8px 0 <span class="number">#999</span>, 15px -10px 0 <span class="number">#eee</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>複数の引数があるミックスインを読み込む際に可変長引数を使う</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> boxBase(<span class="variable">$w</span>: 250px, <span class="variable">$pd</span>: 15px, <span class="variable">$bg_c</span>: <span class="number">#fff</span>, <span class="variable">$bd_c</span>: <span class="number">#ccc</span>) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$w</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="variable">$pd</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">$bg_c</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="variable">$bd_c</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$values</span>: <span class="number">300px</span>, <span class="number">20px</span>; <span class="comment">// こういう変数定義もできるんだと知った</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    @<span class="keyword">include</span> boxBase(<span class="variable">$values</span>...);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ミックスインのスコープ（利用できる範囲）を制限する</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    @<span class="keyword">mixin</span> margin &#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">50px</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.item</span> &#123;</span><br><span class="line">        @<span class="keyword">include</span> margin;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// あまりスコープを制限する例は無いが一応覚えておく</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>ミックスインにコンテントブロックを渡す <code>@content</code><ul>
+<li>→これは便利！</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> media(<span class="variable">$width-media</span>: 768px) &#123;</span><br><span class="line">    @<span class="keyword">media</span> only screen and (max-width: <span class="variable">$width-media</span>) &#123;</span><br><span class="line">        @<span class="keyword">content</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="selector-class">.image</span> &#123;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        @<span class="keyword">include</span> media &#123;</span><br><span class="line">            <span class="attribute">float</span>: none;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.text</span> &#123;</span><br><span class="line">        <span class="attribute">overflow</span>: hidden;</span><br><span class="line">        <span class="attribute">margin-left</span>: <span class="number">15px</span>;</span><br><span class="line">        @<span class="keyword">include</span> media &#123;</span><br><span class="line">            <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.image</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> only screen and (max-width: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.item</span> <span class="selector-class">.image</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item</span> <span class="selector-class">.text</span> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> only screen and (max-width: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.item</span> <span class="selector-class">.text</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ミックスイン名で使える文字と使えない文字</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> shadow1 &#123; ～ &#125;</span><br><span class="line">@<span class="keyword">mixin</span> shadow-1 &#123; ～ &#125;</span><br><span class="line">@<span class="keyword">mixin</span> shadow_1 &#123; ～ &#125;</span><br><span class="line">@<span class="keyword">mixin</span> 影 &#123; ～ &#125;</span><br><span class="line">@<span class="keyword">mixin</span> ｓｈａｄｏw &#123; ～ &#125;</span><br><span class="line">@<span class="keyword">mixin</span> _shadow &#123; ～ &#125;</span><br><span class="line">@<span class="keyword">mixin</span> -shadow &#123; ～ &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使えない文字</span></span><br><span class="line">@<span class="keyword">mixin</span> 01shadow &#123; ～ &#125; <span class="comment">// 数字から始まっている</span></span><br><span class="line">@<span class="keyword">mixin</span> shadow@<span class="number">2</span> &#123; ～ &#125; <span class="comment">// @など使えない記号</span></span><br><span class="line">@<span class="keyword">mixin</span> --shadow &#123; ～ &#125; <span class="comment">// 連続したハイフンから始まっている</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3-ネストしているセレクタをルートに戻せる-at-root"><a href="#4-3-ネストしているセレクタをルートに戻せる-at-root" class="headerlink" title="4-3 ネストしているセレクタをルートに戻せる @at-root"></a>4-3 ネストしているセレクタをルートに戻せる @at-root</h3><ul>
+<li>あまり使い所が無いと感じたが、使える場面があるらしい</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">    <span class="selector-class">.element-A</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    @at-root .element-B &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> <span class="selector-class">.element-A</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.element-B</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使い所は５章で確認する</li>
+</ul>
+<h3 id="4-4-Sassのデータタイプについて"><a href="#4-4-Sassのデータタイプについて" class="headerlink" title="4-4 Sassのデータタイプについて"></a>4-4 Sassのデータタイプについて</h3><ul>
+<li>Sassのデータ・タイプについて</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.DataTypes</span> &#123;</span><br><span class="line">    <span class="comment">/* Number型 */</span></span><br><span class="line">    property: type-of(<span class="number">10%</span>);</span><br><span class="line">    <span class="comment">/* Color型 */</span></span><br><span class="line">    property: type-of(red);</span><br><span class="line">    <span class="comment">/* String型 */</span></span><br><span class="line">    property: type-of(sans-serif);</span><br><span class="line">    <span class="comment">/* Boolean型 */</span></span><br><span class="line">    property: type-of(true);</span><br><span class="line">    <span class="comment">/* Null型 */</span></span><br><span class="line">    property: type-of(null);</span><br><span class="line">    <span class="comment">/* List型 */</span></span><br><span class="line">    property: type-of(<span class="number">1.5em</span> <span class="number">1em</span> <span class="number">0</span> <span class="number">2em</span>);</span><br><span class="line">    <span class="comment">/* Map型 */</span></span><br><span class="line">    <span class="variable">$map</span>:(key1: value1, key2: value2);</span><br><span class="line">    property: type-of(<span class="variable">$map</span>);</span><br><span class="line">    <span class="comment">/* Function型 */</span></span><br><span class="line">    property: type-of(get-function(<span class="string">"lighten"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.DataTypes</span> &#123;</span><br><span class="line">  <span class="comment">/* Number型 */</span></span><br><span class="line">  <span class="attribute">property</span>: number;</span><br><span class="line">  <span class="comment">/* Color型 */</span></span><br><span class="line">  <span class="attribute">property</span>: color;</span><br><span class="line">  <span class="comment">/* String型 */</span></span><br><span class="line">  <span class="attribute">property</span>: string;</span><br><span class="line">  <span class="comment">/* Boolean型 */</span></span><br><span class="line">  <span class="attribute">property</span>: bool;</span><br><span class="line">  <span class="comment">/* Null型 */</span></span><br><span class="line">  <span class="attribute">property</span>: null;</span><br><span class="line">  <span class="comment">/* List型 */</span></span><br><span class="line">  <span class="attribute">property</span>: list;</span><br><span class="line">  <span class="comment">/* Map型 */</span></span><br><span class="line">  <span class="attribute">property</span>: map;</span><br><span class="line">  <span class="comment">/* Function型 */</span></span><br><span class="line">  <span class="attribute">property</span>: function;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@function example(<span class="variable">$value</span>) &#123;</span><br><span class="line">    @<span class="keyword">if</span> type-of(<span class="variable">$value</span>) == number &#123;</span><br><span class="line">        処理</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// typeで判断して関数を作れますよという説明</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-5-制御構文で条件分岐や繰り返し処理を行う"><a href="#4-5-制御構文で条件分岐や繰り返し処理を行う" class="headerlink" title="4-5 制御構文で条件分岐や繰り返し処理を行う"></a>4-5 制御構文で条件分岐や繰り返し処理を行う</h3><ul>
+<li><code>@if</code>,<code>@for</code>,<code>@while</code>,<code>@each</code>を使って表現</li>
+</ul>
+<h3 id="4-6-関数を使ってさまざまな処理を実行する"><a href="#4-6-関数を使ってさまざまな処理を実行する" class="headerlink" title="4-6 関数を使ってさまざまな処理を実行する"></a>4-6 関数を使ってさまざまな処理を実行する</h3><ul>
+<li>Sassには予め用意された関数がある</li>
+<li><p>使用頻度の高いものをピックアップして紹介</p>
+</li>
+<li><p>参照 <a href="https://book2.scss.jp/code/c4/06.html" target="_blank" rel="noopener">https://book2.scss.jp/code/c4/06.html</a></p>
+</li>
+</ul>
+<h3 id="4-7-自作関数を定義する-function"><a href="#4-7-自作関数を定義する-function" class="headerlink" title="4-7 自作関数を定義する@function"></a>4-7 自作関数を定義する@function</h3><ul>
+<li>自作関数の定義方法 そんなに変わったことはしていない</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width</span>: <span class="number">105px</span>;</span><br><span class="line">@function halfSize(<span class="variable">$value</span>:<span class="variable">$width</span>) &#123;</span><br><span class="line">    @return round(<span class="variable">$value</span> / 2);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.boxA</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: halfSize();</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.boxB</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: halfSize(<span class="number">200px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-8-テストやデバックで使える-debug、-warn、-error"><a href="#4-8-テストやデバックで使える-debug、-warn、-error" class="headerlink" title="4-8 テストやデバックで使える@debug、@warn、@error"></a>4-8 テストやデバックで使える@debug、@warn、@error</h3><ul>
+<li>変数のデバッグに使用できる機能もある</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10em + 12em;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.scss:1 DEBUG: 22em</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// WARNで警告</span></span><br><span class="line"><span class="variable">$value</span>: <span class="number">1000px</span>;</span><br><span class="line">@function warnTest()&#123;</span><br><span class="line">    @<span class="keyword">if</span> unitless(<span class="variable">$value</span>) &#123;</span><br><span class="line">        <span class="variable">$value</span>: <span class="variable">$value</span> + px;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">else</span> &#123;</span><br><span class="line">    @<span class="keyword">warn</span> <span class="string">"#&#123;$value&#125;は駄目！$valueに単位は入れないで！"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    @return <span class="variable">$value</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: warnTest();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ERROR で処理を中断</span></span><br><span class="line"><span class="variable">$value</span>: <span class="number">1000px</span>;</span><br><span class="line">@function errorTest()&#123;</span><br><span class="line">    @<span class="keyword">if</span> unitless(<span class="variable">$value</span>) &#123;</span><br><span class="line">        <span class="variable">$value</span>: <span class="variable">$value</span> + px;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">else</span> &#123;</span><br><span class="line">    @error <span class="string">"#&#123;$value&#125;は駄目！$valueに単位は入れないで！"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    @return <span class="variable">$value</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: errorTest();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-9-使いどころに合わせて補完（インターポレーション）してくれる"><a href="#4-9-使いどころに合わせて補完（インターポレーション）してくれる" class="headerlink" title="4-9 使いどころに合わせて補完（インターポレーション）してくれる#{}"></a>4-9 使いどころに合わせて補完（インターポレーション）してくれる#{}</h3><ul>
+<li><p>インターポレーションとは</p>
+<ul>
+<li>変数が参照できない場所でも使うことができるようにする機能</li>
+<li><code>#{}</code>←これ</li>
+</ul>
+</li>
+<li><p>演算しないようにする</p>
+<ul>
+<li><code>font: #{$font-size}/#{$line-height}</code></li>
+</ul>
+</li>
+<li><p>演算できない場所で演算する</p>
+<ul>
+<li><code>.mt#{$i * 5} {</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-10-変数の振る舞いをコントロールする-default-と-global"><a href="#4-10-変数の振る舞いをコントロールする-default-と-global" class="headerlink" title="4-10 変数の振る舞いをコントロールする !default と !global"></a>4-10 変数の振る舞いをコントロールする !default と !global</h3><ul>
+<li><p><code>!default</code>フラグ</p>
+<ul>
+<li>デフォルト値とは上書きされることを前提にした変数の初期値</li>
+<li>このフラグを使用していると、先に宣言されている変数が優先される<ul>
+<li>→ライブラリで使用しているの確認済み。よく使われる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>!global</code>フラグ</p>
+<ul>
+<li>ローカル変数をグローバル変数にするフラグ</li>
+<li>グローバル変数とはドキュメントルートで宣言した、どこからでも参照できる変数のこと</li>
+<li>ネスト内からグローバル変数を上書きしたい場合や、ローカル変数をスコープ外から参照したい場合などに使用する</li>
+</ul>
+</li>
+</ul>
+<h2 id="第5章-現場で使える実践Sassテクニック"><a href="#第5章-現場で使える実践Sassテクニック" class="headerlink" title="第5章 現場で使える実践Sassテクニック"></a>第5章 現場で使える実践Sassテクニック</h2><h3 id="5-1-管理／運用・設計で使えるテクニック"><a href="#5-1-管理／運用・設計で使えるテクニック" class="headerlink" title="5-1 管理／運用・設計で使えるテクニック"></a>5-1 管理／運用・設計で使えるテクニック</h3><ul>
+<li><p>ネストが深すぎると生じる問題を把握して、バランスを見ながら利用する</p>
+</li>
+<li><p>ネストが深すぎて可読性が落ちてしまう</p>
+</li>
+<li><p>セレクタが長くなってしまうことの弊害</p>
+<ul>
+<li>CSSが肥大化する</li>
+</ul>
+</li>
+<li><p>Column: ネストは何階層までがよいか</p>
+<ul>
+<li>2～3階層程度にするのがよい</li>
+<li>HTMLのツリー構造に沿った形でCSSを指定するストラクチャタイプの設計の場合は、</li>
+<li>ある程度ネストを深くしたほうがよい</li>
+</ul>
+</li>
+<li><p>CSSとは違うパーシャルによるSassファイルの分割</p>
+<ul>
+<li><code>_mixin.scss</code>など分けて作成して、<code>@import</code>でまとめる</li>
+</ul>
+</li>
+<li><p>サイトの基本設定を変数にして一元管理する</p>
+</li>
+<li><p>複数人で制作する場合は各自のSassファイルを用意する</p>
+<ul>
+<li>Gitなどが汚れるのではとも感じる…</li>
+</ul>
+</li>
+<li><p>コメントを活用してソースをわかりやすくする</p>
+</li>
+<li><p>大規模サイトで活用できる<code>@import</code>のネスト</p>
+</li>
+<li><p>&amp;(アンパサンド)を活用してBEM的な設計を快適に</p>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.navigation</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &amp;__item &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="number">#666</span>;</span><br><span class="line">        &amp;_state_active &#123;</span><br><span class="line">            <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>@keyframes</code>をルールセット内に書いて関係性をわかりやすくする</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.example</span> &#123;</span><br><span class="line">    @keyframes anima-example &#123;</span><br><span class="line">        0% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: translate(<span class="number">0%</span>, -<span class="number">100%</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        100% &#123;</span><br><span class="line">            <span class="attribute">transform</span>: translate(<span class="number">0%</span>, <span class="number">0%</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="attribute">animation</span>: anima-example <span class="number">0.9s</span> linear <span class="number">500ms</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>@keyframes</code>はルートに書き出してくれる</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.example</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: anima-example <span class="number">0.9s</span> linear <span class="number">500ms</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> anima-example &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(0%, -100%);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(0%, 0%);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>EditorConfigとStylelintでコーディングルールを統一する</p>
+<ul>
+<li>EditorConfig：拡張機能を入れて、<code>.editorconfig</code>ファイルを作成</li>
+<li>Stylelint：拡張機能を入れる<ul>
+<li><code>npm install --global stylelint</code></li>
+<li><code>.stylelintrc</code>という設定ファイルをおけばOK</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Column: 他の人を思いやってSass設計をしよう</p>
+<ul>
+<li>本書のシリーズ「Web製作者のためのCSS設計の教科書」はFLOCSS（フロックス）を提唱しているらしい</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-レイアウト・パーツで使えるテクニック"><a href="#5-2-レイアウト・パーツで使えるテクニック" class="headerlink" title="5-2 レイアウト・パーツで使えるテクニック"></a>5-2 レイアウト・パーツで使えるテクニック</h3><ul>
+<li>clearfixをミックスインで活用する</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> clearfix &#123;</span><br><span class="line">    &amp;::after &#123;</span><br><span class="line">        <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">        <span class="attribute">display</span>: block;</span><br><span class="line">        <span class="attribute">clear</span>: both;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// include</span></span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  @<span class="keyword">include</span> .clearfix;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">  <span class="selector-class">.image</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.text</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>変数を使って、サイドバーの幅を自動的に計算する</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全体の幅</span></span><br><span class="line"><span class="variable">$wrap-width</span>: <span class="number">960px</span>;</span><br><span class="line"><span class="comment">// メインエリアの幅</span></span><br><span class="line"><span class="variable">$main-width</span>: <span class="number">640px</span>;</span><br><span class="line"><span class="comment">// サイドバーの幅</span></span><br><span class="line"><span class="variable">$side_width</span>: <span class="variable">$wrap_width</span> - <span class="variable">$main_width</span> - <span class="number">20</span>;</span><br><span class="line"><span class="selector-id">#contents</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$wrap_width</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#main</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$main_width</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#side</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$side_width</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>nullで簡単に条件分岐してレイアウトする</p>
+<ul>
+<li>nullを指定するとコンパイルした時にプロパティごと生成されない</li>
+</ul>
+</li>
+<li><p>calc と Sass を組み合わせて四則演算を便利に使う</p>
+<ul>
+<li>calcと組み合わせる際の注意点について</li>
+</ul>
+</li>
+<li><p><code>@for</code>を使って余白調整用のclassを生成する</p>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$spaceClass</span>: true !default;</span><br><span class="line"><span class="variable">$spacePadding</span>: false !default;</span><br><span class="line"><span class="variable">$endValue</span>: <span class="number">10</span> !default;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">if</span> <span class="variable">$spaceClass</span> &#123;</span><br><span class="line">    @<span class="keyword">for</span> <span class="variable">$i</span> from 0 through <span class="variable">$space_endValue</span> &#123;</span><br><span class="line">        <span class="selector-class">.mt</span>#&#123;<span class="variable">$i</span> * 5&#125; &#123;</span><br><span class="line">            <span class="attribute">margin-top</span>: <span class="number">5px</span> * <span class="variable">$i</span> <span class="meta">!important</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.mb</span>#&#123;<span class="variable">$i</span> * 5&#125; &#123;</span><br><span class="line">            <span class="attribute">margin-bottom</span>: <span class="number">5px</span> * <span class="variable">$i</span> <span class="meta">!important</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        @<span class="keyword">if</span> <span class="variable">$spacePadding</span> &#123;</span><br><span class="line">            <span class="selector-class">.pt</span>#&#123;<span class="variable">$i</span> * 5&#125; &#123;</span><br><span class="line">                <span class="attribute">padding-top</span>: <span class="number">5px</span> * <span class="variable">$i</span> <span class="meta">!important</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="selector-class">.pb</span>#&#123;<span class="variable">$i</span> * 5&#125; &#123;</span><br><span class="line">                <span class="attribute">padding-bottom</span>: <span class="number">5px</span> * <span class="variable">$i</span> <span class="meta">!important</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mt0</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mb0</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mt5</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">5px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mb5</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">5px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line">...（略）...</span><br><span class="line"><span class="selector-class">.mt50</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">50px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mb50</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">50px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line">// あまり作成しすぎるとCSSコード量も増えるので程々に</span><br></pre></td></tr></table></figure>
+<ul>
+<li>リストマーカー用の連番を使った class名 を作成する</li>
+<li><p>連番を使ったclass名のゼロパディング（0埋め）をする</p>
+</li>
+<li><p>文字リンクカラーのミックスインを作る</p>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> link-color2(<span class="variable">$n</span>) &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$n</span>;</span><br><span class="line">    &amp;:hover &#123;</span><br><span class="line">        <span class="attribute">color</span>: lighten(<span class="variable">$n</span>, <span class="number">30%</span>);</span><br><span class="line">        <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  @<span class="keyword">include</span> link-color2(<span class="number">#f00</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>複数の値を<code>@each</code>でループし、ページによって背景を変更する</li>
+<li>シンプルなグラデーションのミックスインを作る</li>
+<li><p>Map型と<code>@each</code>を使ってSNSアイコンを管理する</p>
+</li>
+<li><p>値が比較しづらい <code>z-index</code> をMap型で一括管理する</p>
+</li>
+<li><p>メディアクエリ用のミックスインを作成して楽々レスポンシブ対応</p>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$breakpoints</span>: (</span><br><span class="line">    xs: <span class="string">"only screen and (max-width: 320px)"</span>,</span><br><span class="line">    s: <span class="string">"only screen and (max-width: 575px)"</span>,</span><br><span class="line">    m: <span class="string">"only screen and (max-width: 767px)"</span>,</span><br><span class="line">    l: <span class="string">"only screen and (max-width: 991px)"</span>,</span><br><span class="line">    xl: <span class="string">"only screen and (max-width: 1199px)"</span>,</span><br><span class="line">);</span><br><span class="line">@<span class="keyword">mixin</span> media(<span class="variable">$breakpoint</span>) &#123;</span><br><span class="line">    @<span class="keyword">media</span> #&#123;<span class="selector-tag">map</span>-get(<span class="variable">$breakpoints</span>, <span class="variable">$breakpoint</span>)&#125; &#123;</span><br><span class="line">        @<span class="keyword">content</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: white;</span><br><span class="line">    @<span class="keyword">include</span> media(l) &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: blue;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">include</span> media(m) &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">include</span> media(xs) &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-3-スマホ・マルチデバイス、ブラウザで使えるテクニック"><a href="#5-3-スマホ・マルチデバイス、ブラウザで使えるテクニック" class="headerlink" title="5-3 スマホ・マルチデバイス、ブラウザで使えるテクニック"></a>5-3 スマホ・マルチデバイス、ブラウザで使えるテクニック</h3><h3 id="5-4-gulpのタスクを追加してもっと便利な環境にする"><a href="#5-4-gulpのタスクを追加してもっと便利な環境にする" class="headerlink" title="5-4 gulpのタスクを追加してもっと便利な環境にする"></a>5-4 gulpのタスクを追加してもっと便利な環境にする</h3><ul>
+<li>パーシャルファイルを一括で読み込む</li>
+<li>ソースマップでコンパイル前のソース場所を知る</li>
+<li>エラー時にWatchを停止させずに、自動コンパイルを継続させる</li>
+<li>エラーに気づきやすくするために通知を出す</li>
+</ul>
+<h3 id="5-5-PostCSSでSassをさらに便利にする"><a href="#5-5-PostCSSでSassをさらに便利にする" class="headerlink" title="5-5 PostCSSでSassをさらに便利にする"></a>5-5 PostCSSでSassをさらに便利にする</h3><ul>
+<li><p>PostCSSとは</p>
+<ul>
+<li>Node.js製のCSSの変換ツール</li>
+</ul>
+</li>
+<li><p>ベンダープレフィックスを自動付与する</p>
+<ul>
+<li>対象ブラウザを確認するには<ul>
+<li><a href="https://browserl.ist/" target="_blank" rel="noopener">https://browserl.ist/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>画像名だけで画像のパスやサイズを取得する</p>
+</li>
+<li><p>CSSプロパティの記述順を自動でソートする</p>
+<ul>
+<li>並び替えオーダーの種類<ul>
+<li>alphabetically</li>
+<li>smacss</li>
+<li>concentric-css</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>バラバラになったメディアクエリをまとめてコード量を削減してスッキリさせる</p>
+</li>
+</ul>
+<h2 id="第6章-もっとSassを便利にするフレームワークやツール"><a href="#第6章-もっとSassを便利にするフレームワークやツール" class="headerlink" title="第6章 もっとSassを便利にするフレームワークやツール"></a>第6章 もっとSassを便利にするフレームワークやツール</h2><h3 id="6-1-Sassのフレームワーク紹介"><a href="#6-1-Sassのフレームワーク紹介" class="headerlink" title="6-1 Sassのフレームワーク紹介"></a>6-1 Sassのフレームワーク紹介</h3><h3 id="6-2-SassのGUIコンパイラ"><a href="#6-2-SassのGUIコンパイラ" class="headerlink" title="6-2 SassのGUIコンパイラ"></a>6-2 SassのGUIコンパイラ</h3><h2 id="第7章-Sass全機能リファレンス"><a href="#第7章-Sass全機能リファレンス" class="headerlink" title="第7章 Sass全機能リファレンス"></a>第7章 Sass全機能リファレンス</h2><h3 id="7-1-Sassの基本と高度な機能"><a href="#7-1-Sassの基本と高度な機能" class="headerlink" title="7-1 Sassの基本と高度な機能"></a>7-1 Sassの基本と高度な機能</h3><h3 id="7-2-Sassの関数一覧"><a href="#7-2-Sassの関数一覧" class="headerlink" title="7-2 Sassの関数一覧"></a>7-2 Sassの関数一覧</h3><h3 id="7-3-Sassの拡張"><a href="#7-3-Sassの拡張" class="headerlink" title="7-3 Sassの拡張"></a>7-3 Sassの拡張</h3><h2 id="付録"><a href="#付録" class="headerlink" title="付録"></a>付録</h2><h2 id="コマンド一覧"><a href="#コマンド一覧" class="headerlink" title="コマンド一覧"></a>コマンド一覧</h2><h2 id="用語集"><a href="#用語集" class="headerlink" title="用語集"></a>用語集</h2>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2020-04-26T03:36:09.892Z" itemprop="dateUpdated">2020-04-26 12:36:09</time>
+</span><br>
+
+
+        
+        thank you for your reading my article!!
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.png" alt="t-tsutsui">
+            t-tsutsui
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教科書/">教科書</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/JAVA/2020-04_JavaEE7徹底入門/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Java EE 7徹底入門 標準Javaフレームワークによる高信頼性Webシステムの構築</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/EX/2020-03_１分で話せ/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">１分で話せ</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+<!--        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p> -->
+    </div>
+    <div class="bottom">
+        <p><span>t-tsutsui &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
