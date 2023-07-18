@@ -29,7 +29,7 @@
 <meta property="og:description" content="AWS認定資格試験テキスト＆問題集　AWS認定ソリューションアーキテクト - プロフェッショナル　改訂第2版 (ＡＷＳ認定資格試験テキスト)書籍情報 https:&#x2F;&#x2F;www.sbcr.jp&#x2F;product&#x2F;4815617929&#x2F;  山下光洋：著者 基礎知識から合格する解答力を身につける！ AWSプラットフォームでシステム設計やアプリケーション開発をするために必要な技術スキルと経験を検証するのが「A">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2023-06-23T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-17T16:16:21.860Z">
+<meta property="article:modified_time" content="2023-07-18T16:18:24.338Z">
 <meta property="article:author" content="t-tsutsui">
 <meta property="article:tag" content="教科書">
 <meta name="twitter:card" content="summary">
@@ -609,8 +609,46 @@
 <ul>
 <li>IAMユーザ二CloudFormationスタックで作成されるリソースへの直接的なアクセス権限を与えられずに、事前に用意されたテンプレートからスタックを作成できる</li>
 <li>例えば、スタックによって作成されたEC2インスタンスなどのリソースには直接アクセスできませんので、決められたインスタンスタイプ以外を起動したり、セキュリティグループを勝手に変更することはできない</li>
-<li>管理者があら化mじめテンプレートを<strong>製品</strong>としてService Catalogに登録し、IAMユーザに許可する製品のリストをポートフォリオとして設定</li>
+<li>管理者があらかじめテンプレートを<strong>製品</strong>としてService Catalogに登録し、IAMユーザに許可する製品のリストをポートフォリオとして設定</li>
 <li>ポートフォリオはいわばIAMユーザにとってのサービスカタログメニューで、Organizations組織でOUを指定して共有できる</li>
+</ul>
+</li>
+<li><p>AWS Resource Access Manager(RAM)</p>
+<ul>
+<li>Organizationsと連携して組織、OUとの共有が可能</li>
+<li>Transit Gateway、サブネット、Route53Resolverの転送ルールを複数アカウントで共有可能</li>
+<li>License Managerではソフトウェア・ライセンスを複数アカウントにまたがって管理</li>
+</ul>
+</li>
+<li><p>AWS Control Tower</p>
+<ul>
+<li>複数アカウントのベストプラクティスであるランディングゾーンを児童構築する</li>
+<li>ランディングゾーンは、Organizations組織のベストプラクティス構成</li>
+<li>ログアカウントと監査アカウント<ul>
+<li>SecurityOUにログと監査のアカウントを作成</li>
+<li>ログアカウントにはCloudTrailとConfigのログが集約される<ul>
+<li>Athenaなどを使用して集約されたログを分析可能</li>
+</ul>
+</li>
+<li>監査アカウント<ul>
+<li>各アカウントのSNSトピックのサブスクライバーのLambda関数から、監査アカウントのSNSトピックへ通知がパブリッシュ（送信）される</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>アカウトの追加、招待<ul>
+<li>アカウントは、Service Controlポートフォリオで作成されたAccountFactoryで新規作成、または追加ができる</li>
+</ul>
+</li>
+<li>アカウント認証<ul>
+<li>Organizationsと連携するIAMアイデンティティセンターによって、各アカウントへのシングルサインオン設定が可能</li>
+</ul>
+</li>
+<li>コントロール（ガードレール）</li>
+<li>ダッシュボード<ul>
+<li>Control Tower ランディングゾーンは作成して終わりでなく、ダッシュボードで確認、設定が可能</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -622,7 +660,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2023-07-17T16:16:21.860Z" itemprop="dateUpdated">2023-07-18 01:16:21</time>
+    最終更新：<time datetime="2023-07-18T16:18:24.338Z" itemprop="dateUpdated">2023-07-19 01:18:24</time>
 </span><br>
 
 
