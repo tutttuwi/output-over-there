@@ -29,7 +29,7 @@
 <meta property="og:description" content="AWS認定資格試験テキスト＆問題集　AWS認定ソリューションアーキテクト - プロフェッショナル　改訂第2版 (ＡＷＳ認定資格試験テキスト)書籍情報 https:&#x2F;&#x2F;www.sbcr.jp&#x2F;product&#x2F;4815617929&#x2F;  山下光洋：著者 基礎知識から合格する解答力を身につける！ AWSプラットフォームでシステム設計やアプリケーション開発をするために必要な技術スキルと経験を検証するのが「A">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2023-06-23T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-06T14:55:39.945Z">
+<meta property="article:modified_time" content="2023-08-07T14:50:28.674Z">
 <meta property="article:author" content="t-tsutsui">
 <meta property="article:tag" content="教科書">
 <meta name="twitter:card" content="summary">
@@ -1049,7 +1049,26 @@
 <h5 id="AWS-Private-Certificate-Authority"><a href="#AWS-Private-Certificate-Authority" class="headerlink" title="AWS Private Certificate Authority"></a>AWS Private Certificate Authority</h5><p>プライベートな独自の証明機関(CA)階層を作成し、ユーザー、デバイス、アプリケーションなどの認証のプライベート証明書を作成可能</p>
 <h5 id="Amazon-Cognito"><a href="#Amazon-Cognito" class="headerlink" title="Amazon Cognito"></a>Amazon Cognito</h5><p>Webアプリケーションやモバイルアプリケーションに安全に認証を提供するサービス</p>
 <ul>
-<li>Cognitoユーザープール</li>
+<li>Cognitoユーザープール<ul>
+<li>サインアップ・サインインを短期間でアプリケーションに実装<ul>
+<li>認証基盤を開発しなくても、モバイルアプリケーションやWebアプリケーションからのサインアップ、サインインのために使用可能</li>
+<li>開発コストを下げて開発機関を短くするためにも有用</li>
+<li>Cognitoユーザープールのみで認証も可能、SNSなど外部での認証も可能</li>
+</ul>
+</li>
+<li>MFA、アドバンスドセキュリティ他<ul>
+<li>パスワードポリシー</li>
+<li>メールアドレス、電話番号の検証</li>
+<li>MFA(多要素認証)</li>
+<li>アドバンスドセキュリティ</li>
+</ul>
+</li>
+<li>Lambdaトリガー<ul>
+<li>サインアップイベント、サインインイベントをトリガーにAWS Lambda関数を実行できる</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>IDプール</li>
 </ul>
 <h4 id="3-信頼性"><a href="#3-信頼性" class="headerlink" title="3　信頼性"></a>3　信頼性</h4><h4 id="4-パフォーマンス"><a href="#4-パフォーマンス" class="headerlink" title="4　パフォーマンス"></a>4　パフォーマンス</h4><h4 id="5-コスト最適化"><a href="#5-コスト最適化" class="headerlink" title="5　コスト最適化"></a>5　コスト最適化</h4><h4 id="6-確認テスト"><a href="#6-確認テスト" class="headerlink" title="6　確認テスト"></a>6　確認テスト</h4><h3 id="第4章-移行とモダナイゼーションの加速"><a href="#第4章-移行とモダナイゼーションの加速" class="headerlink" title="第4章　移行とモダナイゼーションの加速"></a>第4章　移行とモダナイゼーションの加速</h3><h4 id="1-移行評価とアプローチ"><a href="#1-移行評価とアプローチ" class="headerlink" title="1　移行評価とアプローチ"></a>1　移行評価とアプローチ</h4><h4 id="2-移行後アーキテクチャとモダナイゼーション"><a href="#2-移行後アーキテクチャとモダナイゼーション" class="headerlink" title="2　移行後アーキテクチャとモダナイゼーション"></a>2　移行後アーキテクチャとモダナイゼーション</h4><h4 id="3-確認テスト-1"><a href="#3-確認テスト-1" class="headerlink" title="3　確認テスト"></a>3　確認テスト</h4><h3 id="第5章-模擬テスト"><a href="#第5章-模擬テスト" class="headerlink" title="第5章　模擬テスト"></a>第5章　模擬テスト</h3><h4 id="1-問題"><a href="#1-問題" class="headerlink" title="1　問題"></a>1　問題</h4><h4 id="2-解答と解説"><a href="#2-解答と解説" class="headerlink" title="2　解答と解説"></a>2　解答と解説</h4>
@@ -1060,7 +1079,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2023-08-06T14:55:39.945Z" itemprop="dateUpdated">2023-08-06 23:55:39</time>
+    最終更新：<time datetime="2023-08-07T14:50:28.674Z" itemprop="dateUpdated">2023-08-07 23:50:28</time>
 </span><br>
 
 
