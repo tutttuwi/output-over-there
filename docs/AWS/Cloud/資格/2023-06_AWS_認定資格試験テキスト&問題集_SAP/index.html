@@ -29,7 +29,7 @@
 <meta property="og:description" content="AWS認定資格試験テキスト＆問題集　AWS認定ソリューションアーキテクト - プロフェッショナル　改訂第2版 (ＡＷＳ認定資格試験テキスト)書籍情報 https:&#x2F;&#x2F;www.sbcr.jp&#x2F;product&#x2F;4815617929&#x2F;  山下光洋：著者 基礎知識から合格する解答力を身につける！ AWSプラットフォームでシステム設計やアプリケーション開発をするために必要な技術スキルと経験を検証するのが「A">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2023-06-23T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-03T15:40:29.425Z">
+<meta property="article:modified_time" content="2023-09-03T16:15:55.729Z">
 <meta property="article:author" content="t-tsutsui">
 <meta property="article:tag" content="教科書">
 <meta name="twitter:card" content="summary">
@@ -2266,6 +2266,44 @@
 </li>
 </ul>
 </li>
+<li><p>組織ではオンプレミスアプリケーションをEC2に移行したあと、1年を目標期間として、順次コンテナ化して、部分的にサーバレスアーキテクチャに変更することも予定している。可能化限り割引を適用したい</p>
+<ul>
+<li>Compute Savings Plans<ul>
+<li>EC2、Fargate、Lambdaに適用できるので、アーキテクチャを変更してもコンピューティングリソースの割引が受けられる</li>
+</ul>
+</li>
+<li>EC2 Instance Savings Plans,EC2 Reserved Instance:EC2にしか適用できない</li>
+<li>SageMaker Savings Plan: Sagemakerインスタンスの割引プラン</li>
+</ul>
+</li>
+<li><p>S3 Intelligent-Tieringの特徴</p>
+<ul>
+<li>アクセスされないオブジェクトは自動的に低頻度階層へ移動し、自動的にコストが最適になる</li>
+<li>Glacier：アーカイブされるのでアクセスするときは取り出しに3～5時間かかる</li>
+<li>ライフサイクルルール：アップロードした日から設定した日数追加したオブジェクトがS3標準IAへ移動する</li>
+<li>オブジェクトロック：コンプライアンスモードではオブジェクトが削除から保護される</li>
+</ul>
+</li>
+<li><p>S3オブジェクトに対してリクエストしたアカウントに請求が発生するようにしたい</p>
+<ul>
+<li>リクエスタ支払いを有効にして、リクエスト側はx-amz-request-payerをリクエストに含める。リクエスト料金とデータ転送料金がリクエスト側に請求される</li>
+</ul>
+</li>
+<li><p>コストの異常検知をするには？</p>
+<ul>
+<li>Cost Anormaly Detectionでコストモニターを作成する</li>
+</ul>
+</li>
+<li><p>課金状況に対して月ごとに増加する予算管理を死体</p>
+<ul>
+<li>コスト予算の月次予算設定で初期予算と成長率を入力する</li>
+</ul>
+</li>
+<li><p>AWS Compute Optimize</p>
+<ul>
+<li>EC2インスタンスタイプ、Lambda関数のメモリ最適化レポートを確認出来る</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -2275,7 +2313,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2023-09-03T15:40:29.425Z" itemprop="dateUpdated">2023-09-04 00:40:29</time>
+    最終更新：<time datetime="2023-09-03T16:15:55.729Z" itemprop="dateUpdated">2023-09-04 01:15:55</time>
 </span><br>
 
 
