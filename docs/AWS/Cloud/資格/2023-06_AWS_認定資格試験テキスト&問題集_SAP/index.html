@@ -29,7 +29,7 @@
 <meta property="og:description" content="AWS認定資格試験テキスト＆問題集　AWS認定ソリューションアーキテクト - プロフェッショナル　改訂第2版 (ＡＷＳ認定資格試験テキスト)書籍情報 https:&#x2F;&#x2F;www.sbcr.jp&#x2F;product&#x2F;4815617929&#x2F;  山下光洋：著者 基礎知識から合格する解答力を身につける！ AWSプラットフォームでシステム設計やアプリケーション開発をするために必要な技術スキルと経験を検証するのが「A">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2023-06-23T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-17T15:44:56.676Z">
+<meta property="article:modified_time" content="2023-09-29T11:21:38.316Z">
 <meta property="article:author" content="t-tsutsui">
 <meta property="article:tag" content="教科書">
 <meta name="twitter:card" content="summary">
@@ -311,7 +311,7 @@
 </li>
 <li><p>基本設定</p>
 <ul>
-<li>クライアントが使用するIPアドレス葉にをCIDRで設定</li>
+<li>クライアントが使用するIPアドレス用にをCIDRで設定</li>
 <li>AWSクライアントVPNにサブネットを関連付ける</li>
 <li>関連付けられたサブネットにはENIが作成され、ENIにはセキュリティグループがアタッチされる</li>
 </ul>
@@ -393,7 +393,7 @@
 </li>
 <li><p>回復性レベル</p>
 <ul>
-<li>最大回復性</li>
+<li>最大回復性：Direct Connectローケーション全体、またはロケーション内部に物理障害があっても、冗長化を継続できる回復性レベル</li>
 <li>高い回復性</li>
 <li>開発とテスト</li>
 <li>クラシック</li>
@@ -403,7 +403,7 @@
 <li><p>仮想インターフェース</p>
 <ul>
 <li>AWS Direct Connect接続を使用するには、仮想インターフェイス(VIF)が必要</li>
-<li>仮想インターフェイスの種類は以下<ul>
+<li>仮想インターフェイスの種類は以下（覚えておく）<ul>
 <li>プライベート仮想インターフェイス<ul>
 <li>オンプレミスのOSでEFSにマウントできる</li>
 </ul>
@@ -432,6 +432,22 @@
 <li>プライベートVIFの場合は、データ転送を行うAWSアカウントに課金される</li>
 </ul>
 </li>
+</ul>
+</li>
+<li><p>Direct Connect 専用接続</p>
+<ul>
+<li>1,10,100Gbpsから選択可能</li>
+</ul>
+</li>
+<li><p>Direct Connect ホスト接続</p>
+<ul>
+<li>500Mbpsを選択可能</li>
+</ul>
+</li>
+<li><p>Direct Connectのポート時間料金が発生するタイミング</p>
+<ul>
+<li>接続確立していないが、接続が作成されてから９０日後から</li>
+<li>９０日経っていないが、Direct Connectエンドポイントとカスタマールーターの接続が確立されたときから</li>
 </ul>
 </li>
 </ul>
@@ -1026,13 +1042,38 @@
 <ul>
 <li>AWS Systems Manager Parameter Store</li>
 <li>AWS Secrets Manager</li>
-<li>Amazon DynamoDB</li>
+<li>Amazon DynamoDB<ul>
+<li>デフォルトはDynamoDBが管理するキーで暗号化出来る</li>
+</ul>
+</li>
 <li>Amazon EBS</li>
-<li>Amazon RDS</li>
+<li>Amazon RDS<ul>
+<li>暗号化されていないRDSを暗号化するには：スナップショットを暗号化、暗号化されたスナップショットから復元すると同じ暗号化形式で復号化出来る</li>
+</ul>
+</li>
 <li>Amazon WorkSpaces</li>
-<li>Amazon EMR</li>
-<li>Amazon Redshift</li>
-<li>Amazon S3</li>
+<li>Amazon EMR<ul>
+<li>ストレージにS3またはEBSを使用します</li>
+</ul>
+</li>
+<li>Amazon Redshift<ul>
+<li>4階層のキーで暗号化される。KMSキー＞クラスターキー＞データベースキー＞データ暗号化キー＞クラスタ内のデータブロック</li>
+</ul>
+</li>
+<li>Amazon S3<ul>
+<li>クライアントサイド暗号化<ul>
+<li>CSE-C</li>
+<li>CSE-KMS</li>
+</ul>
+</li>
+<li>サーバーサイド暗号化<ul>
+<li>SSE-S3</li>
+<li>SSE-KMS</li>
+<li>SSE-C</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1046,6 +1087,9 @@
 <li>CloudHSMのユースケース(TDE)</li>
 </ul>
 <h5 id="AWS-Certificate-Manager"><a href="#AWS-Certificate-Manager" class="headerlink" title="AWS Certificate Manager"></a>AWS Certificate Manager</h5><p>パブリックなSSL&#x2F;TSL証明書の保存、更新を提供する無料のサービス</p>
+<p>Croud Front,Elastic Load Balancer, API Gatewayと連携してユーザー所有のドメインの証明書を作成出来る</p>
+<p>所有者の確認はメール認証化、CNAME認証で行われる、発行済みの証明書をインポートすることも出来る</p>
+<p>ACMはサイトシールを提供していない</p>
 <h5 id="AWS-Private-Certificate-Authority"><a href="#AWS-Private-Certificate-Authority" class="headerlink" title="AWS Private Certificate Authority"></a>AWS Private Certificate Authority</h5><p>プライベートな独自の証明機関(CA)階層を作成し、ユーザー、デバイス、アプリケーションなどの認証のプライベート証明書を作成可能</p>
 <h5 id="Amazon-Cognito"><a href="#Amazon-Cognito" class="headerlink" title="Amazon Cognito"></a>Amazon Cognito</h5><p>Webアプリケーションやモバイルアプリケーションに安全に認証を提供するサービス</p>
 <ul>
@@ -2149,6 +2193,10 @@
 <li>オブジェクトロックの保持設定</li>
 <li>オブジェクトのコピー</li>
 <li>AWS Lambda関数の呼び出し</li>
+<li>すべてのオブジェクトタグを置換する</li>
+<li>すべてのオブジェクトタグを削除する</li>
+<li>アクセスコントロールリストを置き換える</li>
+<li>S3オブジェクトロックのリーガルホールド</li>
 </ul>
 </li>
 <li><p>なるべくコストを抑えてKMSをを利用したい</p>
@@ -2472,7 +2520,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2023-09-17T15:44:56.676Z" itemprop="dateUpdated">2023-09-18 00:44:56</time>
+    最終更新：<time datetime="2023-09-29T11:21:38.316Z" itemprop="dateUpdated">2023-09-29 20:21:38</time>
 </span><br>
 
 
