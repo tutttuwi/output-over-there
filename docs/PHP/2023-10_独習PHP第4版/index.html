@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>独習PHP 第4版 | OUTPUT*OVER-THERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#264A2E">
+    
+    
+    <meta name="keywords" content="教科書">
+    <meta name="description" content="独習PHP 第4版第1章　イントロダクション1.1　PHPとWebアプリ1.2　サーバーサイド技術におけるPHPの位置付け1.3　PHP環境を設定するための手順1.4　PHPの基本構文この章の理解度チェック第2章　PHPの基本2.1　変数2.2　定数2.3　データ型2.4　配列2.5　型の相互変換この章の理解度チェック第3章　演算子3.1　代数演算子3.2　代入演算子3.3　比較演算子3.4　論理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="独習PHP 第4版">
+<meta property="og:url" content="http://yoursite.com/PHP/2023-10_%E7%8B%AC%E7%BF%92PHP%E7%AC%AC4%E7%89%88/index.html">
+<meta property="og:site_name" content="OUTPUT*OVER-THERE">
+<meta property="og:description" content="独習PHP 第4版第1章　イントロダクション1.1　PHPとWebアプリ1.2　サーバーサイド技術におけるPHPの位置付け1.3　PHP環境を設定するための手順1.4　PHPの基本構文この章の理解度チェック第2章　PHPの基本2.1　変数2.2　定数2.3　データ型2.4　配列2.5　型の相互変換この章の理解度チェック第3章　演算子3.1　代数演算子3.2　代入演算子3.3　比較演算子3.4　論理">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2023-10-12T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-13T11:49:50.018Z">
+<meta property="article:author" content="t-tsutsui">
+<meta property="article:tag" content="教科書">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="OUTPUT*OVER-THERE" href="https://tutttuwi.github.io/output-over-there/atom.xml">
+    
+    <link rel="shortcut icon" href="https://tutttuwi.github.io/output-over-there/favicon.ico">
+    <link rel="stylesheet" href="https://tutttuwi.github.io/output-over-there/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://tutttuwi.github.io/output-over-there/img/brand.png)">
+      <div class="brand">
+        <a href="https://tutttuwi.github.io/output-over-there/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://tutttuwi.github.io/output-over-there/img/avatar.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">t-tsutsui</h5>
+          <a href="mailto:t.tsutsui9117@gmail.com" title="t.tsutsui9117@gmail.com" class="mail">t.tsutsui9117@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="https://tutttuwi.github.io/output-over-there/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://tutttuwi.github.io/output-over-there/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://tutttuwi.github.io/output-over-there/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://tutttuwi.github.io/output-over-there/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://tutttuwi.github.io/output-over-there/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">独習PHP 第4版</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">独習PHP 第4版</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-10-12T15:00:00.000Z" itemprop="datePublished" class="page-time">
+  2023-10-13
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="https://tutttuwi.github.io/output-over-there/categories/PHP/">PHP</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#独習PHP-第4版"><span class="post-toc-number">1.</span> <span class="post-toc-text">独習PHP 第4版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第1章-イントロダクション"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">第1章　イントロダクション</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-PHPとWebアプリ"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.1　PHPとWebアプリ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-サーバーサイド技術におけるPHPの位置付け"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.2　サーバーサイド技術におけるPHPの位置付け</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-3-PHP環境を設定するための手順"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">1.3　PHP環境を設定するための手順</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-4-PHPの基本構文"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">1.4　PHPの基本構文</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第2章-PHPの基本"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">第2章　PHPの基本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-変数"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2.1　変数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-定数"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.2　定数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-データ型"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2.3　データ型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-4-配列"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">2.4　配列</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-5-型の相互変換"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">2.5　型の相互変換</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-1"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第3章-演算子"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">第3章　演算子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-代数演算子"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">3.1　代数演算子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-代入演算子"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">3.2　代入演算子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-比較演算子"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">3.3　比較演算子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-論理演算子"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">3.4　論理演算子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-ビット演算子"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">3.5　ビット演算子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-その他の演算子"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">3.6　その他の演算子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-7-演算子の優先順位と結合則"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">3.7　演算子の優先順位と結合則</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-2"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第4章-制御構文"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">第4章　制御構文</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-条件分岐"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">4.1　条件分岐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-繰り返し処理"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">4.2　繰り返し処理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-ループの制御"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">4.3　ループの制御</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-4-制御命令のその他の話題"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">4.4　制御命令のその他の話題</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-3"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第5章-組み込み関数"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">第5章　組み込み関数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-1-関数の基本"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">5.1　関数の基本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-2-文字列関数"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">5.2　文字列関数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-3-配列関数"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">5.3　配列関数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-4-正規表現（PCRE）関数"><span class="post-toc-number">1.5.4.</span> <span class="post-toc-text">5.4　正規表現（PCRE）関数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-5-ファイルシステム関数"><span class="post-toc-number">1.5.5.</span> <span class="post-toc-text">5.5　ファイルシステム関数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-6-その他の関数"><span class="post-toc-number">1.5.6.</span> <span class="post-toc-text">5.6　その他の関数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-4"><span class="post-toc-number">1.5.7.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第6章-ユーザー定義関数"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">第6章　ユーザー定義関数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-ユーザー定義関数とは"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">6.1　ユーザー定義関数とは?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-変数の有効範囲（スコープ）"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">6.2　変数の有効範囲（スコープ）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-引数のさまざまな記法"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">6.3　引数のさまざまな記法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-4-関数呼び出しと戻り値"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">6.4　関数呼び出しと戻り値</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-5-ジェネレーター"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">6.5　ジェネレーター</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-5"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第7章-標準クラスライブラリ"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">第7章　標準クラスライブラリ</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-1-オブジェクト指向プログラミングの基本"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">7.1　オブジェクト指向プログラミングの基本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-DateTimeクラス"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">7.2　DateTimeクラス</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-3-DirectoryIteratorクラス"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">7.3　DirectoryIteratorクラス</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-外部ライブラリの活用―Composer"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">7.4　外部ライブラリの活用―Composer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-5-HTTPクライアントGuzzle"><span class="post-toc-number">1.7.5.</span> <span class="post-toc-text">7.5　HTTPクライアントGuzzle</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-6"><span class="post-toc-number">1.7.6.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第8章-リクエスト情報"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">第8章　リクエスト情報</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-1-リクエスト情報"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">8.1　リクエスト情報</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-2-ポストデータ―-POST"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">8.2　ポストデータ―$_POST</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-3-クエリ情報―-GET"><span class="post-toc-number">1.8.3.</span> <span class="post-toc-text">8.3　クエリ情報―$_GET</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-4-ヘッダー情報―-SERVER"><span class="post-toc-number">1.8.4.</span> <span class="post-toc-text">8.4　ヘッダー情報―$_SERVER</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-5-サーバー環境変数―-ENV"><span class="post-toc-number">1.8.5.</span> <span class="post-toc-text">8.5　サーバー環境変数―$_ENV</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-6-クッキー情報―-COOKIE"><span class="post-toc-number">1.8.6.</span> <span class="post-toc-text">8.6　クッキー情報―$_COOKIE</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-7-セッション情報―-SESSION"><span class="post-toc-number">1.8.7.</span> <span class="post-toc-text">8.7　セッション情報―$_SESSION</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-8-アップロード処理の実装―-FILES"><span class="post-toc-number">1.8.8.</span> <span class="post-toc-text">8.8　アップロード処理の実装―$_FILES</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-7"><span class="post-toc-number">1.8.9.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第9章-データベース連携"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">第9章　データベース連携</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-1-データベースの種類"><span class="post-toc-number">1.9.1.</span> <span class="post-toc-text">9.1　データベースの種類</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-2-データベース操作の基本"><span class="post-toc-number">1.9.2.</span> <span class="post-toc-text">9.2　データベース操作の基本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-3-データベース抽象化レイヤー"><span class="post-toc-number">1.9.3.</span> <span class="post-toc-text">9.3　データベース抽象化レイヤー</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-4-データベースへの接続"><span class="post-toc-number">1.9.4.</span> <span class="post-toc-text">9.4　データベースへの接続</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-5-SQLクエリの発行"><span class="post-toc-number">1.9.5.</span> <span class="post-toc-text">9.5　SQLクエリの発行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-6-結果セットの取得"><span class="post-toc-number">1.9.6.</span> <span class="post-toc-text">9.6　結果セットの取得</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-7-パラメーター値のバインド"><span class="post-toc-number">1.9.7.</span> <span class="post-toc-text">9.7　パラメーター値のバインド</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-8-トランザクション処理"><span class="post-toc-number">1.9.8.</span> <span class="post-toc-text">9.8　トランザクション処理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-8"><span class="post-toc-number">1.9.9.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第10章-オブジェクト指向構文"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">第10章　オブジェクト指向構文</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-1-クラスの定義"><span class="post-toc-number">1.10.1.</span> <span class="post-toc-text">10.1　クラスの定義</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-2-カプセル化"><span class="post-toc-number">1.10.2.</span> <span class="post-toc-text">10.2　カプセル化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-3-継承"><span class="post-toc-number">1.10.3.</span> <span class="post-toc-text">10.3　継承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-4-ポリモーフィズム"><span class="post-toc-number">1.10.4.</span> <span class="post-toc-text">10.4　ポリモーフィズム</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-5-トレイト"><span class="post-toc-number">1.10.5.</span> <span class="post-toc-text">10.5　トレイト</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-6-オブジェクトの操作"><span class="post-toc-number">1.10.6.</span> <span class="post-toc-text">10.6　オブジェクトの操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-7-例外処理"><span class="post-toc-number">1.10.7.</span> <span class="post-toc-text">10.7　例外処理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-8-マジックメソッド"><span class="post-toc-number">1.10.8.</span> <span class="post-toc-text">10.8　マジックメソッド</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-9-名前空間"><span class="post-toc-number">1.10.9.</span> <span class="post-toc-text">10.9　名前空間</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-10-クラスの自動ローディング"><span class="post-toc-number">1.10.10.</span> <span class="post-toc-text">10.10　クラスの自動ローディング</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-9"><span class="post-toc-number">1.10.11.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第11章-高度なプログラミング"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">第11章　高度なプログラミング</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-1-属性"><span class="post-toc-number">1.11.1.</span> <span class="post-toc-text">11.1　属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-2-セキュリティ対策"><span class="post-toc-number">1.11.2.</span> <span class="post-toc-text">11.2　セキュリティ対策</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-3-ドキュメンテーションコメント"><span class="post-toc-number">1.11.3.</span> <span class="post-toc-text">11.3　ドキュメンテーションコメント</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-4-VSCode＋PHP-Debug拡張によるデバッグ"><span class="post-toc-number">1.11.4.</span> <span class="post-toc-text">11.4　VSCode＋PHP Debug拡張によるデバッグ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#この章の理解度チェック-10"><span class="post-toc-number">1.11.5.</span> <span class="post-toc-text">この章の理解度チェック</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#付録A-「練習問題」「この章の理解度チェック」解答"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">付録A　「練習問題」「この章の理解度チェック」解答</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2023-10_独習PHP第4版"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">独習PHP 第4版</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-10-13 00:00:00" datetime="2023-10-12T15:00:00.000Z"  itemprop="datePublished">2023-10-13</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="https://tutttuwi.github.io/output-over-there/categories/PHP/">PHP</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="独習PHP-第4版"><a href="#独習PHP-第4版" class="headerlink" title="独習PHP 第4版"></a>独習PHP 第4版</h1><h2 id="第1章-イントロダクション"><a href="#第1章-イントロダクション" class="headerlink" title="第1章　イントロダクション"></a>第1章　イントロダクション</h2><h3 id="1-1-PHPとWebアプリ"><a href="#1-1-PHPとWebアプリ" class="headerlink" title="1.1　PHPとWebアプリ"></a>1.1　PHPとWebアプリ</h3><h3 id="1-2-サーバーサイド技術におけるPHPの位置付け"><a href="#1-2-サーバーサイド技術におけるPHPの位置付け" class="headerlink" title="1.2　サーバーサイド技術におけるPHPの位置付け"></a>1.2　サーバーサイド技術におけるPHPの位置付け</h3><h3 id="1-3-PHP環境を設定するための手順"><a href="#1-3-PHP環境を設定するための手順" class="headerlink" title="1.3　PHP環境を設定するための手順"></a>1.3　PHP環境を設定するための手順</h3><h3 id="1-4-PHPの基本構文"><a href="#1-4-PHPの基本構文" class="headerlink" title="1.4　PHPの基本構文"></a>1.4　PHPの基本構文</h3><h3 id="この章の理解度チェック"><a href="#この章の理解度チェック" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第2章-PHPの基本"><a href="#第2章-PHPの基本" class="headerlink" title="第2章　PHPの基本"></a>第2章　PHPの基本</h2><h3 id="2-1-変数"><a href="#2-1-変数" class="headerlink" title="2.1　変数"></a>2.1　変数</h3><h3 id="2-2-定数"><a href="#2-2-定数" class="headerlink" title="2.2　定数"></a>2.2　定数</h3><h3 id="2-3-データ型"><a href="#2-3-データ型" class="headerlink" title="2.3　データ型"></a>2.3　データ型</h3><h3 id="2-4-配列"><a href="#2-4-配列" class="headerlink" title="2.4　配列"></a>2.4　配列</h3><h3 id="2-5-型の相互変換"><a href="#2-5-型の相互変換" class="headerlink" title="2.5　型の相互変換"></a>2.5　型の相互変換</h3><h3 id="この章の理解度チェック-1"><a href="#この章の理解度チェック-1" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第3章-演算子"><a href="#第3章-演算子" class="headerlink" title="第3章　演算子"></a>第3章　演算子</h2><h3 id="3-1-代数演算子"><a href="#3-1-代数演算子" class="headerlink" title="3.1　代数演算子"></a>3.1　代数演算子</h3><h3 id="3-2-代入演算子"><a href="#3-2-代入演算子" class="headerlink" title="3.2　代入演算子"></a>3.2　代入演算子</h3><h3 id="3-3-比較演算子"><a href="#3-3-比較演算子" class="headerlink" title="3.3　比較演算子"></a>3.3　比較演算子</h3><h3 id="3-4-論理演算子"><a href="#3-4-論理演算子" class="headerlink" title="3.4　論理演算子"></a>3.4　論理演算子</h3><h3 id="3-5-ビット演算子"><a href="#3-5-ビット演算子" class="headerlink" title="3.5　ビット演算子"></a>3.5　ビット演算子</h3><h3 id="3-6-その他の演算子"><a href="#3-6-その他の演算子" class="headerlink" title="3.6　その他の演算子"></a>3.6　その他の演算子</h3><h3 id="3-7-演算子の優先順位と結合則"><a href="#3-7-演算子の優先順位と結合則" class="headerlink" title="3.7　演算子の優先順位と結合則"></a>3.7　演算子の優先順位と結合則</h3><h3 id="この章の理解度チェック-2"><a href="#この章の理解度チェック-2" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第4章-制御構文"><a href="#第4章-制御構文" class="headerlink" title="第4章　制御構文"></a>第4章　制御構文</h2><h3 id="4-1-条件分岐"><a href="#4-1-条件分岐" class="headerlink" title="4.1　条件分岐"></a>4.1　条件分岐</h3><h3 id="4-2-繰り返し処理"><a href="#4-2-繰り返し処理" class="headerlink" title="4.2　繰り返し処理"></a>4.2　繰り返し処理</h3><h3 id="4-3-ループの制御"><a href="#4-3-ループの制御" class="headerlink" title="4.3　ループの制御"></a>4.3　ループの制御</h3><h3 id="4-4-制御命令のその他の話題"><a href="#4-4-制御命令のその他の話題" class="headerlink" title="4.4　制御命令のその他の話題"></a>4.4　制御命令のその他の話題</h3><h3 id="この章の理解度チェック-3"><a href="#この章の理解度チェック-3" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第5章-組み込み関数"><a href="#第5章-組み込み関数" class="headerlink" title="第5章　組み込み関数"></a>第5章　組み込み関数</h2><h3 id="5-1-関数の基本"><a href="#5-1-関数の基本" class="headerlink" title="5.1　関数の基本"></a>5.1　関数の基本</h3><h3 id="5-2-文字列関数"><a href="#5-2-文字列関数" class="headerlink" title="5.2　文字列関数"></a>5.2　文字列関数</h3><h3 id="5-3-配列関数"><a href="#5-3-配列関数" class="headerlink" title="5.3　配列関数"></a>5.3　配列関数</h3><h3 id="5-4-正規表現（PCRE）関数"><a href="#5-4-正規表現（PCRE）関数" class="headerlink" title="5.4　正規表現（PCRE）関数"></a>5.4　正規表現（PCRE）関数</h3><h3 id="5-5-ファイルシステム関数"><a href="#5-5-ファイルシステム関数" class="headerlink" title="5.5　ファイルシステム関数"></a>5.5　ファイルシステム関数</h3><h3 id="5-6-その他の関数"><a href="#5-6-その他の関数" class="headerlink" title="5.6　その他の関数"></a>5.6　その他の関数</h3><h3 id="この章の理解度チェック-4"><a href="#この章の理解度チェック-4" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第6章-ユーザー定義関数"><a href="#第6章-ユーザー定義関数" class="headerlink" title="第6章　ユーザー定義関数"></a>第6章　ユーザー定義関数</h2><h3 id="6-1-ユーザー定義関数とは"><a href="#6-1-ユーザー定義関数とは" class="headerlink" title="6.1　ユーザー定義関数とは?"></a>6.1　ユーザー定義関数とは?</h3><h3 id="6-2-変数の有効範囲（スコープ）"><a href="#6-2-変数の有効範囲（スコープ）" class="headerlink" title="6.2　変数の有効範囲（スコープ）"></a>6.2　変数の有効範囲（スコープ）</h3><h3 id="6-3-引数のさまざまな記法"><a href="#6-3-引数のさまざまな記法" class="headerlink" title="6.3　引数のさまざまな記法"></a>6.3　引数のさまざまな記法</h3><h3 id="6-4-関数呼び出しと戻り値"><a href="#6-4-関数呼び出しと戻り値" class="headerlink" title="6.4　関数呼び出しと戻り値"></a>6.4　関数呼び出しと戻り値</h3><h3 id="6-5-ジェネレーター"><a href="#6-5-ジェネレーター" class="headerlink" title="6.5　ジェネレーター"></a>6.5　ジェネレーター</h3><h3 id="この章の理解度チェック-5"><a href="#この章の理解度チェック-5" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第7章-標準クラスライブラリ"><a href="#第7章-標準クラスライブラリ" class="headerlink" title="第7章　標準クラスライブラリ"></a>第7章　標準クラスライブラリ</h2><h3 id="7-1-オブジェクト指向プログラミングの基本"><a href="#7-1-オブジェクト指向プログラミングの基本" class="headerlink" title="7.1　オブジェクト指向プログラミングの基本"></a>7.1　オブジェクト指向プログラミングの基本</h3><h3 id="7-2-DateTimeクラス"><a href="#7-2-DateTimeクラス" class="headerlink" title="7.2　DateTimeクラス"></a>7.2　DateTimeクラス</h3><h3 id="7-3-DirectoryIteratorクラス"><a href="#7-3-DirectoryIteratorクラス" class="headerlink" title="7.3　DirectoryIteratorクラス"></a>7.3　DirectoryIteratorクラス</h3><h3 id="7-4-外部ライブラリの活用―Composer"><a href="#7-4-外部ライブラリの活用―Composer" class="headerlink" title="7.4　外部ライブラリの活用―Composer"></a>7.4　外部ライブラリの活用―Composer</h3><h3 id="7-5-HTTPクライアントGuzzle"><a href="#7-5-HTTPクライアントGuzzle" class="headerlink" title="7.5　HTTPクライアントGuzzle"></a>7.5　HTTPクライアントGuzzle</h3><h3 id="この章の理解度チェック-6"><a href="#この章の理解度チェック-6" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第8章-リクエスト情報"><a href="#第8章-リクエスト情報" class="headerlink" title="第8章　リクエスト情報"></a>第8章　リクエスト情報</h2><h3 id="8-1-リクエスト情報"><a href="#8-1-リクエスト情報" class="headerlink" title="8.1　リクエスト情報"></a>8.1　リクエスト情報</h3><h3 id="8-2-ポストデータ―-POST"><a href="#8-2-ポストデータ―-POST" class="headerlink" title="8.2　ポストデータ―$_POST"></a>8.2　ポストデータ―$_POST</h3><h3 id="8-3-クエリ情報―-GET"><a href="#8-3-クエリ情報―-GET" class="headerlink" title="8.3　クエリ情報―$_GET"></a>8.3　クエリ情報―$_GET</h3><h3 id="8-4-ヘッダー情報―-SERVER"><a href="#8-4-ヘッダー情報―-SERVER" class="headerlink" title="8.4　ヘッダー情報―$_SERVER"></a>8.4　ヘッダー情報―$_SERVER</h3><h3 id="8-5-サーバー環境変数―-ENV"><a href="#8-5-サーバー環境変数―-ENV" class="headerlink" title="8.5　サーバー環境変数―$_ENV"></a>8.5　サーバー環境変数―$_ENV</h3><h3 id="8-6-クッキー情報―-COOKIE"><a href="#8-6-クッキー情報―-COOKIE" class="headerlink" title="8.6　クッキー情報―$_COOKIE"></a>8.6　クッキー情報―$_COOKIE</h3><h3 id="8-7-セッション情報―-SESSION"><a href="#8-7-セッション情報―-SESSION" class="headerlink" title="8.7　セッション情報―$_SESSION"></a>8.7　セッション情報―$_SESSION</h3><h3 id="8-8-アップロード処理の実装―-FILES"><a href="#8-8-アップロード処理の実装―-FILES" class="headerlink" title="8.8　アップロード処理の実装―$_FILES"></a>8.8　アップロード処理の実装―$_FILES</h3><h3 id="この章の理解度チェック-7"><a href="#この章の理解度チェック-7" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第9章-データベース連携"><a href="#第9章-データベース連携" class="headerlink" title="第9章　データベース連携"></a>第9章　データベース連携</h2><h3 id="9-1-データベースの種類"><a href="#9-1-データベースの種類" class="headerlink" title="9.1　データベースの種類"></a>9.1　データベースの種類</h3><h3 id="9-2-データベース操作の基本"><a href="#9-2-データベース操作の基本" class="headerlink" title="9.2　データベース操作の基本"></a>9.2　データベース操作の基本</h3><h3 id="9-3-データベース抽象化レイヤー"><a href="#9-3-データベース抽象化レイヤー" class="headerlink" title="9.3　データベース抽象化レイヤー"></a>9.3　データベース抽象化レイヤー</h3><h3 id="9-4-データベースへの接続"><a href="#9-4-データベースへの接続" class="headerlink" title="9.4　データベースへの接続"></a>9.4　データベースへの接続</h3><h3 id="9-5-SQLクエリの発行"><a href="#9-5-SQLクエリの発行" class="headerlink" title="9.5　SQLクエリの発行"></a>9.5　SQLクエリの発行</h3><h3 id="9-6-結果セットの取得"><a href="#9-6-結果セットの取得" class="headerlink" title="9.6　結果セットの取得"></a>9.6　結果セットの取得</h3><h3 id="9-7-パラメーター値のバインド"><a href="#9-7-パラメーター値のバインド" class="headerlink" title="9.7　パラメーター値のバインド"></a>9.7　パラメーター値のバインド</h3><h3 id="9-8-トランザクション処理"><a href="#9-8-トランザクション処理" class="headerlink" title="9.8　トランザクション処理"></a>9.8　トランザクション処理</h3><h3 id="この章の理解度チェック-8"><a href="#この章の理解度チェック-8" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第10章-オブジェクト指向構文"><a href="#第10章-オブジェクト指向構文" class="headerlink" title="第10章　オブジェクト指向構文"></a>第10章　オブジェクト指向構文</h2><h3 id="10-1-クラスの定義"><a href="#10-1-クラスの定義" class="headerlink" title="10.1　クラスの定義"></a>10.1　クラスの定義</h3><h3 id="10-2-カプセル化"><a href="#10-2-カプセル化" class="headerlink" title="10.2　カプセル化"></a>10.2　カプセル化</h3><h3 id="10-3-継承"><a href="#10-3-継承" class="headerlink" title="10.3　継承"></a>10.3　継承</h3><h3 id="10-4-ポリモーフィズム"><a href="#10-4-ポリモーフィズム" class="headerlink" title="10.4　ポリモーフィズム"></a>10.4　ポリモーフィズム</h3><h3 id="10-5-トレイト"><a href="#10-5-トレイト" class="headerlink" title="10.5　トレイト"></a>10.5　トレイト</h3><h3 id="10-6-オブジェクトの操作"><a href="#10-6-オブジェクトの操作" class="headerlink" title="10.6　オブジェクトの操作"></a>10.6　オブジェクトの操作</h3><h3 id="10-7-例外処理"><a href="#10-7-例外処理" class="headerlink" title="10.7　例外処理"></a>10.7　例外処理</h3><h3 id="10-8-マジックメソッド"><a href="#10-8-マジックメソッド" class="headerlink" title="10.8　マジックメソッド"></a>10.8　マジックメソッド</h3><h3 id="10-9-名前空間"><a href="#10-9-名前空間" class="headerlink" title="10.9　名前空間"></a>10.9　名前空間</h3><h3 id="10-10-クラスの自動ローディング"><a href="#10-10-クラスの自動ローディング" class="headerlink" title="10.10　クラスの自動ローディング"></a>10.10　クラスの自動ローディング</h3><h3 id="この章の理解度チェック-9"><a href="#この章の理解度チェック-9" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第11章-高度なプログラミング"><a href="#第11章-高度なプログラミング" class="headerlink" title="第11章　高度なプログラミング"></a>第11章　高度なプログラミング</h2><h3 id="11-1-属性"><a href="#11-1-属性" class="headerlink" title="11.1　属性"></a>11.1　属性</h3><h3 id="11-2-セキュリティ対策"><a href="#11-2-セキュリティ対策" class="headerlink" title="11.2　セキュリティ対策"></a>11.2　セキュリティ対策</h3><h3 id="11-3-ドキュメンテーションコメント"><a href="#11-3-ドキュメンテーションコメント" class="headerlink" title="11.3　ドキュメンテーションコメント"></a>11.3　ドキュメンテーションコメント</h3><h3 id="11-4-VSCode＋PHP-Debug拡張によるデバッグ"><a href="#11-4-VSCode＋PHP-Debug拡張によるデバッグ" class="headerlink" title="11.4　VSCode＋PHP Debug拡張によるデバッグ"></a>11.4　VSCode＋PHP Debug拡張によるデバッグ</h3><h3 id="この章の理解度チェック-10"><a href="#この章の理解度チェック-10" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="付録A-「練習問題」「この章の理解度チェック」解答"><a href="#付録A-「練習問題」「この章の理解度チェック」解答" class="headerlink" title="付録A　「練習問題」「この章の理解度チェック」解答"></a>付録A　「練習問題」「この章の理解度チェック」解答</h2>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2023-10-13T11:49:50.018Z" itemprop="dateUpdated">2023-10-13 20:49:50</time>
+</span><br>
+
+
+        
+        thank you for your reading my article!!
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="https://tutttuwi.github.io/output-over-there/img/avatar.png" alt="t-tsutsui">
+            t-tsutsui
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="https://tutttuwi.github.io/output-over-there/tags/%E6%95%99%E7%A7%91%E6%9B%B8/" rel="tag">教科書</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="https://tutttuwi.github.io/output-over-there/uncategorized/2020-04_Java%E3%81%AB%E3%82%88%E3%82%8B%E9%96%A2%E6%95%B0%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0Java8%E3%83%A9%E3%83%A0%E3%83%80%E5%BC%8F%E3%81%A8Stream/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2020-04_Javaによる関数型プログラミングJava8ラムダ式とStream</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+<!--        
+
+        <p>
+            
+                <span><a href="https://tutttuwi.github.io/output-over-there/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        </p> -->
+    </div>
+    <div class="bottom">
+        <p><span>t-tsutsui &copy; 2015 - 2023</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: 'https://tutttuwi.github.io/output-over-there/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

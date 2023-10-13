@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-29T15:07:44.045Z</updated>
+  <updated>2023-10-13T11:49:50.018Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>独習PHP 第4版</title>
+    <link href="http://yoursite.com/PHP/2023-10_%E7%8B%AC%E7%BF%92PHP%E7%AC%AC4%E7%89%88/"/>
+    <id>http://yoursite.com/PHP/2023-10_%E7%8B%AC%E7%BF%92PHP%E7%AC%AC4%E7%89%88/</id>
+    <published>2023-10-12T15:00:00.000Z</published>
+    <updated>2023-10-13T11:49:50.018Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="独習PHP-第4版"><a href="#独習PHP-第4版" class="headerlink" title="独習PHP 第4版"></a>独習PHP 第4版</h1><h2 id="第1章-イントロダクション"><a href="#第1章-イントロダクション" class="headerlink" title="第1章　イントロダクション"></a>第1章　イントロダクション</h2><h3 id="1-1-PHPとWebアプリ"><a href="#1-1-PHPとWebアプリ" class="headerlink" title="1.1　PHPとWebアプリ"></a>1.1　PHPとWebアプリ</h3><h3 id="1-2-サーバーサイド技術におけるPHPの位置付け"><a href="#1-2-サーバーサイド技術におけるPHPの位置付け" class="headerlink" title="1.2　サーバーサイド技術におけるPHPの位置付け"></a>1.2　サーバーサイド技術におけるPHPの位置付け</h3><h3 id="1-3-PHP環境を設定するための手順"><a href="#1-3-PHP環境を設定するための手順" class="headerlink" title="1.3　PHP環境を設定するための手順"></a>1.3　PHP環境を設定するための手順</h3><h3 id="1-4-PHPの基本構文"><a href="#1-4-PHPの基本構文" class="headerlink" title="1.4　PHPの基本構文"></a>1.4　PHPの基本構文</h3><h3 id="この章の理解度チェック"><a href="#この章の理解度チェック" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第2章-PHPの基本"><a href="#第2章-PHPの基本" class="headerlink" title="第2章　PHPの基本"></a>第2章　PHPの基本</h2><h3 id="2-1-変数"><a href="#2-1-変数" class="headerlink" title="2.1　変数"></a>2.1　変数</h3><h3 id="2-2-定数"><a href="#2-2-定数" class="headerlink" title="2.2　定数"></a>2.2　定数</h3><h3 id="2-3-データ型"><a href="#2-3-データ型" class="headerlink" title="2.3　データ型"></a>2.3　データ型</h3><h3 id="2-4-配列"><a href="#2-4-配列" class="headerlink" title="2.4　配列"></a>2.4　配列</h3><h3 id="2-5-型の相互変換"><a href="#2-5-型の相互変換" class="headerlink" title="2.5　型の相互変換"></a>2.5　型の相互変換</h3><h3 id="この章の理解度チェック-1"><a href="#この章の理解度チェック-1" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第3章-演算子"><a href="#第3章-演算子" class="headerlink" title="第3章　演算子"></a>第3章　演算子</h2><h3 id="3-1-代数演算子"><a href="#3-1-代数演算子" class="headerlink" title="3.1　代数演算子"></a>3.1　代数演算子</h3><h3 id="3-2-代入演算子"><a href="#3-2-代入演算子" class="headerlink" title="3.2　代入演算子"></a>3.2　代入演算子</h3><h3 id="3-3-比較演算子"><a href="#3-3-比較演算子" class="headerlink" title="3.3　比較演算子"></a>3.3　比較演算子</h3><h3 id="3-4-論理演算子"><a href="#3-4-論理演算子" class="headerlink" title="3.4　論理演算子"></a>3.4　論理演算子</h3><h3 id="3-5-ビット演算子"><a href="#3-5-ビット演算子" class="headerlink" title="3.5　ビット演算子"></a>3.5　ビット演算子</h3><h3 id="3-6-その他の演算子"><a href="#3-6-その他の演算子" class="headerlink" title="3.6　その他の演算子"></a>3.6　その他の演算子</h3><h3 id="3-7-演算子の優先順位と結合則"><a href="#3-7-演算子の優先順位と結合則" class="headerlink" title="3.7　演算子の優先順位と結合則"></a>3.7　演算子の優先順位と結合則</h3><h3 id="この章の理解度チェック-2"><a href="#この章の理解度チェック-2" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第4章-制御構文"><a href="#第4章-制御構文" class="headerlink" title="第4章　制御構文"></a>第4章　制御構文</h2><h3 id="4-1-条件分岐"><a href="#4-1-条件分岐" class="headerlink" title="4.1　条件分岐"></a>4.1　条件分岐</h3><h3 id="4-2-繰り返し処理"><a href="#4-2-繰り返し処理" class="headerlink" title="4.2　繰り返し処理"></a>4.2　繰り返し処理</h3><h3 id="4-3-ループの制御"><a href="#4-3-ループの制御" class="headerlink" title="4.3　ループの制御"></a>4.3　ループの制御</h3><h3 id="4-4-制御命令のその他の話題"><a href="#4-4-制御命令のその他の話題" class="headerlink" title="4.4　制御命令のその他の話題"></a>4.4　制御命令のその他の話題</h3><h3 id="この章の理解度チェック-3"><a href="#この章の理解度チェック-3" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第5章-組み込み関数"><a href="#第5章-組み込み関数" class="headerlink" title="第5章　組み込み関数"></a>第5章　組み込み関数</h2><h3 id="5-1-関数の基本"><a href="#5-1-関数の基本" class="headerlink" title="5.1　関数の基本"></a>5.1　関数の基本</h3><h3 id="5-2-文字列関数"><a href="#5-2-文字列関数" class="headerlink" title="5.2　文字列関数"></a>5.2　文字列関数</h3><h3 id="5-3-配列関数"><a href="#5-3-配列関数" class="headerlink" title="5.3　配列関数"></a>5.3　配列関数</h3><h3 id="5-4-正規表現（PCRE）関数"><a href="#5-4-正規表現（PCRE）関数" class="headerlink" title="5.4　正規表現（PCRE）関数"></a>5.4　正規表現（PCRE）関数</h3><h3 id="5-5-ファイルシステム関数"><a href="#5-5-ファイルシステム関数" class="headerlink" title="5.5　ファイルシステム関数"></a>5.5　ファイルシステム関数</h3><h3 id="5-6-その他の関数"><a href="#5-6-その他の関数" class="headerlink" title="5.6　その他の関数"></a>5.6　その他の関数</h3><h3 id="この章の理解度チェック-4"><a href="#この章の理解度チェック-4" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第6章-ユーザー定義関数"><a href="#第6章-ユーザー定義関数" class="headerlink" title="第6章　ユーザー定義関数"></a>第6章　ユーザー定義関数</h2><h3 id="6-1-ユーザー定義関数とは"><a href="#6-1-ユーザー定義関数とは" class="headerlink" title="6.1　ユーザー定義関数とは?"></a>6.1　ユーザー定義関数とは?</h3><h3 id="6-2-変数の有効範囲（スコープ）"><a href="#6-2-変数の有効範囲（スコープ）" class="headerlink" title="6.2　変数の有効範囲（スコープ）"></a>6.2　変数の有効範囲（スコープ）</h3><h3 id="6-3-引数のさまざまな記法"><a href="#6-3-引数のさまざまな記法" class="headerlink" title="6.3　引数のさまざまな記法"></a>6.3　引数のさまざまな記法</h3><h3 id="6-4-関数呼び出しと戻り値"><a href="#6-4-関数呼び出しと戻り値" class="headerlink" title="6.4　関数呼び出しと戻り値"></a>6.4　関数呼び出しと戻り値</h3><h3 id="6-5-ジェネレーター"><a href="#6-5-ジェネレーター" class="headerlink" title="6.5　ジェネレーター"></a>6.5　ジェネレーター</h3><h3 id="この章の理解度チェック-5"><a href="#この章の理解度チェック-5" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第7章-標準クラスライブラリ"><a href="#第7章-標準クラスライブラリ" class="headerlink" title="第7章　標準クラスライブラリ"></a>第7章　標準クラスライブラリ</h2><h3 id="7-1-オブジェクト指向プログラミングの基本"><a href="#7-1-オブジェクト指向プログラミングの基本" class="headerlink" title="7.1　オブジェクト指向プログラミングの基本"></a>7.1　オブジェクト指向プログラミングの基本</h3><h3 id="7-2-DateTimeクラス"><a href="#7-2-DateTimeクラス" class="headerlink" title="7.2　DateTimeクラス"></a>7.2　DateTimeクラス</h3><h3 id="7-3-DirectoryIteratorクラス"><a href="#7-3-DirectoryIteratorクラス" class="headerlink" title="7.3　DirectoryIteratorクラス"></a>7.3　DirectoryIteratorクラス</h3><h3 id="7-4-外部ライブラリの活用―Composer"><a href="#7-4-外部ライブラリの活用―Composer" class="headerlink" title="7.4　外部ライブラリの活用―Composer"></a>7.4　外部ライブラリの活用―Composer</h3><h3 id="7-5-HTTPクライアントGuzzle"><a href="#7-5-HTTPクライアントGuzzle" class="headerlink" title="7.5　HTTPクライアントGuzzle"></a>7.5　HTTPクライアントGuzzle</h3><h3 id="この章の理解度チェック-6"><a href="#この章の理解度チェック-6" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第8章-リクエスト情報"><a href="#第8章-リクエスト情報" class="headerlink" title="第8章　リクエスト情報"></a>第8章　リクエスト情報</h2><h3 id="8-1-リクエスト情報"><a href="#8-1-リクエスト情報" class="headerlink" title="8.1　リクエスト情報"></a>8.1　リクエスト情報</h3><h3 id="8-2-ポストデータ―-POST"><a href="#8-2-ポストデータ―-POST" class="headerlink" title="8.2　ポストデータ―$_POST"></a>8.2　ポストデータ―$_POST</h3><h3 id="8-3-クエリ情報―-GET"><a href="#8-3-クエリ情報―-GET" class="headerlink" title="8.3　クエリ情報―$_GET"></a>8.3　クエリ情報―$_GET</h3><h3 id="8-4-ヘッダー情報―-SERVER"><a href="#8-4-ヘッダー情報―-SERVER" class="headerlink" title="8.4　ヘッダー情報―$_SERVER"></a>8.4　ヘッダー情報―$_SERVER</h3><h3 id="8-5-サーバー環境変数―-ENV"><a href="#8-5-サーバー環境変数―-ENV" class="headerlink" title="8.5　サーバー環境変数―$_ENV"></a>8.5　サーバー環境変数―$_ENV</h3><h3 id="8-6-クッキー情報―-COOKIE"><a href="#8-6-クッキー情報―-COOKIE" class="headerlink" title="8.6　クッキー情報―$_COOKIE"></a>8.6　クッキー情報―$_COOKIE</h3><h3 id="8-7-セッション情報―-SESSION"><a href="#8-7-セッション情報―-SESSION" class="headerlink" title="8.7　セッション情報―$_SESSION"></a>8.7　セッション情報―$_SESSION</h3><h3 id="8-8-アップロード処理の実装―-FILES"><a href="#8-8-アップロード処理の実装―-FILES" class="headerlink" title="8.8　アップロード処理の実装―$_FILES"></a>8.8　アップロード処理の実装―$_FILES</h3><h3 id="この章の理解度チェック-7"><a href="#この章の理解度チェック-7" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第9章-データベース連携"><a href="#第9章-データベース連携" class="headerlink" title="第9章　データベース連携"></a>第9章　データベース連携</h2><h3 id="9-1-データベースの種類"><a href="#9-1-データベースの種類" class="headerlink" title="9.1　データベースの種類"></a>9.1　データベースの種類</h3><h3 id="9-2-データベース操作の基本"><a href="#9-2-データベース操作の基本" class="headerlink" title="9.2　データベース操作の基本"></a>9.2　データベース操作の基本</h3><h3 id="9-3-データベース抽象化レイヤー"><a href="#9-3-データベース抽象化レイヤー" class="headerlink" title="9.3　データベース抽象化レイヤー"></a>9.3　データベース抽象化レイヤー</h3><h3 id="9-4-データベースへの接続"><a href="#9-4-データベースへの接続" class="headerlink" title="9.4　データベースへの接続"></a>9.4　データベースへの接続</h3><h3 id="9-5-SQLクエリの発行"><a href="#9-5-SQLクエリの発行" class="headerlink" title="9.5　SQLクエリの発行"></a>9.5　SQLクエリの発行</h3><h3 id="9-6-結果セットの取得"><a href="#9-6-結果セットの取得" class="headerlink" title="9.6　結果セットの取得"></a>9.6　結果セットの取得</h3><h3 id="9-7-パラメーター値のバインド"><a href="#9-7-パラメーター値のバインド" class="headerlink" title="9.7　パラメーター値のバインド"></a>9.7　パラメーター値のバインド</h3><h3 id="9-8-トランザクション処理"><a href="#9-8-トランザクション処理" class="headerlink" title="9.8　トランザクション処理"></a>9.8　トランザクション処理</h3><h3 id="この章の理解度チェック-8"><a href="#この章の理解度チェック-8" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第10章-オブジェクト指向構文"><a href="#第10章-オブジェクト指向構文" class="headerlink" title="第10章　オブジェクト指向構文"></a>第10章　オブジェクト指向構文</h2><h3 id="10-1-クラスの定義"><a href="#10-1-クラスの定義" class="headerlink" title="10.1　クラスの定義"></a>10.1　クラスの定義</h3><h3 id="10-2-カプセル化"><a href="#10-2-カプセル化" class="headerlink" title="10.2　カプセル化"></a>10.2　カプセル化</h3><h3 id="10-3-継承"><a href="#10-3-継承" class="headerlink" title="10.3　継承"></a>10.3　継承</h3><h3 id="10-4-ポリモーフィズム"><a href="#10-4-ポリモーフィズム" class="headerlink" title="10.4　ポリモーフィズム"></a>10.4　ポリモーフィズム</h3><h3 id="10-5-トレイト"><a href="#10-5-トレイト" class="headerlink" title="10.5　トレイト"></a>10.5　トレイト</h3><h3 id="10-6-オブジェクトの操作"><a href="#10-6-オブジェクトの操作" class="headerlink" title="10.6　オブジェクトの操作"></a>10.6　オブジェクトの操作</h3><h3 id="10-7-例外処理"><a href="#10-7-例外処理" class="headerlink" title="10.7　例外処理"></a>10.7　例外処理</h3><h3 id="10-8-マジックメソッド"><a href="#10-8-マジックメソッド" class="headerlink" title="10.8　マジックメソッド"></a>10.8　マジックメソッド</h3><h3 id="10-9-名前空間"><a href="#10-9-名前空間" class="headerlink" title="10.9　名前空間"></a>10.9　名前空間</h3><h3 id="10-10-クラスの自動ローディング"><a href="#10-10-クラスの自動ローディング" class="headerlink" title="10.10　クラスの自動ローディング"></a>10.10　クラスの自動ローディング</h3><h3 id="この章の理解度チェック-9"><a href="#この章の理解度チェック-9" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="第11章-高度なプログラミング"><a href="#第11章-高度なプログラミング" class="headerlink" title="第11章　高度なプログラミング"></a>第11章　高度なプログラミング</h2><h3 id="11-1-属性"><a href="#11-1-属性" class="headerlink" title="11.1　属性"></a>11.1　属性</h3><h3 id="11-2-セキュリティ対策"><a href="#11-2-セキュリティ対策" class="headerlink" title="11.2　セキュリティ対策"></a>11.2　セキュリティ対策</h3><h3 id="11-3-ドキュメンテーションコメント"><a href="#11-3-ドキュメンテーションコメント" class="headerlink" title="11.3　ドキュメンテーションコメント"></a>11.3　ドキュメンテーションコメント</h3><h3 id="11-4-VSCode＋PHP-Debug拡張によるデバッグ"><a href="#11-4-VSCode＋PHP-Debug拡張によるデバッグ" class="headerlink" title="11.4　VSCode＋PHP Debug拡張によるデバッグ"></a>11.4　VSCode＋PHP Debug拡張によるデバッグ</h3><h3 id="この章の理解度チェック-10"><a href="#この章の理解度チェック-10" class="headerlink" title="この章の理解度チェック"></a>この章の理解度チェック</h3><h2 id="付録A-「練習問題」「この章の理解度チェック」解答"><a href="#付録A-「練習問題」「この章の理解度チェック」解答" class="headerlink" title="付録A　「練習問題」「この章の理解度チェック」解答"></a>付録A　「練習問題」「この章の理解度チェック」解答</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;独習PHP-第4版&quot;&gt;&lt;a href=&quot;#独習PHP-第4版&quot; class=&quot;headerlink&quot; title=&quot;独習PHP 第4版&quot;&gt;&lt;/a&gt;独習PHP 第4版&lt;/h1&gt;&lt;h2 id=&quot;第1章-イントロダクション&quot;&gt;&lt;a href=&quot;#第1章-イントロダクショ</summary>
+      
+    
+    
+    
+    <category term="PHP" scheme="http://yoursite.com/categories/PHP/"/>
+    
+    
+    <category term="教科書" scheme="http://yoursite.com/tags/%E6%95%99%E7%A7%91%E6%9B%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>2020-04_Javaによる関数型プログラミングJava8ラムダ式とStream</title>
@@ -485,32 +509,6 @@
     
     
     <category term="教科書" scheme="http://yoursite.com/tags/%E6%95%99%E7%A7%91%E6%9B%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Googleアシスタントアプリ開発入門</title>
-    <link href="http://yoursite.com/AI/2019_01_Google%E3%82%A2%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E5%85%A5%E9%96%80/"/>
-    <id>http://yoursite.com/AI/2019_01_Google%E3%82%A2%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E5%85%A5%E9%96%80/</id>
-    <published>2018-12-31T15:00:00.000Z</published>
-    <updated>2019-07-20T15:51:52.664Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Googleアシスタントアプリ開発入門"><a href="#Googleアシスタントアプリ開発入門" class="headerlink" title="Googleアシスタントアプリ開発入門"></a>Googleアシスタントアプリ開発入門</h1><div style="text-align:center; margin-bottom: 40px"><img src="/img/cover/2019_01_google_assistant_handson.jpg" alt="2019_01_google_assistant_handson" title="2019_01_google_assistant_handson" style="width:980px"></div><ul><li>目次<ul><li><p>●chapter1 GoogleアシスタントとAction</p><ul><li>1.1 AIアシスタント ～対話型のインタフェースで問題を解決～</li><li>1.2 Googleアシスタントとは？</li><li>1.3 Googleアシスタントから呼ばれる機能「Action」を使いこなそう</li></ul></li><li><p>●chapter2 Googleアシスタントのアプリ「Action」の作り方</p><ul><li>2.1 アプリ開発エコシステム「Actions on Google」で快適開発</li><li>2.2 簡単な会話アプリを作ってみる</li><li>2.3 やまびこアプリを作ろう（会話アプリのはじめの一歩）</li></ul></li><li><p>●chapter3 しっかり作るGoogleアシスタントアプリ</p><ul><li>3.1 標準的なアプリ実行環境を知ろう</li><li>3.2 基本的な処理フローをおさえよう</li><li>3.3 アプリのテーマと会話内容を決めよう</li><li>3.4 スピーカー向けアプリを作ろう1（静的会話をDialogflowで実装してみる）</li><li>3.5 スピーカー向けアプリを作ろう2（「じゃんけんアプリ」に動的会話を実装）</li><li>3.6 シミュレータや実機でしっかりテストしよう</li><li>3.7 アプリの会話音声をチューニングしよう（SSMLを使う）</li><li>3.8 UIを視覚的にリッチにしよう（Rich Responses）</li><li>3.9 最終的なプログラムコードを確認しよう</li><li>3.10 column：アプリのアルファリリース、ベータリリース</li></ul></li><li><p>●chapter4 いろいろな機能を活用してアプリを作ってみよう</p><ul><li>4.1 ToDoリストアプリを作ろう（データベースを利用する）</li><li>4.2 位置情報を音声で返すアプリを作ろう（位置情報を利用する）</li><li>4.3 天気予報アプリを作ろう（位置情報を利用して周囲の天気予報を応える）</li><li>4.4 アラームアプリを作ろう（Push APIを使う）</li><li>4.5 column：Actions on Googleのさまざまな機能</li></ul></li><li><p>●chapter5 アプリが世の中に出るまで／出たあと</p><ul><li>5.1 作ったアプリを配信しよう（Google社の審査）</li><li>5.2 Googleアシスタントにアプリをおすすめしてもらおう</li><li>5.3 船出のあと……</li></ul></li></ul></li></ul><h2 id="学んだこと"><a href="#学んだこと" class="headerlink" title="学んだこと"></a>学んだこと</h2><ul><li>Googleアシスタントアプリ開発に必要な用語</li><li>※業務で必要な箇所のみ拾い読み</li><li>あとで再読したい</li></ul><h2 id="手に取った理由"><a href="#手に取った理由" class="headerlink" title="手に取った理由"></a>手に取った理由</h2><ul><li>Googleアシスタントアプリの運用&#x2F;保守に携わっていく上で必要なスキルを習得するため</li><li>スピーカー開発関連の知識を増やすため</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Googleアシスタントアプリ開発入門&quot;&gt;&lt;a href=&quot;#Googleアシスタントアプリ開発入門&quot; class=&quot;headerlink&quot; title=&quot;Googleアシスタントアプリ開発入門&quot;&gt;&lt;/a&gt;Googleアシスタントアプリ開発入門&lt;/h1&gt;&lt;div </summary>
-      
-    
-    
-    
-    <category term="AI" scheme="http://yoursite.com/categories/AI/"/>
-    
-    
-    <category term="教科書" scheme="http://yoursite.com/tags/%E6%95%99%E7%A7%91%E6%9B%B8/"/>
-    
-    <category term="再読" scheme="http://yoursite.com/tags/%E5%86%8D%E8%AA%AD/"/>
     
   </entry>
   
